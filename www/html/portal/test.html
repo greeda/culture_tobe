@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="keywords" content="문화포털 집콕문화생활">
+<meta name="description" content="문화포털 집콕문화생활">
+<meta name="description" content="문화포털 집콕문화생활"/>
+<title>문화포털 집콕문화생활-문화포털 집콕문화생활</title>
+<link rel="stylesheet" type="text/css" href="https://www.culture.go.kr/assets/css/global.css">
+<link rel="stylesheet" type="text/css" href="https://www.culture.go.kr/assets/css/specialized.css">
+<link rel="stylesheet" type="text/css" href="https://www.culture.go.kr/assets/css/culturelife.css">
+<script type="text/javascript" src="https://www.culture.go.kr/assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://www.culture.go.kr/assets/js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.culture.go.kr/assets/css/swiper.min.css?v=20200218170000">
+<script type="text/javascript" src="https://www.culture.go.kr/assets/js/ui.js"></script>
+<!--네이버 검색시 사이트 연관채널 지정_Start-->
+<script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "문화포털",
+            "url": "https://www.culture.go.kr",
+            "sameAs": [
+                "https://blog.naver.com/kcis_",
+                "https://www.facebook.com/cultureportal",
+                "https://tv.naver.com/culturepd",
+                "https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw",
+                "https://www.instagram.com/culture_portal"
+            ]
+        }
+    	</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+			var bnrSwiperOption = {};
+        	if ( $(".intro .intro__bnrslide .swiper-container .swiper-slide").length == 1 ) {
+        		bnrSwiperOption = {
+        				effect : 'fade',
+        				speed: 600,
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        centeredSlides: true,
+                        observer: true,
+                        resizeObserver: false,
+                		loop: false,
+                        autoplay: false,
+                        noSwiping: true,
+                        noswipingClass: 'swiper-no-swiping',
+        		}
+        		$(".intro .intro__bnrslide .swiper-container .swiper-slide").addClass("swiper-no-swiping")
+        	} else{
+        		bnrSwiperOption = {
+                        speed: 600,
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        centeredSlides: true,
+                        autoplay:{
+                        	delay: 8000,
+                        	disableOnInteraction: false,
+                        },
+                        loop: true,
+                        loopFillGroupWithBlank: true,
+                        observer: true,
+                        resizeObserver: false
+        		}
+        	}
+			var introSwiper = new Swiper('.intro .intro__bnrslide .swiper-container',bnrSwiperOption)
+            //콘텐츠, 채널 클릭 후 reload 시 마지막 자리 유지
+            $('#contentsSession').click(function(){
+                sessionStorage.setItem("homeTab", "contents");
+            });
+            $('#channelSession').click(function(){
+                sessionStorage.setItem("homeTab", "channel");
+            });
+            var homeTab = sessionStorage.getItem("homeTab");
+            if (homeTab == "channel") {
+                $('#channelSession').click();
+            }
+            //
+            var channelTab = $("#channelTab").find(".swiper-wrapper");
+            for(var l = 0; l < channelTab.length; l++){
+                var channelLis = channelTab.eq(l).find("li");
+                var contBoxBanner = $("#cont_box_banner"+(l+1));
+                if(channelLis.length == 0){
+                    contBoxBanner.hide();
+                }
+            }
+            function changeBgBanner() {
+                //BG 이미지 설정
+                var bgImageURL = [{"MENU_TYPE":12236,"BANNER_TITLE":null,"REG_LOC":null,"MOBILE_URL2":null,"END_DATE":"2022-12-31","USER_ID":"ispark","MOBILE_URL3":null,"URL":"https:\/\/www.culture.go.kr\/home\/index.do","STATUS":"Y","SUMMARY":"\uC9D1\uCF55\uC9D1\uBC16 \uBB38\uD654\uC0DD\uD65C \uC0C1\uC2DC\uBC30\uB108\uC785\uB2C8\uB2E4.","LINK_TYPE":null,"SUMMARY2":null,"SUMMARY3":null,"SUMMARY4":null,"CONTENT":null,"TOP_BANNER_TYPE":"A","MOBILE_URL":null,"URL4":null,"URL3":null,"IMAGE_NAME":"banner_202209217465662213.jpg","MOBILE_IMAGE_NAME3":null,"URL2":null,"MOBILE_IMAGE_NAME2":null,"REG_DATE":"2022-09-21T07:46:56.000+09:00","START_DATE":"2022-09-21","IMAGE_NAME4":null,"IMAGE_NAME3":null,"REQUEST":null,"USER_NM":null,"IMAGE_NAME2":null,"MOBILE_IMAGE_NAME":"banner_202209217465626891.jpg","INSTT_CODE":null,"SORT":1,"OPEN_API_AGREE":null,"TITLE":"\uC9D1\uCF55\uC9D1\uBC16\uBB38\uD654\uC0DD\uD65C \uC0C1\uC2DC\uBC30\uB108","TEL":null,"SEQ":3144,"UPD_DATE":"2022-09-21T07:46:56.000+09:00"}];
+                var bgMobileImageURL = null;
+                var hideIntroPrologueYn = null;
+                var desktopBg = $('.desktop').find('#contents');
+                var mobileBg = $('.mobile').find('#contents');
+                var urlOrigin = window.location.origin;
+                if (bgImageURL != null) {
+                    if (mobileBg.length > 0) {
+                        mobileBg.css("background-image", "url(" + urlOrigin + '/upload/banner/' + bgMobileImageURL + ")");
+                    } else {
+                        desktopBg.css("background-image", "url(" + urlOrigin + '/upload/banner/' + bgImageURL + ")");
+                    }
+                    if (hideIntroPrologueYn === "N") {
+                        $('.intro__prologue').css('opacity', '0');
+                    }
+                }
+            }
+        });
+      //조회수 증가
+		function dailyCnt(num, conttype){
+			$.ajax({
+				url : "/home/dailyCnt.do",
+				type : "post",
+				dataType : "json",
+				data : {
+					seq : num,
+					type : conttype
+				},
+				success : function(data){
+					console.log(data);
+				},
+				error : function(response, status, err){
+					console.log(err);
+				}
+			})
+		}
+    </script>
+<!--네이버 검색시 사이트 연관채널 지정_End-->
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<dl id="skipNav">
+		<dt>바로가기 메뉴</dt>
+		<dd><a href="#contents">본문 바로가기</a></dd>
+		<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+		<dd><a href="#footer">푸터 바로가기</a></dd>
+	</dl>
+	<!-- header -->
+	<header class="header">
+	<div class="header__inner">
+		<h1 class="logo">
+		<a href="/index.do"><img src="https://www.culture.go.kr/assets/images/common/header_logo.png" alt="문화포털"></a>
+		<span class="logo__title">집콕+집밖 문화생활</span>
+		</h1>
+		<button type="button" class="partner__trigger" aria-haspopup="dialog" aria-controls="partnerModal">
+		<span>참여기관 안내</span>
+		<i></i>
+		</button>
+		<div class="search-form">
+			<!-- <form id="searchFormHeader" name="searchForm" method="get" action="/searchTotal.do" onsubmit="return false;"> -->
+			<form id="searchFormHeader" name="searchForm" method="get" action="/integratedSearch/searchList.do" onsubmit="return false;">
+				<label for="searchContents" class="a11y__sr--only">검색어 입력</label>
+				<input type="text" id="searchContents" class="search-form__input" name="searchTerm" value="" onkeypress="javascript:if(event.keyCode==13){requestSearch();return false;}" onfocus="return dq_setTextbox('0',event);" onmousedown="dq_setTextbox('1',event);" onkeydown="dq_setTextbox('1',event)">
+				<input type="hidden" id="categoryType" name="categoryType" value="total">
+				<input type="hidden" id="integratedPage" name="cPage" value="1">
+				<input type="hidden" name="limit" value="3">
+				<script type="text/javascript" src="https://www.culture.go.kr/assets/js/search/dqAutoComplete.js?v=20200218170000"></script>
+				<script type="text/javascript" src="https://www.culture.go.kr/assets/js/search/search.js?v=20200218170000"></script>
+				<button type="button" class="search-form__button" onclick="requestSearch();return false;">검색</button>
+			</form>
+		</div>
+		<div class="header__util">
+			<div class="util">
+				<a href="/sso/login.do" class="util__menu util__menu--login">
+				<i></i>
+				<span>로그인</span>
+				</a>
+				<a href="/member/register.do" class="util__menu util__menu--join">
+				<i></i>
+				<span>회원가입</span>
+				</a>
+				<a href="/info/aboutA.do" class="util__menu util__menu--guide">
+				<i></i>
+				<span>이용안내</span>
+				</a>
+				<div class="util__menu util__menu--adjust">
+					<i></i>
+					<span>100%</span>
+					<button type="button">확대</button>
+					<button type="button">축소</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav id="gnb" class="nav">
+	<button type="button" class="nav__hamburger" aria-owns="navAll" aria-expanded="false" aria-label="전체 메뉴">
+	<span></span>
+	<span></span>
+	<span></span>
+	</button>
+	<ul class="nav__list">
+		<li class="nav__item">
+		<a class="nav__link" aria-haspopup="true" href="/oneeye/oneEyeList.do" aria-expanded="false">문화체험</a>
+		<ul class="nav-sub__list">
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="">집콕+집밖 문화생활</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/oneeye/oneEyeList.do">한눈에 보는 문화정보</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/perform/relayList.do">문화릴레이티켓</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/space/facility.do?sido=서울&amp;gugun=종로구&amp;facilityCode=&amp;searchKeyword=">문화공간,단체</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/info/sns.do">문화SNS 지도</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav__item">
+		<a class="nav__link" aria-haspopup="true" href="/culture/themeList.do" aria-expanded="false">문화공감</a>
+		<ul class="nav-sub__list">
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/culturetv/mainList.do">문화TV</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/culture/themeList.do">공감리포트</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/magazine/cardnewsList.do">카드뉴스</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/magazine/webzine.do">웹진</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/calendar/view.do">문화캘린더</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/board/list.do">문화마루</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav__item">
+		<a class="nav__link" aria-haspopup="true" href="/news/newsList.do" aria-expanded="false">문화지식</a>
+		<ul class="nav-sub__list">
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/tradition/traditionalPatternMain.do">전통문양</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/news/newsList.do">정책뉴스</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/knowledge/reportListNew.do">연구교육자료</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/knowledge/encyclopediaList.do">예술지식백과</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/knowledge/realisticContentList.do">실감형 콘텐츠</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/knowledge/relicList.do">문화유물</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/knowledge/recommendList.do">도서</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav__item">
+		<a class="nav__link" aria-haspopup="true" href="/news/recruitList.do" aria-expanded="false">문화알리미</a>
+		<ul class="nav-sub__list">
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/culturedata/dataAnalyze.do">문화정보분석</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/news/recruitList.do">채용·자원봉사 모집</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/event/eventRunningList.do">문화이벤트</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/cultureplan/cultureSupport.do">문화지원사업</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/industry/apiGuideA.do">문화포털API</a>
+			</li>
+			<li class="nav-sub__item">
+			<a class="nav-sub__link" href="/news/noticeList.do">공지사항</a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	<ul class="nav-spl__list">
+		<li class="nav-spl__item">
+		<a href="/culturetv/mainList.do" class="nav-spl__link nav-spl__link--tv " aria-expanded="false" aria-haspopup="true">
+		<span>문화TV</span>
+		<i></i>
+		</a>
+		<ul class="nav-spl-sub__list">
+			<li class="nav-spl-sub__item">
+			<a href="/culturetv/videoList.do" class="nav-spl-sub__link">문화영상</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/culturetv/unescoList.do" class="nav-spl-sub__link">유네스코 등재유산</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/culturetv/culture100List.do" class="nav-spl-sub__link">한국문화100</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/culturetv/job30List.do" class="nav-spl-sub__link">문화인터뷰</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/culturetv/publicMovList.do" class="nav-spl-sub__link">기관별영상</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav-spl__item">
+		<a href="" class="nav-spl__link nav-spl__link--life nav-spl__link--active">
+		<span>집콕+집밖 문화생활</span>
+		<i></i>
+		</a>
+		</li>
+		<li class="nav-spl__item">
+		<a href="/tradition/traditionalPatternMain.do" class="nav-spl__link nav-spl__link--pattern " aria-expanded="false" aria-haspopup="true">
+		<span>전통문양</span>
+		<i></i>
+		</a>
+		<ul class="nav-spl-sub__list">
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalDesignPatternList.do" class="nav-spl-sub__link">디자인문양</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalShapeList.do" class="nav-spl-sub__link">형태별문양</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalUseList.do" class="nav-spl-sub__link">용도별문양</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalUsePatternList.do" class="nav-spl-sub__link">활용디자인</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalSpecialExhibitionList.do" class="nav-spl-sub__link">전통문양특별전</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditional3DContentsList.do" class="nav-spl-sub__link">3D프린팅콘텐츠</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalUseDesignList.do" class="nav-spl-sub__link">전통문양활용</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalPattern.do" class="nav-spl-sub__link">문양의 이해</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/tradition/traditionalPatternUsage.do" class="nav-spl-sub__link">전통문양사용방법</a>
+			</li>
+		</ul>
+		</li>
+		<li class="nav-spl__item">
+		<a href="/culturedata/dataAnalyze.do" class="nav-spl__link nav-spl__link--analysis " aria-expanded="false" aria-haspopup="true">
+		<span>문화정보분석</span>
+		<i></i>
+		</a>
+		<ul class="nav-spl-sub__list">
+			<li class="nav-spl-sub__item">
+			<a href="/culturedata/dataAnalyze.do" class="nav-spl-sub__link">문화정보 데이터분석</a>
+			</li>
+			<li class="nav-spl-sub__item">
+			<a href="/culturedata/culturemap.do" class="nav-spl-sub__link">예술,관광 지도매핑 서비스</a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	<div class="nav-sub__fill">
+	</div>
+	<div class="nav-spl-sub__fill">
+	</div>
+	</nav>
+	<div id="navAll" class="nav-allmenu" tabindex="-1">
+		<div class="allmenu">
+			<div class="allmenu__container">
+				<div class="allmenu__inner">
+					<ul class="allmenu__list">
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-haspopup="true" aria-expanded="true">문화체험</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="">집콕+집밖 문화생활</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/oneeye/oneEyeList.do">한눈에 보는 문화정보</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/perform/relayList.do">문화릴레이티켓</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/space/facility.do?sido=서울&amp;gugun=종로구&amp;facilityCode=&amp;searchKeyword=">문화공간,단체</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/info/sns.do">문화SNS 지도</a>
+							</li>
+						</ul>
+						</li>
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-haspopup="true" aria-expanded="true">문화공감</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturetv/mainList.do">문화TV</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culture/themeList.do">공감리포트</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/magazine/cardnewsList.do">카드뉴스</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/magazine/webzine.do">웹진</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/calendar/view.do">문화캘린더</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/board/list.do">문화마루</a>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="allmenu__inner">
+					<ul class="allmenu__list">
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-haspopup="true" aria-expanded="true">문화지식</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalPatternMain.do">전통문양</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/news/newsList.do">정책뉴스</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/knowledge/reportListNew.do">연구교육자료</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/knowledge/encyclopediaList.do">예술지식백과</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/knowledge/realisticContentList.do">실감형 콘텐츠</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/knowledge/relicList.do">문화유물</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/knowledge/recommendList.do">도서</a>
+							<ul class="allmenu-threedepth__list">
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/knowledge/recommendList.do">추천도서</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/knowledge/seojiList.do">도서서지</a>
+								</li>
+							</ul>
+							</li>
+						</ul>
+						</li>
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-haspopup="true" aria-expanded="true">문화알리미</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturedata/dataAnalyze.do">문화정보분석</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/news/recruitList.do">채용·자원봉사 모집</a>
+							<ul class="allmenu-threedepth__list">
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/news/recruitList.do">채용</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/cultureplan/cultureList.do">자원봉사 모집</a>
+								</li>
+							</ul>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/event/eventRunningList.do">문화이벤트</a>
+							<ul class="allmenu-threedepth__list">
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/event/eventRunningList.do">진행이벤트</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/event/winnerList.do">당첨자발표</a>
+								</li>
+							</ul>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/cultureplan/cultureSupport.do">문화지원사업</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/industry/apiGuideA.do">문화포털API</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/news/noticeList.do">공지사항</a>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="allmenu__inner">
+					<ul class="allmenu__list">
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-haspopup="true" aria-expanded="true">기타</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/info/aboutA.do">이용안내</a>
+							<ul class="allmenu-threedepth__list">
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/info/aboutA.do">사이트소개</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/info/faq.do">자주찾는질문</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/info/inquireList.do">서비스문의</a>
+								</li>
+							</ul>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/mypage/mypage.do">마이페이지</a>
+							<ul class="allmenu-threedepth__list">
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/mypage/information.do">개인정보수정</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/mypage/document.do">나의게시물</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/mypage/event.do">이벤트</a>
+								</li>
+								<li class="allmenu-threedepth__item">
+								<a class="allmenu-threedepth__link" href="/mypage/ticket.do">예매내역</a>
+								</li>
+							</ul>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/english.do">English</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/cultureplan/cardList.do">문화융성카드</a>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="allmenu__inner">
+					<ul class="allmenu__list">
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-expanded="false" aria-haspopup="true">문화TV</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturetv/videoList.do">문화영상</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturetv/unescoList.do">유네스코 등재유산</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturetv/culture100List.do">한국문화100</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturetv/job30List.do">문화인터뷰</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturetv/publicMovList.do">기관별영상</a>
+							</li>
+						</ul>
+						</li>
+						<li class="allmenu__item">
+						<a href="" class="allmenu__link allmenu__link--only" aria-current="page">집콕+집밖 문화생활</a>
+						<ul class="allmenu-twodepth__list">
+						</ul>
+						</li>
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-expanded="false" aria-haspopup="true">전통문양</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalDesignPatternList.do">디자인문양</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalShapeList.do">형태별문양</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalUseList.do">용도별문양</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalUsePatternList.do">활용디자인</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalSpecialExhibitionList.do">전통문양특별전</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditional3DContentsList.do">3D프린팅콘텐츠</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalUseDesignList.do">전통문양활용</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalPattern.do">문양의 이해</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/tradition/traditionalPatternUsage.do">전통문양사용방법</a>
+							</li>
+						</ul>
+						</li>
+						<li class="allmenu__item">
+						<a href="javascript:void(0);" class="allmenu__link" aria-expanded="false" aria-haspopup="true">문화정보분석</a>
+						<ul class="allmenu-twodepth__list">
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturedata/dataAnalyze.do">문화정보 데이터분석</a>
+							</li>
+							<li class="allmenu-twodepth__item">
+							<a class="allmenu-twodepth__link" href="/culturedata/culturemap.do">예술,관광 지도매핑 서비스</a>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</header>
+	<!-- // header -->
+	<!-- // header -->
+	<!-- CONTENTS -->
+
+
+
+	
+
+
+
+
+	<!-- //CONTENTS -->
+	<!-- 관련기관 안내 -->
+	<div id="agencyContents" class="agency__container">
+		<div class="section">
+			<div class="section__header">
+				<p class="section__header--title">
+					관련기관 안내
+				</p>
+			</div>
+			<div class="section__swiper-group">
+				<div class="section__swiper section__swiper--agency-logo swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.museum.go.kr/site/main/home" target="_blank" title="국립중앙박물관새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211152581383.jpg" alt="국립중앙박물관">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.korean-national-ballet.kr/ko" target="_blank" title="국립발레단(KOREAN NATIONAL BALLET)새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211145113463.jpg" alt="국립발레단(KOREAN NATIONAL BALLET)">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.nationalopera.org/" target="_blank" title="국립오페라단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211143896134.jpg" alt="국립오페라단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.kncdc.kr/ko/main" target="_blank" title="국립현대무용단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211141943691.jpg" alt="국립현대무용단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.nsac.or.kr/Home/Main.aspx" target="_blank" title="남산예술센터 x삼일로창고극장새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211134514528.jpg" alt="남산예술센터 x삼일로창고극장">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.snart.or.kr/" target="_blank" title="성남아트센터새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211123757510.jpg" alt="성남아트센터">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.ansanart.com/index.do" target="_blank" title="안산문화재단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211122070650.jpg" alt="안산문화재단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.jeongdong.or.kr/portal/main/main.do" target="_blank" title="정동극장새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221112600876.jpg" alt="정동극장">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://theater.arko.or.kr/Pages/Main.aspx" target="_blank" title="한국문화예술위원회 새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211114700500.jpg" alt="한국문화예술위원회 ">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.ntck.or.kr" target="_blank" title="국립극단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211151173359.jpg" alt="국립극단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.spac.or.kr/" target="_blank" title="서울예술단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211132877005.jpg" alt="서울예술단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.karts.ac.kr/index_karts.jsp" target="_blank" title="한국예술종합학교새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221110328670.jpg" alt="한국예술종합학교">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.ltikorea.or.kr/" target="_blank" title="한국문학번역원새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221194530136.jpg" alt="한국문학번역원">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.copyright.or.kr/main.do" target="_blank" title="한국저작권위원회새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221192806466.jpg" alt="한국저작권위원회">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.kocca.kr/cop/main.do" target="_blank" title="한국콘텐츠진흥원새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_2019122119803960.jpg" alt="한국콘텐츠진흥원">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.nfm.go.kr" target="_blank" title="국립민속박물관새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221183699687.jpg" alt="국립민속박물관">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.gugak.go.kr/site/main/index001" target="_blank" title="국립국악원새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221181558053.jpg" alt="국립국악원">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.sac.or.kr/SacHome/sachome/main" target="_blank" title="예술의전당새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221175339251.jpg" alt="예술의전당">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.ntok.go.kr/kr/Main/Index" target="_blank" title="국립극장새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221173592982.jpg" alt="국립극장">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://nationalchorus.or.kr/" target="_blank" title="재단법인 국립합창단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20191221165985028.jpg" alt="재단법인 국립합창단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="http://www.mmca.go.kr/main.do" target="_blank" title="국립현대미술관새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211102337173.jpg" alt="국립현대미술관">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://archive.arko.or.kr/" target="_blank" title="아르코예술기록원새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_201912211112673772.jpg" alt="아르코예술기록원">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.gcf.or.kr/main/?load_popup=1" target="_blank" title="김포문화재단새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_20220110973816325.JPG" alt="김포문화재단">
+						</figure>
+						</a>
+						</li>
+						<li class="swiper-slide">
+						<a class="banner" href="https://www.sejongpac.or.kr/portal/main/main.do" target="_blank" title="세종문화회관새창이동">
+						<figure class="banner__figure banner__figure--logo">
+						<img class="banner__img" src="https://www.culture.go.kr/upload/banner/banner_2022031815421271992.jpg" alt="세종문화회관">
+						</figure>
+						</a>
+						</li>
+					</ul>
+				</div>
+				<button type="button" class="section__swiper--prev">이전</button>
+				<button type="button" class="section__swiper--next">다음</button>
+			</div>
+		</div>
+	</div>
+	<!-- //관련기관 안내 -->
+	<!-- footer -->
+	<div class="floating">
+		<a href="/culture/publicize.do">문화홍보<br>
+		등록</a>
+	</div>
+	<footer class="footer" id="footer">
+	<div class="footer__util">
+		<div class="footer__inner">
+			<ul class="footer__policy">
+				<li class="footer__policy--item"><a href="/info/aboutA.do" target="_blank" title="새 창">문화포털이란?</a></li>
+				<li class="footer__policy--item"><a href="#" class="agency__trigger" aria-expanded="false" aria-owns="agencyContents">관련기관 안내</a></li>
+				<li class="footer__policy--item"><a href="/culture/publicize.do" target="_blank" title="새 창">문화홍보등록</a></li>
+				<li class="footer__policy--item"><a href="/info/copyrightGuide.do" target="_blank" title="새 창">저작권정책</a></li>
+				<li class="footer__policy--item"><a href="/info/privacyPolicy.do" target="_blank" title="새 창">개인정보처리방침</a></li>
+				<li class="footer__policy--item"><a href="/info/searchPolicy.do" target="_blank" title="새 창">검색결과수집정책</a></li>
+				<li class="footer__policy--item"><a href="/ticketadmin" target="_blank" title="새 창">참여단체</a></li>
+			</ul>
+			<div class="footer__family">
+				<label for="familySite" class="a11y__sr--only">관련 사이트 선택</label>
+				<select id="familySite" class="footer__family--select">
+					<option value="">관련 사이트</option>
+					<option value="https://webzine.kcisa.kr/vol005/index.php">웹진 이데아 Vol.5</option>
+					<option value="https://www.culture.go.kr/ic/"> 5G기반 실감형전시플랫폼</option>
+					<option value="https://www.kogl.or.kr/">공공누리</option>
+					<option value="https://qi.kcisa.kr/">모바일큐아이</option>
+					<option value="https://www.culture.go.kr/data/main/main.do">문화공공데이터광장</option>
+					<option value="https://www.culture.go.kr/deduction/">문화비소득공제</option>
+					<option value="https://www.bigdata-culture.kr/bigdata/user/main.do">문화빅데이터플랫폼</option>
+					<option value="http://ggpassrecruit.kr">경기도사회서비스원채용공고</option>
+				</select>
+				<button type="button" title="선택된 관련 사이트 새창으로 열기">이동</button>
+			</div>
+		</div>
+	</div>
+	<div class="footer__info">
+		<div class="footer__inner">
+			<div class="footer__left">
+				<ul class="footer__link">
+					<li class="footer__link--item"><a href="https://www.kcisa.kr" target="_blank" title="KCISA 한국문화정보원 새 창 열림"><img src="https://www.culture.go.kr/assets/images/common/footer_link01.png" alt="KCISA 한국문화정보원 새 창 열림"></a></li>
+					<li class="footer__link--item"><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="문화체육관광부 새 창 열림"><img src="https://www.culture.go.kr/assets/images/common/footer_link02.png" alt="문화체육관광부 새 창 열림"></a></li>
+				</ul>
+				<address class="footer__address">
+				<p class="footer__address--desc">
+					 대표전화 <a href="tell:1688-2220">1688-2220</a> / 이메일 <a href="mailto:culture@kcisa.kr">culture@kcisa.kr</a><br>
+					 사업자번호 101-82-10054 / 통신판매업신고 2018-서울마포-1502 / 대표자 홍희경<br>
+					 우) 03925 서울시 마포구 월드컵북로 400
+				</p>
+				</address>
+				<p class="footer__copylight">
+					COPYRIGHT&copy; 한국문화정보원
+				</p>
+			</div>
+			<div class="footer__right">
+				<div class="footer-sns">
+					<div class="sns">
+						<ul class="sns__list">
+							<li class="sns__item">
+							<a href="https://www.youtube.com/channel/UCl02ZJk18gXDfs-Gl76PDSw" target="_blank" class="sns__link" title="한국문화정보원(유튜브)새창 열림"><img src="https://www.culture.go.kr/assets/images/common/ico_footer_youtube.png" alt="한국문화정보원(유튜브)"></a>
+							</li>
+							<li class="sns__item">
+							<a href="https://www.instagram.com/culture_portal/" target="_blank" class="sns__link" title="한국문화정보원(인스타그램)새창 열림"><img src="https://www.culture.go.kr/assets/images/common/ico_footer_instagram.png" alt="한국문화정보원(인스타그램)"></a>
+							</li>
+							<li class="sns__item">
+							<a href="https://www.facebook.com/cultureportal" target="_blank" class="sns__link" title="한국문화정보원(페이스북)새창 열림"><img src="https://www.culture.go.kr/assets/images/common/ico_footer_facebook.png" alt="한국문화정보원(페이스북)"></a>
+							</li>
+							<li class="sns__item">
+							<a href="https://blog.naver.com/kcis_" target="_blank" class="sns__link" title="한국문화정보원(네이버블로그)새창 열림"><img src="https://www.culture.go.kr/assets/images/common/ico_footer_blog_02.png" alt="한국문화정보원(네이버블로그)"></a>
+							</li>
+							<li class="sns__item">
+							<a href="https://tv.naver.com/culturepd" target="_blank" class="sns__link" title="한국문화정보원(네이버TV)새창 열림"><img src="https://www.culture.go.kr/assets/images/common/ico_footer_navertv.png" alt="한국문화정보원(네이버TV)"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="footer__auth">
+					<li class="footer__auth--item"><a href="/info/accessibility.do" target="_blank" title="웹접근성 새 창 열림"><img src="https://www.culture.go.kr/assets/images/common/img_footer_auth_wa_2022.png" alt="웹접근성 새 창 열림"></a></li>
+					<li class="footer__auth--item"><a href="https://www.kogl.or.kr/index.do" target="_blank" title="공공누리 새 창 열림"><img src="https://www.culture.go.kr/assets/images/common/img_footer_auth_open.png" alt="공공누리 새 창 열림"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</footer>
+	<!-- //footer -->
+	<!-- 참여기관 안내 배너 -->
+	<div role="dialog" id="partnerModal" class="modal-container" aria-labelledby="partnerModalTitle" aria-modal="true" aria-hidden="true" tabindex="0">
+		<div class="modal">
+			<div class="modal__dimmed">
+			</div>
+			<div class="modal__body">
+				<div class="modal__header">
+					<p id="partnerModalTitle" class="modal__header--title">
+						참여기관 안내
+					</p>
+				</div>
+				<div class="modal__contents">
+					<div class="section">
+						<div class="section__header">
+							<p class="section__header--title">
+								참여기관
+							</p>
+						</div>
+						<ul class="partner">
+							<li class="partner__item">
+							<a href="https://www.kotpa.org" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner01.png" alt="(재)전통공연예술진흥재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.gwdt.or.kr/kor/main/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner02.png" alt="강원도립극단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.gwcf.or.kr/ko/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner03.png" alt="강원문화재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner04.png" alt="경찰청" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.msit.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner05.png" alt="과학기술정보통신부" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.gugak.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner06.png" alt="국립국악원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.ntck.or.kr/ko" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner07.png" alt="국립극단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner08.png" alt="국립김해박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://naju.museum.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner09.png" alt="국립나주박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://namwon.gugak.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner10.png" alt="국립민속국악원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.cfnmk.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner11.png" alt="국립박물관문화재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.korean-national-ballet.kr/ko" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner12.png" alt="국립발레단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://busan.gugak.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner13.png" alt="국립부산국악원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://buyeo.museum.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner14.png" alt="국립부여박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.acc.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner15.png" alt="국립아시아문화전당" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.nlcy.go.kr/NLCY/main/index.do" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner16.png" alt="국립어린이청소년도서관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.nationalopera.org/cpage" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner17.png" alt="국립오페라단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner18.png" alt="국립익산박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://jeonju.museum.go.kr/korean/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner19.png" alt="국립전주박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner20.png" alt="국립제주박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.ntok.go.kr/kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner21.png" alt="국립중앙극장" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.nl.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner22.png" alt="국립중앙도서관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner23.png" alt="국립진주박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://cheongju.museum.go.kr/www/index.do" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner24.png" alt="국립청주박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.hangeul.go.kr/main.do" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner25.png" alt="국립한글박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://kncdc.kr/ko/main" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner26.png" alt="국립현대무용단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.mmca.go.kr/main.do" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner27.png" alt="국립현대미술관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kspo.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner28.png" alt="국민체육진흥공단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.nts.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner29.png" alt="국세청" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.arirang.com" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner30.png" alt="국제방송교류재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner31.png" alt="기상청" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.moef.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner32.png" alt="기획재정부" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.kumdo.org/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner33.png" alt="대한검도회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.much.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner34.png" alt="대한민국역사박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.koreabadminton.org/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner35.png" alt="대한배드민턴협회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://kaf.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner36.png" alt="대한산악연맹" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.sports.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner37.png" alt="대한체육회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.kortennis.co.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner38.png" alt="대한테니스협회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.cha.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner39.png" alt="문화재청" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.bpcf.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner40.png" alt="부평구문화재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.spac.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner41.png" alt="서울예술단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://yangjae.seocholib.or.kr/docyan/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner42.png" alt="서초구립양재도서관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner43.png" alt="시립마포노인종합복지관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.mfds.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner44.png" alt="식품의약품안전처" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.asan.go.kr/main" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner45.png" alt="아산시" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.mogef.go.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner46.png" alt="여성가족부" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kofic.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner47.png" alt="영화진흥위원회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.sac.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner48.png" alt="예술의전당" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.ito.or.kr" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner49.png" alt="인천관광공사" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.icdonggu.go.kr/open_content/main/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner50.png" alt="인천광역시 동구" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.incheon.go.kr/museum/index" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner51.png" alt="인천광역시립박물관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner52.png" alt="인천광역시미추홀도서관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner53.png" alt="인천문화예술회관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://ifac.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner54.png" alt="인천문화재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://iscf.kr/_new/html/index/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner55.png" alt="인천서구문화재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner56.png" alt="전라남도립국악단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.jfac.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner57.png" alt="제주문화예술재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner58.png" alt="진주시립이성자미술관" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.pajubookcity.org/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner59.png" alt="출판도시문화재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner60.png" alt="충청남도역사문화연구원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner61.png" alt="충청북도" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.koreansymphony.com/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner62.png" alt="코리안심포니오케스트라" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.tpf.or.kr/tpf/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner63.png" alt="태권도진흥재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kofac.re.kr" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner64.png" alt="한국과학창의재단" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://www.visitkorea.or.kr" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner65.png" alt="한국관광공사" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="http://kofice.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner66.png" alt="한국국제문화교류진흥원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.ltikorea.or.kr" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner67.png" alt="한국문학번역원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kcti.re.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner68.png" alt="한국문화관광연구원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.arte.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner69.png" alt="한국문화예술교육진흥원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.arko.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner70.png" alt="한국문화예술위원회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://kccf.or.kr" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner71.png" alt="한국문화원연합회" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.koreafilm.or.kr/main" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner72.png" alt="한국영상자료원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kcopa.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner73.png" alt="한국저작권보호원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.ksponco.or.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner74.png" alt="한국체육산업개발주식회사" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kpipa.or.kr" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner75.png" alt="한국출판문화산업진흥원" class="partner__img"></a>
+							</li>
+							<li class="partner__item">
+							<a href="https://www.kocca.kr/" target="_blank" title="새 창"><img src="../assets/images/specialized/culturelife/img_logo_partner76.png" alt="한국콘텐츠진흥원" class="partner__img"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<button type="button" class="modal__close">닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- //참여기관 안내 배너 -->
+</div>
+</body>
+</html>
