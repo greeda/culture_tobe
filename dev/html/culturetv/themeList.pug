@@ -1,0 +1,45 @@
+extends /_src/_pug/_extend_html5
+
+block append css
+    //- link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+
+block contents
+    #container.pageClassSub
+        #content(role='main')
+            .content-inner
+                nav.breadcrumb
+                    .location-area
+                        ol.location-content
+                            li
+                                a(href="#") 홈
+                            li
+                                a(href="#") 문화공감
+                            li
+                                a(href="#") 문화TV
+                            li
+                                a.on(href="#") 공감리포트
+                    .share-area
+                        ul.share-content
+                            li
+                                a.link-share(href="#")
+                            li
+                                a.link-print(href="#")
+                section.visual-top
+                    .section-inner
+                        .title-area
+                            h1.title-h1 공감리포트
+                                |
+                                span.txt 최신 문화이슈와 문화현장을 생생하게 전달합니다.
+
+                        .visual-area
+                            .visual-content-box
+                                .video 비디오 컨텐츠 영역
+                            .visual-text-box
+                                h3.title-h3 [정부위원회 246개 통폐합···40% 가까이 정비 [뉴스의 맥]
+                                p.sub-txt 김용민 앵커 > 앞서 국무회의 소식 전해드렸는데요. 국무회의 주요 안건을 취재기자와 자세히 알아보겠습니다. 임소형 기자 나와있습니다. 윤 대통령이 정부세종청사에서 국무회의를 주재한 건 이번이 두 번째였는데요. 어떤 안건들이 다뤄졌습니까. …
+                                dl.info
+                                    dt 출처
+                                    dd 한국정책방송원
+
+                                
+
