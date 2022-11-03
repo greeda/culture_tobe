@@ -46,18 +46,4 @@
       -ms-transform: rotate(45deg);
           transform: rotate(45deg); }
 
-.ui-swiper04 .swiper-slide {
-  width: 500px;
-  width: 50rem;
-  height: 500px;
-  height: 50rem;
-  margin-right: 20px;
-  margin-right: 2rem;
-  background-color: #ffffff; }
-
-.ui-swiper04 .video-item-container {
-  width: 480px;
-  height: 480px;
-  margin: 0 auto; }
-
-/*# sourceMappingURL=../sass_maps/component_carousel.css.map */
+/*# sourceMappingURL=../../sass_maps/css_partials/component_carousel.css.map */

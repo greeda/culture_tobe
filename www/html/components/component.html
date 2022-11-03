@@ -52,13 +52,26 @@
             </div>
           </div>
           <div class="et--component-content">
-            <h2 class="et--component-title">List</h2>
+            <h2 class="et--component-title">공통</h2>
             <div class="et--component-group">
-              <h3 class="et--component-group-title01">List</h3>
+              <h3 class="et--component-group-title01">Swiper</h3>
               <div class="et--component-group-sub">
-                <h4 class="et--component-group-title02">기본</h4>
+                <h4 class="et--component-group-title02">타입 1</h4>
                 <div class="et--component-view">
-                  <!--code-->
+                  <div class="default-swiper">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">1</div>
+                        <div class="swiper-slide">2</div>
+                        <div class="swiper-slide">3</div>
+                        <div class="swiper-slide">4</div>
+                        <div class="swiper-slide">5</div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="et--component-code">
                   <div class="options">
@@ -71,14 +84,28 @@
                   </div>
                   <div class="et--component-code-box">
                     <pre>
-//code
+.default-swiper
+    .swiper-container
+        .swiper-wrapper
+            .swiper-slide 1
+            .swiper-slide 2
+            .swiper-slide 3
+            .swiper-slide 4
+            .swiper-slide 5
+
+        //- Add Pagination
+        .swiper-pagination
+        //- Add Arrows
+        .swiper-button-prev
+        .swiper-button-next
+
 
 </pre>
                   </div>
                 </div>
 
                 <div class="et--component-note">
-                  <pre># &#60;a>&#60;/a> 샘플</pre>
+                  <pre># https://swiperjs.com/demos</pre>
                 </div>
               </div>
             </div>
@@ -91,6 +118,22 @@
     <img src="/images/common/blank_size_100.png" alt="">
   </div>
   <script src="components.js"></script>
+  <script>
+    var swiper = new Swiper('.default-swiper .swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      watchOverflow: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+  </script>
 </body>
 
 </html>

@@ -61,19 +61,3 @@
         }
     }
 }
-
-// 테스트용 컨텐츠 스타일 - 비디오
-.ui-swiper04{
-    .swiper-slide{
-        @include rem(width, 500px);
-        @include rem(height, 500px);
-        @include rem(margin-right, 20px);
-        background-color:#ffffff;
-    }
-    .video-item-container{
-        width:480px;
-        height:480px;
-        margin:0 auto;
-    }
-    .video-item-container .video-file{}
-}

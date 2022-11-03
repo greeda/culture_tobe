@@ -1,0 +1,63 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title 공통
+
+                    .et--component-group
+                        h3.et--component-group-title01 Swiper
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 1
+
+                            :code
+                                .default-swiper
+                                    .swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide 1
+                                            .swiper-slide 2
+                                            .swiper-slide 3
+                                            .swiper-slide 4
+                                            .swiper-slide 5
+
+                                        //- Add Pagination
+                                        .swiper-pagination
+                                        //- Add Arrows
+                                        .swiper-button-prev
+                                        .swiper-button-next
+
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 14.
+                                pre.
+                                    # https://swiperjs.com/demos
+block footer
+
+block script
+    script(src="components.js")
+    script.
+        var swiper = new Swiper('.default-swiper .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
