@@ -1,14 +1,9 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "NotoSans-Black";
-  src: url("../font/NotoSans-Black.eot");
-  /* IE 6 ~ 8, IE 호환성 보기 */
-  src: local(☺), url("../font/NotoSans-Black.woff2") format("woff2"), url("../font/NotoSans-Black.woff") format("woff"), url("../font/NotoSans-Black.ttf") format("truetype"); }
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap");
 .fonts-load {
   visibility: hidden; }
 
 .fonts-loaded .fonts-load {
   visibility: visible; }
 
-/*# sourceMappingURL=../sass_maps/font.css.map */
+/*# sourceMappingURL=../../sass_maps/css_partials/font.css.map */

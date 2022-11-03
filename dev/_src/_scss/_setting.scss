@@ -30,7 +30,7 @@ $global-font-size: 10px !default;
 // font-familu, line-height, word-break, word-wrap, letter-spacing
 // ******************** code comments ********************
 $global-font-family: (
-    'ko': ('Malgun Gothic', '맑은 고딕', Dotum, '돋움', arial, verdana, sans-serif),
+    'ko': (Noto Sans KR, 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', arial, verdana, sans-serif),
     'en': (Helvetica, Arial, sans-serif),
     'ja': ('Meiryo', 'メイリオ', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif),
     'zh': (Helvetica, Arial, 'Microsoft Yahei','微软雅黑', STXihei, '华文细黑', sans-serif)

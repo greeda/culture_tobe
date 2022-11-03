@@ -1,10 +1,5 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "NotoSans-Black";
-  src: url("../font/NotoSans-Black.eot");
-  /* IE 6 ~ 8, IE 호환성 보기 */
-  src: local(☺), url("../font/NotoSans-Black.woff2") format("woff2"), url("../font/NotoSans-Black.woff") format("woff"), url("../font/NotoSans-Black.ttf") format("truetype"); }
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 .fonts-load {
   visibility: hidden; }
 
@@ -26,7 +21,7 @@ html {
   font-size: 10px;
   font-weight: 400; }
   html:lang(ko) {
-    font-family: "Malgun Gothic", "맑은 고딕", Dotum, "돋움", arial, verdana, sans-serif; }
+    font-family: Noto Sans KR, "Malgun Gothic", "맑은 고딕", Dotum, "돋움", arial, verdana, sans-serif; }
   html:lang(en) {
     font-family: Helvetica, Arial, sans-serif; }
   html:lang(ja) {
