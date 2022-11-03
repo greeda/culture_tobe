@@ -19,22 +19,25 @@
 
 
 
-@font-face {
-    font-family: "NotoSans-Black";
-    // font-weight: 900;
-    src: url('../font/NotoSans-Black.eot'); /* IE 6 ~ 8, IE 호환성 보기 */
-    src: local(☺),
-    url('../font/NotoSans-Black.woff2') format('woff2'), /* IE Edge, WOFF2 지원 브라우저 */
-    url('../font/NotoSans-Black.woff') format('woff'), /* IE 9+, 모던 브라우저 */
-    url('../font/NotoSans-Black.ttf') format('truetype');
-}
+// @font-face {
+//     font-family: "NotoSans-Black";
+//     // font-weight: 900;
+//     src: url('../font/NotoSans-Black.eot'); /* IE 6 ~ 8, IE 호환성 보기 */
+//     src: local(☺),
+//     url('../font/NotoSans-Black.woff2') format('woff2'), /* IE Edge, WOFF2 지원 브라우저 */
+//     url('../font/NotoSans-Black.woff') format('woff'), /* IE 9+, 모던 브라우저 */
+//     url('../font/NotoSans-Black.ttf') format('truetype');
+// }
 
 
 
 
 // 구글 API로 세팅 할때 아래 소스 사용
 // noto sans kr
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
 
 // noto sans jp
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
