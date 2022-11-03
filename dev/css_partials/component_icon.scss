@@ -182,24 +182,3 @@
  * tag
  * default
  */
-.tag{
-    display:inline-flex;
-    align-items: center;
-    background-color:#f8f8f8;
-    @include rem(height, 19);
-    @include rem(border-radius, 12);
-    @include rem(padding, 0 8);
-    .txt{
-        @include font-size(10, 10);
-    }
-    &.bg01{
-        background-color:blue;
-        .txt{color:#ffffff;}
-    }
-    &.bg02{
-        background-color:red;
-        .txt{color:#000000;}
-    }
-    &.color01 .txt{color:red;}
-    &.color02 .txt{color:blue;}
-}

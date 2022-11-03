@@ -217,37 +217,5 @@
  * tag
  * default
  */
-.tag {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #f8f8f8;
-  height: 19px;
-  height: 1.9rem;
-  border-radius: 12px;
-  border-radius: 1.2rem;
-  padding: 0px 8px;
-  padding: 0rem 0.8rem; }
-  .tag .txt {
-    font-size: 10px;
-    font-size: 1rem;
-    line-height: 1; }
-  .tag.bg01 {
-    background-color: blue; }
-    .tag.bg01 .txt {
-      color: #ffffff; }
-  .tag.bg02 {
-    background-color: red; }
-    .tag.bg02 .txt {
-      color: #000000; }
-  .tag.color01 .txt {
-    color: red; }
-  .tag.color02 .txt {
-    color: blue; }
 
 /*# sourceMappingURL=../sass_maps/component_icon.css.map */

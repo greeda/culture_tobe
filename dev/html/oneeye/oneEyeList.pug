@@ -1,7 +1,6 @@
 extends /_src/_pug/_extend_html5
 
 block append css
-    //- link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
     link(href=`${pathSettingHtml}css/oneEye.css`, type='text/css', rel='stylesheet')
 
 block contents
@@ -14,9 +13,11 @@ block contents
                             li
                                 a(href="#") 홈
                             li
-                                a(href="#") 문화체험
+                                a(href="#") 문화공감
                             li
-                                a.on(href="#") 집콕+집밖 문화생활
+                                a(href="#") 문화TV
+                            li
+                                a.on(href="#") 공감리포트
                     .share-area
                         ul.share-content
                             li
@@ -39,6 +40,5 @@ block contents
                                 dl.info
                                     dt 출처
                                     dd 한국정책방송원
-
-                                
-
+                section.life-section
+                    .section-inner

@@ -146,18 +146,6 @@ a:before {
   display: block; }
 
 /*! 공통 레이아웃 속성 */
-html, body {
-  height: 100%; }
-
-#wrap {
-  height: 100%; }
-
-#container {
-  height: 100%; }
-
-#content {
-  height: 100%; }
-
 /*! 아이콘 공통 속성 */
 [class^="ico-"] {
   display: inline-block;
