@@ -1,0 +1,70 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Input
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input Radio
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                span.input-radio
+                                    input(type="radio" id="radio201" name="radio201")
+                                    label(for="radio201")
+                                        span.hide-txt 숨김텍스트처리
+                                span.input-radio
+                                    input(type="radio" id="radio202" name="radio202" checked)
+                                    label(for="radio202")
+                                        span.hide-txt 숨김텍스트처리
+                                span.input-radio
+                                    input(type="radio" id="radio203" name="radio203" disabled)
+                                    label(for="radio203")
+                                        span.hide-txt 숨김텍스트처리
+                                span.input-radio
+                                    input(type="radio" id="radio204" name="radio204" checked disabled)
+                                    label(for="radio204")
+                                        span.hide-txt 숨김텍스트처리
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 label
+
+                            :code
+                                span.input-radio.right
+                                    input(type="radio" id="radio211" name="radio211")
+                                    label(for="radio211")
+                                        span.txt 텍스트 오른쪽
+                                span.input-radio.left
+                                    input(type="radio" id="radio221" name="radio221")
+                                    label(for="radio221")
+                                        span.txt 텍스트 왼쪽
+                                span.input-radio.down
+                                    input(type="radio" id="radio231" name="radio231")
+                                    label(for="radio231")
+                                        span.txt 텍스트 아래쪽
+                                span.input-radio.up
+                                    input(type="radio" id="radio241" name="radio241")
+                                    label(for="radio241")
+                                        span.txt 텍스트 위쪽
+
+                            .et--component-note
+                                pre.
+                                    # 텍스트의 위치에 따라 right, left, up, down 클래스를 붙여줍니다.
+block footer
+
+block script
+    script(src="components.js")

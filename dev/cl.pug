@@ -1,0 +1,320 @@
+extends /_src/_pug/_extend_html5
+
+block title
+    title 코딩리스트
+
+block css
+    //- www
+    if NODE_ENV === 'development'
+        link(href='css_partials/codinglist.css', type='text/css', rel='stylesheet')
+    //- build
+    else
+        style
+            include /css_partials/codinglist.scss
+
+
+block contents
+    block header
+
+    //- 코딩리스트 테이블 컨텐츠
+    mixin cl_table_auto(data, type)
+        - var type = type || ""
+        - var htmlRoot = "./"
+        - var htmlPath = "html/"
+        - var outLink = `http://uxdev.etribe.co.kr/${project_name}/`
+        - var pageNameSetting = 5 // page(ID)
+        - var pagePathSetting = 6 // path
+        - var pageCompleteSetting = 7 // 완료일
+        - var pageStatusSetting = 8 // 상태
+
+        table.cl-table(class=type)
+            thead
+                tr
+                    //- each head, i in header
+                    //-     th #{head}
+                    th no
+                    th depth 1
+                    th depth 2
+                    th depth 3
+                    th depth 4
+                    th depth 5
+                    th page(ID)
+                    th view
+                    th 완료일
+                    th 상태
+                    th 비고
+            tbody
+                each row, j in data
+                    tr
+                        td
+                        each col, k in row
+                            //- 비고 영역
+                            if(k == row.length - 1)
+                                td(class="cl-table-td0"+k)
+                                    each etc, l in col
+                                        div(class=etc[0])!= etc[1]
+                            //- 페이지 이름(ID)
+                            else if(k == pageNameSetting)
+                                td(data-page-name=col class="cl-table-td-name cl-table-td0"+k)!= col
+                            //- 페이지 경로
+                            else if(k == pagePathSetting)
+                                td(data-page-path=col class="cl-table-td-path cl-table-td0"+k)
+                                    div.path-btn-area
+                                        a(href=htmlRoot+htmlPath+col) [열림]
+                                        a(href=htmlRoot+htmlPath+col target="_blank") [새창열림]
+                                        a(role="button" data-preview-mode-txt=htmlPath+col).ui--preview-mode [Preview]
+                                        //a(href=outLink+htmlPath+col target="_blank") [uxdev]
+                                    div.path-txt-wrap
+                                        div.path-txt-area!= htmlPath+col
+                            //- 완료일
+                            else if(k == pageCompleteSetting)
+                                td(data-page-complete=col class="cl-table-td-complete cl-table-td0"+k)!= col
+                            //- 상태표시
+                            else if(k == pageStatusSetting)
+                                td(data-page-Status=col class="ui--page-status cl-table-td-status cl-table-td0"+k)!= col
+                            //- 기본 테이블
+                            else
+                                td(class="cl-table-td0"+k)!= col
+
+
+    #content(role='main')
+        //- 코딩리스트 레이아웃
+        mixin link-category(items)
+            div.cl-info-area
+                h1.project-tit
+                    | 문화포털 고도화 운영 프로젝트
+
+            div.cl-link-area
+                //- 필요시 주석 해제
+                //- div.link-other
+                //-     a(href="#", target="_blank") 외부링크1
+                //-     a(href="#", target="_blank") 외부링크2
+                //-     a(href="#", target="_blank") 외부링크3
+
+                .link-category-container
+                    div.link-category
+                        each item in items
+                            a(href='#ct'+item[1])!= item[0]
+
+                div.page-count-area
+                    span.pc-all 전체
+                        span 0
+                    span.pc-ing 진행중
+                        span 0
+                    //- span.pc_modify 수정중
+                    //- 	span 0
+                    span.pc-end 완료
+                        span 0
+                    span.pc-percent 진행률
+                        span 0
+                        | %
+
+            each item in items
+                div(id='ct'+item[1]).cl-category-link
+                    div.cl-list-area
+                        div.cl-list-detail
+                            h2.cl-category-tit!= item[0]
+                                span.page-count-category
+                            //- 코딩리스트 갯수만큼 아래 목록 추가 하기
+                            case item[1]
+                                when 'p1'
+                                    include _codinglist/_components_cl
+                                when 1
+                                    include _codinglist/_cl01
+                                when 2
+                                    include _codinglist/_cl02
+
+                            //-
+                                when 4
+                                    include _codinglist/_cl04
+                                when 5
+                                    include _codinglist/_cl05
+                                when 6
+                                    include _codinglist/_cl06
+                                when 7
+                                    include _codinglist/_cl07
+                                when 8
+                                    include _codinglist/_cl08
+                                when 9
+                                    include _codinglist/_cl09
+                                when 10
+                                    include _codinglist/_cl10
+
+        //- 코딩리스트 카테고리별 항목 데이터 입력 영역
+        //- 위 case 문에서 include 파일 목록 추가 해야함
+        +link-category(
+            [
+                ['1. 문화포털', 1],
+                ['2. 문화공감', 2],
+                ['components', 'p1'],
+            ]
+        )
+
+    block footer
+
+    //- 코딩리스트 preview
+    .frame-preview
+        .frame-wrap
+            .frame-head
+                a.frame-page(href="#none" target="_blank")
+                .frame-sort
+                    select
+                        option(value="375*629") iPhone 12 Mini
+                        option(value="375*667" selected) iPhone 6/7/8
+                        option(value="414*736") iPhone 6/7/8 Plus
+                        option(value="375*812") iPhone X
+                        option(value="360*640") Galaxy S5
+                    p.frame-size 375 X 667
+            .frame-inner(style="width: 375px; height: 667px;")
+                iframe(src="" frameborder="0") 미리보기 화면
+        button(type="button").frame-toggle
+            span.hide-txt 창 닫기
+
+
+    a(href="#content").btn-top TOP
+
+
+block script
+    script(src='js/jquery.js')
+
+    script.
+        $(function () {
+            var allCount = $('.ui--page-status:contains()').length;
+            var noCount = $('.ui--page-status:contains(-)').length;
+            var endCount = $('.ui--page-status:contains(완료)').length;
+            var ingCount = $('.ui--page-status:contains(진행중)').length;
+            //- var modifyCount = $('.p_status:contains(수정중)').length;
+
+            // 전체 페이지 (전체 페이지 - 페이지아닌것들)
+            var all_sum_count = allCount - noCount;
+
+            // 진행률 (완료 페이지 / 전체 페이지 * 100)
+            var eCount = endCount / all_sum_count * 100;
+
+            //- console.log(endCount);
+            //- console.log(ingCount);
+            //- console.log(modifyCount);
+            //- console.log(allCount);
+
+            $('.pc-ing>span').text(ingCount);
+            //- $('.pc_modify>span').text(modifyCount);
+            $('.pc-end>span').text(endCount);
+            //- (-) 대쉬로 표시된 파일들은 카운트 하지 않음
+            $('.pc-all>span').text(all_sum_count);
+            $('.pc-percent>span').text(eCount.toFixed(0));
+
+            // page number auto
+            $('.cl-table>tbody').each(function () {
+                $(this).children().children('td:first-child').each(function (index) {
+                    //- console.log(index);
+                    $(this).text(index + 1);
+                });
+            });
+
+            // 링크 메뉴 sticky
+            var stickyNavTop = $('.cl-link-area').offset().top;
+            var stickyNavHeight = $('.cl-link-area').height();
+
+            var stickyNav = function () {
+                var scrollTop = $(window).scrollTop();
+
+                if (scrollTop > stickyNavTop) {
+                $('.cl-link-area').addClass('cl-link-area-sticky');
+                $('.cl-info-area').css('margin-bottom', stickyNavHeight);
+                } else {
+                $('.cl-link-area').removeClass('cl-link-area-sticky');
+                $('.cl-info-area').css('margin-bottom', '');
+                }
+            };
+            stickyNav();
+            $(window).scroll(function () {
+                stickyNav();
+            });
+
+            // 링크 메뉴 클릭시 화면 스크롤
+            $('a[href*="#"]')
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+                ) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                    scrollTop: target.offset().top - stickyNavHeight
+                    }, 300, function () {
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) {
+                        return false;
+                    } else {
+                        // $target.attr('tabindex', '-1');
+                        $target.focus();
+                    };
+                    });
+                }
+                }
+            });
+
+            // preview
+            function onPreviewBtn() {
+                var $btnPreview = $('.ui--preview-mode');
+                var $framePreview = $('.frame-preview');
+                var $framePreviewToggle = $framePreview.find('.frame-toggle');
+
+                // preview 된 tr 포커스
+                function focusPreviewLink (target) {
+                    $('.cl-table td').removeAttr('style');
+                    target.closest('tr').find('td').css('background', '#161616');
+                }
+
+                // preview 창 열고 닫기
+                function openFrame(link) {
+                    $framePreviewToggle.addClass('on');
+                    $framePreview.css({right: 0});
+
+                    if(link === undefined) return;
+                    $('.frame-page').attr('href', link).text(link);
+                    $framePreview.find('iframe').attr('src', link);
+                }
+
+                function closeFrame(size) {
+                    $framePreviewToggle.removeClass('on');
+                    $framePreview.css({right: -size});
+                }
+
+                $framePreviewToggle.on('click', function(){
+                    var frameWidth = $('.frame-wrap').outerWidth();
+                    $framePreviewToggle.hasClass('on') ? closeFrame(frameWidth) : openFrame();
+                });
+
+                // preview 버튼 클릭
+                $btnPreview.on('click', function(){
+                    var selectedLink = $(this).attr('data-preview-mode-txt');
+
+                    if($(this).hasClass('on')) return;
+
+                    $btnPreview.removeClass('on');
+                    $(this).addClass('on');
+
+                    openFrame(selectedLink);
+                    focusPreviewLink($(this));
+                });
+
+                // preview 창 사이즈 변경
+                $('.frame-sort select').on('change', function(){
+                    var splitValue = $(this).val().split('*');
+                    var widthValue = splitValue[0];
+                    var heightValue = splitValue[1];
+                    $('.frame-inner').css({width: widthValue, height: heightValue});
+                    $('.frame-size').text(widthValue + ' X ' + heightValue);
+                });
+            }
+
+            onPreviewBtn();
+        });

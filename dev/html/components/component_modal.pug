@@ -1,0 +1,156 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title popup
+
+                    .et--component-group
+                        h3.et--component-group-title01 기본 팝업
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                //- 아래 팝업 사용시 .popup-wrap 의 inline style 지우고 사용 할 것
+                                //- 프로토타입용으로 정리 할때는 아래와 같이 inline style 사용 할 것
+                                //- 프로토타입용 small 샘플
+                                .popup-wrap(style="position:relative;display:block;vertical-align:top;width:auto;top:0;left:0;")
+                                    .popup-dialog.small
+                                        .popup-container
+                                            .popup-header
+                                                h1.popup-tit(tabindex="-1") 팝업 예제 small
+                                            .popup-content
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                            .popup-footer
+                                                | 푸터 컨텐츠 버튼등
+                                            button(type="button").btn-close-popup
+                                                span.hide-txt 팝업 닫기
+                                                i.ico-close(aria-hidden="true")
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 스크립트 테스트용
+
+                            :code
+                                .popup-wrap
+                                    .popup-dialog
+                                        .popup-container
+                                            .popup-header
+                                                h1.popup-tit(tabindex="-1") 팝업 제목
+                                            .popup-content
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                            .popup-footer
+                                                | 푸터 컨텐츠 버튼등
+                                            button(type="button").btn-close-popup
+                                                span.hide-txt 팝업 닫기
+                                                i.ico-close(aria-hidden="true")
+                                //- 팝업 테스트용 버튼
+                                a(href="#none" role="button").btn-lv01.blue
+                                    span.txt 팝업테스트 버튼01
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 15.
+                                pre.
+                                    # .popup-wrap 영역이 display:block 되면 팝업 화면에 나타납니다.
+                                    # .popup-dialog 기본 화면 가운데 정렬, 사이즈 가로 100%
+                                    # .popup-dialog.large 기본 화면 가운데 정렬, 사이즈 가로 1200px (프로젝트별로 설정 필요)
+                                    # .popup-dialog.middle 기본 화면 가운데 정렬, 사이즈 가로 800px (프로젝트별로 설정 필요)
+                                    # .popup-dialog.small 기본 화면 가운데 정렬, 사이즈 가로 400px (프로젝트별로 설정 필요)
+                                    # .popup-dialog.top 상단 정렬
+                                    # .popup-dialog.bottom 하단 정렬
+                                    # 사이즈와 정렬 클래스 혼합 사용 가능 합니다.
+
+                    .et--component-group
+                        h3.et--component-group-title01 Modal 팝업
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                //- 아래 팝업 사용시 .modal-popup-wrap 의 inline style 지우고 사용 할 것
+                                //- 프로토타입용으로 정리 할때는 아래와 같이 inline style 사용 할 것
+                                //- 프로토타입용 small 샘플
+                                .modal-popup-wrap(style="position:relative;display:block;vertical-align:top;width:auto;top:0;left:0;")
+                                    .modal-popup-dialog.small
+                                        .modal-popup-container
+                                            .modal-popup-header
+                                                h1.modal-popup-tit(tabindex="-1") 모달 팝업 예제 small
+                                            .modal-popup-content
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 모달 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                            .modal-popup-footer
+                                                | 푸터 컨텐츠 버튼등
+                                            button(type="button").btn-close-popup
+                                                span.hide-txt 팝업 닫기
+                                                i.ico-close(aria-hidden="true")
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 스크립트 테스트용
+
+                            :code
+                                .modal-popup-wrap
+                                    .modal-popup-dialog
+                                        .modal-popup-container
+                                            .modal-popup-header
+                                                h1.modal-popup-tit(tabindex="-1") 팝업 제목
+                                            .modal-popup-content
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                                | 팝업 컨텐츠 영역, 텍스트 및 이미지
+                                            .modal-popup-footer
+                                                | 푸터 컨텐츠 버튼등
+                                            button(type="button").btn-close-popup
+                                                span.hide-txt 팝업 닫기
+                                                i.ico-close(aria-hidden="true")
+
+                                //- 팝업 테스트용 버튼
+                                a(href="#none" role="button").btn-lv01.blue
+                                    span.txt 모달 팝업테스트 버튼01
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 15.
+                                pre.
+                                    # .modal-popup-wrap 영역이 display:block 되면 팝업 화면에 나타납니다.
+                                    # .modal-popup-dialog 기본 화면 가운데 정렬, 사이즈 가로 100%
+                                    # .modal-popup-dialog.large 기본 화면 가운데 정렬, 사이즈 가로 1200px (프로젝트별로 설정 필요)
+                                    # .modal-popup-dialog.middle 기본 화면 가운데 정렬, 사이즈 가로 800px (프로젝트별로 설정 필요)
+                                    # .modal-popup-dialog.small 기본 화면 가운데 정렬, 사이즈 가로 400px (프로젝트별로 설정 필요)
+                                    # .modal-popup-dialog.top 상단 정렬
+                                    # .modal-popup-dialog.bottom 하단 정렬
+                                    # 사이즈와 정렬 클래스 혼합 사용 가능 합니다.
+block footer
+
+block script
+    script(src="components.js")

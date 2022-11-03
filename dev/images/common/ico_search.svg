@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.125" height="45.304" viewBox="0 0 45.125 45.304">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #222;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="icon_검색" transform="translate(2.296 2.296)">
+    <ellipse id="타원_27" data-name="타원 27" class="cls-1" cx="15.565" cy="15.571" rx="15.565" ry="15.571" transform="matrix(0.161, -0.987, 0.987, 0.161, 0, 30.722)"/>
+    <line id="선_42" data-name="선 42" class="cls-1" x1="10.122" y1="10.122" transform="translate(29.878 30.057)"/>
+  </g>
+</svg>

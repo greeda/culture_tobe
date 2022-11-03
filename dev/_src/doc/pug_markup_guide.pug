@@ -1,0 +1,238 @@
+extends /_src/_pug/_extend_html5
+
+block append css
+    //- link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+
+block contents
+    #container.pageClassSub
+        #content(role='main')
+            | 컨텐츠 시작
+
+            //- 기본정렬
+            .component-컴포넌트명-타입
+            .component-컴포넌트명-타입
+            .component-컴포넌트명-타입
+            .component-컴포넌트명-타입
+
+            //- 예외정렬
+            .container
+                .article
+                    .component-컴포넌트명-타입
+                        .section-컴포넌트명-타입
+                            .section-row //- 세로로 정렬되는 컨텐츠를 감싸는 영역
+                                .section-클래스명
+                                .section-tit
+                                .section-item
+                                .section-link
+                                .section-tap
+                            .section-col //- 가로로 정렬되는 컨텐츠를 감싸는 영역
+                                .section-클래스명
+                                .section-tit
+                                .section-item
+                                .section-link
+                                .section-tap
+                            .section-header //- 컨텐츠 상단을 의미할때
+                                .section-클래스명
+                                .section-tit
+                                .section-item
+                                .section-link
+                                .section-tap
+                            .section-content //- 컨텐츠 본문을 의미할때
+                                .section-클래스명
+                                .section-tit
+                                .section-item
+                                .section-link
+                                .section-tap
+                            .section-footer //- 컨텐츠 하단을 의미할때
+                                .section-클래스명
+                                .section-tit
+                                .section-item
+                                .section-link
+                                .section-tap
+
+                            .group-컴포넌트명-타입
+                                .group-row //- 세로로 정렬되는 컨텐츠를 감싸는 영역
+                                    .group-클래스명
+                                    .group-tit
+                                    .group-item
+                                    .group-link
+                                    .group-tap
+                                .group-col //- 가로로 정렬되는 컨텐츠를 감싸는 영역
+                                    .group-클래스명
+                                    .group-tit
+                                    .group-item
+                                    .group-link
+                                    .group-tap
+                                .group-header //- 컨텐츠 상단을 의미할때
+                                    .group-클래스명
+                                    .group-tit
+                                    .group-item
+                                    .group-link
+                                    .group-tap
+                                .group-content //- 컨텐츠 본문을 의미할때
+                                    .group-클래스명
+                                    .group-tit
+                                    .group-item
+                                    .group-link
+                                    .group-tap
+                                .group-footer //- 컨텐츠 하단을 의미할때
+                                    .group-클래스명
+                                    .group-tit
+                                    .group-item
+                                    .group-link
+                                    .group-tap
+
+                                .area-컴포넌트명-타입
+                                    .area-row //- 세로로 정렬되는 컨텐츠를 감싸는 영역
+                                        .area-클래스명
+                                        .area-tit
+                                        .area-item
+                                        .area-link
+                                        .area-tap
+                                    .area-col //- 가로로 정렬되는 컨텐츠를 감싸는 영역
+                                        .area-클래스명
+                                        .area-tit
+                                        .area-item
+                                        .area-link
+                                        .area-tap
+                                    .area-header //- 컨텐츠 상단을 의미할때
+                                        .area-클래스명
+                                        .area-tit
+                                        .area-item
+                                        .area-link
+                                        .area-tap
+                                    .area-content //- 컨텐츠 본문을 의미할때
+                                        .area-클래스명
+                                        .area-tit
+                                        .area-item
+                                        .area-link
+                                        .area-tap
+                                    .area-footer //- 컨텐츠 하단을 의미할때
+                                        .area-클래스명
+                                        .area-tit
+                                        .area-item
+                                        .area-link
+                                        .area-tap
+
+            //- 타입샘플
+            .component-컴포넌트명-타입
+                .component-tit
+                    .component-row
+                        .tit-lv03
+                        .ico-arrow
+                        .bl-arrow
+                        .btn-lv01
+
+            .component-컴포넌트명-타입
+                .section-컴포넌트명-타입
+                    .section-tit
+                        .tit-lv03
+                        .ico-arrow
+                        .bl-arrow
+                        .btn-lv01
+                    .section-content
+
+            .component-컴포넌트명-타입
+                .component-bg
+                    .component-content
+                        .component-item
+                            .component-link
+                                .tit-lv01
+                                .txt-lv01
+
+            .component-컴포넌트명-타입
+                .component-bg
+                    ul.section-컴포넌트명-타입
+                        li
+                    ul.section-컴포넌트명-타입
+                        li.section-item
+                    ul.section-컴포넌트명-타입
+                        li.section-item
+                            a(href="#").section-link
+
+            .component-컴포넌트명-타입
+                .component-bg
+                .component-tit
+                ul.section-컴포넌트명-타입
+                    li
+                    li
+                .component-btn
+
+            .component-컴포넌트명-타입
+                dl.section-컴포넌트명-타입샘플
+                    dt
+                    dd
+                ul.section-컴포넌트명-타입
+                    li
+
+            //- container, article
+                배경, 여백등을 컨트롤 하는 항목
+
+
+            //- component 기본속성 (공통 관리)
+                width:100%; background-color:#ffffff; margin:0; padding:0;
+
+            //- component 간격 (공통 관리)
+                .component + .component 인접선택자로 간격 제어
+                간격 방향 기준은 top
+
+            //- component 추가 클래스 (공통 관리)
+                .space: 좌우 간격
+                .line : 컴퍼넌트 라인
+                .bg : 컴퍼넌트 배경 컬러
+
+            //- 컴퍼넌트명이 붙을 수 있는 클래스
+                .component-
+                .section-
+                .group-
+                .area-
+
+            //- 접두사로 가능한 클래스 이름
+                .component-
+                .section-
+                .group-
+                .area-
+
+            //- 자식 요소로 사용하는 접미사의 종류
+                -item : 리스트 자식요소
+                -link : 링크 자식요소
+                -tap : 클릭 자식요소
+                -content : 컨텐츠 자식요소
+                -header : 상단 자식요소
+                -footer : 하단 자식요소
+                -row : 세로정렬 자식요소
+                -col : 가로정렬 자식요소
+                등등...
+
+
+            //- 아래 클래스들을 중심으로 상속 하여 스타일을 작성한다.
+            //- component-컴포넌트명-타입
+            //- section-컴포넌트명-타입
+            //- group-컴포넌트명-타입
+            //- area-컴포넌트명-타입
+            //- 위 클래스 이하는 미리 약속해둔 접두사나 그 외에 의미있는 접두사로 작성하면 됨
+                component-클래스명
+                section-클래스명
+                group-클래스명
+                area-클래스명
+
+            //- 아래 공통요소들은 모양은 공통으로 만들고 컴포넌트에서의 위치등은 컴포넌트별로 정리
+            //- 타이틀 요소 (공통 관리) - 커스터마이징은 컴포넌트별 관리
+                .tit-lv01
+
+            //- 텍스트 요소 (공통 관리) - 커스터마이징은 컴포넌트별 관리
+                .txt-lv01
+
+            //- 버튼 요소 (공통 관리) - 커스터마이징은 컴포넌트별 관리
+                .btn-cta01
+                .btn-lv01
+
+            //- 아이콘 요소 (공통 관리) - 커스터마이징은 컴포넌트별 관리
+                .ico-이름
+
+            //- 블릿 요소 (공통 관리) - 커스터마이징은 컴포넌트별 관리
+                .bl-이름
+
+
+            //- 주의사항
+                ul,dl,ol 은 단독으로 component 가 될 수 없다. component 는 div 태그만 사용 한다.

@@ -1,0 +1,54 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title 에디터
+
+                    .et--component-group
+                        h3.et--component-group-title01 에디터 리셋 스타일
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                // 아래 클래스만 사용 하세요.
+                                div.editor-reset-style
+                                    ul
+                                        li 1
+                                        li 2
+                                        li 3
+                                    ol
+                                        li 1
+                                        li 2
+                                        li 3
+                                    em abc
+                                    i abc
+                                    b abc
+                                    strong abc
+                                    h1 가나다
+                                    h2 가나다
+                                    h3 가나다
+                                    h4 가나다
+                                    h5 가나다
+                                    h6 가나다
+
+                            .et--component-note
+                                pre.
+                                    # 리셋이 필요한 위치(에디터 영역등)에 editor-reset-style 클래스를 사용하면 됩니다.
+                                    # 더욱 강력한 리셋이 필요한 경우 editor-reset-style 이하 속성에 !important 를 적용 시켜줍니다.
+block footer
+
+block script
+    script(src="components.js")

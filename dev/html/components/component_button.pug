@@ -1,0 +1,170 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title button
+
+                    .et--component-group
+                        h3.et--component-group-title01 기본 버튼
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 button 태그
+
+                            :code
+                                button(type="button").btn-lv01.blue
+                                    span.txt 지원하기
+                                a(href="#none").btn-lv01.blue
+                                    span.txt 지원하기
+                                button(type="button").btn-lv01.white
+                                    span.txt 목록
+                                a(href="#none").btn-lv01.white
+                                    span.txt 목록
+                                button(type="button").btn-lv01.white
+                                    span.txt 목록
+                                    i.ico-style-arrow.right(aria-hidden="true")
+                                a(href="#none").btn-lv01.white
+                                    span.txt 목록
+                                    i.ico-style-arrow.right(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 버튼 공통 클래스는 btn- 입니다.
+                                    # 버튼의 스타일은 .blue, .white 등의 추가 클래스를 만들어서 활용 합니다.
+
+                                    # 버튼의 텍스트 영역을 span 마크업으로 확장해서 사용하면 마우스 hover 애니메이션 효과에 대하여 쉽게 대응 할 수 있습니다.
+                                    # 텍스트영역의 line-height 값을 지정하지 않으면 &#60;a> 태그와 &#60;button> 태그의 높이값이 다르게 렌더링 되기 때문에 주의 해야 합니다.
+                                    # 아이콘 영역은 빈 태그이며 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+                                    # 링크 버튼과 기능 버튼을 구분해서 사용 합니다.
+                                    # &#60;a>&#60;/a> 태그는 링크 버튼에 사용합니다.
+                                    # &#60;button type="button">&#60;/button> 태그는 링크 이동이 아닌 기능 버튼에 사용합니다. (type속성을 명시해 주세요.)
+                                    # &#60;a role="button">&#60;/a> 태그를 기능 버튼으로 사용해야 하는 경우는 aria 태그의 role="button" 속성을 넣어 줍니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 a 태그
+
+                            :code
+                                button(type="button").btn-lv01.blue
+                                    span.txt 지원하기
+                                a(href="#none").btn-lv01.blue
+                                    span.txt 지원하기
+                                button(type="button").btn-lv01.white
+                                    span.txt 목록
+                                a(href="#none").btn-lv01.white
+                                    span.txt 목록
+                                button(type="button").btn-lv01.white
+                                    span.txt 목록
+                                    i.ico-style-arrow.right(aria-hidden="true")
+                                a(href="#none").btn-lv01.white
+                                    span.txt 목록
+                                    i.ico-style-arrow.right(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 버튼 공통 클래스는 btn- 입니다.
+                                    # 버튼의 스타일은 .blue, .white 등의 추가 클래스를 만들어서 활용 합니다.
+
+                                    # 버튼의 텍스트 영역을 span 마크업으로 확장해서 사용하면 마우스 hover 애니메이션 효과에 대하여 쉽게 대응 할 수 있습니다.
+                                    # 텍스트영역의 line-height 값을 지정하지 않으면 &#60;a> 태그와 &#60;button> 태그의 높이값이 다르게 렌더링 되기 때문에 주의 해야 합니다.
+                                    # 아이콘 영역은 빈 태그이며 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+                                    # 링크 버튼과 기능 버튼을 구분해서 사용 합니다.
+                                    # &#60;a>&#60;/a> 태그는 링크 버튼에 사용합니다.
+                                    # &#60;button type="button">&#60;/button> 태그는 링크 이동이 아닌 기능 버튼에 사용합니다. (type속성을 명시해 주세요.)
+                                    # &#60;a role="button">&#60;/a> 태그를 기능 버튼으로 사용해야 하는 경우는 aria 태그의 role="button" 속성을 넣어 줍니다.
+
+                    .et--component-group
+                        h3.et--component-group-title01 버튼 정렬
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 균등 분할 좌우정렬
+
+                            :code
+                                .btn-container
+                                    .btn-align-type01.spacebetween-equal
+                                        button(type="button").btn-lv01.blue
+                                            span.txt 지원하기
+                                        a(href="#none").btn-lv01.white
+                                            span.txt 목록
+                                            i.ico-style-arrow.right(aria-hidden="true")
+                                        button(type="button").btn-lv01.blue
+                                            span.txt 지원하기
+
+
+                            .et--component-note
+                                pre.
+                                    # class="btn-align-type01" 버튼 정렬 클래스
+                                    # class="btn-align-type01 spacebetween-equal" 균등 분할 좌우 정렬
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 가운데 정렬
+
+                            :code
+                                .btn-container
+                                    .btn-align-type01.center
+                                        button(type="button").btn-lv01.blue
+                                            span.txt 지원하기
+                                            i.ico-style-arrow.right(aria-hidden="true")
+                                        a(href="#none").btn-lv01.white
+                                            span.txt 목록
+                                        button(type="button").btn-lv01.blue
+                                            span.txt 지원하기
+                                        a(href="#none").btn-lv01.white
+                                            span.txt 목록
+                                            i.ico-style-arrow.right(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # class="btn-align-type01" 버튼 정렬 클래스
+                                    # class="btn-align-type01 center" 가운데 정렬
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 왼쪽 정렬
+
+                            :code
+                                .btn-container
+                                    .btn-align-type01.left
+                                        button(type="button").btn-lv01.blue
+                                            span.txt 지원하기
+                                            i.ico-style-arrow.right(aria-hidden="true")
+                                        a(href="#none").btn-lv01.white
+                                            span.txt 목록
+
+                            .et--component-note
+                                pre.
+                                    # class="btn-align-type01" 버튼 정렬 클래스
+                                    # class="btn-align-type01 left" 왼쪽 정렬
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 오른쪽 정렬
+
+                            :code
+                                .btn-container
+                                    .btn-align-type01.right
+                                        button(type="button").btn-lv01.blue
+                                            span.txt 지원하기
+                                            i.ico-style-arrow.right(aria-hidden="true")
+                                        a(href="#none").btn-lv01.white
+                                            span.txt 목록
+
+                            .et--component-note
+                                pre.
+                                    # class="btn-align-type01" 버튼 정렬 클래스
+                                    # class="btn-align-type01 right" 오른쪽 정렬
+
+block footer
+
+block script
+    script(src="components.js")

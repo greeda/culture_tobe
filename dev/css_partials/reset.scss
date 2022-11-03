@@ -1,0 +1,771 @@
+@charset "utf-8";
+
+// 추가 인클루드는 _setting 안에다가 하기 여기 인클루드는 _setting 하나만 나와있게 관리하기
+@import 'dev/_src/_scss/_setting';
+
+/*! reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+// html 에 font-size, font-weight 등 설정 이유는
+// 1. rem 코딩을 활용하기 위해
+// 2. 다국어 활용을 위해 (lang 으로 분기 설정)
+html{
+    text-size-adjust: 100%;
+    font-size: $global-font-size;
+    font-weight: 400;
+    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // -webkit-tap-highlight-color: transparent;
+    @include languages();
+}
+// rem 코딩일때 화면 리사이즈에 rem 값이 자연스럽게 변하는 미디어 쿼리 분기값 (아래 사이트들 참고)
+// rem 단위를 쓰지 않으면 필요 없는 소스
+// https://css-tricks.com/using-a-mixin-to-take-the-math-out-of-responsive-font-sizes/
+// https://css-tricks.com/snippets/css/fluid-typography/
+
+// 모바일 기본 영역 보다 작은 사이즈 대응 영역
+@media (max-width: 374px) {
+    html {
+        font-size: calc(#{$global-font-size - 3} + 10 * ((100vw - 280px) / 374));
+    }
+}
+
+// 모바일 기본 사이즈 대응 영역 (PSD 750 사이즈 기준 세팅)
+// max-width 에는 PSD 가로 사이즈 적용하기. 그걸 반으로 나눈 것을 min-width 에 적용하기.
+@media (min-width: 375px) and (max-width: 750px) {
+    html {
+        font-size: calc(#{$global-font-size} + 20 * ((100vw - 375px) / 750));
+    }
+}
+
+// 기본 영역보다 큰 사이즈 대응 영역 (태블릿 전 단계)
+@media (min-width: 751px) and (max-width: 1023px) {
+    html {
+        font-size: calc(#{$global-font-size} + 13 * ((100vw - 751px) / 1023));
+    }
+}
+
+// 태블릿 영역 대응 (아이패드 기준 1024 부터 태블릿 영역으로 정의함)
+// pc 컨텐츠 영역 최소 사이즈에 맞춰서 조정이 필요함
+// 예) 컨텐츠 최소 넓이가 1100px 이라고 한다면 max-width를 1100px 로 변경 해야함
+@media (min-width: 1024px) and (max-width: 1279px) {
+    html {
+        font-size: calc(#{$global-font-size} + 12 * ((100vw - 1024px) / 1279));
+    }
+}
+
+// PC 영역
+@media (min-width: 1280px) {
+    html {
+        font-size: $global-font-size;
+    }
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+code,form,fieldset,legend,input,textarea,p,blockquote,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,
+hgroup,nav,section,time,mark,audio,video{margin:0;padding:0}
+body{
+    color:$global-font-color;
+    background-color:$global-background-color;
+}
+img{border:0;border-style: none;}
+// img{max-width:100%;} 모바일 일때 설정 여부 확인
+button{
+    border:0;background:none;padding:0;cursor: pointer;
+}
+button,input,select,optgroup,textarea{
+    margin:0;font-size:100%;
+    font-family:inherit;
+}
+
+table{border-collapse:collapse;border-spacing:0}
+fieldset{border:0}
+legend{color:#000}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;line-height:1;}
+caption,hr,legend{width:0px;height:0px;font-size:1px;text-indent:-9999em;line-height:0}
+a{
+    color:inherit;
+    text-decoration:none;
+    background-color: transparent;
+}
+// ios border bug 해결소스
+a:visited span {
+    border:inherit;
+}
+
+// @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//   /* IE10+ CSS styles go here */
+// }
+
+// @supports (-ms-ime-align:auto) {
+//   /* IE Edge 12+ CSS styles go here */
+// }
+
+
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/*
+ * Render the `main` element consistently in IE.
+ */
+main {
+    display: block;
+}
+
+/* Text-level semantics
+  ========================================================================== */
+
+/*
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+/*
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+
+/*
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+
+/* Forms
+  ========================================================================== */
+
+/*
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+    overflow: visible;
+}
+
+/*
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+    text-transform: none;
+}
+
+/*
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/*
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/*
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/*
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+    vertical-align: baseline;
+}
+
+/*
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+    overflow: auto;
+}
+
+/*
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/*
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/*
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+/* Interactive
+  ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+    display: block;
+}
+
+/* Misc
+  ========================================================================== */
+
+/*
+ * Add the correct display in IE 10+.
+ */
+template {
+    display: none;
+}
+
+/*
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+// 미디어쿼리 범위 샘플
+// 미디어 쿼리가 필요할 경우 아래 소스를 가져가다 쓴다.
+// 범위에 맞게 수정해서 사용해도 됨.
+// 해당 범위별로 media 쿼리내에 sass 파일을 import 해서 사용한다.
+// 0 ~ 359px - 아이폰4,5 - 320px viewport 대응
+// @media (max-width:359px){
+//   @import 'test_mobile_01';
+// }
+// 360px ~ 374px - 갤럭시노트2,3 갤럭시S3,S5 - 360px viewport 대응
+// @media (min-width:360px) and (max-width:374px){
+//   @import 'test_mobile_02';
+// }
+// 375px ~ 413px - 아이폰6,7,8 - 375px viewport 대응
+// @media (min-width:375px) and (max-width:413px){
+//   @import 'test_mobile_03';
+// }
+// 414px ~ 767px - 아이폰6+,7+,8+ - 414px viewport 대응
+// @media (min-width:414px) and (max-width:767px){
+//   @import 'test_mobile_04';
+// }
+// 768px ~ 1024px - 태블릿 대응
+// @media (min-width:768px) and (max-width:1024px){
+//   @import 'test_tablet_01';
+// }
+// 1025px 이상 - pc 대응
+// @media (min-width:1025px){
+//   @import 'test_pc_01';
+// }
+
+// 마우스를 사용하지 않는 디바이스에서 마우스 오버 효과 적용되지 않도록 하는 미디어쿼리
+// 마우스 오버 효과때문에 디바이스에서 클릭시 링크 이동이 제대로 안될 수 있기 때문
+// 근데 이 소스를 IE에서 사용하면 마우스오버가 되지 않는다. 사용에는 신중히. 소스만 남겨둠
+// @media (hover: hover){
+//
+// }
+
+// 유형별 글꼴 그룹 분류
+// p.serif {
+//   font-family: "Times New Roman", Times, serif;
+// }
+// p.sansserif {
+//   font-family: Helvetica, Arial, sans-serif;
+// }
+// p.monospace {
+//   font-family: "Courier New", Courier, monospace;
+// }
+// p.cursive {
+//   font-family: Florence, cursive;
+// }
+// p.fantasy {
+//   font-family: Blippo, fantasy;
+// }
+
+
+
+
+// 아래 사이즈외에 더 추가되는 사이즈가 있을 경우는 해당되는 범위 파일안에
+// 미디어 범위를 추가해서 스타일을 추가 해준다
+
+// contents - mobile
+// @media (max-width:1023px){
+// 	// sass 에서 _를 넣지 않아도 컴파일을 한다.
+// 	// visual studio code 에서 cmd + click 해서 파일로 이동할때 import 파일이름에 _를 넣으면 오류가 난다.
+// 	@import 'category_mobile';
+// }
+
+// contents - tablet
+// @media (min-width:1024px) and (max-width:1280px){
+// 	// sass 에서 _를 넣지 않아도 컴파일을 한다.
+// 	// visual studio code 에서 cmd + click 해서 파일로 이동할때 import 파일이름에 _를 넣으면 오류가 난다.
+// 	@import 'category_tablet';
+// }
+
+// contents - pc
+// @media (min-width:1281px){
+// 	// sass 에서 _를 넣지 않아도 컴파일을 한다.
+// 	// visual studio code 에서 cmd + click 해서 파일로 이동할때 import 파일이름에 _를 넣으면 오류가 난다.
+// 	@import 'category_pc';
+// }
+
+
+
+// 에디터 사용을 위한 css default 속성
+// 에디터가 사용되는 곳에 reset.css 를 지우고 default 속성을 넣을려면 아래 소스를 적용하기
+// 에디터가 들어가는 영역에 특정 클래스로 아래 속성들을 상속 시켜서 에디터 영역에서만 적용 되게 합니다.
+// a:line{
+//     color: (internal value);
+//     text-decoration: underline;
+//     cursor: auto;
+// }
+// a:visited{
+//     color: (internal value);
+//     text-decoration: underline;
+//     cursor: auto;
+// }
+// a:link:active{
+//     color: (internal value);
+// }
+// a:visited:active{
+//     color: (internal value);
+// }
+// address{
+//     display: block;
+//     font-style: italic;
+// }
+// area{
+//     display:none;
+// }
+// article{
+//     display: block;
+// }
+// aside{
+//     display: block;
+// }
+// b{
+//     font-weight: bold;
+// }
+// bdo{
+//     unicode-bidi: bidi-override;
+// }
+// blockquote{
+//     display: block;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 40px;
+//     margin-right: 40px;
+// }
+// // 이 부분은 컨텐츠 컨테이너에 적용 하기
+// body{
+//     display: block;
+//     margin: 8px;
+// }
+// // 이 부분은 컨텐츠 컨테이너에 적용 하기
+// body:focus{
+//     outline: none;
+// }
+// caption{
+//     display: table-caption;
+//     text-align: center;
+// }
+// cite{
+//     font-style: italic;
+// }
+// code{
+//     font-family: monospace;
+// }
+// col{
+//     display: table-column;
+// }
+// colgroup{
+//     display: table-column-group
+// }
+// datalist{
+//     display: none;
+// }
+// dd{
+//     display: block;
+//     margin-left: 40px;
+// }
+// del{
+//     text-decoration: line-through;
+// }
+// details{
+//     display: block;
+// }
+// dfn{
+//     font-style: italic;
+// }
+
+// div{
+//     display: block;
+// }
+// dl{
+//     display: block;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 0;
+//     margin-right: 0;
+// }
+// dt{
+//     display: block;
+// }
+// em{
+//     font-style: italic;
+// }
+// embed:focus{
+//     outline: none;
+// }
+// fieldset{
+//     display: block;
+//     margin-left: 2px;
+//     margin-right: 2px;
+//     padding-top: 0.35em;
+//     padding-bottom: 0.625em;
+//     padding-left: 0.75em;
+//     padding-right: 0.75em;
+//     border: 2px groove (internal value);
+// }
+// figcaption{
+//     display: block;
+// }
+// figure{
+//     display: block;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 40px;
+//     margin-right: 40px;
+// }
+// footer{
+//     display: block;
+// }
+
+// form{
+//     display: block;
+//     margin-top: 0em;
+// }
+// h1{
+//     display: block;
+//     font-size: 2em;
+//     margin-top: 0.67em;
+//     margin-bottom: 0.67em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     font-weight: bold;
+// }
+// h2{
+//     display: block;
+//     font-size: 1.5em;
+//     margin-top: 0.83em;
+//     margin-bottom: 0.83em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     font-weight: bold;
+// }
+// h3{
+//     display: block;
+//     font-size: 1.17em;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     font-weight: bold;
+// }
+// h4{
+//     display: block;
+//     margin-top: 1.33em;
+//     margin-bottom: 1.33em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     font-weight: bold;
+// }
+// h5{
+//     display: block;
+//     font-size: .83em;
+//     margin-top: 1.67em;
+//     margin-bottom: 1.67em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     font-weight: bold;
+// }
+// h6{
+//     display: block;
+//     font-size: .67em;
+//     margin-top: 2.33em;
+//     margin-bottom: 2.33em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     font-weight: bold;
+// }
+// head{
+//     display: none;
+// }
+// header{
+//     display: block;
+// }
+// hr{
+//     display: block;
+//     margin-top: 0.5em;
+//     margin-bottom: 0.5em;
+//     margin-left: auto;
+//     margin-right: auto;
+//     border-style: inset;
+//     border-width: 1px;
+// }
+// // 이 부분은 컨텐츠 컨테이너에 적용 하기
+// html{
+//     display: block;
+// }
+// // 이 부분은 컨텐츠 컨테이너에 적용 하기
+// html:focus{
+//     outline: none;
+// }
+// i{
+//     font-style: italic;
+// }
+// iframe:focus{
+//     outline: none;
+// }
+// iframe[seamless]{
+//     display: block;
+// }
+// img{
+//     display: inline-block;
+// }
+// ins{
+//     text-decoration: underline;
+// }
+// kbd{
+//     font-family: monospace;
+// }
+// label{
+//     cursor: default;
+// }
+// legend{
+//     display: block;
+//     padding-left: 2px;
+//     padding-right: 2px;
+//     border: none;
+// }
+// li{
+//     display: list-item;
+// }
+// link{
+//     display: none;
+// }
+// map{
+//     display: inline;
+// }
+// mark{
+//     background-color: yellow;
+//     color: black;
+// }
+// menu{
+//     display: block;
+//     list-style-type: disc;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     padding-left: 40px;
+// }
+// nav{
+//     display: block;
+// }
+// object:focus{
+//     outline: none;
+// }
+// ol{
+//     display: block;
+//     list-style-type: decimal;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     padding-left: 40px;
+// }
+// output{
+//     display: inline;
+// }
+// p{
+//     display: block;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     margin-left: 0;
+//     margin-right: 0;
+// }
+// param{
+//     display: none;
+// }
+// pre{
+//     display: block;
+//     font-family: monospace;
+//     white-space: pre;
+//     margin: 1em 0;
+// }
+// q{
+//     display: inline;
+// }
+// q::before{
+//     content: open-quote;
+// }
+// q::after{
+//     content: close-quote;
+// }
+// rt{
+//     line-height: normal;
+// }
+// s{
+//     text-decoration: line-through;
+// }
+// samp{
+//     font-family: monospace;
+// }
+// script{
+//     display: none;
+// }
+// section{
+//     display: block;
+// }
+// small{
+//     font-size: smaller;
+// }
+// strike{
+//     text-decoration: line-through;
+// }
+// strong{
+//     font-weight: bold;
+// }
+// style{
+//     display: none;
+// }
+// sub{
+//     vertical-align: sub;
+//     font-size: smaller;
+// }
+// summary{
+//     display: block;
+// }
+// sup{
+//     vertical-align: super;
+//     font-size: smaller;
+// }
+// table{
+//     display: table;
+//     border-collapse: separate;
+//     border-spacing: 2px;
+//     border-color: gray;
+// }
+// tbody{
+//     display: table-row-group;
+//     vertical-align: middle;
+//     border-color: inherit;
+// }
+// td{
+//     display: table-cell;
+//     vertical-align: inherit;
+// }
+// tfoot{
+//     display: table-footer-group;
+//     vertical-align: middle;
+//     border-color: inherit;
+// }
+// th{
+//     display: table-cell;
+//     vertical-align: inherit;
+//     font-weight: bold;
+//     text-align: center;
+// }
+// thead{
+//     display: table-header-group;
+//     vertical-align: middle;
+//     border-color: inherit;
+// }
+// title{
+//     display: none;
+// }
+// tr{
+//     display: table-row;
+//     vertical-align: inherit;
+//     border-color: inherit;
+// }
+// u{
+//     text-decoration: underline;
+// }
+// ul{
+//     display: block;
+//     list-style-type: disc;
+//     margin-top: 1em;
+//     margin-bottom: 1 em;
+//     margin-left: 0;
+//     margin-right: 0;
+//     padding-left: 40px;
+// }
+// var{
+//     font-style: italic;
+// }

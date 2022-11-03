@@ -1,0 +1,192 @@
+- var project_name = locals['project_name'];
+//- 기본 경로 변수 세팅
+
+
+
+
+
+//- 공통 mixin
+//- 아래 소스를 파일로 분리해야 할 경우 include 사용
+//- include /_src/_pug/_mixin
+
+
+//- 언어별로 분기를 태워야 할때 아래 if, else 사용
+//- if language == "ko"
+//- else if language == "en"
+
+//- ******************** code comments ********************
+//- html conditional
+//- ******************** code comments ********************
+mixin html_conditional_comment(lang)
+    <!--[if IE 7]><html lang="#{lang}" class="ie7"><![endif]-->
+    <!--[if IE 8]><html lang="#{lang}" class="ie8"><![endif]-->
+    <!--[if IE 9]><html lang="#{lang}" class="ie9"><![endif]-->
+    <!--[if gt IE 9]><!-->
+
+//- ******************** code comments ********************
+//- browserupgrade
+//- ******************** code comments ********************
+mixin browserupgrade
+    //[if lte IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]
+
+//- ******************** code comments ********************
+//- dimm
+//- ******************** code comments ********************
+mixin dimm
+    .dimm
+        img(src=`${pathSettingHtml}images/common/blank_size_100.png`, alt="")
+
+//- ******************** code comments ********************
+//- 특정 화면 사이즈에서 영역을 가려 버리는 소스
+//- ******************** code comments ********************
+mixin mobile-mode-dimm()
+    .mobile-mode-dimm-container
+        .mobile-mode-box
+            span.txt01 모바일 화면을 지원하지 않습니다.
+
+//- ******************** code comments ********************
+//- 같은 컨텐츠를 반복해서 출력해야 할때 사용
+//- ******************** code comments ********************
+mixin loop(count)
+    - var n = 0
+    while n < count
+        block
+        - n++
+
+//- ******************** code comments ********************
+//- tab
+//- ******************** code comments ********************
+mixin tab-nav(tabType, active, tabs)
+    ul(class=tabType role="tablist")
+        each item, index in tabs
+            if (index === active)
+                li.tab-item
+                    a.tab-link(href="#none" role="tab").active
+                        span.hide-txt 선택됨
+                        span.txt!= item
+            else
+                li.tab-item
+                    a.tab-link(href="#none" role="tab")
+                        span.hide-txt 선택됨
+                        span.txt!= item
+
+//- ******************** code comments ********************
+//- paging
+//- ******************** code comments ********************
+mixin page-nav(type, addClass)
+    //- 추가 클래스가 있을 경우 붙이기 addClass
+    .page-nav(class=addClass)
+        .page-util.first
+            // page-link 에 disabled 클래스 있음
+            a.page-link(href="#none" role="button")
+                span.hide-txt 첫 페이지
+                span.ico-area(aria-hidden="true")
+                    i.ico-page-arrow.left
+                    i.ico-page-arrow.left
+        .page-util.prev
+            a.page-link(href="#none" role="button")
+                span.hide-txt 이전 페이지
+                span.ico-area(aria-hidden="true")
+                    i.ico-page-arrow.left
+
+        if (type === 'type01')
+            ul.page-item-container
+                li.page-item
+                    // on 됐을 경우 span 태그로 변경
+                    span.page-link.on
+                        span.txt 1
+                li.page-item
+                    a.page-link(href="#none")
+                        span.txt 2
+                li.page-item
+                    a.page-link(href="#none")
+                        span.txt 3
+                li.page-item
+                    a.page-link(href="#none")
+                        span.txt 4
+                li.page-item
+                    a.page-link(href="#none")
+                        span.txt 5
+
+        else if (type === 'type02')
+            ul.page-item-container
+                li.page-item
+                    // page-link 에 on 클래스 있음
+                    span.page-link
+                        span.txt 1
+                li.page-item
+                    span.page-link
+                        span.txt 2
+
+        .page-util.next
+            a.page-link(href="#none" role="button")
+                span.hide-txt 다음 페이지
+                span.ico-area(aria-hidden="true")
+                    i.ico-page-arrow.right
+        .page-util.last
+            a.page-link(href="#none" role="button")
+                span.hide-txt 마지막 페이지
+                span.ico-area(aria-hidden="true")
+                    i.ico-page-arrow.right
+                    i.ico-page-arrow.right
+
+
+//- ******************** code comments ********************
+//- breadcrumb - 01
+//- ******************** code comments ********************
+//- ******************** code comments ********************
+//- map
+//- ******************** code comments ********************
+//- 지도 - mixin source
+mixin mapApiNaver
+    #map01.map-api
+
+//- 지도 - mixin source
+mixin mapApiKakao
+    #map02.map-api
+
+//- 지도 - mixin source
+mixin mapApiGoogle
+    #map03.map-api
+
+//- ******************** code comments ********************
+//- video
+//- ******************** code comments ********************
+//- 영상 - mixin source
+mixin youtubeIframe
+    .movie-area
+        iframe(src="https://www.youtube.com/embed/tgbNymZ7vqY?")
+
+//- 영상 - mixin source
+mixin youtubeObject
+    .movie-area
+        object(data="https://www.youtube.com/embed/tgbNymZ7vqY")
+
+//- 영상 - mixin source
+mixin youtubeEmbed
+    .movie-area
+        embed(src="https://www.youtube.com/embed/tgbNymZ7vqY")
+
+//- 영상 - mixin source
+mixin vimeoIframe
+    .movie-area
+        iframe(src="https://player.vimeo.com/video/3873878?control=0&background=1&autoplay=0&loop=1&autopause=0" allowfullscreen)
+
+//- 영상 - mixin source
+mixin vimeoEmbed
+    .movie-area
+        embed(src="https://player.vimeo.com/video/3873878?control=0&background=1&autoplay=0&loop=1&autopause=0" allowfullscreen)
+
+//- 영상 - mixin source
+mixin video
+    .movie-area
+        video(controls)
+            source( src="movie.mp4" type="video/mp4")
+            source( src="movie.ogg" type="video/ogg")
+
+//- ******************** code comments ********************
+//- swiper
+//- ******************** code comments ********************
+//- ******************** code comments ********************
+//- popup
+//- ******************** code comments ********************

@@ -1,0 +1,964 @@
+// ie10 ~ ie11 에만 적용되는 css 를 만들때 사용하는 미디어쿼리 소스
+//@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//    // IE10+ CSS here
+//    .selectbox{
+//        // 텍스트 수직 중앙정렬을 위해서 ie10 ~ 11 속성 재정의
+//        select{
+//            padding:12px 0 10px 15px;
+//            height:auto;
+//        }
+//    }
+//}
+
+//- 변수 경로 사용하는 방법
+// background:url('#{$currentUrl}images/common/ko_bg_test01.jpg')
+
+
+// ******************** code comments ********************
+// 기본 변수 세팅
+// $global-background-color: #ffffff; - 기본 배경 컬러 설정
+// $global-font-color: #000000; - 기본 폰트 컬러 설정
+// $global-font-size: 10px !default; - 기본 폰트 크기 설정
+// ******************** code comments ********************
+$global-background-color: #ffffff;
+$global-font-color: #000000;
+$global-font-size: 10px !default;
+
+
+// ******************** code comments ********************
+// 언어별 설정 <html lang="">
+// font-familu, line-height, word-break, word-wrap, letter-spacing
+// ******************** code comments ********************
+$global-font-family: (
+    'ko': ('Malgun Gothic', '맑은 고딕', Dotum, '돋움', arial, verdana, sans-serif),
+    'en': (Helvetica, Arial, sans-serif),
+    'ja': ('Meiryo', 'メイリオ', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif),
+    'zh': (Helvetica, Arial, 'Microsoft Yahei','微软雅黑', STXihei, '华文细黑', sans-serif)
+);
+$global-line-height: (
+    'ko': (1.15),
+    'en': (1.15),
+    'ja': (1.15),
+    'zh': (1.15)
+);
+$global-word-break: (
+    'ko': (keep-all),
+    'en': (break-all),
+    'ja': (break-all),
+    'zh': (break-all)
+);
+$global-word-wrap: (
+    'ko': (break-word),
+    'en': (break-word),
+    'ja': (break-word),
+    'zh': (break-word)
+);
+$global-letter-spacing: (
+    'ko': (0),
+    'en': (0),
+    'ja': (0),
+    'zh': (0)
+);
+
+
+// ******************** code comments ********************
+// 프로젝트 별로 세팅 하기
+// 폰트 굵기 참고용
+// Thin 100
+// Light 300
+// Regular 400
+// Medium 500
+// Bold 700
+// Black 900
+// 프로젝트내에서 사용되는 폰트 굵기를 모아놓고 관리한다
+// ******************** code comments ********************
+
+
+// ******************** code comments ********************
+// 프로젝트 별로 세팅 하기
+// font size / line-height 참고
+// 24 / 36 - 1.5
+// 26 / 38 - 1.46
+// 28 / 40 - 1.42
+// 30 / 42 - 1.4
+// 32 / 44 - 1.375
+// 34 / 46 - 1.35
+// 42 / 54 - 1.28
+// 48 / 64 - 1.33
+// ******************** code comments ********************
+
+
+// ******************** code comments ********************
+// flex 사용 참고용
+// flex: 1 1 1; - 자동으로 더 커지게 하고 자동으로 더 줄어들게 하고 기본 값은 없음
+// /* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+// flex: 1 1 auto; - 자동으로 더 커지게 하고 자동으로 더 줄어들게 하고 기본값은 자동
+// /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+// flex: 1 1 500px; - 500보다 늘어날 수 있고 500이하로 줄어 들 수 있음, 기본값은 500
+// /* flex-grow: 1; flex-shrink: 1; flex-basis: 500px; */
+
+// /* flex-grow: 0; */ /* 기본값 - flex-basis 이상으로 안 늘어남 */
+// /* flex-grow: 1; */ /* flex-basis 보다 늘어남 */
+// flex-shrink: 1; /* 기본값 - flex-basis 크기 보다 줄어듬 */
+// flex-shrink: 0; /* flex-basis 크기를 최소값으로 고정함 */
+// ******************** code comments ********************
+
+
+// ******************** code comments ********************
+// z-index 세팅 및 관리
+// 기본 z-index를 기준으로 +, - 하여 관리 한다
+// 변수명은 되도록 직관적으로 네이밍 한다
+// 프로젝트에서 사용되는 모든 z-index 값은 아래 정리 되어야 한다
+// 단, z-index:1, z-index:2 등의 10이하 단위들은 컨텐츠내 css 에서 관리한다
+// ******************** code comments ********************
+$base-z-index: 100; // 기본 z-index
+$mobile-mode-dimm-container: $base-z-index + 900; // 반응형 미지원 페이지 안내 컨텐츠 컨테이너 z-index 1000
+$popup-zindex: $base-z-index; // 팝업 z-index 100
+$global-dimm-zindex: $base-z-index - 10; // 딤드 영역 z-index 90
+$gnb-container-zindex: $base-z-index - 15; // pc & mobile gnb z-index 85
+$mobile-subpage-header-title-zindex: $base-z-index - 19; // 모바일 서브페이지 헤더 타이틀 fixed z-index 81
+$header-scroll-fixed-zindex: $base-z-index - 20; // 헤더 스크롤 fixed z-index 80
+
+
+// ******************** code comments ********************
+// 컬러값 변수 설정
+// 폰트컬러(color), 배경컬러(background-color), 라인컬러(border)으로 구분한다
+// 변수 네이밍에 컬러 코드 값을 사용하여 작성한다
+// 프로젝트 초반에 컬러값이 정리가 되지 않을 경우, 변수를 먼저 세팅하고 나중에 디자인팀에 현재 설정된 변수 컬러값을 전달하여 불필요한 컬러값들을 정리 하도록 한다
+// ******************** code comments ********************
+$font-e1002a: #e1002a;
+$font-4051b8: #4051b8;
+$font-00bca9: #00bca9;
+$font-ffe53f: #ffe53f;
+$font-222222: #222222;
+$font-666666: #666666;
+$font-999999: #999999;
+$font-cccccc: #cccccc;
+
+$bg-eeeeee: #eeeeee;
+$bg-f5f5f5: #f5f5f5;
+$bg-f9f9f9: #f9f9f9;
+$bg-ffe53f: #ffe53f;
+$bg-e1002a: #e1002a;
+$bg-222222: #222222;
+$bg-333333: #333333;
+$bg-444444: #444444;
+$bg-2b2b2b: #2b2b2b;
+
+$line-ffe53f: #ffe53f;
+$line-e1002a: #e1002a;
+$line-222222: #222222;
+$line-cccccc: #cccccc;
+$line-dddddd: #dddddd;
+$line-e5e5e5: #e5e5e5;
+$line-f5f5f5: #f5f5f5;
+$line-eeeeee: #eeeeee;
+$line-999999: #999999;
+
+// ******************** code comments ********************
+// svg background-image 변수
+// svg의 사용은 운영을 고려해서 결정해야 함.
+// ******************** code comments ********************
+$ico-search: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2245.125%22%20height%3D%2245.304%22%20viewBox%3D%220%200%2045.125%2045.304%22%3E%20%20%3Cdefs%3E %20%20%20%20%3Cstyle%3E %20%20%20%20%20%20.cls-1%20%7B %20%20%20%20%20%20%20%20fill%3A%20none%3B %20%20%20%20%20%20%20%20stroke%3A%20%23222%3B %20%20%20%20%20%20%20%20stroke-linecap%3A%20round%3B %20%20%20%20%20%20%20%20stroke-linejoin%3A%20round%3B %20%20%20%20%20%20%20%20stroke-width%3A%204px%3B %20%20%20%20%20%20%7D %20%20%20%20%3C%2Fstyle%3E %20%20%3C%2Fdefs%3E %20%20%3Cg%20id%3D%22icon_%EA%B2%80%EC%83%89%22%20transform%3D%22translate(2.296%202.296)%22%3E %20%20%20%20%3Cellipse%20id%3D%22%ED%83%80%EC%9B%90_27%22%20data-name%3D%22%ED%83%80%EC%9B%90%2027%22%20class%3D%22cls-1%22%20cx%3D%2215.565%22%20cy%3D%2215.571%22%20rx%3D%2215.565%22%20ry%3D%2215.571%22%20transform%3D%22matrix(0.161%2C%20-0.987%2C%200.987%2C%200.161%2C%200%2C%2030.722)%22%2F%3E %20%20%20%20%3Cline%20id%3D%22%EC%84%A0_42%22%20data-name%3D%22%EC%84%A0%2042%22%20class%3D%22cls-1%22%20x1%3D%2210.122%22%20y1%3D%2210.122%22%20transform%3D%22translate(29.878%2030.057)%22%2F%3E %20%20%3C%2Fg%3E %3C%2Fsvg%3E";
+$ico-all-menu: "%3Csvg%20id%3D%22MO__BTN_menu%22%20data-name%3D%22MO_%20BTN_menu%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2235.992%22%20viewBox%3D%220%200%2044%2035.992%22%3E%20%20%3Cdefs%3E %20%20%20%20%3Cstyle%3E %20%20%20%20%20%20.cls-1%20%7B %20%20%20%20%20%20%20%20fill%3A%20%23222%3B %20%20%20%20%20%20%7D %20%20%20%20%3C%2Fstyle%3E %20%20%3C%2Fdefs%3E %20%20%3Crect%20id%3D%22%EC%82%AC%EA%B0%81%ED%98%95_68%22%20data-name%3D%22%EC%82%AC%EA%B0%81%ED%98%95%2068%22%20class%3D%22cls-1%22%20width%3D%2244%22%20height%3D%224%22%20rx%3D%221%22%2F%3E %20%20%3Crect%20id%3D%22%EC%82%AC%EA%B0%81%ED%98%95_69%22%20data-name%3D%22%EC%82%AC%EA%B0%81%ED%98%95%2069%22%20class%3D%22cls-1%22%20width%3D%2244%22%20height%3D%224%22%20rx%3D%221%22%20transform%3D%22translate(0%2015.996)%22%2F%3E %20%20%3Crect%20id%3D%22%EC%82%AC%EA%B0%81%ED%98%95_70%22%20data-name%3D%22%EC%82%AC%EA%B0%81%ED%98%95%2070%22%20class%3D%22cls-1%22%20width%3D%2244%22%20height%3D%224%22%20rx%3D%221%22%20transform%3D%22translate(0%2031.992)%22%2F%3E %3C%2Fsvg%3E";
+$ico-x: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2238.184%22%20height%3D%2238.184%22%20viewBox%3D%220%200%2038.184%2038.184%22%3E%20%20%3Cdefs%3E %20%20%20%20%3Cstyle%3E %20%20%20%20%20%20.cls-1%20%7B %20%20%20%20%20%20%20%20fill%3A%20%23333%3B %20%20%20%20%20%20%7D %20%20%20%20%3C%2Fstyle%3E %20%20%3C%2Fdefs%3E %20%20%3Cg%20id%3D%22%EA%B7%B8%EB%A3%B9_312%22%20data-name%3D%22%EA%B7%B8%EB%A3%B9%20312%22%20transform%3D%22translate(-236.852%20-1036.027)%20rotate(45)%22%3E %20%20%20%20%3Cpath%20id%3D%22%ED%8C%A8%EC%8A%A4_1881%22%20data-name%3D%22%ED%8C%A8%EC%8A%A4%201881%22%20class%3D%22cls-1%22%20d%3D%22M931.69%2C590.553a2%2C2%2C0%2C0%2C1-2-2v-46a2%2C2%2C0%2C0%2C1%2C4%2C0v46A2%2C2%2C0%2C0%2C1%2C931.69%2C590.553Z%22%20transform%3D%22translate(-4.629%20-0.451)%22%2F%3E %20%20%20%20%3Cpath%20id%3D%22%ED%8C%A8%EC%8A%A4_1882%22%20data-name%3D%22%ED%8C%A8%EC%8A%A4%201882%22%20class%3D%22cls-1%22%20d%3D%22M0%2C48a2%2C2%2C0%2C0%2C1-2-2V0A2%2C2%2C0%2C0%2C1%2C0-2%2C2%2C2%2C0%2C0%2C1%2C2%2C0V46A2%2C2%2C0%2C0%2C1%2C0%2C48Z%22%20transform%3D%22translate(950.061%20565.102)%20rotate(90)%22%2F%3E %20%20%3C%2Fg%3E %3C%2Fsvg%3E";
+$ico-plus: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%20%20%3Cdefs%3E %20%20%20%20%3Cstyle%3E %20%20%20%20%20%20.cls-1%20%7B %20%20%20%20%20%20%20%20fill%3A%20%23291a04%3B %20%20%20%20%20%20%7D %20%20%20%20%3C%2Fstyle%3E %20%20%3C%2Fdefs%3E %20%20%3Cg%20id%3D%22%EA%B7%B8%EB%A3%B9_307%22%20data-name%3D%22%EA%B7%B8%EB%A3%B9%20307%22%20transform%3D%22translate(1%201)%22%3E %20%20%20%20%3Cpath%20id%3D%22%ED%8C%A8%EC%8A%A4_1865%22%20data-name%3D%22%ED%8C%A8%EC%8A%A4%201865%22%20class%3D%22cls-1%22%20d%3D%22M2380%2C6573.744h-26a1%2C1%2C0%2C0%2C1%2C0-2h26a1%2C1%2C0%2C0%2C1%2C0%2C2Z%22%20transform%3D%22translate(-2354%20-6559.744)%22%2F%3E %20%20%20%20%3Cpath%20id%3D%22%ED%8C%A8%EC%8A%A4_1866%22%20data-name%3D%22%ED%8C%A8%EC%8A%A4%201866%22%20class%3D%22cls-1%22%20d%3D%22M26%2C1H0A1%2C1%2C0%2C0%2C1-1%2C0%2C1%2C1%2C0%2C0%2C1%2C0-1H26a1%2C1%2C0%2C0%2C1%2C1%2C1A1%2C1%2C0%2C0%2C1%2C26%2C1Z%22%20transform%3D%22translate(13)%20rotate(90)%22%2F%3E %20%20%3C%2Fg%3E %3C%2Fsvg%3E";
+$ico-arrow: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222.673%22%20height%3D%2239.685%22%20viewBox%3D%220%200%2022.673%2039.685%22%3E%20%20%3Cdefs%3E %20%20%20%20%3Cstyle%3E %20%20%20%20%20%20.cls-1%20%7B %20%20%20%20%20%20%20%20fill%3A%20%23333%3B %20%20%20%20%20%20%7D %20%20%20%20%3C%2Fstyle%3E %20%20%3C%2Fdefs%3E %20%20%3Cpath%20id%3D%22arrow%22%20class%3D%22cls-1%22%20d%3D%22M60.245%2C85.895a1.993%2C1.993%2C0%2C0%2C1-1.381-.554L40.191%2C67.5a2%2C2%2C0%2C0%2C1%2C0-2.892L58.864%2C46.763a2%2C2%2C0%2C1%2C1%2C2.763%2C2.892l-17.16%2C16.4%2C17.16%2C16.4a2%2C2%2C0%2C0%2C1-1.382%2C3.446Z%22%20transform%3D%22translate(-39.573%20-46.209)%22%2F%3E %3C%2Fsvg%3E";
+
+// ******************** code comments ********************
+// box shadow 샘플
+// box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.05);
+// PSD - box-shadow: 거리 거리 크기 스프레드 rgba(컬러,컬러,컬러,불투명도)
+// 박스 inset - 보더대신 서야 할 때
+// box-shadow: inset -1px 1px 0px 0px rgba(221,221,221,1);
+// 프로젝트내에서 사용하는 box shadow 를 모아놓고 관리한다
+// ******************** code comments ********************
+
+
+// 공통 소스 인클루드 영역
+// sass 에서 _를 넣지 않아도 컴파일을 한다.
+// visual studio code 에서 cmd + click 해서 파일로 이동할때 import 파일이름에 _를 넣으면 오류가 난다.
+//@import 'dev/_src/_scss/mixin';
+
+
+// ******************** code comments ********************
+// disabled 속성
+// ******************** code comments ********************
+@mixin ui-disabled(){
+    // disabled 속성 (모던 브라우저)
+    &.disabled{
+        opacity: 0.5;
+        pointer-events: none;
+        position: relative;
+        z-index: -1;
+        // disabled 속성 ie10 대응
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            /* IE10+ CSS styles go here */
+            &:after{
+                content:'';
+                position: absolute;
+                width:100%;
+                height:100%;
+                top:0;left:0;
+                background:#ffffff;
+                opacity: 0;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+
+// ******************** code comments ********************
+// 텍스트 말줄임
+// ******************** code comments ********************
+@mixin ellipsis($line: 1) { // 인자 값의 기본 값은 1
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+
+// ******************** code comments ********************
+// 언어별 폰트 설정
+// /* 사용 예제 Languages */
+// @include languages();
+// ******************** code comments ********************
+@mixin languages() {
+    @each $type, $font-family in $global-font-family {
+        &:lang(#{$type}) {
+            font-family:$font-family;
+        }
+    }
+    @each $type, $line-height in $global-line-height {
+        &:lang(#{$type}) {
+            line-height:$line-height;
+        }
+    }
+    @each $type, $word-break in $global-word-break {
+        &:lang(#{$type}) {
+            word-break:$word-break;
+        }
+    }
+    @each $type, $word-wrap in $global-word-wrap {
+        &:lang(#{$type}) {
+            word-wrap:$word-wrap;
+        }
+    }
+    @each $type, $letter-spacing in $global-letter-spacing {
+        &:lang(#{$type}) {
+            letter-spacing:$letter-spacing;
+        }
+    }
+}
+
+
+// ******************** code comments ********************
+// /**
+// * Computes a CSS calc function that betweens a value from
+// * A to B over viewport-width A to viewport-width B.
+// * Requires a media query to cap the value at B.
+// * vw 단위를 활용하여 미디어쿼리 분기의 중간 상태값을
+// * 계산해주는 SASS 함수.
+// * 간격이나 폰트사이즈에 적용하면 자연스러운
+// * 반응형 사이즈 처리가 가능 함.
+// * 참고사이트 http://dohoons.com/blog/1364
+// */
+// 소스 사용예제
+// @media (min-width: $small) {
+// 	padding: between(16px, 32px, $small, $medium);
+// }
+// @media (min-width: $medium) {
+// 	padding: between(32px, 90px, $medium, $large);
+// }
+// @media (min-width: $large) {
+// 	padding: 90px;
+// }
+// ******************** code comments ********************
+$small: 400px;
+$large: 1000px;
+@function between($to, $from, $toWidth, $fromWidth) {
+    $slope: ($to - $from) / ($toWidth - $fromWidth);
+    $base: $from - $slope * $fromWidth;
+
+    @return calc(#{$base} + #{100vw * $slope});
+}
+
+
+// ******************** code comments ********************
+// /**
+// * Read the article: http://sassbreak.com/viewport-relative-headings-with-sass
+// * px 를 vw 로 자동으로 바꿔 줌.
+// * max-breakpoint 를 설정하면 미디어쿼리 브레이크 포인트가 됨.
+// * 그래서 미디어쿼리 브레이크 포인트에 맞춰 px 가 vw 로 변환됨.
+// * 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
+// * 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
+// */
+// 예) width: get-vw(21px);
+// ******************** code comments ********************
+// Max breakpoint
+$max-breakpoint-main: 1400;
+$max-breakpoint-main-height: 720;
+
+// This could be one of your media query breakpoint variables
+$wide-screen: "(min-width: #{$max-breakpoint-main}px)";
+
+// Function
+@function get-vw($target) {
+    // 1 vw is equal to 1% of the viewport width
+    $vw-context: ($max-breakpoint-main * .01) * 1px; // 1% viewport width
+    @return ($target/$vw-context) * 1vw; // 100=1, 140=1.4
+}
+
+@function get-vh($target) {
+    // 1 vw is equal to 1% of the viewport width
+    $vw-context: ($max-breakpoint-main-height * .01) * 1px; // 1% viewport width
+    @return ($target/$vw-context) * 1vh;
+}
+
+
+// 입력 받은 값의 숫자만 남겨놓고 단위 지우기
+// Remove the unit of a length
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+
+// ******************** code comments ********************
+// px를 rem 변환 (2021.03.22 버전) - 기존버전 보다 다양하게 활용할 수 있음 아래 url 참고 바람.
+// reset.css 의 기본 폰트와는 별개로 정해짐. psd 가이드에 맞게 $global-font-size 수정함.
+//
+// sass 기본 사용법
+// @include rem(font-size, 24px); // Simple
+// @include rem(padding, 5px 10px); // Multiple values
+// @include rem(border-bottom, 1px solid black); // Multiple mixed values
+// @include rem(box-shadow, 0 0 2px #ccc, inset 0 0 5px #eee); // Comma-separated values
+// // Multiple properties
+// @include rem((
+//     margin: 10px 5px,
+//     text-shadow: (1px 1px #eee, -1px -1px #eee) // Parentheses needed because of comma
+// ));
+//
+// css 출력
+// font-size: 24px;
+// font-size: 1.5rem;
+// padding: 5px 10px;
+// padding: 0.3125rem 0.625rem;
+// border-bottom: 1px solid black;
+// border-bottom: 0.0625rem solid black;
+// box-shadow: 0 0 2px #ccc, inset 0 0 5px #eee;
+// box-shadow: 0 0 0.125rem #ccc, inset 0 0 0.3125rem #eee;
+// margin: 10px 5px;
+// margin: 0.625rem 0.3125rem;
+// text-shadow: 1px 1px #eee, -1px -1px #eee;
+// text-shadow: 0.0625rem 0.0625rem #eee, -0.0625rem -0.0625rem #eee;
+//
+// rem line-height 사용법
+// 예) @include rem(font-size, 23px, 33);
+// 가이드) @include rem(font-size, 23px, psd line-height)
+//
+// libsass (v3.5.0.beta.2)
+// https://github.com/pierreburel/sass-rem
+// ******************** code comments ********************
+
+$rem-baseline: $global-font-size !default;
+$rem-fallback: true !default;
+// 하위브라우저 호환 맞춰야 할때 - false: rem만 출력, true: px,rem 둘다 출력
+$rem-px-only: false !default;
+// rem 변환이 필요 없을 때 - false: rem 변환 사용(기본), true: rem 변환 사용 안함(px출력)
+
+@function rem-separator($list, $separator: false) {
+    @if $separator == "comma" or $separator == "space" {
+        @return append($list, null, $separator);
+    }
+
+    @if function-exists("list-separator") == true {
+        @return list-separator($list);
+    }
+
+    // list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
+    $test-list: ();
+    @each $item in $list {
+        $test-list: append($test-list, $item, space);
+    }
+
+    @return if($test-list == $list, space, comma);
+}
+
+@mixin rem-baseline($zoom: 100%) {
+    font-size: $zoom / 16px * $rem-baseline;
+}
+
+@function rem-convert($to, $values...) {
+    $result: ();
+    $separator: rem-separator($values);
+
+    @each $value in $values {
+        // 단위 안써도 되게하는 소스
+        @if type-of($value) == number and unitless($value) {
+            $value: px($value);
+        }
+
+        // 기본 소스 (단위 안써도 되는거 필요 없을 경우 위 소스 삭제)
+        @if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
+            $result: append($result, $value / 1rem * $rem-baseline + 0px, $separator);
+        } @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
+            $result: append($result, $value / $rem-baseline + 0rem, $separator);
+        } @else if type-of($value) == "number" and unit($value) == "px" and $to == "lineheight" {
+            $result: append($result, floor((($value + 10) / $value)*100)/100, $separator);
+        } @else if type-of($value) == "list" {
+            $value-separator: rem-separator($value);
+            $value: rem-convert($to, $value...);
+            $value: rem-separator($value, $value-separator);
+            $result: append($result, $value, $separator);
+        } @else {
+            $result: append($result, $value, $separator);
+        }
+
+        // line-height 기능 추가 - 위에 else if로 추가 되어 있음.
+        // @if type-of($value) == "number" and unit($value) == "px" and $to == "lineheight" {
+        //     $result: append($result, floor((($value + 10) / $value)*100)/100, $separator);
+        // }
+    }
+
+    @return if(length($result) == 1, nth($result, 1), $result);
+}
+
+@function rem($values...) {
+    @if $rem-px-only {
+        @return rem-convert(px, $values...);
+    } @else {
+        @return rem-convert(rem, $values...);
+    }
+}
+
+@mixin rem($properties, $values...) {
+    @if type-of($properties) == "map" {
+        @each $property in map-keys($properties) {
+            @include rem($property, map-get($properties, $property));
+        }
+    // line-height 자동으로 넣는 소스
+    } @else if $properties == "font-size"{
+        @each $property in $properties {
+            @if $rem-fallback or $rem-px-only {
+                #{$property}: rem-convert(px, $values...);
+            }
+            @if not $rem-px-only {
+                #{$property}: rem-convert(rem, $values...);
+            }
+            // line-height: rem-convert(lineheight, $values...);
+        }
+    } @else {
+        @each $property in $properties {
+            @if $rem-fallback or $rem-px-only {
+                #{$property}: rem-convert(px, $values...);
+            }
+            @if not $rem-px-only {
+                #{$property}: rem-convert(rem, $values...);
+            }
+        }
+    }
+}
+
+// font-size + line-height mixin
+@mixin font-size($font-size, $line-height: "null"){
+    @if $line-height == "null"{
+        font-size: $font-size + px;
+        font-size: $font-size / 10 + rem;
+    } @else {
+        font-size: $font-size+px;
+        font-size: $font-size / 10+rem;
+        line-height: $line-height / $font-size;
+    }
+}
+
+// ******************** code comments ********************
+// px를 em 변환
+//
+// em 기본 사용법
+// @include em(height,51px);
+// @include em(padding, 0 15px);
+// font-size + line-height 사용법
+//
+// em line-height 사용법
+// 예) @include em(font-size, 23px, 33);
+// 가이드) @include em(font-size, 23px, psd line-height)
+//
+// em border 사용법
+// 예) @include em(border, 2px, solid blue);
+// 예) @include em(border-left, 20px, solid blue);
+//
+// reset.css 의 기본 폰트와는 별개로 정해짐. psd 가이드에 맞게 $global-font-size 수정함.
+// ******************** code comments ********************
+$baseFont : $global-font-size;
+@mixin em($target, $values, $line-height:0, $border-info...) {
+    $mixin-base-font-size: $baseFont ;
+    $px-values: ();
+    $em-values: ();
+
+    @each $value in $values {
+        @if $value == 0 or $value == 0px {
+            $px-values: join($px-values, 0);
+            $em-values: join($em-values, 0);
+        } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+            $new-em-value: $value / $mixin-base-font-size;
+            $px-values: join($px-values, round($value));
+            $em-values: join($em-values, #{$new-em-value}em);
+        } @else {
+            $px-values: join($px-values, round($value * $mixin-base-font-size));
+            $em-values: join($em-values, #{$value}em);
+        }
+    }
+    @if $target == 'font-size' {
+        @if $line-height == 0 {
+            #{$target}: $px-values;
+            #{$target}: $em-values;
+        } @else{
+            #{$target}: $px-values;
+            #{$target}: $em-values;
+            line-height: $line-height / strip-unit($values);
+        }
+    } @else if $target == 'border' & 'border-left' & 'border-right' & 'border-top' & 'border-bottom' {
+        #{$target}: $px-values $line-height $border-info;
+        #{$target}: $em-values $line-height $border-info;
+    } @else {
+        #{$target}: $px-values;
+        #{$target}: $em-values;
+    }
+}
+
+// ******************** code comments ********************
+// pc, mobile = px & rem & em & vw 전용 스프라이트 믹스인 영역
+// pc, mobile = px & rem & em & vw 전용 이미지 background-position 값 설정
+// ******************** code comments ********************
+@mixin sprite-position-px($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+@mixin sprite-position-rem($sprite) {
+    $sprite-offset-x: rem(nth($sprite, 3));
+    $sprite-offset-y: rem(nth($sprite, 4));
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+@mixin sprite-position-em($sprite) {
+    $sprite-offset-x: em(nth($sprite, 3));
+    $sprite-offset-y: em(nth($sprite, 4));
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+@mixin sprite-position-vw($sprite) {
+    $sprite-offset-x: get-vw(nth($sprite, 3));
+    $sprite-offset-y: get-vw(nth($sprite, 4));
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+
+// ******************** code comments ********************
+// pc, mobile = px & rem & em & vw 전용 스프라이트 믹스인 영역
+// pc, mobile = px & rem & em & vw 전용 이미지 background-size 값 설정
+// ******************** code comments ********************
+@mixin sprite-background-size-px($sprite) {
+    $sprite-size-width: nth($sprite, 7);
+    $sprite-size-height: nth($sprite, 8);
+    background-size: $sprite-size-width  $sprite-size-height;
+}
+@mixin sprite-background-size-rem($sprite) {
+    $sprite-size-width: rem(nth($sprite, 7));
+    $sprite-size-height: rem(nth($sprite, 8));
+    background-size: $sprite-size-width  $sprite-size-height;
+}
+@mixin sprite-background-size-em($sprite) {
+    $sprite-size-width: em(nth($sprite, 7));
+    $sprite-size-height: em(nth($sprite, 8));
+    background-size: $sprite-size-width  $sprite-size-height;
+}
+@mixin sprite-background-size-vw($sprite) {
+    $sprite-size-width: get-vw(nth($sprite, 7));
+    $sprite-size-height: get-vw(nth($sprite, 8));
+    background-size: $sprite-size-width  $sprite-size-height;
+}
+
+
+// ******************** code comments ********************
+// pc, mobile = px & rem & em & vw 전용 스프라이트 믹스인 영역
+// pc, mobile = px & rem & em & vw 전용 이미지 width 값 설정
+// ******************** code comments ********************
+@mixin sprite-width-px($sprite) {
+    width: nth($sprite, 5);
+}
+@mixin sprite-width-rem($sprite) {
+    width: rem(nth($sprite, 5));
+}
+@mixin sprite-width-em($sprite) {
+    width: em(nth($sprite, 5));
+}
+@mixin sprite-width-vw($sprite) {
+    width: get-vw(nth($sprite, 5));
+}
+
+
+// ******************** code comments ********************
+// pc, mobile = px & rem & em & vw 전용 스프라이트 믹스인 영역
+// pc, mobile = px & rem & em & vw 전용 이미지 height 값 설정
+// ******************** code comments ********************
+@mixin sprite-height-px($sprite) {
+    height: nth($sprite, 6);
+}
+@mixin sprite-height-rem($sprite) {
+    height: rem(nth($sprite, 6));
+}
+@mixin sprite-height-em($sprite) {
+    height: em(nth($sprite, 6));
+}
+@mixin sprite-height-vw($sprite) {
+    height: get-vw(nth($sprite, 6));
+}
+
+
+// ******************** code comments ********************
+// pc px & rem & em & vw 전용 이미지 스프라이트 믹스인 (위 설정값을 가져옴)
+// 사용예 pc 버전
+// @include sprite-custom(rem, $pc-logo-pc-ko);
+// @include sprite-custom(em, $pc-logo-pc-ko);
+// @include sprite-custom(px, $pc-logo-pc-ko);
+// @include sprite-custom(vw, $pc-logo-pc-ko);
+// ******************** code comments ********************
+@mixin sprite-custom($unit, $sprite) {
+    @include sprite-image($sprite);
+
+    @if $unit == px{
+        @include sprite-position-px($sprite);
+        @include sprite-width-px($sprite);
+        @include sprite-height-px($sprite);
+        @include sprite-background-size-px($sprite);
+    } @else if $unit == rem{
+        @include sprite-position-px($sprite);
+        @include sprite-position-rem($sprite);
+        @include sprite-width-px($sprite);
+        @include sprite-width-rem($sprite);
+        @include sprite-height-px($sprite);
+        @include sprite-height-rem($sprite);
+        @include sprite-background-size-px($sprite);
+        @include sprite-background-size-rem($sprite);
+    } @else if $unit == em {
+        @include sprite-position-px($sprite);
+        @include sprite-position-em($sprite);
+        @include sprite-width-px($sprite);
+        @include sprite-width-em($sprite);
+        @include sprite-height-px($sprite);
+        @include sprite-height-em($sprite);
+        @include sprite-background-size-px($sprite);
+        @include sprite-background-size-em($sprite);
+    } @else if $unit == vw {
+        @include sprite-position-vw($sprite);
+        @include sprite-width-vw($sprite);
+        @include sprite-height-vw($sprite);
+        @include sprite-background-size-vw($sprite);
+    }
+}
+
+
+// ******************** code comments ********************
+// mobile px & rem & em & vw 전용 이미지 스프라이트 믹스인 (위 설정값을 가져옴)
+// 사용예 mobile 버전
+// @include retina-sprite-custom(rem, $mobile-logo-pc-ko-group);
+// @include retina-sprite-custom(em, $mobile-logo-pc-ko-group);
+// @include retina-sprite-custom(px, $mobile-logo-pc-ko-group);
+// @include retina-sprite-custom(vw, $mobile-logo-pc-ko-group);
+// ******************** code comments ********************
+@mixin retina-sprite-custom($unit, $retina-group) {
+    $normal-sprite: nth($retina-group, 2);
+    $retina-sprite: nth($retina-group, 3);
+    @include sprite-image($retina-sprite);
+    background-repeat: no-repeat;
+
+    @if $unit == px{
+        @include sprite-position-px($normal-sprite);
+        @include sprite-width-px($normal-sprite);
+        @include sprite-height-px($normal-sprite);
+        @include sprite-background-size-px($normal-sprite);
+    } @else if $unit == rem{
+        @include sprite-position-px($normal-sprite);
+        @include sprite-position-rem($normal-sprite);
+        @include sprite-width-px($normal-sprite);
+        @include sprite-width-rem($normal-sprite);
+        @include sprite-height-px($normal-sprite);
+        @include sprite-height-rem($normal-sprite);
+        @include sprite-background-size-px($normal-sprite);
+        @include sprite-background-size-rem($normal-sprite);
+    } @else if $unit == em{
+        @include sprite-position-px($normal-sprite);
+        @include sprite-position-em($normal-sprite);
+        @include sprite-width-px($normal-sprite);
+        @include sprite-width-em($normal-sprite);
+        @include sprite-height-px($normal-sprite);
+        @include sprite-height-em($normal-sprite);
+        @include sprite-background-size-px($normal-sprite);
+        @include sprite-background-size-em($normal-sprite);
+    } @else if $unit == vw{
+        @include sprite-position-vw($normal-sprite);
+        @include sprite-width-vw($normal-sprite);
+        @include sprite-height-vw($normal-sprite);
+        @include sprite-background-size-vw($normal-sprite);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $title
+// ____________________________________________________________________________
+//
+//    SCSS Unit Conversion v.2.1.2
+//
+//
+//    Links:
+//    GitHub   https://github.com/jakob-e/unitconversion
+//    Codepen  https://codepen.io/jakob-e/pen/AHunv
+// ____________________________________________________________________________
+//
+//   Function               Input units
+//
+//   Absolute length
+//   px(input);             px, pt, pc, in, mm, cm, em, rem, number
+//   pt(input);             px, pt, pc, in, mm, cm, em, rem, number
+//   pc(input);             px, pt, pc, in, mm, cm, em, rem, number
+//   in(input);             px, pt, pc, in, mm, cm, em, rem, number
+//   mm(input);             px, pt, pc, in, mm, cm, em, rem, number
+//   cm(input);             px, pt, pc, in, mm, cm, em, rem, number
+//
+//   Relative length
+//   em(input);             px, pt, pc, in, mm, cm, em, rem, number
+//   rem(input);            px, pt, pc, in, mm, cm, em, rem, number
+//   ex(input);             ex, number
+//   ch(input);             ch, number
+//   vw(input);             vw, number
+//   vh(input);             vh, number
+//   vmin(input);           vmin, number
+//   vmax(input);           vmax, number
+//
+//   Angle
+//   deg(input);            deg, rad, grad, turn, number
+//   rad(input);            deg, rad, grad, turn, number
+//   grad(input);           deg, rad, grad, turn, number
+//   turn(input);           deg, rad, grad, turn, number
+//
+//   Resolution
+//   dpi(input);            dpi, dpcm, dppx, number
+//   dpcm(input);           dpi, dpcm, dppx, number
+//   dppx(input);           dpi, dpcm, dppx, number
+//
+//   Time
+//   s(input);              s, ms, number
+//   ms(input);             s, ms, number
+//
+//   Frequency
+//   hz(input);             hz, khz, number
+//   khz(input);            hz, khz, number
+//
+//   String
+//   str(input);            anything not null
+//
+//   Number, int and uint
+//   num(input);            px, pt, pc, in, mm, cm, em, rem, ex, ch,
+//                          vw, vh, vmin, vmax, deg, rad, grad, turn,
+//                          dpi, dpcm, dppx, s, ms, hz, khz, number
+//   int(input);            as number
+//   uint(input);           as number
+//
+//   ratio                  number to fraction
+//
+//   Aliases
+//   string(input);
+//   number(input);
+//
+// ____________________________________________________________________________
+
+// Base font size in pixel for converting em and rem to absolute lengths.
+$unit-base-font-size: $global-font-size;
+
+
+// Absolute lengths
+@function px($input){ @return to-unit(px, $input); }
+@function pt($input){ @return to-unit(pt, $input); }
+@function pc($input){ @return to-unit(pc, $input); }
+@function in($input){ @return to-unit(in, $input); }
+@function mm($input){ @return to-unit(mm, $input); }
+@function cm($input){ @return to-unit(cm, $input); }
+
+// Angles
+@function deg($input){ @return to-unit(deg, $input); }
+@function rad($input){ @return to-unit(rad, $input); }
+@function grad($input){ @return to-unit(grad, $input); }
+@function turn($input){ @return to-unit(turn, $input); }
+
+// Resolution
+@function dpi($input){ @return to-unit(dpi, $input); }
+@function dpcm($input){ @return to-unit(dpcm, $input); }
+@function dppx($input){ @return to-unit(dppx, $input); }
+
+// Time
+@function ms($input){ @return to-unit(ms, $input); }
+@function s($input){ @return to-unit(s, $input); }
+
+// Frequencies
+@function hz($input){ @return to-unit(hz, $input);}
+@function khz($input){ @return to-unit(khz, $input); }
+
+// Relative lengths
+@function em($input...){
+    $em: to-unit(em, nth($input,1));
+    // Adjust for compounds (visual size)
+    @if length($input) > 1 {
+        @for $i from 2 through length($input){
+            $em: $em / num(em(nth($input,$i)));
+        }
+    }
+    @return $em;
+}
+@function rem($input){ @return to-unit(rem, num(em($input))); }
+
+// Inconvertible relative lengths – depends on font
+@function ex($input){ @return to-unit(ex, $input); }
+@function ch($input){ @return to-unit(ch, $input); }
+
+// Viewport
+@function vw($input){ @return to-unit(vw, $input); }
+@function vh($input){ @return to-unit(vh, $input); }
+@function vmin($input){ @return to-unit(vmin, $input); }
+@function vmax($input){ @return to-unit(vmax, $input); }
+
+// Strings and numbers
+@function str($input){ @return #{$input};  }
+@function num($input){
+    @if type-of($input) != number {
+        @error 'Could not convert `#{$input}` - must be `type-of number`';
+        @return null;
+    }
+    @return $input/($input*0+1);
+}
+@function int($input){
+    $num: num($input);
+    @return if($num<0, ceil($num), floor($num));
+}
+@function uint($input){ @return abs(int($input)); }
+
+// Aliases
+@function string($input){ @return str($input);}
+@function number($input){ @return num($input);}
+
+
+// Conversion function
+@function to-unit($unit, $input){
+    // Test against valid CSS units
+    $to-unit: map-get((
+            px: 0px, pt: 0pt, pc: 0pc, in: 0in, mm: 0mm, cm: 0cm, // absolute length
+            em: 0em, rem: 0rem, ch: 0ch, ex: 0ex,                 // relative length - font based
+            vw: 0vw, vh: 0vh, vmin: 0vmin, vmax: 0vmax,           // relative length - viewport based
+            deg: 0deg, turn: 0turn, grad: 0grad, rad: 0rad,       // angle
+            s: 0s, ms: 0ms,                                       // time
+            hz: 0Hz, khz: 0kHz,                                   // frequency
+            dpi: 0dpi, dpcm: 0dpcm, dppx: 0dppx,                  // resolution
+            pct: 0%, percent: 0%, num: 0, number: 0               // percent or number
+    ), $unit);
+
+    // Error handling – wrong $unit
+    // Incomparable units are caught in convertion
+    @if not $to-unit {
+        @error 'Could not convert to `#{$unit}` – must be a valid CSS unit';
+        @return null;
+    }
+
+    // Number/incomparable conversion
+    @if index(num number ex ch vw vh vmin vmax, $unit) {
+        $value: num($input);
+    }
+
+    // EM/REM convertion using px as base
+    @if index(em rem, unit($input)) {
+        $input: 0px + num($input) * $unit-base-font-size/1px;
+    }
+    @if index(em rem, $unit) and not unitless($input) {
+        $input: 0px + $input;
+        $input: num($input) * 1px/$unit-base-font-size;
+    }
+
+    // Bug fix – resolution units seems to be flipped
+    @if index(dpi dpcm dppx, $unit){
+        $units: (dppx: 0dppx, dpcm: 0dpcm, dpi: 0dpi);
+        $input-unit: map-get($units, unit($input));
+        $input: if(1dppx < 95dpi,num($input-unit + (num($input) + $to-unit)),$input);
+    }
+
+    // Convert
+    @return $to-unit + $input;
+}
+
+//  Convert number to ratio (fraction)
+//  ratio(1.7777778) =>   16/9
+@function ratio($x, $y: null){
+    @if not $y {
+        $n: $x; $y: 1;
+        @while $y < 10 {
+            $x:  $n * 10 - ((10 - $y) * $n);
+            @if $x == round($x){ @return #{$x}/#{$y}; }
+            @else { $y: $y + 1; }
+        }
+        $x: round($n * 1000000); $y: 1000000;
+        @while $x % 10 == 0 { $x: $x/10; $y: $y/10; }
+        @while $x % 5 == 0 { $x: $x/5; $y: $y/5; }
+        @while $x % 2 == 0 { $x: $x/2; $y: $y/2; }
+        @return #{$x}/#{$y};
+    }
+    @else if $x == round($x) and $y == round($y){ @return #{$x}/#{$y}; }
+    @warn 'X and Y must be integers'; @return false;
+}
+
+
+
+@import 'dev/_src/_scss/_sprite/sprite_mobile';
+@import 'dev/_src/_scss/_sprite/sprite_pc';

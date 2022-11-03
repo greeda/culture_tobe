@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+// **********************************
+// 기본 영역
+// _extend_html5.pug 파일의 block css 영역
+// if NODE_ENV === 'development' 영역의 css와 동일하게 세팅해야 하지만
+// 프로토타입 영역은 메인에서 사용해야 하는 css만 @import 합니다.
+// 추가로 main_content 파일을 @import 해줍니다.
+// **********************************
+@import '../css_partials/font';
+@import '../css_partials/reset';
+@import '../css_partials/print';
+
+@import '../css_partials/component_common';
+
+@import '../css_partials/header';
+@import '../css_partials/footer';
+
+@import '../css_partials/main_content';

@@ -1,0 +1,51 @@
+- var pathSettingHtml = locals['pathSettingHtml'];
+block vars
+
+//- 헤더 영역
+header#header.header-sample01
+    ul.skipnav
+        li
+            a(href="#content")
+                | 컨텐츠 바로가기
+
+    //- .header-continer 영역이 fixed 됨
+    //- 화면 스크롤 되면 .header-continer 영역에 .scroll 클래스 추가 하기
+    .header-continer
+        .header-content
+            // 로고영역
+            h1.header-logo
+                span.hide-txt 로고영역
+                i.bg-logo(aria-hidden="true")
+            // 모바일 백버튼
+            .header-page-prev
+                a(href="#none").btn-page-prev
+                    span.hide-txt 이전으로
+                    i.ico-prev(aria-hidden="true")
+            // mobile & pc gnb
+            .header-gnb-container
+                .gnb-align
+                    .gnb-list-container
+                        ul.gnb-list
+                            li.gnb-item
+                                a(href="#none").gnb-link
+                                    span.gnb-txt 1뎁스
+                            li.gnb-item
+                                a(href="#none").gnb-link
+                                    span.gnb-txt 1뎁스
+                            li.gnb-item
+                                a(href="#none").gnb-link
+                                    span.gnb-txt 1뎁스
+            // 검색 버튼
+            .header-search
+                a(href="#none" role="button").btn-header-search
+                    span.hide-txt 검색
+                    i.ico-search(aria-hidden="true")
+            // 모바일 전체메뉴 버튼
+            //- 클릭시 gnb 로 초점 이동 시키기
+            .header-all-menu
+                button(type="button").btn-all-menu
+                    span.hide-txt 전체메뉴 열기
+                    .bar-align
+                        .bar01(aria-hidden="true")
+                        .bar02(aria-hidden="true")
+                        .bar03(aria-hidden="true")

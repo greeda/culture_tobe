@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+// ******************** code comments ********************
+// button
+// 프로젝트 폰트 종류에 따라 font-size, line-height 값을 조정해 주기
+// 텍스트 설정후에 패딩으로 버튼의 높이값 조절
+// 최소 가로값이 필요 할 경우 min-width 사용 하기
+// 크기나 스타일에 따라서 lv01, lv02, lv03 등으로 타입 추가 하기
+// ******************** code comments ********************
+/*! 기본 버튼 */
+.btn-lv01{
+    display:inline-block;
+    text-align:center;
+    @include rem(padding, 11px 15px 12px 15px);
+    .txt{
+        position:relative;
+        vertical-align:middle;
+        @include rem(font-size, 20px);
+        line-height:1.4;
+    }
+    &.blue{
+        border:1px solid skyblue;
+        background-color:skyblue;
+        color:#ffffff;
+    }
+    &.white{
+        border:1px solid skyblue;
+        background-color:#ffffff;
+        color:red;
+    }
+    [class^="ico-"]{
+        @include rem(margin-left, 10px);
+    }
+}
+
+/*! 기본 버튼 - 컨테이너 */
+.btn-container{}
+
+/*! 기본 버튼 - 정렬 */
+.btn-align-type01 {
+    // 균등 분할 좌우정렬
+    &.spacebetween-equal{
+        display:flex;
+        justify-content: space-between;
+        @include rem(margin-right, -5px);
+        [class^="btn-"]{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            @include rem(margin-right, 5px);
+            flex: 0 1 100%;
+            word-break: break-all;
+
+            .txt{
+                display:block;
+                flex:0 1 auto;
+            }
+            [class^="ico-"]{
+                flex:0 0 auto;
+            }
+        }
+    }
+    // 가운데 정렬
+    &.center{
+        display:flex;
+        justify-content: center;
+        [class^="btn-"]{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            @include rem(margin-right, 5px);
+            flex: 0 1 auto;
+            word-break: break-all;
+
+            &:last-child{
+                margin-right:0;
+            }
+            .txt {
+                display: block;
+                flex: 0 1 auto;
+            }
+            [class^="ico-"] {
+                flex: 0 0 auto;
+            }
+        }
+    }
+    // 왼쪽 정렬
+    &.left{
+        display:flex;
+        justify-content: flex-start;
+        [class^="btn-"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include rem(margin-right, 5px);
+            flex: 0 1 auto;
+            word-break: break-all;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .txt {
+                display: block;
+                flex: 0 1 auto;
+            }
+
+            [class^="ico-"] {
+                flex: 0 0 auto;
+            }
+        }
+    }
+    // 오른쪽 정렬
+    &.right {
+        display: flex;
+        justify-content: flex-end;
+        [class^="btn-"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include rem(margin-left, 5px);
+            flex: 0 1 auto;
+            word-break: break-all;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            .txt {
+                display: block;
+                flex: 0 1 auto;
+            }
+            [class^="ico-"] {
+                flex: 0 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+// ******************** code comments ********************
+// input text
+// ******************** code comments ********************
+/*! form - input text */
+.input-txt{
+    position:relative;
+    background-color: #ffffff;
+    input{
+        display:block;
+        width:100%;
+        @include rem(font-size, 17px);
+        @include rem(height, 50px);
+        @include rem(line-height, 50px);
+        border:none;
+        border-bottom-width:1px;
+        border-bottom-style:solid;
+        border-bottom-color:$line-dddddd;
+        appearance: none;border-radius: 0;
+        color:$font-222222;
+        transition: all .3s ease-out;
+
+        // background-color:rgba(0,0,0,0);
+        // 위와 같이 background-color:rgba(0,0,0,0); 안 쓰면 ie10 에서 input 커서를 클릭할 수 없는 버그 발생함
+
+        // ie에서 X 아이콘 삭제하는 소스 (입력 텍스트 초기화 아이콘)
+        &::-ms-clear{
+            display:none;
+        }
+        &:focus{
+            border-bottom:1px solid $line-222222;
+            outline: 0;
+        }
+    }
+    &.line-all{
+        input{
+            border-width:1px;
+            border-style:solid;
+            border-color:$line-dddddd;
+            @include rem(padding, 0 0 0 15px);
+            @include rem(height, 50px);
+            @include rem(line-height, 50px);
+            @include rem(border-radius, 5px);
+            &:focus{
+                border:1px solid $line-222222;
+                outline: 0;
+            }
+        }
+    }
+    &.btn-type01{
+        position: relative;
+        input{
+            background-color:$bg-f5f5f5;
+            border:1px solid $line-f5f5f5;
+            @include rem(padding-right, 50px);
+            &:focus{
+                outline: 0;
+                background-color:#ffffff;
+                @include rem(box-shadow, 5px 5px 15px 0px rgba(0,0,0,0.1));
+            }
+        }
+        .btn-input-search{
+            position: absolute;
+            top:0;
+            right:0;
+            @include rem(padding, 15px 15px 15px 15px);
+            .ico-input-search{
+                display:block;
+                @include rem(width, 20px);
+                @include rem(height, 20px);
+                background:url('../images/common/ico_search_input_mo.png') no-repeat center center;
+                @include rem(background-size, 20px 20px);
+            }
+        }
+        .btn-input-del{
+            position: absolute;
+            top:0;
+            right:0;
+            @include rem(padding, 15px 15px 15px 15px);
+            .ico-input-del{
+                display:block;
+                position: relative;
+                @include rem(width, 20px);
+                @include rem(height, 20px);
+                &:before{
+                    content:'';
+                    width:100%;
+                    height:2px;
+                    position: absolute;
+                    top:50%;
+                    left:0;
+                    margin-top: -1px;
+                    background-color:gray;
+                    transition: all .3s ease-out;
+                }
+                &:after{
+                    content:'';
+                    width:2px;
+                    height:100%;
+                    position: absolute;
+                    top:0;
+                    left:50%;
+                    margin-left: -1px;
+                    background-color:gray;
+                    transition: all .3s ease-out;
+                }
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+// form - placeholder
+// Chrome, Firefox, Opera, Safari 10.1+
+.input-txt input::placeholder{
+    color:$font-cccccc;
+    background:transparent;
+    // 아래 속성은 Firefox 용
+    opacity: 1;
+    font-weight: 400 !important;
+    // font-family: 'Noto Sans KR' !important;
+}
+// .input-txt input:-ms-input-placeholder{position:relative;top:1px;}
+// .input-txt input::-ms-input-placeholder{position:relative;top:1px;}
+
+// ******************** code comments ********************
+// input date
+// ******************** code comments ********************
+
+// ******************** code comments ********************
+// input file
+// ******************** code comments ********************
+/*! 파일첨부 스타일 */
+.input-file-type01 {
+    position: relative;
+    @include rem(padding-right, 60px);
+
+    .input-file {
+        position: relative;
+        width: 100%;
+        @include rem(height, 50px);
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .input-file-label {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        width:calc(100% - 60px);
+        width:calc(100% - 6rem);
+        @include rem(padding, 15px 0 15px 20px);
+        border: 1px solid gray;
+        color: gray;
+        @include rem(font-size, 16px);
+        font-weight: 300;
+        transition: all .3s ease-out;
+
+        &:after {
+            content: '';
+            display: block;
+            @include rem(width, 50px);
+            @include rem(height, 50px);
+            position: absolute;
+            @include rem(top, -1px);
+            @include rem(right, -60px);
+            background: #f5f5f5 url('../images/common/ico_add_file.png') no-repeat center center;
+        }
+    }
+
+    .input-file {
+        &:hover + .input-file-label,
+        &:focus + .input-file-label {
+            border: 1px solid black;
+        }
+    }
+}

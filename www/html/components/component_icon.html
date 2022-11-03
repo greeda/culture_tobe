@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <title>프로토타입</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link href="/css_partials/font.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/reset.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/print.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/jquery.scrollbar.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/swiper.5.4.5.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/tui-date-picker.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_common.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_scroll.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_map.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_video.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_icon.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_button.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_input.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_select.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_checkbox.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_radio.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_formGroup.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_pagination.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_table.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_card.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_list.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_tab.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_dropdowns.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_breadcrumb.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_scrollspy.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_carousel.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_accordion.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_tooltip.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_modal.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_toasts.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_spinners.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_editor.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_test.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/componentlist.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/header.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/footer.css" type="text/css" rel="stylesheet">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/gsap.min.js"></script>
+  <script src="/js/swiper.min.5.4.5.js"></script>
+  <script src="/js/jquery.scrollbar.min.js" defer></script>
+  <script src="/js/common.js" defer></script>
+</head>
+
+<body>
+  <!--[if lte IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+  <div id="wrap">
+    <div id="container">
+      <div id="content" role="main">
+        <div class="et--component-wrap">
+          <div class="et--component-menu-wrap">
+            <button class="btn-toggle" type="button">
+              <span class="hide-txt">메뉴 열고 닫기</span>
+            </button>
+            <div class="et--component-menu-scroll">
+              <nav class="et--component-menu">
+                <div class="et--component-menu-guide">
+                  <a class="et--component-btn01" href="/html/components/component_guide.pdf" target="_blank">
+                    <span>퍼블리싱 가이드</span>
+                  </a>
+                </div>
+                <h1 class="et--component-menu-title">components</h1>
+                <ul class="et--component-menu-list">
+                  <li>
+                    <a href="/html/components/component_scroll.html">scroll</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_map.html">map</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_video.html">video</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_icon.html">icon</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_button.html">button</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_input.html">input</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_select.html">select</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_checkbox.html">checkbox</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_radio.html">radio</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_formGroup.html">formGroup</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_pagination.html">pagination</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_table.html">table</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_card.html">card</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_list.html">list</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_tab.html">tab</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_dropdowns.html">dropdowns</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_breadcrumb.html">breadcrumb</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_scrollspy.html">scrollspy</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_carousel.html">carousel</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_accordion.html">accordion</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_tooltip.html">tooltip</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_modal.html">modal</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_toasts.html">toasts</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_spinners.html">spinners</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_test.html">test</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="et--component-content">
+            <h2 class="et--component-title">Icon, Tag</h2>
+            <div class="et--component-group">
+              <h3 class="et--component-group-title01">Icon</h3>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">css type - arrow</h4>
+                <div class="et--component-view">
+                  <i class="ico-arrow top" aria-hidden="true"></i>
+                  <i class="ico-arrow down" aria-hidden="true"></i>
+                  <i class="ico-arrow left" aria-hidden="true"></i>
+                  <i class="ico-arrow right" aria-hidden="true"></i>
+                  <i class="ico-arrow top-left" aria-hidden="true"></i>
+                  <i class="ico-arrow top-right" aria-hidden="true"></i>
+                  <i class="ico-arrow bottom-left" aria-hidden="true"></i>
+                  <i class="ico-arrow bottom-right" aria-hidden="true"></i>
+                  <i class="ico-arrow top-narrow" aria-hidden="true"></i>
+                  <i class="ico-arrow top-wide" aria-hidden="true"></i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-arrow.top(aria-hidden="true")
+i.ico-arrow.down(aria-hidden="true")
+i.ico-arrow.left(aria-hidden="true")
+i.ico-arrow.right(aria-hidden="true")
+i.ico-arrow.top-left(aria-hidden="true")
+i.ico-arrow.top-right(aria-hidden="true")
+i.ico-arrow.bottom-left(aria-hidden="true")
+i.ico-arrow.bottom-right(aria-hidden="true")
+i.ico-arrow.top-narrow(aria-hidden="true")
+i.ico-arrow.top-wide(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+# 기본 클래스 class="ico-arrow"
+# 방향 클래스 top, down, left, right, top-left, top-right, bottom-left, bottom-right, top-narrow, top-wide
+# 사용법 - 기본 클래스 + 방향 클래스 예) class="ico-arrow down"
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">css type - triangle</h4>
+                <div class="et--component-view">
+                  <i class="ico-triangle up" aria-hidden="true"></i>
+                  <i class="ico-triangle down" aria-hidden="true"></i>
+                  <i class="ico-triangle left" aria-hidden="true"></i>
+                  <i class="ico-triangle right" aria-hidden="true"></i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-triangle.up(aria-hidden="true")
+i.ico-triangle.down(aria-hidden="true")
+i.ico-triangle.left(aria-hidden="true")
+i.ico-triangle.right(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+# 기본 클래스 class="ico-triangle"
+# 방향 클래스 up, down, left, right
+# 사용법 - 기본 클래스 + 방향 클래스 예) class="ico-triangle up"
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">css type - line</h4>
+                <div class="et--component-view">
+                  <i class="ico-line more" aria-hidden="true"></i>
+                  <i class="ico-line close" aria-hidden="true"></i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-line.more(aria-hidden="true")
+i.ico-line.close(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+# 아이콘 사용시 인라인 스타일은 제거하고 클래스로 만들어서 사용합니다.
+
+# 기본 클래스 class="ico-line"
+# 모양 클래스 more, close
+# 사용법 - 기본 클래스 + 모양 클래스 예) class="ico-line more"
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">css type - etc</h4>
+                <div class="et--component-view">
+                  <i class="ico-delete" aria-hidden="true">
+                    <span class="line"></span>
+                  </i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-delete(aria-hidden="true")
+    span.line
+
+</pre>
+                  </div>
+                </div>
+
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">image type - icon</h4>
+                <div class="et--component-view">
+                  <i class="ico-download-black" aria-hidden="true"></i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-download-black(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">sprite image type - icon</h4>
+                <div class="et--component-view">
+                  <i class="ico-download-black02" aria-hidden="true"></i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-download-black02(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">svg type - icon</h4>
+                <div class="et--component-view">
+                  <i class="ico-search" aria-hidden="true"></i>
+                  <i class="ico-all-menu" aria-hidden="true"></i>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+i.ico-search(aria-hidden="true")
+i.ico-all-menu(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># data url type
+# svg 파일을 vscode에서 불러온 후에 data-url 형태로 변환해서 background-image 로 사용하면 됩니다.
+# data-url 변환시 vscode의 확장프로그램 URL Encode 를 사용하면 됩니다.
+# data-rul이 호환성 있게 변환이 안되면 ie에서 svg background-image가 제대로 나오지 않습니다.
+
+# background image type
+# svg 파일을 background-image로 사용합니다.</pre>
+                  <pre></pre>
+                </div>
+              </div>
+            </div>
+            <div class="et--component-group">
+              <h3 class="et--component-group-title01">Tag</h3>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">css type - tag</h4>
+                <div class="et--component-view">
+                  <!-- bg별-->
+                  <div class="tag bg01">
+                    <span class="txt">마이너스</span>
+                  </div>
+                  <div class="tag bg02">
+                    <span class="txt">거래중지</span>
+                  </div><!-- 컬러별-->
+                  <div class="tag color01">
+                    <span class="txt">사전예약</span>
+                  </div>
+                  <div class="tag color02">
+                    <span class="txt">발급중</span>
+                  </div><!-- 기본-->
+                  <div class="tag">
+                    <span class="txt">기본태그</span>
+                  </div>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+// bg별
+.tag.bg01
+    span.txt 마이너스
+.tag.bg02
+    span.txt 거래중지
+
+// 컬러별
+.tag.color01
+    span.txt 사전예약
+.tag.color02
+    span.txt 발급중
+
+// 기본
+.tag
+    span.txt 기본태그
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dimm">
+    <img src="/images/common/blank_size_100.png" alt="">
+  </div>
+  <script src="components.js"></script>
+</body>
+
+</html>

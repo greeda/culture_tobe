@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+/*! 메인 헤더 스타일 */
+.bodyClassMain{
+    .header-continer{
+        background-color:rgba(255,255,255,0.95);
+        border-bottom:1px solid $line-e5e5e5;
+    }
+}
+
+/*! 서브 메인 헤더 스타일 */
+.bodyClassSubMain{
+    .header-continer{
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%);
+    }
+}
+
+/*! 공통 헤더 스타일 */
+.header-sample01{
+    .header-continer{
+        position:fixed;
+        z-index:$header-scroll-fixed-zindex;
+        top:0;left:0;
+        width:100%;
+        @include rem(height, 60px);
+        &.scroll{
+            background:#ffffff;
+            border-bottom:1px solid $line-e5e5e5;
+            @include rem(box-shadow, 0px 3px 5px 0px rgba(0,0,0,0.1));
+            .bg-logo{
+                @include rem(width, 28px);
+                @include rem(height, 36px);
+                background-image:url('/images/common/logo02_mo.png');
+                @include rem(background-size, 28px 36px);
+            }
+        }
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height:100%;
+        @include rem(padding, 0 20px 0 20px);
+    }
+    .header-logo{
+        display:none;
+        .bg-logo{
+            display:block;
+            @include rem(width, 90px);
+            @include rem(height, 28px);
+            background-color:aqua;
+            @include rem(background-size, 90px 28px);
+            // transition:background .1s ease-out;
+        }
+    }
+    .header-page-prev{
+        position:relative;
+        @include rem(left, -10px);
+        @include rem(padding, 10px 10px 10px 10px);
+        .ico-prev{
+            display:block;
+            @include rem(width, 16px);
+            @include rem(height, 16px);
+            @include rem(border-top, 2px solid #000000);
+            @include rem(border-right, 2px solid #000000);
+            transform: rotate(-135deg);
+        }
+    }
+    .header-gnb-container{
+        display: none;
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        z-index:$gnb-container-zindex;
+        background-color:#ffffff;
+        .gnb-align{}
+        .gnb-list-container{}
+        .gnb-list{}
+        .gnb-item{}
+        .gnb-link{}
+        .gnb-txt{}
+    }
+    .header-search{
+        display:none;
+        .ico-search{
+            display:block;
+            @include rem(width, 25px);
+            @include rem(height, 25px);
+            background:url('/images/common/ico_header_search_mo.png') no-repeat center center;
+            @include rem(background-size, 25px 25px);
+        }
+    }
+    .header-all-menu{
+        position:relative;
+        @include rem(right, -10px);
+        // background:red;
+        @include rem(padding, 10px 10px 10px 10px);
+        .bar-align{
+            display:flex;
+            @include rem(width, 22px);
+            @include rem(height, 18px);
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        [class^=bar0]{
+            border-radius: 1px;
+            width:100%;
+            height:2px;
+            background-color:$bg-222222;
+        }
+    }
+}
+
+/*! 메인 헤더 컨트롤 */
+.bodyClassMain{
+    .header-logo{
+        display:block;
+    }
+    .header-page-prev{
+        display:none;
+    }
+    .header-mobile-title{
+        display:none;
+    }
+}
+
+/*! 서브 메인 헤더 컨트롤 */
+.bodyClassSubMain{
+    .header-logo{
+        display:block;
+    }
+    .header-page-prev{
+        display:none;
+    }
+    .header-mobile-title{
+        display:none;
+    }
+}

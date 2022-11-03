@@ -1,0 +1,179 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Accordion
+
+                    .et--component-group
+                        h3.et--component-group-title01 Accordion
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 Group1, 모션 slide, 포커스 이동 됨
+
+                            :code
+                                .accordion-container
+                                    ul.accordion-list(data-group="group1" data-toggle-group="group1" data-motion-type="slide" )
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt word-break:keep-all; word-wrap:break-word; 클릭영역 글자수에 따라 세로 가변형 스타일
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt word-break:keep-all; word-wrap:break-word; 클릭영역 글자수에 따라 세로 가변형 스타일
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis Group1, 모션 slide, 포커스 이동 안됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                    button(type="button" data-toggle-group="group1").accordion-all-btn
+                                        span.txt.open-txt 모두열기
+                                        span.txt.close-txt 모두닫기
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 아코디언 - Group2, 모션 static, 포커스 이동 안됨
+
+                            :code
+                                .accordion-container.ui-accordion-container
+                                    ul.accordion-list.ui-accordion-list(data-group="group2" data-motion-type="static" data-body-scroll="false" data-toggle-group="group2")
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn.ui-accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis Group2, 모션 static, 포커스 이동 안됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content.ui-accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn.ui-accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis Group2, 모션 static, 포커스 이동 안됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content.ui-accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn.ui-accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis Group2, 모션 static, 포커스 이동 안됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content.ui-accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                    button(type="button" data-toggle-group="group2").accordion-all-btn.ui-btn-accordion-all-
+                                        span.txt.open-txt 모두열기
+                                        span.txt.close-txt 모두닫기
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 아코디언 - 토글기능, 모션 슬라이드 (기본) , 포커스 이동 안됨
+
+                            :code
+                                .accordion-container
+                                    ul.accordion-list(data-body-scroll="false" data-toggle-group="group3")
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis 토글기능, 모션 슬라이드 (기본) , 포커스 이동 됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis 토글기능, 모션 슬라이드 (기본) , 포커스 이동 됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                        li.accordion-item
+                                            a(href="#none").accordion-btn
+                                                span.hide-txt.close 메뉴 닫힘
+                                                span.hide-txt.open 메뉴 열림
+                                                span.accordion-util
+                                                    span.txt.ellipsis 토글기능, 모션 슬라이드 (기본) , 포커스 이동 됨
+                                                    span.tag 정상
+                                                    span.bu(aria-hidden="true")
+                                            .accordion-content
+                                                | 아코디언 컨텐츠 영역
+                                    button(type="button" data-toggle-group="group3").btn-all-accordion
+                                        span.txt.open-txt 모두열기
+                                        span.txt.close-txt 모두닫기
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 03. 16.
+                                //- 이슈 - 맥북 사파리에서 모바일 크기로 스크롤 줄이다 보면 텍스트 영역이 왼쪽으로 넘어감
+                                pre.
+                                    # .accordion-util 영역에 아이콘등 추가 할 수 있습니다.
+                                    # .accordion-content 영역에 아코디언 컨텐츠를 추가 합니다.
+
+                                    # 스크립트 관련 가이드
+                                    # 기본은 전체가 열리는 버전 입니다.
+                                    # .accordion-list 에 ui-accordion-toggle 클래스 붙이면 토글 형태로 변경됩니다.
+
+                            .et--component-note
+                                pre.
+                                    # 스크립트 관련 가이드
+
+                                    # option 속성 .accordion-list(data-group="group2" data-motion-type="static" data-body-scroll="false")
+                                        group : "string"
+                                            ex ) 스트링이 같은것끼리 만 닫힘, 다른건 안닫힘 data-group 속성값 없으면 각각 열리고 닫는 토글기능
+                                        motion-type : "string"
+                                            ex ) 기본 slide , option : static
+                                        body-scroll : "boolean"
+                                            ex ) 기본 true 해당 컨텐츠로 포커스 이동 시킵니다 . false하면 포커스 안됨.
+                                        toggle-group : "string"
+                                            ex ) 모두 열기 ,닫기 기능있을때 data-toggle-group 속성을 버튼과 .accordion-list 에 똑같이 넣어줘야함
+
+block footer
+
+block script
+    script(src="components.js")

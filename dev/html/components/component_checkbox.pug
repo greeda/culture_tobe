@@ -1,0 +1,71 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Input
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input Checkbox
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                span.input-checkbox
+                                    input(type="checkbox" id="checkbox201" name="checkbox201")
+                                    label(for="checkbox201")
+                                        span.hide-txt 숨김텍스트처리
+                                span.input-checkbox
+                                    input(type="checkbox" id="checkbox202" name="checkbox202" checked)
+                                    label(for="checkbox202")
+                                        span.hide-txt 숨김텍스트처리
+                                span.input-checkbox
+                                    input(type="checkbox" id="checkbox203" name="checkbox203" disabled)
+                                    label(for="checkbox203")
+                                        span.hide-txt 숨김텍스트처리
+                                span.input-checkbox
+                                    input(type="checkbox" id="checkbox204" name="checkbox204" checked disabled)
+                                    label(for="checkbox204")
+                                        span.hide-txt 숨김텍스트처리
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 label
+
+                            :code
+                                span.input-checkbox.right
+                                    input(type="checkbox" id="checkbox211" name="checkbox211")
+                                    label(for="checkbox211")
+                                        span.txt 텍스트 오른쪽
+                                span.input-checkbox.left
+                                    input(type="checkbox" id="checkbox221" name="checkbox221")
+                                    label(for="checkbox221")
+                                        span.txt 텍스트 왼쪽
+                                span.input-checkbox.down
+                                    input(type="checkbox" id="checkbox231" name="checkbox231")
+                                    label(for="checkbox231")
+                                        span.txt 텍스트 아래쪽
+                                span.input-checkbox.up
+                                    input(type="checkbox" id="checkbox241" name="checkbox241")
+                                    label(for="checkbox241")
+                                        span.txt 텍스트 위쪽
+
+
+                            .et--component-note
+                                pre.
+                                    # 텍스트의 위치에 따라 right, left, up, down 클래스를 붙여줍니다.
+block footer
+
+block script
+    script(src="components.js")

@@ -1,0 +1,162 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Icon, Tag
+
+                    .et--component-group
+                        h3.et--component-group-title01 Icon
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 css type - arrow
+
+                            :code
+                                i.ico-arrow.top(aria-hidden="true")
+                                i.ico-arrow.down(aria-hidden="true")
+                                i.ico-arrow.left(aria-hidden="true")
+                                i.ico-arrow.right(aria-hidden="true")
+                                i.ico-arrow.top-left(aria-hidden="true")
+                                i.ico-arrow.top-right(aria-hidden="true")
+                                i.ico-arrow.bottom-left(aria-hidden="true")
+                                i.ico-arrow.bottom-right(aria-hidden="true")
+                                i.ico-arrow.top-narrow(aria-hidden="true")
+                                i.ico-arrow.top-wide(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+                                    # 기본 클래스 class="ico-arrow"
+                                    # 방향 클래스 top, down, left, right, top-left, top-right, bottom-left, bottom-right, top-narrow, top-wide
+                                    # 사용법 - 기본 클래스 + 방향 클래스 예) class="ico-arrow down"
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 css type - triangle
+
+                            :code
+                                i.ico-triangle.up(aria-hidden="true")
+                                i.ico-triangle.down(aria-hidden="true")
+                                i.ico-triangle.left(aria-hidden="true")
+                                i.ico-triangle.right(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+                                    # 기본 클래스 class="ico-triangle"
+                                    # 방향 클래스 up, down, left, right
+                                    # 사용법 - 기본 클래스 + 방향 클래스 예) class="ico-triangle up"
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 css type - line
+
+                            :code
+                                i.ico-line.more(aria-hidden="true")
+                                i.ico-line.close(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+                                    # 아이콘 사용시 인라인 스타일은 제거하고 클래스로 만들어서 사용합니다.
+
+                                    # 기본 클래스 class="ico-line"
+                                    # 모양 클래스 more, close
+                                    # 사용법 - 기본 클래스 + 모양 클래스 예) class="ico-line more"
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 css type - etc
+
+                            :code
+                                i.ico-delete(aria-hidden="true")
+                                    span.line
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 image type - icon
+
+                            :code
+                                i.ico-download-black(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 sprite image type - icon
+
+                            :code
+                                i.ico-download-black02(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 svg type - icon
+
+                            :code
+                                i.ico-search(aria-hidden="true")
+                                i.ico-all-menu(aria-hidden="true")
+
+                            .et--component-note
+                                pre.
+                                    # data url type
+                                    # svg 파일을 vscode에서 불러온 후에 data-url 형태로 변환해서 background-image 로 사용하면 됩니다.
+                                    # data-url 변환시 vscode의 확장프로그램 URL Encode 를 사용하면 됩니다.
+                                    # data-rul이 호환성 있게 변환이 안되면 ie에서 svg background-image가 제대로 나오지 않습니다.
+
+                                    # background image type
+                                    # svg 파일을 background-image로 사용합니다.
+                                pre
+
+
+
+
+
+
+
+
+
+
+                    .et--component-group
+                        h3.et--component-group-title01 Tag
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 css type - tag
+
+                            :code
+                                // bg별
+                                .tag.bg01
+                                    span.txt 마이너스
+                                .tag.bg02
+                                    span.txt 거래중지
+
+                                // 컬러별
+                                .tag.color01
+                                    span.txt 사전예약
+                                .tag.color02
+                                    span.txt 발급중
+
+                                // 기본
+                                .tag
+                                    span.txt 기본태그
+
+                            .et--component-note
+                                pre.
+                                    # 빈태그일때 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+block footer
+
+block script
+    script(src="components.js")

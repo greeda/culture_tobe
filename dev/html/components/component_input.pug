@@ -1,0 +1,183 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Input
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input 기본형
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                .form-validation-container.pass
+                                    .input-txt.line-all
+                                        input(type="text" title="" placeholder="플레이스홀더")
+                                    .form-validation-message 사용 가능한 이메일 입니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 error
+
+                            :code
+                                .form-validation-container.error
+                                    .input-txt.line-all
+                                        input(type="text" title="" placeholder="" value="입력완료")
+                                    .form-validation-message 비밀번호가 일치하지 않습니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 disabled
+
+                            :code
+                                .form-validation-container.disabled
+                                    .input-txt.line-all
+                                        input(type="text" title="" placeholder="" value="disabled 비활성화" disabled)
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 readonly
+
+                            :code
+                                .form-validation-container.readonly
+                                    .input-txt.line-all
+                                        input(type="text" title="" placeholder="" value="readonly 비활성화" readonly)
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input 라인형
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                .form-validation-container.pass
+                                    .input-txt
+                                        input(type="text" title="" placeholder="플레이스홀더")
+                                    .form-validation-message 사용 가능한 이메일 입니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 error
+
+                            :code
+                                .form-validation-container.error
+                                    .input-txt
+                                        input(type="text" title="" placeholder="" value="입력완료")
+                                    .form-validation-message 비밀번호가 일치하지 않습니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 disabled
+
+                            :code
+                                .form-validation-container.disabled
+                                    .input-txt
+                                        input(type="text" title="" placeholder="" value="disabled 비활성화" disabled)
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 readonly
+
+                            :code
+                                .form-validation-container.readonly
+                                    .input-txt
+                                        input(type="text" title="" placeholder="" value="readonly 비활성화" readonly)
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input 텍스트 + 검색버튼
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                .form-validation-container
+                                    .input-txt.line-all.btn-type01
+                                        input(type="text" title="검색어를 입력하세요." placeholder="플레이스홀더")
+                                        button(type="button").btn-input-search
+                                            span.hide-txt 검색
+                                            i.ico-input-search(aria-hidden="true")
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 disabled
+
+                            :code
+                                .form-validation-container.disabled
+                                    .input-txt.line-all.btn-type01
+                                        input(type="text" title="검색어를 입력하세요." placeholder="비활성화" disabled)
+                                        button(type="button").btn-input-search
+                                            span.hide-txt 검색
+                                            i.ico-input-search(aria-hidden="true")
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input 텍스트 + X 버튼
+
+                        .et--component-group-sub
+
+                            :code
+                                .form-validation-container
+                                    .input-txt.line-all.btn-type01.ui-input-reset
+                                        input(type="text" title="검색어를 입력하세요." placeholder="플레이스홀더")
+                                        button(type="button").btn-input-del.ui-reset-btn
+                                            span.hide-txt 검색
+                                            i.ico-input-del(aria-hidden="true")
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 03. 24.
+                                pre.
+                                    # .form-validation-container 영역에 추가 클래스로 컨텐츠간 여백을 조정 합니다.
+
+                                    # 벨리데이션 체크
+                                    # class="form-validation-container pass" - 성공 스타일
+                                    # class="form-validation-container error" - 에러 스타일
+                                    # class="form-validation-container disabled" - 비활성 스타일
+                                    # class="form-validation-container readonly" - 비활성 스타일
+                                    # 위 클래스를 상속 받아서 하위 영역을 컨트롤 합니다.
+
+                                    # class="input-txt" - 하단 라인형 스타일
+                                    # class="input-txt line-all" - 전체 라인형 스타일
+                                    # class="input-txt btn-type01" - 버튼 추가형 스타일
+
+                                    # input text은 label 태그를 필수로 연결해야 합니다. label를 사용할 수 없을때는 title="" 태그를 사용 합니다.
+                                    # input의 id 값과 label의 for 값을 동일하게 연결해줘야 합니다.
+
+                    .et--component-group
+                        h3.et--component-group-title01 Input date (IE 미지원)
+
+                        .et--component-group-sub
+
+                            :code
+                                span.input-date
+                                    input(type="date" title="날짜 선택" value="2019-02-28")
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 03. 24.
+                                pre.
+                                    # input date 기본형.
+                                    # IE는 지원하지 않기 때문에 모바일웹에서 사용하기 적당합니다.
+                                    # 기본 컴퍼넌트는 웹접근성을 준수합니다.(인증마크 획득시 통과)
+                                    # 커스터마이징에 제약사항이 많습니다.
+                                    # 텍스트가 가운데정렬이 되지 않아 텍스트 오른쪽에 아이콘 이미지를 추가하는 형태를 만들어서 maring:0 auto; 등으로 달력 컴퍼넌트 전체를 가운데 정렬해서 사용해야 합니다.
+
+                    .et--component-group
+                        h3.et--component-group-title01 파일첨부
+
+                        .et--component-group-sub
+
+                            :code
+                                .input-file-type01
+                                    input(type="file" id="input_file_type01").input-file
+                                    // label 에 파일 이름을 넣어 주세요.
+                                    label(for="input_file_type01").input-file-label
+                                        | 파일 이름이 들어 갑니다.
+
+block footer
+
+block script
+    script(src="components.js")

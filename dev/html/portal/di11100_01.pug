@@ -1,0 +1,27 @@
+extends /_src/_pug/_extend_html5
+
+block css
+    //- www
+    if NODE_ENV === 'development'
+        link(href=`${pathSettingHtml}css_partials/font.css`, type='text/css', rel='stylesheet')
+        link(href=`${pathSettingHtml}css_partials/reset.css`, type='text/css', rel='stylesheet')
+        link(href=`${pathSettingHtml}css_partials/print.css`, type='text/css', rel='stylesheet')
+
+        link(href=`${pathSettingHtml}css_partials/component_common.css`, type='text/css', rel='stylesheet')
+
+        link(href=`${pathSettingHtml}css_partials/header.css`, type='text/css', rel='stylesheet')
+        link(href=`${pathSettingHtml}css_partials/footer.css`, type='text/css', rel='stylesheet')
+
+        link(href=`${pathSettingHtml}css_partials/main_content.css`, type='text/css', rel='stylesheet')
+    //- build
+    else
+        link(href=`${pathSettingHtml}css/main.css`, type='text/css', rel='stylesheet')
+
+block script_top
+    script(src=`${pathSettingHtml}js/jquery.js`)
+    script(src=`${pathSettingHtml}js/main.js` defer)
+
+block contents
+    #container.pageClassMain
+        #content(role='main')
+            | 컨텐츠 시작

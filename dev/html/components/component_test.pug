@@ -1,0 +1,73 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title test
+
+                    .et--component-group
+                        h3.et--component-group-title01 크로스 브라우징 테스트
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 a태그, button태그 렌더링 맞추기
+
+                            :code
+                                a(href="#" style="border:1px solid red;line-height:1.4;padding:10px 0;display:inline-block;").a-test a 태그와 button 태그 랜더링 맞추기
+                                button(type="button" style="border:1px solid red;line-height:1.4;padding:10px 0;display:inline-block;").a-test a 태그와 button 태그 랜더링 맞추기
+
+                    .et--component-group
+                        h3.et--component-group-title01 웹 폰트 테스트
+
+                        .et--component-group-sub
+                            - var txt00 = " - 가나다라마바사아자차카타파하"
+                            - var txt01 = " - 가갸거교고규그기"
+                            - var txt02 = " - 갊갋갉값갂갖갗각감간갈갑갚갘갓갇같강갛"
+                            - var txt03 = " - ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅌㅍㅎ"
+                            - var txt04 = " - abcdefghijklmnopqrstuvwxyz"
+                            - var txt05 = " - ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            - var txt06 = " - 0123456789.:,;()*!?'@#<>$%&^+-=~"
+                            - var txt07 = " - The quick brown fox jumps over the lazy dog."
+                            - var txt08 = " - 중국어 - 春夏秋冬东南西北金木水火土天地日月星黑白红"
+                            - var txt09 = " - 일본어 - 一二三四五六七八九十百千上下左右中大小月日年早"
+                            - var txt10 = " - 일본어 - 親したしい間柄あいだがらで, 会あったり別わかれる時とき親したしみをこめて言いうあ"
+
+                            mixin font_test(...fonts)
+                                div.font-test-wrap
+                                    each val, index in fonts
+                                        div(class= val)
+                                            div.font-test-tit= fonts[index]
+                                            each val, index in [txt00, txt00, txt01, txt02, txt03, txt04, txt05, txt05, txt06, txt07, txt08, txt08, txt08, txt08, txt09, txt09, txt10, txt10, txt00, txt00, txt00, txt00, txt00, txt00]
+                                                div(class='item0' + index)= index + val
+
+                            .et--component-view
+                                .-component-test-style
+                                    +font_test(
+                                        'font-size-10',
+                                        'font-size-12',
+                                        'font-size-14',
+                                        'font-size-16',
+                                        'font-size-18',
+                                        'font-size-20',
+                                        'font-size-22',
+                                        'font-size-24',
+                                        'font-size-26',
+                                        'font-size-28',
+                                        'font-size-30',
+                                        'font-size-42',
+                                        'font-size-72',
+                                    )
+block footer
+
+block script
+    script(src="components.js")

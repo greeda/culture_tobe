@@ -1,0 +1,226 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$mobile-ico-paginav-first-name: 'mobile_ico_paginav_first';
+$mobile-ico-paginav-first-x: 0px;
+$mobile-ico-paginav-first-y: 0px;
+$mobile-ico-paginav-first-offset-x: 0px;
+$mobile-ico-paginav-first-offset-y: 0px;
+$mobile-ico-paginav-first-width: 16px;
+$mobile-ico-paginav-first-height: 17px;
+$mobile-ico-paginav-first-total-width: 62px;
+$mobile-ico-paginav-first-total-height: 44px;
+$mobile-ico-paginav-first-image: '../images/common/sprite_mobile.png';
+$mobile-ico-paginav-first: (0px, 0px, 0px, 0px, 16px, 17px, 62px, 44px, '../images/common/sprite_mobile.png', 'mobile_ico_paginav_first', );
+$mobile-ico-paginav-last-name: 'mobile_ico_paginav_last';
+$mobile-ico-paginav-last-x: 26px;
+$mobile-ico-paginav-last-y: 0px;
+$mobile-ico-paginav-last-offset-x: -26px;
+$mobile-ico-paginav-last-offset-y: 0px;
+$mobile-ico-paginav-last-width: 16px;
+$mobile-ico-paginav-last-height: 17px;
+$mobile-ico-paginav-last-total-width: 62px;
+$mobile-ico-paginav-last-total-height: 44px;
+$mobile-ico-paginav-last-image: '../images/common/sprite_mobile.png';
+$mobile-ico-paginav-last: (26px, 0px, -26px, 0px, 16px, 17px, 62px, 44px, '../images/common/sprite_mobile.png', 'mobile_ico_paginav_last', );
+$mobile-ico-paginav-next-name: 'mobile_ico_paginav_next';
+$mobile-ico-paginav-next-x: 52px;
+$mobile-ico-paginav-next-y: 0px;
+$mobile-ico-paginav-next-offset-x: -52px;
+$mobile-ico-paginav-next-offset-y: 0px;
+$mobile-ico-paginav-next-width: 10px;
+$mobile-ico-paginav-next-height: 17px;
+$mobile-ico-paginav-next-total-width: 62px;
+$mobile-ico-paginav-next-total-height: 44px;
+$mobile-ico-paginav-next-image: '../images/common/sprite_mobile.png';
+$mobile-ico-paginav-next: (52px, 0px, -52px, 0px, 10px, 17px, 62px, 44px, '../images/common/sprite_mobile.png', 'mobile_ico_paginav_next', );
+$mobile-ico-paginav-prev-name: 'mobile_ico_paginav_prev';
+$mobile-ico-paginav-prev-x: 0px;
+$mobile-ico-paginav-prev-y: 27px;
+$mobile-ico-paginav-prev-offset-x: 0px;
+$mobile-ico-paginav-prev-offset-y: -27px;
+$mobile-ico-paginav-prev-width: 10px;
+$mobile-ico-paginav-prev-height: 17px;
+$mobile-ico-paginav-prev-total-width: 62px;
+$mobile-ico-paginav-prev-total-height: 44px;
+$mobile-ico-paginav-prev-image: '../images/common/sprite_mobile.png';
+$mobile-ico-paginav-prev: (0px, 27px, 0px, -27px, 10px, 17px, 62px, 44px, '../images/common/sprite_mobile.png', 'mobile_ico_paginav_prev', );
+$mobile-ico-paginav-first-2x-name: 'mobile_ico_paginav_first@2x';
+$mobile-ico-paginav-first-2x-x: 0px;
+$mobile-ico-paginav-first-2x-y: 0px;
+$mobile-ico-paginav-first-2x-offset-x: 0px;
+$mobile-ico-paginav-first-2x-offset-y: 0px;
+$mobile-ico-paginav-first-2x-width: 32px;
+$mobile-ico-paginav-first-2x-height: 34px;
+$mobile-ico-paginav-first-2x-total-width: 124px;
+$mobile-ico-paginav-first-2x-total-height: 88px;
+$mobile-ico-paginav-first-2x-image: '../images/common/sprite_mobile@2x.png';
+$mobile-ico-paginav-first-2x: (0px, 0px, 0px, 0px, 32px, 34px, 124px, 88px, '../images/common/sprite_mobile@2x.png', 'mobile_ico_paginav_first@2x', );
+$mobile-ico-paginav-last-2x-name: 'mobile_ico_paginav_last@2x';
+$mobile-ico-paginav-last-2x-x: 52px;
+$mobile-ico-paginav-last-2x-y: 0px;
+$mobile-ico-paginav-last-2x-offset-x: -52px;
+$mobile-ico-paginav-last-2x-offset-y: 0px;
+$mobile-ico-paginav-last-2x-width: 32px;
+$mobile-ico-paginav-last-2x-height: 34px;
+$mobile-ico-paginav-last-2x-total-width: 124px;
+$mobile-ico-paginav-last-2x-total-height: 88px;
+$mobile-ico-paginav-last-2x-image: '../images/common/sprite_mobile@2x.png';
+$mobile-ico-paginav-last-2x: (52px, 0px, -52px, 0px, 32px, 34px, 124px, 88px, '../images/common/sprite_mobile@2x.png', 'mobile_ico_paginav_last@2x', );
+$mobile-ico-paginav-next-2x-name: 'mobile_ico_paginav_next@2x';
+$mobile-ico-paginav-next-2x-x: 104px;
+$mobile-ico-paginav-next-2x-y: 0px;
+$mobile-ico-paginav-next-2x-offset-x: -104px;
+$mobile-ico-paginav-next-2x-offset-y: 0px;
+$mobile-ico-paginav-next-2x-width: 20px;
+$mobile-ico-paginav-next-2x-height: 34px;
+$mobile-ico-paginav-next-2x-total-width: 124px;
+$mobile-ico-paginav-next-2x-total-height: 88px;
+$mobile-ico-paginav-next-2x-image: '../images/common/sprite_mobile@2x.png';
+$mobile-ico-paginav-next-2x: (104px, 0px, -104px, 0px, 20px, 34px, 124px, 88px, '../images/common/sprite_mobile@2x.png', 'mobile_ico_paginav_next@2x', );
+$mobile-ico-paginav-prev-2x-name: 'mobile_ico_paginav_prev@2x';
+$mobile-ico-paginav-prev-2x-x: 0px;
+$mobile-ico-paginav-prev-2x-y: 54px;
+$mobile-ico-paginav-prev-2x-offset-x: 0px;
+$mobile-ico-paginav-prev-2x-offset-y: -54px;
+$mobile-ico-paginav-prev-2x-width: 20px;
+$mobile-ico-paginav-prev-2x-height: 34px;
+$mobile-ico-paginav-prev-2x-total-width: 124px;
+$mobile-ico-paginav-prev-2x-total-height: 88px;
+$mobile-ico-paginav-prev-2x-image: '../images/common/sprite_mobile@2x.png';
+$mobile-ico-paginav-prev-2x: (0px, 54px, 0px, -54px, 20px, 34px, 124px, 88px, '../images/common/sprite_mobile@2x.png', 'mobile_ico_paginav_prev@2x', );
+$spritesheet-width: 62px;
+$spritesheet-height: 44px;
+$spritesheet-image: '../images/common/sprite_mobile.png';
+$spritesheet-sprites: ($mobile-ico-paginav-first, $mobile-ico-paginav-last, $mobile-ico-paginav-next, $mobile-ico-paginav-prev, );
+$spritesheet: (62px, 44px, '../images/common/sprite_mobile.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 124px;
+$retina-spritesheet-height: 88px;
+$retina-spritesheet-image: '../images/common/sprite_mobile@2x.png';
+$retina-spritesheet-sprites: ($mobile-ico-paginav-first-2x, $mobile-ico-paginav-last-2x, $mobile-ico-paginav-next-2x, $mobile-ico-paginav-prev-2x, );
+$retina-spritesheet: (124px, 88px, '../images/common/sprite_mobile@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$mobile-ico-paginav-first-group-name: 'mobile_ico_paginav_first';
+$mobile-ico-paginav-first-group: ('mobile_ico_paginav_first', $mobile-ico-paginav-first, $mobile-ico-paginav-first-2x, );
+$mobile-ico-paginav-last-group-name: 'mobile_ico_paginav_last';
+$mobile-ico-paginav-last-group: ('mobile_ico_paginav_last', $mobile-ico-paginav-last, $mobile-ico-paginav-last-2x, );
+$mobile-ico-paginav-next-group-name: 'mobile_ico_paginav_next';
+$mobile-ico-paginav-next-group: ('mobile_ico_paginav_next', $mobile-ico-paginav-next, $mobile-ico-paginav-next-2x, );
+$mobile-ico-paginav-prev-group-name: 'mobile_ico_paginav_prev';
+$mobile-ico-paginav-prev-group: ('mobile_ico_paginav_prev', $mobile-ico-paginav-prev, $mobile-ico-paginav-prev-2x, );
+$retina-groups: ($mobile-ico-paginav-first-group, $mobile-ico-paginav-last-group, $mobile-ico-paginav-next-group, $mobile-ico-paginav-prev-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

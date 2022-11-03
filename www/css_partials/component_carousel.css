@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*! mobile 버전 - css */
+/*! pc & tablet 버전 - css */
+.default-swiper .swiper-slide {
+  width: 200px;
+  width: 20rem;
+  height: 200px;
+  height: 20rem;
+  margin-right: 20px;
+  margin-right: 2rem;
+  background-color: chocolate; }
+
+.default-swiper .swiper-pagination-bullet-active {
+  background-color: blue; }
+
+.default-swiper .swiper-pagination-progressbar-fill {
+  background-color: blue; }
+
+.default-swiper .swiper-button-prev:after {
+  font-size: 0;
+  display: inline-block;
+  width: 20px;
+  width: 2rem;
+  height: 20px;
+  height: 2rem;
+  border-top: 2px solid #000000;
+  border-top: 0.2rem solid #000000;
+  border-right: 2px solid #000000;
+  border-right: 0.2rem solid #000000;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg); }
+
+.default-swiper .swiper-button-next:after {
+  font-size: 0;
+  display: inline-block;
+  width: 20px;
+  width: 2rem;
+  height: 20px;
+  height: 2rem;
+  border-top: 2px solid #000000;
+  border-top: 0.2rem solid #000000;
+  border-right: 2px solid #000000;
+  border-right: 0.2rem solid #000000;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.ui-swiper04 .swiper-slide {
+  width: 500px;
+  width: 50rem;
+  height: 500px;
+  height: 50rem;
+  margin-right: 20px;
+  margin-right: 2rem;
+  background-color: #ffffff; }
+
+.ui-swiper04 .video-item-container {
+  width: 480px;
+  height: 480px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=../sass_maps/component_carousel.css.map */

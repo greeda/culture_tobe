@@ -1,0 +1,183 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title swiper
+
+                    .et--component-group
+                        h3.et--component-group-title01 Swiper
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 1
+
+                            :code
+                                .default-swiper.ui-swiper01
+                                    .swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide 1
+                                            .swiper-slide 2
+                                            .swiper-slide 3
+                                            .swiper-slide 4
+                                            .swiper-slide 5
+
+                                        //- Add Pagination
+                                        .swiper-pagination
+                                        //- Add Arrows
+                                        .swiper-button-prev
+                                        .swiper-button-next
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 2
+
+                            :code
+                                .default-swiper.ui-swiper02
+                                    .swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide 1
+                                            .swiper-slide 2
+                                            .swiper-slide 3
+                                            .swiper-slide 4
+                                            .swiper-slide 5
+
+                                        //- Add Pagination
+                                        .swiper-pagination
+                                        //- Add Arrows
+                                        .swiper-button-prev
+                                        .swiper-button-next
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 3
+
+                            :code
+                                .default-swiper.ui-swiper03
+                                    .swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide 1
+                                            .swiper-slide 2
+                                            .swiper-slide 3
+                                            .swiper-slide 4
+                                            .swiper-slide 5
+
+                                        //- Add Pagination
+                                        .swiper-pagination
+                                        //- Add Arrows
+                                        .swiper-button-prev
+                                        .swiper-button-next
+
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 비디오
+
+                            :code
+                                .default-swiper.ui-swiper04
+                                    .swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .video-item-container
+                                                    video.video-file(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                                        source(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                            .swiper-slide
+                                                .video-item-container
+                                                    video.video-file(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                                        source(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                            .swiper-slide
+                                                .video-item-container
+                                                    video.video-file(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                                        source(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                            .swiper-slide
+                                                .video-item-container
+                                                    video.video-file(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                                        source(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                            .swiper-slide
+                                                .video-item-container
+                                                    video.video-file(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+                                                        source(src="../../images/common/test_video01.mp4" muted autoplay playsinline loop)
+
+                                        //- Add Pagination
+                                        .swiper-pagination
+                                        //- Add Arrows
+                                        .swiper-button-prev
+                                        .swiper-button-next
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 14.
+                                pre.
+                                    # https://swiperjs.com/demos
+
+                                    # swiper 라이브러리에서 제공하는 .swiper-container .swiper-wrapper .swiper-slide 클래스는 동일하게 사용 합니다.
+                                    # .swiper-container 를 감싸는 영역인 .default-swiper 와 같이 클래스명을 정해서 swiper 종류별 또는 카테고리별로 관리 합니다.
+
+                                    # 스크립트
+                                    # .ui-swiper01 를 셀렉터로 사용 합니다. 01,02,03과 같이 추가해서 사용합니다.
+block footer
+
+block script
+    script(src="components.js")
+    script.
+        var swiper = new Swiper('.ui-swiper01 .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper = new Swiper('.ui-swiper02 .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper = new Swiper('.ui-swiper03 .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper = new Swiper('.ui-swiper04 .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });

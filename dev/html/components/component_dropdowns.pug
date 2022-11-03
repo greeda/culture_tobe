@@ -1,0 +1,96 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Dropdowns
+
+                    .et--component-group
+                        h3.et--component-group-title01 Dropdowns
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 리스트 아래로 열림
+
+                            :code
+                                .drop-down-container
+                                    // open 클래스 추가 시 열림
+                                    .drop-down-align
+                                        button(type="button").drop-down-btn
+                                            span.drop-down-index 문의하실 유형을 선택하세요.
+                                            i.drop-down-ico(aria-hidden="true")
+                                        ul.drop-down-list
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템1
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템2
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템3
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 리스트 위로 열림
+
+                            :code
+                                .drop-down-container
+                                    // open 클래스 추가 시 열림
+                                    .drop-down-align.top
+                                        button(type="button").drop-down-btn
+                                            span.drop-down-index 문의하실 유형을 선택하세요.
+                                            i.drop-down-ico(aria-hidden="true")
+                                        ul.drop-down-list
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템1
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템2
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템3
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 비활성화
+
+                            :code
+                                .drop-down-container
+                                    .drop-down-align.disabled
+                                        button(type="button").drop-down-btn
+                                            span.drop-down-index 문의하실 유형을 선택하세요.
+                                            i.drop-down-ico(aria-hidden="true")
+                                        ul.drop-down-list
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템1
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템2
+                                            li.drop-down-item
+                                                a(href="#none").drop-down-link
+                                                    span.drop-down-txt 아이템3
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 04. 03.
+                                pre.
+                                    # class="drop-down-align" - 리스트 방향 아래쪽 타입
+                                    # class="drop-down-align top" - 리스트 방향 위쪽 타입
+                                    # class="drop-down-align disabled" - 비활성 타입
+
+                                    # class="drop-down-align open" - 리스트 아래로 열림
+                                    # class="drop-down-align top open" - 리스트 위로 열림
+block footer
+
+block script
+    script(src="components.js")

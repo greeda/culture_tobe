@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+// ******************** code comments ********************
+// table
+// ******************** code comments ********************
+/*! table - col 타입 1 */
+.tbl-container01{
+    width: 100%;
+}
+// 셀 균등하게 만들때
+.tbl-cell-equal{
+    table-layout: fixed;
+}
+// 고정틀 + 스크롤 테이블
+.tbl-fixed-scroll{
+    border:1px solid gray;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    &.height01{
+        @include rem(max-height, 300px);
+    }
+    table{
+        border:0;
+        white-space: nowrap;
+        border-collapse: separate;
+    }
+    .sticky-thead01{
+        position: sticky;
+        top:0;
+        z-index:5;
+        @include rem(height, 25px);
+    }
+    .sticky-thead02{
+        position: sticky;
+        @include rem(top, 25px);
+        z-index:4;
+        @include rem(height, 25px);
+    }
+    .sticky-tbody01{
+        position: sticky;
+        top:0;
+        left:0;
+        z-index: 3;
+        @include rem(min-width, 90px);
+    }
+    .sticky-tbody02{
+        position: sticky;
+        top:0;
+        @include rem(left, 90px);
+        z-index: 2;
+        background-color: #ffffff;
+    }
+}
+
+// col 타입
+.tbl-col01{
+    width:100%;
+    border:1px solid gray;
+    th{
+        background-color:cornsilk;
+        @include rem(font-size, 24px);
+        border-right:1px solid gray;
+        border-bottom:1px solid gray;
+        &:last-child{
+            border-right:0;
+        }
+    }
+    td{
+        @include rem(font-size, 18px);
+        border-right:1px solid gray;
+        border-bottom:1px solid gray;
+        &:last-child{
+            border-right:0;
+        }
+    }
+    tr:last-child{
+        td{
+            border-bottom:0;
+        }
+    }
+}
+
+// row 타입
+.tbl-row01{
+    width:100%;
+    border:1px solid gray;
+    th{
+        background-color:cornsilk;
+        @include rem(font-size, 24px);
+        border-right:1px solid gray;
+        border-bottom:1px solid gray;
+    }
+    td{
+        @include rem(font-size, 18px);
+        border-right:1px solid gray;
+        border-bottom:1px solid gray;
+        &:last-child{
+            border-right:0;
+        }
+    }
+    tr:last-child{
+        th{
+            border-bottom:0;
+        }
+        td{
+            border-bottom:0;
+        }
+    }
+}
+
+// col + row 타입
+.tbl-col-row01{
+    width:100%;
+    border:1px solid gray;
+    th{
+        background-color:cornsilk;
+        @include rem(font-size, 12px);
+        border-right:1px solid gray;
+        border-bottom:1px solid gray;
+        text-align: center;
+    }
+    td{
+        @include rem(font-size, 12px);
+        border-right:1px solid gray;
+        border-bottom:1px solid gray;
+        &:last-child{
+            border-right:0;
+        }
+    }
+    thead{
+        tr:first-child{
+            th:last-child{
+                border-right:0;
+            }
+        }
+    }
+    tbody{
+        tr:last-child{
+            th{
+                border-bottom:0;
+            }
+            td{
+                border-bottom:0;
+            }
+        }
+    }
+}

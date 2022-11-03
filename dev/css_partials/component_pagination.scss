@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+// ******************** code comments ********************
+// page navigation
+// ******************** code comments ********************
+/*! page navigation */
+// .page-nav-container{}
+.page-nav{
+    width:100%;
+    text-align:center;
+    font-size:0;
+
+    .page-item-container{
+        display:inline-block;
+        @include rem(margin, 0 34px);
+    }
+
+    // 페이징 숫자 영역
+    .page-item{
+        display:inline-block;
+        @include rem(width, 40px);
+        @include rem(height, 48px);
+
+        .page-link{
+            display:table;
+            width:100%;
+            height:100%;
+            .txt{
+                display:table-cell;
+                vertical-align:middle;
+                @include rem(font-size, 18px);
+                color: gray;
+                transition: color .3s ease-out;
+            }
+            &:hover:not(.on),
+            &:focus:not(.on),
+            &:active:not(.on){
+                .txt{
+                    color: blue;
+                }
+            }
+            &.on{
+                .txt{
+                    color: blue;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    // 페이징 버튼 영역
+    .page-util{
+        display:inline-block;
+        @include rem(width, 48px);
+        @include rem(height, 48px);
+
+        .page-link{
+            display:table;
+            width:100%;
+            height:100%;
+            border:1px solid #999999;
+            transition: border .3s ease-out;
+        }
+
+        .ico-area{
+            display:table-cell;
+            vertical-align:middle;
+            width:100%;
+        }
+        .ico-page-arrow{
+            display:inline-block;
+            position: relative;
+            @include rem(width, 8px);
+            @include rem(height, 8px);
+            @include rem(border-top, 2px solid #000000);
+            @include rem(border-right, 2px solid #000000);
+            transition: border .3s ease-out;
+            &.left{
+                transform: rotate(-135deg);
+                @include rem(margin-right, -2px);
+
+                // hover 애니메이션 관련 소스 필요 없을 경우 제거
+                left:0;
+                &:first-child{
+                    transition: left .3s ease-out;
+                }
+                &:last-child{
+                    transition: left .3s ease-out;
+                }
+            }
+            &.right{
+                transform: rotate(45deg);
+                @include rem(margin-left, -2px);
+
+                // hover 애니메이션 관련 소스 필요 없을 경우 제거
+                right:0;
+                &:first-child{
+                    transition: right .3s ease-out;
+                }
+                &:last-child{
+                    transition: right .3s ease-out;
+                }
+            }
+        }
+
+        &.prev{
+            @include rem(margin-left, 8px);
+        }
+        &.next{
+            @include rem(margin-right, 8px);
+        }
+
+        // 페이징 버튼 - 화살표 애니메이션 - 필요 없을 시 제거하기
+        .page-link{
+            &:hover:not(.disabled){
+                .ico-page-arrow{
+                    &.left{
+                        left:-3px;
+                    }
+                    &.right{
+                        right:-3px;
+                    }
+                }
+            }
+        }
+
+        // 페이징 버튼 - 기본 마우스 hover 속성
+        .page-link{
+            &:hover:not(.disabled),
+            &:focus:not(.disabled),
+            &:active:not(.disabled){
+                border-color: blue;
+                .ico-page-arrow{
+                    border-color: blue;
+                }
+            }
+            // disabled 속성
+            @include ui-disabled();
+        }
+    }
+}
+
+/*! page navigation - type02 */
+.page-nav.type02{
+    .page-item-container{
+        .page-item{
+            &:first-child{
+                position: relative;
+                @include rem(padding-right, 15px);
+                &:after{
+                    content:'';
+                    @include rem(width, 1px);
+                    @include rem(height, 20px);
+                    position: absolute;
+                    top:50%;
+                    right:0;
+                    @include rem(margin-top, -10px);
+                    background-color:gray;
+                    transform: rotate(0deg) skew(-20deg, 0deg);
+                }
+            }
+            &:last-child{
+                @include rem(padding-left, 15px);
+            }
+        }
+    }
+}

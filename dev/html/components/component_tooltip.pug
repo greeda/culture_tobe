@@ -1,0 +1,35 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Tooltip
+
+                    .et--component-group
+                        h3.et--component-group-title01 Tooltip
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                //code
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 14.
+                                pre.
+                                    # &#60;a>&#60;/a> 샘플
+block footer
+
+block script
+    script(src="components.js")

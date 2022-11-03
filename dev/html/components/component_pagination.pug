@@ -1,0 +1,61 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title 페이지 네비게이션
+
+                    .et--component-group
+                        h3.et--component-group-title01 페이지 네비게이션
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 1
+
+                            .et--component-view
+                                .page-nav-container
+                                    +page-nav('type01')
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                .page-nav-container
+                                    //+page-nav('type01')
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 15.
+                                pre.
+                                    # 페이지네비게이션 타입 1
+                                    # 빈 태그에는 aria-hidden="true" 라고 처리해야 스크린 리더나 보이스오버, 토크백등에서 읽지 않습니다.
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 타입 2
+
+                            .et--component-view
+                                .page-nav-container
+                                    +page-nav('type02', 'type02')
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                .page-nav-container
+                                    //+page-nav('type02', 'type02')
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 02. 15.
+                                pre.
+                                    # 페이지네비게이션 타입 2
+                                    # 빈 태그에는 aria-hidden="true" 라고 처리해야 스크린 리더나 보이스오버, 토크백등에서 읽지 않습니다.
+
+block footer
+
+block script
+    script(src="components.js")

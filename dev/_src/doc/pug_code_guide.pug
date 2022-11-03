@@ -1,0 +1,191 @@
+//- pug 페이지 설명
+//- 아래 나열된 순서대로 필요한 부분 설명 보고 사용합니다.
+//- 이 페이지를 사용하는 것이 아니라 아래 주석 가이드를 참고 바랍니다.
+//- block, append, prepend 명령어를 효율적으로 사용합니다.
+
+
+
+//- pug 템플릿 파일 연결 (기본 1개로 세팅해서 메인, 서브 등등 공통으로 사용합니다.)
+//- 특정한 페이지의 경우 block, append 등의 명령어를 사용해서 커스터 마이징
+extends /_src/_pug/_extend_html5
+
+
+
+//- 메타태그 title 입력 영역
+//- 서브페이지에서 설정하지 않으면 extend_html5.pug 에 설정된 공통 값으로 사용합니다.
+//- 페이지에서 별도 입력이 필요한 경우 아래와 같이 사용하고, title 영역에 텍스트 입력
+block title
+    title 타이틀
+
+
+
+//- 메타태그 keywords, description 입력 영역
+//- 서브페이지에서 설정하지 않으면 extend_html5.pug 에 설정된 공통 값으로 사용합니다.
+//- 페이지에서 별도 입력이 필요한 경우 아래와 같이 사용하고, content='' 영역에 텍스트 입력
+block keywords&description
+    meta(name="keywords" content='')
+    meta(name="description" content='')
+
+
+
+//- org태그 title, url, image, description
+//- 서브페이지에서 설정하지 않으면 extend_html5 에 설정된 공통 값으로 사용합니다.
+//- 페이지에서 별도 입력이 필요한 경우 아래와 같이 사용하고, content='' 영역에 텍스트 입력
+block property
+    meta(property="og:title" content='')
+    meta(property="og:url" content='')
+    meta(property="og:image" content='')
+    meta(property="og:description" content='')
+
+
+
+//- css 링크 영역
+//- 서브페이지에서 설정하지 않으면 extend_html5 에 설정된 공통 값으로 사용합니다.
+//- block css 할 경우 extend_html5 의 공통 css 링크를 초기화하고 현재 페이지에서 새롭게 css 링크를 정의
+//- block append css 할 경우 extend_html5 의 기존 css 링크를 유지하고 마지막에 추가합니다.
+//- block prepend css 할 경우 extend_html5 의 기존 css 링크를 유지하고 처음에 추가합니다.
+block prepend css
+    link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+block append css
+    link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+block css
+    link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+
+//- 메인페이지의 경우 (필요한 css로만 재배치)
+block css
+    //- www
+    if NODE_ENV === 'development'
+        link(href=`${pathSettingHtml}css_partials/font.css`, type='text/css', rel='stylesheet')
+        link(href=`${pathSettingHtml}css_partials/reset.css`, type='text/css', rel='stylesheet')
+        link(href=`${pathSettingHtml}css_partials/print.css`, type='text/css', rel='stylesheet')
+
+        link(href=`${pathSettingHtml}css_partials/component_common.css`, type='text/css', rel='stylesheet')
+
+        link(href=`${pathSettingHtml}css_partials/header.css`, type='text/css', rel='stylesheet')
+        link(href=`${pathSettingHtml}css_partials/footer.css`, type='text/css', rel='stylesheet')
+
+        link(href=`${pathSettingHtml}css_partials/main_content.css`, type='text/css', rel='stylesheet')
+    //- build
+    else
+        link(href=`${pathSettingHtml}css/main.css`, type='text/css', rel='stylesheet')
+
+
+//- css inline 영역
+//- 페이지에 style 소스를 넣을려면 아래와 같이 사용합니다.
+//- 특수한 상황 아니면 이 방법은 사용하지 않습니다.
+block append css
+    style.
+        html{font-size:24px;}
+        .aaa div{font-size:1.8rem;}
+        .bbb div{font-size:12px}
+        .ccc div{font-size:1.2em}
+
+
+
+//- <head></head> 영역에 스크립트 링크를 넣을 경우 사용합니다.
+block script_top
+    script(src=`${pathSettingHtml}jquery.js`)
+
+//- <head></head> 영역에 인라인 스크립트 넣을 경우 사용합니다.
+block append script_top
+    script.
+        var swiper = new Swiper('.history-outer', {
+            speed: 600,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            parallax: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true
+            }
+        });
+
+//- <head></head> 영역에 인클루드 가능합니다.
+block append script_top
+    script
+        include /_codinglist/_js/_codinglist_common.js
+
+
+
+//- <html lang=""> <html class=""> <body class=""> <div id="wrap" class="">
+//- html 언어설정, html,body 영역 클래스, wrap 영역 클래스 설정
+//- 필요한 부분만 변수를 가져와서 사용하면 해당 페이지에서만 적용
+//- 설정 하지 않을 경우 extend_html5.pug 의 설정을 적용
+block vars
+    - var language = 'ko' //- <html> lang 언어 설정
+    - var htmlClass = 'aaa' //- <html> class 설정
+    - var bodyClass = 'bbb' //- <body> class 설정
+    - var wrapClass = 'ccc' //- id="wrap" 영역 class 설정
+    - var pathSettingHtml = '../../../' //- 해당 페이지의 상대경로를 바꿉니다.
+
+
+
+//- <div id="wrap"> 영역 주변에 엘리먼트를 추가 할 경우 사용합니다.
+//- <div id="wrap"> 영역 이전에 추가합니다.
+block prepend wrap
+    div.dimm1
+//- <div id="wrap"> 영역 다음에 추가합니다.
+block append wrap
+    div.dimm2
+//- <div id="wrap"> 영역 초기화 (wrap 안의 모든 영역이 초기화 됩니다.)
+block wrap
+    div
+
+
+
+//- 메인이나 일부 페이지에서 header 가 없거나 디자인이 다를때 초기화 후 재설정
+block header
+    div 헤더 영역 초기화
+block header
+    // s: header include
+    //- 다른 파일 인클루드 해야 할 경우
+    include /html/include/다른헤더파일인클루드가능
+    // e: header include
+
+
+
+//- 컨텐츠 영역
+block contents
+    //- id=container 영역에 페이지 이름과 같은 클래스를 유니크하게 지정 (pageClass페이지명)
+    #container.pageClass페이지명
+        #content(role='main')
+            | 컨텐츠 시작
+
+
+
+//- 메인이나 일부 페이지에서 footer 가 없거나 디자인이 다를때 초기화 후 재설정
+block footer
+    div 헤더 영역 퍼블리싱 또는 아래와 같이 다른 파일 인클루드
+block footer
+    // s: footer include
+    //- 다른 파일 인클루드 해야 할 경우
+    include /html/include/다른푸터파일인클루드가능
+    // e: footer include
+
+
+
+//- 하단 스크립트 링크 영역 - 초기화 하고 다시 세팅 할때
+block script
+    script(src=`${pathSettingHtml}jquery.js`)
+//- 하단 스크립트 링크 영역 - 기존 링크 파일의 마지막에 추가 할때
+block append script
+    script(src=`${pathSettingHtml}jquery.js`)
+//- 하단 스크립트 링크 영역 - 기존 링크 파일의 처음에 추가 할때
+block prepend script
+    script(src=`${pathSettingHtml}jquery.js`)
+//- <body> 영역에 인라인 스크립트 넣을 경우 사용 (아래와 같이 인클루드 가능)
+block append script
+    script.
+        var swiper = new Swiper('.history-outer', {
+            speed: 600,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            parallax: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true
+            }
+        });
+block append script
+    script
+        include /_codinglist/_js/_codinglist_common.js

@@ -1,0 +1,126 @@
+- var language = 'ko'
+- var htmlClass = ''
+- var bodyClass = ''
+- var wrapClass = ''
+- var pathSettingHtml = locals['pathSettingHtml'];
+- var NODE_ENV = locals['NODE_ENV'];
+block vars
+
+//- 추가 인클루드는 _setting 안에다가 하기 여기 인클루드는 _setting 하나만 나와있게 관리하기
+include /_src/_pug/_setting
+
+doctype html
+
+html(class=`${htmlClass}`, lang=`${language}`)
+    head
+        block viewport
+            - var viewport_mode = 'pc'
+
+        case viewport_mode
+            when 'pc'
+                meta(name='viewport', content='width=device-width, initial-scale=1')
+            when 'mobile'
+                meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover')
+                meta(name='format-detection', content="telephone=no")
+
+        meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+        meta(charset="utf-8")
+
+        block title
+            title 프로젝트타이틀
+
+        block keywords&description
+            meta(name="keywords" content="")
+            meta(name="description" content="")
+
+        block property
+            meta(property="og:title" content="")
+            meta(property="og:url" content="")
+            meta(property="og:image" content="")
+            meta(property="og:description" content="")
+
+        link(rel='shortcut icon', type='image/x-icon', href='/favicon.ico')
+
+        block css
+            //- www
+            if NODE_ENV === 'development'
+                link(href=`${pathSettingHtml}css_partials/font.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/reset.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/print.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/jquery.scrollbar.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/swiper.5.4.5.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/tui-date-picker.css`, type='text/css', rel='stylesheet')
+
+                link(href=`${pathSettingHtml}css_partials/component_common.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_scroll.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_map.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_video.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_icon.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_button.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_input.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_select.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_checkbox.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_radio.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_formGroup.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_pagination.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_table.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_card.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_list.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_tab.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_dropdowns.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_breadcrumb.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_scrollspy.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_carousel.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_accordion.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_tooltip.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_modal.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_toasts.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_spinners.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_editor.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_test.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/componentlist.css`, type='text/css', rel='stylesheet')
+
+                link(href=`${pathSettingHtml}css_partials/header.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/footer.css`, type='text/css', rel='stylesheet')
+            //- build
+            else
+                link(href=`${pathSettingHtml}css/common.css`, type='text/css', rel='stylesheet')
+
+        block script_top
+            script(src=`${pathSettingHtml}js/jquery.js`)
+            script(src=`${pathSettingHtml}js/gsap.min.js`)
+            script(src=`${pathSettingHtml}js/swiper.min.5.4.5.js`)
+            script(src=`${pathSettingHtml}js/jquery.scrollbar.min.js` defer)
+            script(src=`${pathSettingHtml}js/common.js` defer)
+
+    body(class=`${bodyClass}`)
+        //- ie8이하 브라우저 업그레이드 권장 안내 텍스트
+        +browserupgrade
+
+        block wrap
+            #wrap(class=`${wrapClass}`)
+
+                block header
+                    // s: header include
+                    if NODE_ENV === 'development'
+                        <!--#include virtual="/html/include/header.html" -->
+                    else
+                        include /html/include/header
+                    // e: header include
+
+                block contents
+
+                block top_btn
+
+                block footer
+                    // s: footer include
+                    if NODE_ENV === 'development'
+                        <!--#include virtual="/html/include/footer.html" -->
+                    else
+                        include /html/include/footer
+                    // e: footer include
+
+            //- 딤드용 이미지
+            +dimm
+
+        block script

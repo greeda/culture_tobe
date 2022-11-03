@@ -1,0 +1,170 @@
+//- 이 페이지는 참고용 가이드 페이지 입니다.
+//- 아래 세팅은 모든 페이지에서 공통으로 적용 됩니다.
+//- 별도 세팅이 필요한 경우 해당 페이지내에서 설정 해야 합니다.
+//- 해당 페이지에서의 설정은 pug_code_guide.pug 를 참고해 주세요.
+
+//- 언어, html 클래스, body 클래스, wrap 클래스 변수 설정 영역 입니다.
+//- block vars 라고 설정해야 다른 페이지에서 사용 할 수 있습니다.
+- var language = 'ko'
+- var htmlClass = ''
+- var bodyClass = ''
+- var wrapClass = ''
+//- 링크경로 관련 변수 설정 입니다.
+- var pathSettingHtml = locals['pathSettingHtml'];
+//- 작업영역을 구분할 수 있는 변수 설정 입니다.
+- var NODE_ENV = locals['NODE_ENV'];
+block vars
+
+//- 필수 include 파일. _setting에 저장된 내용을 전체 페이지에서 공통으로 사용 할 수 있게 해줍니다.
+include /_src/_pug/_setting
+
+//- doctype 설정
+doctype html
+
+//- ie브라우저 관련 조건 주석문 mixin (1)
++html_conditional_comment(language)
+
+//- html 클래스와 언어 설정을 위한 변수를 아래와 같이 세팅
+html(class=`${htmlClass}`, lang=`${language}`)
+    //- ie브라우저 관련 조건 주석문 mixin (2)
+    //<![endif]
+    head
+        //- 뷰포트 선택 영역
+        //- case 에 설정된 코드를 아래 viewport_mode 변수에 값을 세팅 합니다.
+        //- 반응형 일 경우 'mobile'로 설정 합니다.
+        block viewport
+            - var viewport_mode = 'pc'
+
+        case viewport_mode
+            when 'pc'
+                meta(name='viewport', content='width=device-width, initial-scale=1')
+            when 'mobile'
+                meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover')
+                meta(name='format-detection', content="telephone=no")
+
+        meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+        meta(charset="utf-8")
+
+        //- 프로젝트 타이틀 설정
+        //- 모든 페이지에 공통 적용
+        block title
+            title 프로젝트타이틀
+
+        //- 메타태그 keywords, description 텍스트 설정
+        //- 모든 페이지에 공통 적용
+        block keywords&description
+            meta(name="keywords" content="")
+            meta(name="description" content="")
+
+        //- org 태그 title, url, image, description 텍스트 설정
+        //- 모든 페이지에 공통 적용
+        block property
+            meta(property="og:title" content="")
+            meta(property="og:url" content="")
+            meta(property="og:image" content="")
+            meta(property="og:description" content="")
+
+        //- 파비콘 설정 영역
+        link(rel='shortcut icon', type='image/x-icon', href='/favicon.ico')
+
+        //- 기본 css 링크 설정 (모든 페이지 공통 적용)
+        block css
+            //- www
+            //- if NODE_ENV === 'development' 영역은 퍼블리싱 작업시에 화면을 구성하는 www 폴더의 모든 페이지에 렌더링 되는 css 링크들 입니다.
+            //- 퍼블리싱 작업시에 아래 링크들을 pug의 include 형태로 작업을 하면 속도가 너무 느려서 아래와 같은 방법으로 처리 하고 있습니다.
+            if NODE_ENV === 'development'
+                //- 기본 세팅 css
+                //- 경로는 ${pathSettingHtml} 변수를 사용 합니다.
+                link(href=`${pathSettingHtml}css_partials/font.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/reset.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/print.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/jquery.scrollbar.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/swiper.5.4.5.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/tui-date-picker.css`, type='text/css', rel='stylesheet')
+
+                //- 프로토타입 css
+                link(href=`${pathSettingHtml}css_partials/component_common.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_scroll.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_map.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_video.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_icon.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_button.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_input.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_select.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_checkbox.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_radio.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_formGroup.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_pagination.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_table.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_card.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_list.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_tab.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_dropdowns.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_breadcrumb.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_scrollspy.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_carousel.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_accordion.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_tooltip.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_modal.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_toasts.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_spinners.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_test.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/componentlist.css`, type='text/css', rel='stylesheet')
+
+                //- 공통 인클루드 css
+                link(href=`${pathSettingHtml}css_partials/header.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/footer.css`, type='text/css', rel='stylesheet')
+
+            //- build
+            //- else 영역은 개발에 전달하는 build 폴더의 모든 페이지에 렌더링 되는 css 링크들 입니다.
+            //- 위 css 파일들이 common.css 파일에 import 되어 있습니다.
+            else
+                link(href=`${pathSettingHtml}css/common.css`, type='text/css', rel='stylesheet')
+
+        //- 스크립트 링크 설정 - 상단
+        //- defer aysnc 에 관한건 구글 검색 해보세요.
+        block script_top
+            script(src=`${pathSettingHtml}js/jquery.js`)
+            script(src=`${pathSettingHtml}js/gsap.min.js`)
+            script(src=`${pathSettingHtml}js/swiper.min.5.4.5.js`)
+            script(src=`${pathSettingHtml}js/jquery.scrollbar.min.js` defer)
+            script(src=`${pathSettingHtml}js/common.js` defer)
+
+    //- body클래스 설정을 위한 변수를 아래와 같이 세팅
+    body(class=`${bodyClass}`)
+        //- ie8이하 브라우저 업그레이드 권장 안내 텍스트
+        +browserupgrade
+
+        block wrap
+            #wrap(class=`${wrapClass}`)
+
+                block header
+                    // s: header include
+                    //- if NODE_ENV === 'development' 영역은 www용 공통 헤더 파일 입니다.
+                    //- html 소스에 header 소스를 나타내지 않습니다. 그러나 브라우저 화면과 요소검사에서는 나타나게 합니다.
+                    //- include 파일 수정시 느린 속도를 해결하기 위한 소스 입니다.
+                    if NODE_ENV === 'development'
+                        <!--#include virtual="/html/include/header.html" -->
+
+                    //- else는 개발용 build 폴더의 모든 html 페이지에 header 소스를 출력 합니다.
+                    else
+                        include /html/include/header
+                    // e: header include
+
+                //- 페이지별 컨텐츠 영역 입니다.
+                block contents
+
+                block footer
+                    //- header 와 동일 합니다.
+                    // s: footer include
+                    if NODE_ENV === 'development'
+                        <!--#include virtual="/html/include/footer.html" -->
+                    else
+                        include /html/include/footer
+                    // e: footer include
+
+            //- 딤드용 공통 이미지
+            +dimm
+
+        //- 스크립트 링크 설정 - 하단
+        block script

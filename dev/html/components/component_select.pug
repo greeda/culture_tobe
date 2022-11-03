@@ -1,0 +1,87 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Select
+
+                    .et--component-group
+                        h3.et--component-group-title01 Select 기본형
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                .form-validation-container
+                                    .selectbox
+                                        select(title="")
+                                            option(value="") 선택
+                                            option(value="") 아이템1
+                                            option(value="") 아이템2
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 disabled
+
+                            :code
+                                .form-validation-container.disabled
+                                    .selectbox
+                                        select(title="" disabled)
+                                            option(value="") disabled
+                                            option(value="") 아이템1
+                                            option(value="") 아이템2
+
+                    .et--component-group
+                        h3.et--component-group-title01 Select 제목 + 셀렉트 박스
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                .form-validation-container
+                                    label(for="selectbox-label01").label-area
+                                        .label-txt 제목
+                                    .selectbox
+                                        select(title="" id="selectbox-label01")
+                                            option(value="") 선택
+                                            option(value="") 아이템1
+                                            option(value="") 아이템2
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 disabled
+
+                            :code
+                                .form-validation-container.disabled
+                                    label(for="selectbox-label02").label-area
+                                        .label-txt 제목
+                                    .selectbox
+                                        select(title="" id="selectbox-label02" disabled)
+                                            option(value="") disabled
+                                            option(value="") 아이템1
+                                            option(value="") 아이템2
+
+
+                            .et--component-note
+                                //- 최신업데이트 2021. 03. 24.
+                                pre.
+                                    # .form-validation-container 영역에 추가 클래스로 컨텐츠간 여백&amp;사이즈를 조정 합니다.
+
+                                    # .form-validation-container.disabled - 비활성
+                                    # 위 클래스를 상속 받아서 하위 영역을 컨트롤 합니다.
+
+                                    # 셀렉트박스는 사용시 웹접근성 준수를 위하여 선택 후 "버튼"을 누를 수 있도록 퍼블리싱되어야 합니다.
+                                    # selectbox는 label 태그를 필수로 연결해야 합니다. label를 사용할 수 없을때는 title="" 태그를 사용 합니다.
+block footer
+
+block script
+    script(src="components.js")

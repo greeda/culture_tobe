@@ -1,0 +1,84 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Video
+
+                    .et--component-group
+                        h3.et--component-group-title01 Video
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 youtube iframe
+
+                            .et--component-view
+                                +youtubeIframe
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                //+youtubeIframe
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 youtube object
+
+                            .et--component-view
+                                +youtubeObject
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                //+youtubeObject
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 youtube embed
+
+                            .et--component-view
+                                +youtubeEmbed
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                //+youtubeEmbed
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 vimeo iframe
+
+                            .et--component-view
+                                +vimeoIframe
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                //+vimeoIframe
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 vimeo embed
+
+                            .et--component-view
+                                +vimeoEmbed
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                //+vimeoEmbed
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 video
+
+                            .et--component-view
+                                +video
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                //+video
+block footer
+
+block script
+    script(src="components.js")

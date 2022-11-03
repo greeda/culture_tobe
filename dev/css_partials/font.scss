@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+// 추가 인클루드는 _setting 안에다가 하기 여기 인클루드는 _setting 하나만 나와있게 관리하기
+@import 'dev/_src/_scss/_setting';
+
+// http://wit.nts-corp.com/2017/02/13/4258
+// 웹폰트에 대한 참고 사이트 입니다.
+// 깜빡거림 현상 같은거 해결 방법 있음
+// fontfaceobserver.js
+
+//- 웹폰트를 사용하는 경우 font stylesheet 를 사용 합니다.
+//- 폰트의 경로등은 프로젝트시 개발그룹과 상의해서 정하세요.
+//- 폰트 파일은 요청해서 받으시기 바랍니다.
+//- 모바일에서는 웹폰트는 비추천입니다. 폰트다운속도도 느리고 다운받는것 전부 사용자 데이터 요금입니다.
+
+// :lang(en){font-family:"맑은 고딕";color:red;}
+// :lang(ko){font-family:"궁서";color:blue;}
+// 해당영역에 {영어폰트(영어만 지원해야함), 한글폰트, 기본폰트}로 순으로 폰트 설정하고 숫자만 인라인 테그로 처리
+
+
+
+@font-face {
+    font-family: "NotoSans-Black";
+    // font-weight: 900;
+    src: url('../font/NotoSans-Black.eot'); /* IE 6 ~ 8, IE 호환성 보기 */
+    src: local(☺),
+    url('../font/NotoSans-Black.woff2') format('woff2'), /* IE Edge, WOFF2 지원 브라우저 */
+    url('../font/NotoSans-Black.woff') format('woff'), /* IE 9+, 모던 브라우저 */
+    url('../font/NotoSans-Black.ttf') format('truetype');
+}
+
+
+
+
+// 구글 API로 세팅 할때 아래 소스 사용
+// noto sans kr
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+// noto sans jp
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+// noto sans sc
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+// noto sans tc
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+// noto sans hk
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap');
+
+// noto sans kr + jp + sc + tc + hk
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+// roboto - 영문 + 숫자
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Montserrat - 영문 + 숫자 - font-family: 'Montserrat', sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// noto sans sc - 중국 본토 - 간체
+// noto sans tc - 대만 - 번체
+// noto sans hk - 홍콩
+
+// 한국 - lang="ko"
+// 미국 - lang="en"
+// 일본 - lang="ja"
+// 중국 - lang="zh"
+
+// font-family: 'Noto Sans KR', sans-serif;
+// font-family: 'Noto Sans JP', sans-serif;
+// font-family: 'Noto Sans SC', sans-serif;
+// font-family: 'Noto Sans TC', sans-serif;
+// font-family: 'Noto Sans HK', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+// 중국 시스템 폰트 - 법무법인 태평양
+// "Microsoft yahei","微软雅黑","Tahoma","Verdana","Arial","sans-serif"
+// 중국 시스템 폰트 - LG 화학
+// Helvetica, Arial, 'Microsoft Yahei','微软雅黑', STXihei, '华文细黑', sans-serif
+
+// 일본 시스템 폰트 - 법무법인 태평양
+// "Meiryo","Meiryo UI","MS PGothic","MS UI Gothic","Verdana","Tahoma","Arial","sans-serif"
+// 일본 시스템 폰트 - LG 화학
+// 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif
+// 일본 시스템 폰트 - 기타
+// 'Meiryo', 'メイリオ', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif
+
+// Thin 100
+// Light 300
+// Regular 400
+// Medium 500
+// Bold 700
+// Black 900
+
+
+
+
+
+// 아래는 fontfaceobserver.js 사용할때 쓰는 클래스들
+.fonts-load{visibility: hidden;}
+// .font-load-end{visibility: visible;}
+// .fonts-loaded .font-load{visibility: visible;}
+.fonts-loaded .fonts-load {visibility: visible;}

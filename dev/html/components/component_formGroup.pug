@@ -1,0 +1,153 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Form
+
+                    .et--component-group
+                        h3.et--component-group-title01 Form 컨테이너
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 col type
+
+                            :code
+                                .form-container
+                                    .form-align-type01.spacebetween-equal
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0101").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0101")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                        .form-col
+                                            .form-validation-container.error
+                                                label(for="form-container0102").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0102")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 col type
+
+                            :code
+                                .form-container
+                                    .form-align-type01.spacebetween-equal
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0301").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0301")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0302").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0302")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                        .form-col
+                                            .form-validation-container
+                                                label(for="form-container0303").label-area
+                                                    .label-txt 제목
+                                                .selectbox
+                                                    select(title="" id="form-container0303")
+                                                        option(value="") 선택
+                                                        option(value="") 아이템1
+                                                        option(value="") 아이템2
+
+                            .et--component-note
+                                pre.
+                                    class="form-align-type01 spacebetween-equal" 은 균등 분할
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 row + col type
+
+                            :code
+                                .form-container
+                                    .form-align-type01.spacebetween-equal
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0301").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0301")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0302").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0302")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                        .form-col
+                                            .form-validation-container
+                                                label(for="form-container0303").label-area
+                                                    .label-txt 제목
+                                                .selectbox
+                                                    select(title="" id="form-container0303")
+                                                        option(value="") 선택
+                                                        option(value="") 아이템1
+                                                        option(value="") 아이템2
+                                    .form-align-type01.spacebetween-equal
+                                        .form-col
+                                            .form-validation-container
+                                                label(for="form-container0303").label-area
+                                                    .label-txt 제목
+                                                .selectbox
+                                                    select(title="" id="form-container0303")
+                                                        option(value="") 선택
+                                                        option(value="") 아이템1
+                                                        option(value="") 아이템2
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0301").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0301")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                        .form-col
+                                            .form-validation-container.pass
+                                                label(for="form-container0302").label-area
+                                                    .label-txt 제목
+                                                .input-txt
+                                                    input(type="text" title="" placeholder="플레이스홀더" id="form-container0302")
+                                                .form-validation-message 사용 가능한 이메일 입니다.
+                                    .form-align-type01.spacebetween-equal
+                                        .form-col.flex-end-type01
+                                            span.input-radio.right
+                                                input(type="radio" id="test_radio0101" name="test_radio01")
+                                                label(for="test_radio0101")
+                                                    span.txt 텍스트 오른쪽1
+                                            span.input-radio.right
+                                                input(type="radio" id="test_radio0102" name="test_radio01")
+                                                label(for="test_radio0102")
+                                                    span.txt 텍스트 오른쪽2
+                                        .form-col
+                                            .form-validation-container
+                                                label(for="form-container0303").label-area
+                                                    .label-txt 제목
+                                                .selectbox
+                                                    select(title="" id="form-container0303")
+                                                        option(value="") 선택
+                                                        option(value="") 아이템1
+                                                        option(value="") 아이템2
+block footer
+
+block script
+    script(src="components.js")

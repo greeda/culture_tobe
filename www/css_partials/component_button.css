@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/*! mobile 버전 - css */
+/*! pc & tablet 버전 - css */
+/*! 기본 버튼 */
+.btn-lv01 {
+  display: inline-block;
+  text-align: center;
+  padding: 11px 15px 12px 15px;
+  padding: 1.1rem 1.5rem 1.2rem 1.5rem; }
+  .btn-lv01 .txt {
+    position: relative;
+    vertical-align: middle;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.4; }
+  .btn-lv01.blue {
+    border: 1px solid skyblue;
+    background-color: skyblue;
+    color: #ffffff; }
+  .btn-lv01.white {
+    border: 1px solid skyblue;
+    background-color: #ffffff;
+    color: red; }
+  .btn-lv01 [class^="ico-"] {
+    margin-left: 10px;
+    margin-left: 1rem; }
+
+/*! 기본 버튼 - 컨테이너 */
+/*! 기본 버튼 - 정렬 */
+.btn-align-type01.spacebetween-equal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: -5px;
+  margin-right: -0.5rem; }
+  .btn-align-type01.spacebetween-equal [class^="btn-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 5px;
+    margin-right: 0.5rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    word-break: break-all; }
+    .btn-align-type01.spacebetween-equal [class^="btn-"] .txt {
+      display: block;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto; }
+    .btn-align-type01.spacebetween-equal [class^="btn-"] [class^="ico-"] {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+
+.btn-align-type01.center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .btn-align-type01.center [class^="btn-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 5px;
+    margin-right: 0.5rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    word-break: break-all; }
+    .btn-align-type01.center [class^="btn-"]:last-child {
+      margin-right: 0; }
+    .btn-align-type01.center [class^="btn-"] .txt {
+      display: block;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto; }
+    .btn-align-type01.center [class^="btn-"] [class^="ico-"] {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+
+.btn-align-type01.left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .btn-align-type01.left [class^="btn-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 5px;
+    margin-right: 0.5rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    word-break: break-all; }
+    .btn-align-type01.left [class^="btn-"]:last-child {
+      margin-right: 0; }
+    .btn-align-type01.left [class^="btn-"] .txt {
+      display: block;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto; }
+    .btn-align-type01.left [class^="btn-"] [class^="ico-"] {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+
+.btn-align-type01.right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .btn-align-type01.right [class^="btn-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 5px;
+    margin-left: 0.5rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    word-break: break-all; }
+    .btn-align-type01.right [class^="btn-"]:first-child {
+      margin-left: 0; }
+    .btn-align-type01.right [class^="btn-"] .txt {
+      display: block;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto; }
+    .btn-align-type01.right [class^="btn-"] [class^="ico-"] {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+
+/*# sourceMappingURL=../sass_maps/component_button.css.map */

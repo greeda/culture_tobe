@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+// **********************************
+// 기본 영역
+// _extend_html5.pug 파일의 block css 영역
+// if NODE_ENV === 'development' 영역의 css와 동일하게 세팅하기.
+// **********************************
+@import '../css_partials/font';
+@import '../css_partials/reset';
+@import '../css_partials/print';
+@import '../css_partials/jquery.scrollbar';
+@import '../css_partials/swiper.5.4.5';
+@import '../css_partials/tui-date-picker';
+
+@import '../css_partials/component_common';
+@import '../css_partials/component_scroll';
+@import '../css_partials/component_map';
+@import '../css_partials/component_video';
+@import '../css_partials/component_icon';
+@import '../css_partials/component_button';
+@import '../css_partials/component_input';
+@import '../css_partials/component_select';
+@import '../css_partials/component_checkbox';
+@import '../css_partials/component_radio';
+@import '../css_partials/component_formGroup';
+@import '../css_partials/component_pagination';
+@import '../css_partials/component_table';
+@import '../css_partials/component_card';
+@import '../css_partials/component_list';
+@import '../css_partials/component_tab';
+@import '../css_partials/component_dropdowns';
+@import '../css_partials/component_breadcrumb';
+@import '../css_partials/component_scrollspy';
+@import '../css_partials/component_carousel';
+@import '../css_partials/component_accordion';
+@import '../css_partials/component_tooltip';
+@import '../css_partials/component_modal';
+@import '../css_partials/component_toasts';
+@import '../css_partials/component_spinners';
+@import '../css_partials/component_editor';
+@import '../css_partials/component_test';
+@import '../css_partials/componentlist';
+
+@import '../css_partials/header';
+@import '../css_partials/footer';
+
+// **********************************
+// 서브 컨텐츠 영역
+// 서브 카테고리 css는 각 페이지마다 불어오는 것을 권장 하지만
+// common.css 에 다 넣어야 할때 아래에 @import 하면 됩니다.
+// **********************************
+// 예) @import '../css/서브카테고리';

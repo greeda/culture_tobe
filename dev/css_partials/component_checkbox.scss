@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+// ******************** code comments ********************
+// input - checkbox
+// ******************** code comments ********************
+/*! input - checkbox */
+.input-checkbox{
+    display:inline-block;
+    input{
+        border: 0;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+    }
+    label{
+        display:inline-block;
+        position: relative;
+        @include rem(min-width, 20px);
+        @include rem(min-height, 20px);
+        @include rem(padding-top, 1px);
+        // 익스에서 위로 조금더 올라 간것 같으면 위 패딩은 미디어쿼리 핵으로 2px 로 분기처리하기
+        user-select: none;
+    }
+    .txt{
+        display:inline-block;
+        color:gray;
+        @include rem(font-size, 16px);
+    }
+    label:before{
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include rem(width, 20px);
+        @include rem(height, 20px);
+        @include rem(margin-top, -10px);
+        border: 1px solid gray;
+        text-align: center;
+        transition: all .3s ease-out;
+    }
+    label:after{
+        content:'';
+        display:block;
+        position: absolute;
+        top: 50%;
+        @include rem(left, 5px);
+        @include rem(margin-top, -4px);
+        @include rem(width, 9px);
+        @include rem(height, 6px);
+        @include rem(border-top, 2px solid gray);
+        @include rem(border-right, 2px solid gray);
+        transform: rotate(130deg);
+        transition: all .3s ease-out;
+    }
+    &.right{
+        label{
+            @include rem(padding-left, 30px);
+        }
+    }
+    &.left{
+        label{
+            @include rem(padding-right, 30px);
+        }
+        label:before{
+            left:auto;
+            right:0;
+        }
+        label:after{
+            left:auto;
+            @include rem(right, 5px);
+        }
+    }
+    &.up{
+        label{
+            @include rem(padding-bottom, 25px);
+        }
+        label:before{
+            top:auto;
+            bottom:0;
+            left:50%;
+            @include rem(margin-left, -10px);
+            margin-top:0;
+        }
+        label:after{
+            top:auto;
+            @include rem(bottom, 8px);
+            left:50%;
+            @include rem(margin-left, -5px);
+            margin-top:0;
+        }
+    }
+    &.down{
+        label{
+            @include rem(padding-top, 25px);
+        }
+        label:before{
+            top:0;
+            left:50%;
+            @include rem(margin-left, -10px);
+            margin-top:0;
+        }
+        label:after{
+            @include rem(top, 6px);
+            left:50%;
+            @include rem(margin-left, -5px);
+            margin-top:0;
+        }
+    }
+    // 접근성 소스 필요시 아래 주석 해제
+    // input:hover,
+    // input:focus{
+    // 	& + label:before{
+    // 		box-shadow: 0px 0px 2px 3px rgba(0,180,255,0.5);
+    // 	}
+    // }
+    // checked 됐을때 스타일 변화
+    input.checked,
+    input:checked{
+        & + label:before{
+            background-color:blue;
+            border-color:blue;
+        }
+        & + label:after{
+            border-color:#ffffff;
+        }
+        & + label .txt{
+            color: gray;
+        }
+    }
+    // disabled 됐을때 스타일 변화
+    input.disabled,
+    input:disabled{
+        & + label:before{
+            background-color:lightgray;
+            border-color:gray;
+        }
+        & + label:after{
+            border-color:#ffffff;
+        }
+    }
+}

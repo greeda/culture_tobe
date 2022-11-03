@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <title>코딩리스트</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link href="css_partials/codinglist.css" type="text/css" rel="stylesheet">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/gsap.min.js"></script>
+  <script src="/js/swiper.min.5.4.5.js"></script>
+  <script src="/js/jquery.scrollbar.min.js" defer></script>
+  <script src="/js/common.js" defer></script>
+</head>
+
+<body>
+  <!--[if lte IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+  <div id="wrap">
+    <div id="content" role="main">
+      <div class="cl-info-area">
+        <h1 class="project-tit">문화포털 고도화 운영 프로젝트</h1>
+      </div>
+      <div class="cl-link-area">
+        <div class="link-category-container">
+          <div class="link-category">
+            <a href="#ct1">1. 문화포털</a>
+            <a href="#ct2">2. 문화공감</a>
+            <a href="#ctp1">components</a>
+          </div>
+        </div>
+        <div class="page-count-area">
+          <span class="pc-all">전체<span>0</span>
+          </span>
+          <span class="pc-ing">진행중<span>0</span>
+          </span>
+          <span class="pc-end">완료<span>0</span>
+          </span>
+          <span class="pc-percent">진행률<span>0</span>%</span>
+        </div>
+      </div>
+      <div class="cl-category-link" id="ct1">
+        <div class="cl-list-area">
+          <div class="cl-list-detail">
+            <h2 class="cl-category-tit">1. 문화포털<span class="page-count-category"></span>
+            </h2>
+            <table class="cl-table">
+              <thead>
+                <tr>
+                  <th>no</th>
+                  <th>depth 1</th>
+                  <th>depth 2</th>
+                  <th>depth 3</th>
+                  <th>depth 4</th>
+                  <th>depth 5</th>
+                  <th>page(ID)</th>
+                  <th>view</th>
+                  <th>완료일</th>
+                  <th>상태</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">문화체험</td>
+                  <td class="cl-table-td01">집콕+집밖 문화생활</td>
+                  <td class="cl-table-td02">tab 1</td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11100">DI-11100</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11100_01.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11100_01.html">[열림]</a>
+                      <a href="./html/portal/di11100_01.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11100_01.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11100_01.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02">tab 2</td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11100">DI-11100</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11100_02.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11100_02.html">[열림]</a>
+                      <a href="./html/portal/di11100_02.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11100_02.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11100_02.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02">tab 3</td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11100">DI-11100</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11100_03.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11100_03.html">[열림]</a>
+                      <a href="./html/portal/di11100_03.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11100_03.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11100_03.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01">한눈에 보는 문화정보</td>
+                  <td class="cl-table-td02">type01</td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11200">DI-11200</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11200_01.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11200_01.html">[열림]</a>
+                      <a href="./html/portal/di11200_01.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11200_01.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11200_01.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02">type02</td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11200">DI-11200</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11200_03.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11200_03.html">[열림]</a>
+                      <a href="./html/portal/di11200_03.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11200_03.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11200_03.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02">type03</td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11200">DI-11200</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11200_03.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11200_03.html">[열림]</a>
+                      <a href="./html/portal/di11200_03.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11200_03.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11200_03.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01">문화릴레이티켓</td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11300">DI-11300</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11300_01.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11300_01.html">[열림]</a>
+                      <a href="./html/portal/di11300_01.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11300_01.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11300_01.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00"></td>
+                  <td class="cl-table-td01">문화공간단체</td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11500">DI-11500</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="portal/di11500_01.html">
+                    <div class="path-btn-area">
+                      <a href="./html/portal/di11500_01.html">[열림]</a>
+                      <a href="./html/portal/di11500_01.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/portal/di11500_01.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/portal/di11500_01.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="cl-category-link" id="ct2">
+        <div class="cl-list-area">
+          <div class="cl-list-detail">
+            <h2 class="cl-category-tit">2. 문화공감<span class="page-count-category"></span>
+            </h2>
+            <table class="cl-table">
+              <thead>
+                <tr>
+                  <th>no</th>
+                  <th>depth 1</th>
+                  <th>depth 2</th>
+                  <th>depth 3</th>
+                  <th>depth 4</th>
+                  <th>depth 5</th>
+                  <th>page(ID)</th>
+                  <th>view</th>
+                  <th>완료일</th>
+                  <th>상태</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">문화공감</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="DI-11200">DI-11200</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="sympathy/di12220_01.html">
+                    <div class="path-btn-area">
+                      <a href="./html/sympathy/di12220_01.html">[열림]</a>
+                      <a href="./html/sympathy/di12220_01.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/sympathy/di12220_01.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/sympathy/di12220_01.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status=""></td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="cl-category-link" id="ctp1">
+        <div class="cl-list-area">
+          <div class="cl-list-detail">
+            <h2 class="cl-category-tit">components<span class="page-count-category"></span>
+            </h2>
+            <table class="cl-table">
+              <thead>
+                <tr>
+                  <th>no</th>
+                  <th>depth 1</th>
+                  <th>depth 2</th>
+                  <th>depth 3</th>
+                  <th>depth 4</th>
+                  <th>depth 5</th>
+                  <th>page(ID)</th>
+                  <th>view</th>
+                  <th>완료일</th>
+                  <th>상태</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">guide</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="guide">guide</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_guide.pdf">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_guide.pdf">[열림]</a>
+                      <a href="./html/components/component_guide.pdf" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_guide.pdf">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_guide.pdf</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">scroll</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="scroll">scroll</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_scroll.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_scroll.html">[열림]</a>
+                      <a href="./html/components/component_scroll.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_scroll.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_scroll.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">map</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="map">map</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_map.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_map.html">[열림]</a>
+                      <a href="./html/components/component_map.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_map.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_map.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">video</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="video">video</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_video.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_video.html">[열림]</a>
+                      <a href="./html/components/component_video.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_video.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_video.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">icon</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="icon">icon</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_icon.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_icon.html">[열림]</a>
+                      <a href="./html/components/component_icon.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_icon.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_icon.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">button</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="button">button</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_button.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_button.html">[열림]</a>
+                      <a href="./html/components/component_button.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_button.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_button.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">input</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="input">input</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_input.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_input.html">[열림]</a>
+                      <a href="./html/components/component_input.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_input.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_input.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">select</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="select">select</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_select.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_select.html">[열림]</a>
+                      <a href="./html/components/component_select.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_select.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_select.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">checkbox</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="checkbox">checkbox</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_checkbox.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_checkbox.html">[열림]</a>
+                      <a href="./html/components/component_checkbox.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_checkbox.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_checkbox.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">radio</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="radio">radio</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_radio.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_radio.html">[열림]</a>
+                      <a href="./html/components/component_radio.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_radio.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_radio.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">formGroup</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="formGroup">formGroup</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_formGroup.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_formGroup.html">[열림]</a>
+                      <a href="./html/components/component_formGroup.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_formGroup.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_formGroup.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">pagination</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="pagination">pagination</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_pagination.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_pagination.html">[열림]</a>
+                      <a href="./html/components/component_pagination.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_pagination.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_pagination.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">table</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="table">table</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_table.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_table.html">[열림]</a>
+                      <a href="./html/components/component_table.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_table.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_table.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">card</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="card">card</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_card.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_card.html">[열림]</a>
+                      <a href="./html/components/component_card.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_card.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_card.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">list</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="list">list</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_list.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_list.html">[열림]</a>
+                      <a href="./html/components/component_list.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_list.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_list.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">tab</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="tab">tab</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_tab.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_tab.html">[열림]</a>
+                      <a href="./html/components/component_tab.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_tab.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_tab.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">dropdowns</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="dropdowns">dropdowns</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_dropdowns.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_dropdowns.html">[열림]</a>
+                      <a href="./html/components/component_dropdowns.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_dropdowns.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_dropdowns.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">breadcrumb</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="breadcrumb">breadcrumb</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_breadcrumb.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_breadcrumb.html">[열림]</a>
+                      <a href="./html/components/component_breadcrumb.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_breadcrumb.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_breadcrumb.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">scrollspy</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="scrollspy">scrollspy</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_scrollspy.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_scrollspy.html">[열림]</a>
+                      <a href="./html/components/component_scrollspy.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_scrollspy.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_scrollspy.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">carousel</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="carousel">carousel</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_carousel.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_carousel.html">[열림]</a>
+                      <a href="./html/components/component_carousel.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_carousel.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_carousel.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">accordion</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="accordion">accordion</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_accordion.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_accordion.html">[열림]</a>
+                      <a href="./html/components/component_accordion.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_accordion.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_accordion.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">tooltip</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="tooltip">tooltip</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_tooltip.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_tooltip.html">[열림]</a>
+                      <a href="./html/components/component_tooltip.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_tooltip.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_tooltip.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">modal</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="modal">modal</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_modal.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_modal.html">[열림]</a>
+                      <a href="./html/components/component_modal.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_modal.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_modal.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">toasts</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="toasts">toasts</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_toasts.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_toasts.html">[열림]</a>
+                      <a href="./html/components/component_toasts.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_toasts.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_toasts.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">spinners</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="spinners">spinners</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_spinners.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_spinners.html">[열림]</a>
+                      <a href="./html/components/component_spinners.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_spinners.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_spinners.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cl-table-td00">test</td>
+                  <td class="cl-table-td01"></td>
+                  <td class="cl-table-td02"></td>
+                  <td class="cl-table-td03"></td>
+                  <td class="cl-table-td04"></td>
+                  <td class="cl-table-td-name cl-table-td05" data-page-name="test">test</td>
+                  <td class="cl-table-td-path cl-table-td06" data-page-path="components/component_test.html">
+                    <div class="path-btn-area">
+                      <a href="./html/components/component_test.html">[열림]</a>
+                      <a href="./html/components/component_test.html" target="_blank">[새창열림]</a>
+                      <a class="ui--preview-mode" role="button" data-preview-mode-txt="html/components/component_test.html">[Preview]</a>
+                      <!--a(href=outLink+htmlPath+col target="_blank") [uxdev]-->
+                    </div>
+                    <div class="path-txt-wrap">
+                      <div class="path-txt-area">html/components/component_test.html</div>
+                    </div>
+                  </td>
+                  <td class="cl-table-td-complete cl-table-td07" data-page-complete=""></td>
+                  <td class="ui--page-status cl-table-td-status cl-table-td08" data-page-Status="-">-</td>
+                  <td class="cl-table-td09">
+                    <div></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-preview">
+      <div class="frame-wrap">
+        <div class="frame-head">
+          <a class="frame-page" href="#none" target="_blank"></a>
+          <div class="frame-sort">
+            <select>
+              <option value="375*629">iPhone 12 Mini</option>
+              <option value="375*667" selected>iPhone 6/7/8</option>
+              <option value="414*736">iPhone 6/7/8 Plus</option>
+              <option value="375*812">iPhone X</option>
+              <option value="360*640">Galaxy S5</option>
+            </select>
+            <p class="frame-size">375 X 667</p>
+          </div>
+        </div>
+        <div class="frame-inner" style="width: 375px; height: 667px;">
+          <iframe src="" frameborder="0">미리보기 화면</iframe>
+        </div>
+      </div>
+      <button class="frame-toggle" type="button">
+        <span class="hide-txt">창 닫기</span>
+      </button>
+    </div>
+    <a class="btn-top" href="#content">TOP</a>
+  </div>
+  <div class="dimm">
+    <img src="/images/common/blank_size_100.png" alt="">
+  </div>
+  <script src="js/jquery.js"></script>
+  <script>
+    $(function() {
+      var allCount = $('.ui--page-status:contains()').length;
+      var noCount = $('.ui--page-status:contains(-)').length;
+      var endCount = $('.ui--page-status:contains(완료)').length;
+      var ingCount = $('.ui--page-status:contains(진행중)').length;
+      //- var modifyCount = $('.p_status:contains(수정중)').length;
+
+      // 전체 페이지 (전체 페이지 - 페이지아닌것들)
+      var all_sum_count = allCount - noCount;
+
+      // 진행률 (완료 페이지 / 전체 페이지 * 100)
+      var eCount = endCount / all_sum_count * 100;
+
+      //- console.log(endCount);
+      //- console.log(ingCount);
+      //- console.log(modifyCount);
+      //- console.log(allCount);
+
+      $('.pc-ing>span').text(ingCount);
+      //- $('.pc_modify>span').text(modifyCount);
+      $('.pc-end>span').text(endCount);
+      //- (-) 대쉬로 표시된 파일들은 카운트 하지 않음
+      $('.pc-all>span').text(all_sum_count);
+      $('.pc-percent>span').text(eCount.toFixed(0));
+
+      // page number auto
+      $('.cl-table>tbody').each(function() {
+        $(this).children().children('td:first-child').each(function(index) {
+          //- console.log(index);
+          $(this).text(index + 1);
+        });
+      });
+
+      // 링크 메뉴 sticky
+      var stickyNavTop = $('.cl-link-area').offset().top;
+      var stickyNavHeight = $('.cl-link-area').height();
+
+      var stickyNav = function() {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickyNavTop) {
+          $('.cl-link-area').addClass('cl-link-area-sticky');
+          $('.cl-info-area').css('margin-bottom', stickyNavHeight);
+        } else {
+          $('.cl-link-area').removeClass('cl-link-area-sticky');
+          $('.cl-info-area').css('margin-bottom', '');
+        }
+      };
+      stickyNav();
+      $(window).scroll(function() {
+        stickyNav();
+      });
+
+      // 링크 메뉴 클릭시 화면 스크롤
+      $('a[href*="#"]')
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              event.preventDefault();
+              $('html, body').animate({
+                scrollTop: target.offset().top - stickyNavHeight
+              }, 300, function() {
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) {
+                  return false;
+                } else {
+                  // $target.attr('tabindex', '-1');
+                  $target.focus();
+                };
+              });
+            }
+          }
+        });
+
+      // preview
+      function onPreviewBtn() {
+        var $btnPreview = $('.ui--preview-mode');
+        var $framePreview = $('.frame-preview');
+        var $framePreviewToggle = $framePreview.find('.frame-toggle');
+
+        // preview 된 tr 포커스
+        function focusPreviewLink(target) {
+          $('.cl-table td').removeAttr('style');
+          target.closest('tr').find('td').css('background', '#161616');
+        }
+
+        // preview 창 열고 닫기
+        function openFrame(link) {
+          $framePreviewToggle.addClass('on');
+          $framePreview.css({
+            right: 0
+          });
+
+          if (link === undefined) return;
+          $('.frame-page').attr('href', link).text(link);
+          $framePreview.find('iframe').attr('src', link);
+        }
+
+        function closeFrame(size) {
+          $framePreviewToggle.removeClass('on');
+          $framePreview.css({
+            right: -size
+          });
+        }
+
+        $framePreviewToggle.on('click', function() {
+          var frameWidth = $('.frame-wrap').outerWidth();
+          $framePreviewToggle.hasClass('on') ? closeFrame(frameWidth) : openFrame();
+        });
+
+        // preview 버튼 클릭
+        $btnPreview.on('click', function() {
+          var selectedLink = $(this).attr('data-preview-mode-txt');
+
+          if ($(this).hasClass('on')) return;
+
+          $btnPreview.removeClass('on');
+          $(this).addClass('on');
+
+          openFrame(selectedLink);
+          focusPreviewLink($(this));
+        });
+
+        // preview 창 사이즈 변경
+        $('.frame-sort select').on('change', function() {
+          var splitValue = $(this).val().split('*');
+          var widthValue = splitValue[0];
+          var heightValue = splitValue[1];
+          $('.frame-inner').css({
+            width: widthValue,
+            height: heightValue
+          });
+          $('.frame-size').text(widthValue + ' X ' + heightValue);
+        });
+      }
+
+      onPreviewBtn();
+    });
+
+  </script>
+</body>
+
+</html>

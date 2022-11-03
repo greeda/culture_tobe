@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*! common */
+.clfix:after, .clfix:before {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+.clfix:after {
+  clear: both; }
+
+.hide-txt {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+@media (max-width: 1024px) {
+  a .hide-txt {
+    font-size: 0; } }
+
+a:before {
+  content: '　';
+  position: absolute;
+  font-size: 0; }
+
+[tabindex="-1"]:focus {
+  outline: 0; }
+
+/*! 반응형 미지원 컨텐츠의 모바일 화면시 가림막 소스 */
+.mobile-mode-dimm-container {
+  display: none; }
+
+@media (max-width: 1023px) {
+  .mobile-mode-dimm-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1000;
+    background: #000;
+    opacity: 1; }
+    .mobile-mode-dimm-container .mobile-mode-box {
+      position: relative;
+      padding: 20px;
+      padding: 2rem;
+      margin: 0px 40px;
+      margin: 0rem 4rem;
+      background: #fff;
+      border-radius: 10px;
+      border-radius: 1rem;
+      border: 2px solid blue;
+      font-size: 24px;
+      font-size: 2.4rem; } }
+
+/*! skipnav */
+.skipnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 0;
+  line-height: 1; }
+
+.skipnav a {
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: 0 -1px -1px 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 1; }
+
+.skipnav a:active, .skipnav a:focus, .skipnav a:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 19px;
+  margin: 0;
+  padding: 5px 0;
+  border: 1px solid #c4d7ea;
+  background: #2b6cb0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.333em;
+  text-align: center;
+  line-height: 100%; }
+
+/*! Browser Upgrade Prompt */
+.browserupgrade {
+  margin: .2em 0;
+  padding: .2em 0;
+  background: #ccc;
+  color: #000;
+  font-size: 1px; }
+
+.browserupgrade strong {
+  color: #000;
+  font-weight: 700; }
+
+.browserupgrade a {
+  color: #8d0080;
+  font-weight: 700;
+  text-decoration: underline; }
+
+/*! dimm */
+.dimm {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: #000;
+  opacity: .6; }
+
+.dimm img {
+  display: block; }
+
+/*! 공통 레이아웃 속성 */
+html, body {
+  height: 100%; }
+
+#wrap {
+  height: 100%; }
+
+#container {
+  height: 100%; }
+
+#content {
+  height: 100%; }
+
+/*! 아이콘 공통 속성 */
+[class^="ico-"] {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+/*! mobile 버전 - css */
+/*! pc & tablet 버전 - css */
+/*! 모바일 헤더 타이틀 */
+.mobile-title-container {
+  position: fixed;
+  z-index: 81;
+  top: 0;
+  left: 0;
+  width: -webkit-calc(100% - 110px);
+  width: calc(100% - 110px);
+  width: -webkit-calc(100% - 11rem);
+  width: calc(100% - 11rem);
+  margin: 0px 55px 0px 55px;
+  margin: 0rem 5.5rem 0rem 5.5rem;
+  height: 60px;
+  height: 6rem; }
+  .mobile-title-container.hidden .mobile-title-txt {
+    opacity: 0; }
+
+.mobile-title-align {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%; }
+
+.mobile-title-txt {
+  font-size: 20px;
+  font-size: 2rem;
+  color: #222222;
+  font-weight: 500;
+  -webkit-transition: opacity .3s ease-out;
+  -o-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out; }
+
+/*# sourceMappingURL=../sass_maps/component_common.css.map */

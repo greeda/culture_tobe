@@ -1,0 +1,54 @@
+
+//- 믹스인 영역
+mixin componentsList(type, items)
+    //- 프로토타입 내용 입력 영역
+    - var htmlPath = "html/"
+    -
+        var items = [
+            ["guide","","","","","guide","components/component_guide.pdf","","-",[["", ""],],],
+            ["scroll","","","","","scroll","components/component_scroll.html","","-",[["", ""],],],
+            ["map","","","","","map","components/component_map.html","","-",[["", ""],],],
+            ["video","","","","","video","components/component_video.html","","-",[["", ""],],],
+            ["icon","","","","","icon","components/component_icon.html","","-",[["", ""],],],
+            ["button","","","","","button","components/component_button.html","","-",[["", ""],],],
+            ["input","","","","","input","components/component_input.html","","-",[["", ""],],],
+            ["select","","","","","select","components/component_select.html","","-",[["", ""],],],
+            ["checkbox","","","","","checkbox","components/component_checkbox.html","","-",[["", ""],],],
+            ["radio","","","","","radio","components/component_radio.html","","-",[["", ""],],],
+            ["formGroup","","","","","formGroup","components/component_formGroup.html","","-",[["", ""],],],
+            ["pagination","","","","","pagination","components/component_pagination.html","","-",[["", ""],],],
+            ["table","","","","","table","components/component_table.html","","-",[["", ""],],],
+            ["card","","","","","card","components/component_card.html","","-",[["", ""],],],
+            ["list","","","","","list","components/component_list.html","","-",[["", ""],],],
+            ["tab","","","","","tab","components/component_tab.html","","-",[["", ""],],],
+            ["dropdowns","","","","","dropdowns","components/component_dropdowns.html","","-",[["", ""],],],
+            ["breadcrumb","","","","","breadcrumb","components/component_breadcrumb.html","","-",[["", ""],],],
+            ["scrollspy","","","","","scrollspy","components/component_scrollspy.html","","-",[["", ""],],],
+            ["carousel","","","","","carousel","components/component_carousel.html","","-",[["", ""],],],
+            ["accordion","","","","","accordion","components/component_accordion.html","","-",[["", ""],],],
+            ["tooltip","","","","","tooltip","components/component_tooltip.html","","-",[["", ""],],],
+            ["modal","","","","","modal","components/component_modal.html","","-",[["", ""],],],
+            ["toasts","","","","","toasts","components/component_toasts.html","","-",[["", ""],],],
+            ["spinners","","","","","spinners","components/component_spinners.html","","-",[["", ""],],],
+            ["test","","","","","test","components/component_test.html","","-",[["", ""],],],
+        ]
+
+    //- 메뉴 영역일때
+    if(type == 'menu')
+        .et--component-menu-wrap
+            button(type="button").btn-toggle
+                span.hide-txt 메뉴 열고 닫기
+            .et--component-menu-scroll
+                nav.et--component-menu
+                    .et--component-menu-guide
+                        a(href!=`${pathSettingHtml}`+htmlPath+items[0][6] target="_blank").et--component-btn01
+                            span 퍼블리싱 가이드
+                    h1.et--component-menu-title components
+                    ul.et--component-menu-list
+                        each item in items
+                            if item !== items[0]
+                                li
+                                    a(href!=`${pathSettingHtml}`+htmlPath+item[6])!= item[0]
+    //- 프로토타입 리스트 영역일때
+    else
+        +cl_table_auto(items)

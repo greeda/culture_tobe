@@ -1,0 +1,127 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Tab
+
+                    .et--component-group
+                        h3.et--component-group-title01 Tab
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 균등분할(equal)
+
+                            .et--component-view
+                                .tab-nav-container
+                                    +tab-nav(
+                                        'tab-nav',
+                                        0,
+                                        [
+                                            'ON 20px M<br> #ffffff',
+                                            'OFF 20px R #666666',
+                                            'OFF',
+                                            'OFF'
+                                        ]
+                                    )
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                .tab-nav-container
+                                     //
+                                        +tab-nav(
+                                            'tab-nav',
+                                            0,
+                                            [
+                                                'ON 20px M<br> #ffffff',
+                                                'OFF 20px R #666666',
+                                                'OFF',
+                                                'OFF'
+                                            ]
+                                        )
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 불균등분할 (unequal)
+
+                            .et--component-view
+                                .tab-nav-container
+                                    +tab-nav(
+                                        'tab-nav unequal',
+                                        0,
+                                        [
+                                            'ON 20px M<br> #ffffff',
+                                            'OFF 20px R #666666',
+                                            'OFF',
+                                            'OFF'
+                                        ]
+                                    )
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                .tab-nav-container
+                                    //
+                                        +tab-nav(
+                                            'tab-nav unequal',
+                                            0,
+                                            [
+                                                'ON 20px M<br> #ffffff',
+                                                'OFF 20px R #666666',
+                                                'OFF',
+                                                'OFF'
+                                            ]
+                                        )
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 스크롤
+
+                            .et--component-view
+                                .tab-nav-container.scroll
+                                    +tab-nav(
+                                        'tab-nav unequal',
+                                        0,
+                                        [
+                                            'ON 20px M<br> #ffffff',
+                                            'OFF 20px R #666666',
+                                            'OFF',
+                                            'OFF'
+                                        ]
+                                    )
+
+                            :code
+                                // pug mixin 주석을 해제하고 사용하세요
+                                .tab-nav-container.scroll
+                                    //
+                                        +tab-nav(
+                                            'tab-nav unequal',
+                                            0,
+                                            [
+                                                'ON 20px M<br> #ffffff',
+                                                'OFF 20px R #666666',
+                                                'OFF',
+                                                'OFF'
+                                            ]
+                                        )
+
+                            .et--component-note
+                                pre.
+                                    # class="tab-nav" 균등분할
+                                    # class="tab-nav unequal" 불균등분할
+                                    # tab-link 에 활성화 클래스 active
+
+                                    # 스크롤 버전은 모바일에서만 사용 합니다.
+                                    # class="tab-nav-container scroll" 가로 스크롤 버전
+                                    # 스크롤은 class="tab-nav unequal" 에서만 작동 합니다.
+block footer
+
+block script
+    script(src="components.js")

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <title>프로토타입</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link href="/css_partials/font.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/reset.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/print.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/jquery.scrollbar.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/swiper.5.4.5.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/tui-date-picker.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_common.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_scroll.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_map.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_video.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_icon.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_button.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_input.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_select.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_checkbox.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_radio.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_formGroup.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_pagination.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_table.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_card.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_list.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_tab.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_dropdowns.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_breadcrumb.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_scrollspy.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_carousel.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_accordion.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_tooltip.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_modal.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_toasts.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_spinners.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_editor.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/component_test.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/componentlist.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/header.css" type="text/css" rel="stylesheet">
+  <link href="/css_partials/footer.css" type="text/css" rel="stylesheet">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/gsap.min.js"></script>
+  <script src="/js/swiper.min.5.4.5.js"></script>
+  <script src="/js/jquery.scrollbar.min.js" defer></script>
+  <script src="/js/common.js" defer></script>
+</head>
+
+<body>
+  <!--[if lte IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+  <div id="wrap">
+    <div id="container">
+      <div id="content" role="main">
+        <div class="et--component-wrap">
+          <div class="et--component-menu-wrap">
+            <button class="btn-toggle" type="button">
+              <span class="hide-txt">메뉴 열고 닫기</span>
+            </button>
+            <div class="et--component-menu-scroll">
+              <nav class="et--component-menu">
+                <div class="et--component-menu-guide">
+                  <a class="et--component-btn01" href="/html/components/component_guide.pdf" target="_blank">
+                    <span>퍼블리싱 가이드</span>
+                  </a>
+                </div>
+                <h1 class="et--component-menu-title">components</h1>
+                <ul class="et--component-menu-list">
+                  <li>
+                    <a href="/html/components/component_scroll.html">scroll</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_map.html">map</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_video.html">video</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_icon.html">icon</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_button.html">button</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_input.html">input</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_select.html">select</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_checkbox.html">checkbox</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_radio.html">radio</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_formGroup.html">formGroup</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_pagination.html">pagination</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_table.html">table</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_card.html">card</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_list.html">list</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_tab.html">tab</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_dropdowns.html">dropdowns</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_breadcrumb.html">breadcrumb</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_scrollspy.html">scrollspy</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_carousel.html">carousel</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_accordion.html">accordion</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_tooltip.html">tooltip</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_modal.html">modal</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_toasts.html">toasts</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_spinners.html">spinners</a>
+                  </li>
+                  <li>
+                    <a href="/html/components/component_test.html">test</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="et--component-content">
+            <h2 class="et--component-title">button</h2>
+            <div class="et--component-group">
+              <h3 class="et--component-group-title01">기본 버튼</h3>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">button 태그</h4>
+                <div class="et--component-view">
+                  <button class="btn-lv01 blue" type="button">
+                    <span class="txt">지원하기</span>
+                  </button>
+                  <a class="btn-lv01 blue" href="#none">
+                    <span class="txt">지원하기</span>
+                  </a>
+                  <button class="btn-lv01 white" type="button">
+                    <span class="txt">목록</span>
+                  </button>
+                  <a class="btn-lv01 white" href="#none">
+                    <span class="txt">목록</span>
+                  </a>
+                  <button class="btn-lv01 white" type="button">
+                    <span class="txt">목록</span>
+                    <i class="ico-style-arrow right" aria-hidden="true"></i>
+                  </button>
+                  <a class="btn-lv01 white" href="#none">
+                    <span class="txt">목록</span>
+                    <i class="ico-style-arrow right" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+button(type="button").btn-lv01.blue
+    span.txt 지원하기
+a(href="#none").btn-lv01.blue
+    span.txt 지원하기
+button(type="button").btn-lv01.white
+    span.txt 목록
+a(href="#none").btn-lv01.white
+    span.txt 목록
+button(type="button").btn-lv01.white
+    span.txt 목록
+    i.ico-style-arrow.right(aria-hidden="true")
+a(href="#none").btn-lv01.white
+    span.txt 목록
+    i.ico-style-arrow.right(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 버튼 공통 클래스는 btn- 입니다.
+# 버튼의 스타일은 .blue, .white 등의 추가 클래스를 만들어서 활용 합니다.
+
+# 버튼의 텍스트 영역을 span 마크업으로 확장해서 사용하면 마우스 hover 애니메이션 효과에 대하여 쉽게 대응 할 수 있습니다.
+# 텍스트영역의 line-height 값을 지정하지 않으면 &#60;a> 태그와 &#60;button> 태그의 높이값이 다르게 렌더링 되기 때문에 주의 해야 합니다.
+# 아이콘 영역은 빈 태그이며 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+# 링크 버튼과 기능 버튼을 구분해서 사용 합니다.
+# &#60;a>&#60;/a> 태그는 링크 버튼에 사용합니다.
+# &#60;button type="button">&#60;/button> 태그는 링크 이동이 아닌 기능 버튼에 사용합니다. (type속성을 명시해 주세요.)
+# &#60;a role="button">&#60;/a> 태그를 기능 버튼으로 사용해야 하는 경우는 aria 태그의 role="button" 속성을 넣어 줍니다.
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">a 태그</h4>
+                <div class="et--component-view">
+                  <button class="btn-lv01 blue" type="button">
+                    <span class="txt">지원하기</span>
+                  </button>
+                  <a class="btn-lv01 blue" href="#none">
+                    <span class="txt">지원하기</span>
+                  </a>
+                  <button class="btn-lv01 white" type="button">
+                    <span class="txt">목록</span>
+                  </button>
+                  <a class="btn-lv01 white" href="#none">
+                    <span class="txt">목록</span>
+                  </a>
+                  <button class="btn-lv01 white" type="button">
+                    <span class="txt">목록</span>
+                    <i class="ico-style-arrow right" aria-hidden="true"></i>
+                  </button>
+                  <a class="btn-lv01 white" href="#none">
+                    <span class="txt">목록</span>
+                    <i class="ico-style-arrow right" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+button(type="button").btn-lv01.blue
+    span.txt 지원하기
+a(href="#none").btn-lv01.blue
+    span.txt 지원하기
+button(type="button").btn-lv01.white
+    span.txt 목록
+a(href="#none").btn-lv01.white
+    span.txt 목록
+button(type="button").btn-lv01.white
+    span.txt 목록
+    i.ico-style-arrow.right(aria-hidden="true")
+a(href="#none").btn-lv01.white
+    span.txt 목록
+    i.ico-style-arrow.right(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># 버튼 공통 클래스는 btn- 입니다.
+# 버튼의 스타일은 .blue, .white 등의 추가 클래스를 만들어서 활용 합니다.
+
+# 버튼의 텍스트 영역을 span 마크업으로 확장해서 사용하면 마우스 hover 애니메이션 효과에 대하여 쉽게 대응 할 수 있습니다.
+# 텍스트영역의 line-height 값을 지정하지 않으면 &#60;a> 태그와 &#60;button> 태그의 높이값이 다르게 렌더링 되기 때문에 주의 해야 합니다.
+# 아이콘 영역은 빈 태그이며 보이스 오버나 스크린리더에 읽히지 않도록 aria-hidden="true" 처리 해줍니다.
+
+# 링크 버튼과 기능 버튼을 구분해서 사용 합니다.
+# &#60;a>&#60;/a> 태그는 링크 버튼에 사용합니다.
+# &#60;button type="button">&#60;/button> 태그는 링크 이동이 아닌 기능 버튼에 사용합니다. (type속성을 명시해 주세요.)
+# &#60;a role="button">&#60;/a> 태그를 기능 버튼으로 사용해야 하는 경우는 aria 태그의 role="button" 속성을 넣어 줍니다.
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="et--component-group">
+              <h3 class="et--component-group-title01">버튼 정렬</h3>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">균등 분할 좌우정렬</h4>
+                <div class="et--component-view">
+                  <div class="btn-container">
+                    <div class="btn-align-type01 spacebetween-equal">
+                      <button class="btn-lv01 blue" type="button">
+                        <span class="txt">지원하기</span>
+                      </button>
+                      <a class="btn-lv01 white" href="#none">
+                        <span class="txt">목록</span>
+                        <i class="ico-style-arrow right" aria-hidden="true"></i>
+                      </a>
+                      <button class="btn-lv01 blue" type="button">
+                        <span class="txt">지원하기</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+.btn-container
+    .btn-align-type01.spacebetween-equal
+        button(type="button").btn-lv01.blue
+            span.txt 지원하기
+        a(href="#none").btn-lv01.white
+            span.txt 목록
+            i.ico-style-arrow.right(aria-hidden="true")
+        button(type="button").btn-lv01.blue
+            span.txt 지원하기
+
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># class="btn-align-type01" 버튼 정렬 클래스
+# class="btn-align-type01 spacebetween-equal" 균등 분할 좌우 정렬
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">가운데 정렬</h4>
+                <div class="et--component-view">
+                  <div class="btn-container">
+                    <div class="btn-align-type01 center">
+                      <button class="btn-lv01 blue" type="button">
+                        <span class="txt">지원하기</span>
+                        <i class="ico-style-arrow right" aria-hidden="true"></i>
+                      </button>
+                      <a class="btn-lv01 white" href="#none">
+                        <span class="txt">목록</span>
+                      </a>
+                      <button class="btn-lv01 blue" type="button">
+                        <span class="txt">지원하기</span>
+                      </button>
+                      <a class="btn-lv01 white" href="#none">
+                        <span class="txt">목록</span>
+                        <i class="ico-style-arrow right" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+.btn-container
+    .btn-align-type01.center
+        button(type="button").btn-lv01.blue
+            span.txt 지원하기
+            i.ico-style-arrow.right(aria-hidden="true")
+        a(href="#none").btn-lv01.white
+            span.txt 목록
+        button(type="button").btn-lv01.blue
+            span.txt 지원하기
+        a(href="#none").btn-lv01.white
+            span.txt 목록
+            i.ico-style-arrow.right(aria-hidden="true")
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># class="btn-align-type01" 버튼 정렬 클래스
+# class="btn-align-type01 center" 가운데 정렬
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">왼쪽 정렬</h4>
+                <div class="et--component-view">
+                  <div class="btn-container">
+                    <div class="btn-align-type01 left">
+                      <button class="btn-lv01 blue" type="button">
+                        <span class="txt">지원하기</span>
+                        <i class="ico-style-arrow right" aria-hidden="true"></i>
+                      </button>
+                      <a class="btn-lv01 white" href="#none">
+                        <span class="txt">목록</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+.btn-container
+    .btn-align-type01.left
+        button(type="button").btn-lv01.blue
+            span.txt 지원하기
+            i.ico-style-arrow.right(aria-hidden="true")
+        a(href="#none").btn-lv01.white
+            span.txt 목록
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># class="btn-align-type01" 버튼 정렬 클래스
+# class="btn-align-type01 left" 왼쪽 정렬
+</pre>
+                </div>
+              </div>
+              <div class="et--component-group-sub">
+                <h4 class="et--component-group-title02">오른쪽 정렬</h4>
+                <div class="et--component-view">
+                  <div class="btn-container">
+                    <div class="btn-align-type01 right">
+                      <button class="btn-lv01 blue" type="button">
+                        <span class="txt">지원하기</span>
+                        <i class="ico-style-arrow right" aria-hidden="true"></i>
+                      </button>
+                      <a class="btn-lv01 white" href="#none">
+                        <span class="txt">목록</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="et--component-code">
+                  <div class="options">
+                    <button class="btn-copy" type="button">
+                      <span>COPY</span>
+                    </button>
+                    <div class="toast-copy">
+                      <span>copied!</span>
+                    </div>
+                  </div>
+                  <div class="et--component-code-box">
+                    <pre>
+.btn-container
+    .btn-align-type01.right
+        button(type="button").btn-lv01.blue
+            span.txt 지원하기
+            i.ico-style-arrow.right(aria-hidden="true")
+        a(href="#none").btn-lv01.white
+            span.txt 목록
+
+</pre>
+                  </div>
+                </div>
+
+                <div class="et--component-note">
+                  <pre># class="btn-align-type01" 버튼 정렬 클래스
+# class="btn-align-type01 right" 오른쪽 정렬
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dimm">
+    <img src="/images/common/blank_size_100.png" alt="">
+  </div>
+  <script src="components.js"></script>
+</body>
+
+</html>

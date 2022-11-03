@@ -1,0 +1,39 @@
+extends /_src/_pug/_extend_html5
+//- 데이터 영역 인클루드
+include /_codinglist/_components_data
+
+block title
+    title 프로토타입
+
+block header
+
+block contents
+    #container
+        #content(role='main')
+            .et--component-wrap
+                +componentsList('menu')
+
+                .et--component-content
+                    h2.et--component-title Spinners
+
+                    .et--component-group
+                        h3.et--component-group-title01 Spinners
+
+                        .et--component-group-sub
+                            h4.et--component-group-title02 기본
+
+                            :code
+                                .loading-area.in-content
+                                    .loading-box
+                                        .dot.dot01.css-animation-bounce
+                                        .dot.dot02.css-animation-bounce
+                                        .dot.dot03.css-animation-bounce
+                                        .dot.dot04.css-animation-bounce
+
+                            .et--component-note
+                                pre.
+                                    # 컨텐츠 안에서 사용할때는 .in-content 클래스 추가 필요합니다.
+block footer
+
+block script
+    script(src="components.js")

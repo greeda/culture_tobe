@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/*! mobile 버전 - css */
+/*! pc & tablet 버전 - css */
+/*! popup */
+.popup-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  overflow: hidden;
+  z-index: 100;
+  text-align: center; }
+
+.popup-dialog {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  text-align: left;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .popup-dialog.full {
+    max-width: 100%;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    -webkit-box-align: initial;
+    -webkit-align-items: initial;
+        -ms-flex-align: initial;
+            align-items: initial; }
+  .popup-dialog.large {
+    max-width: 1200px; }
+  .popup-dialog.middle {
+    max-width: 800px; }
+  .popup-dialog.small {
+    max-width: 400px; }
+  .popup-dialog.top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .popup-dialog.bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+
+.popup-container {
+  width: 100%;
+  position: relative;
+  border: 1px solid gray;
+  background-color: #ffffff; }
+  .popup-container .popup-header {
+    padding: 30px 30px 30px 30px;
+    padding: 3rem 3rem 3rem 3rem;
+    border-bottom: 1px solid #dddddd; }
+  .popup-container .popup-content {
+    padding: 30px 30px 30px 30px;
+    padding: 3rem 3rem 3rem 3rem; }
+    .popup-container .popup-content img {
+      max-width: 100%; }
+  .popup-container .popup-tit {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: gray; }
+  .popup-container .btn-close-popup {
+    position: absolute;
+    top: 17px;
+    top: 1.7rem;
+    right: 17px;
+    right: 1.7rem;
+    padding: 10px;
+    padding: 1rem;
+    background: red; }
+    .popup-container .btn-close-popup .ico-close {
+      display: inline-block;
+      position: relative;
+      width: 20px;
+      width: 2rem;
+      height: 20px;
+      height: 2rem;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+      .popup-container .btn-close-popup .ico-close:before {
+        content: '';
+        width: 20px;
+        width: 2rem;
+        height: 2px;
+        height: 0.2rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        background-color: #000000;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+      .popup-container .btn-close-popup .ico-close:after {
+        content: '';
+        width: 2px;
+        width: 0.2rem;
+        height: 20px;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        background-color: #000000;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+
+/*! modal popup */
+.modal-popup-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  overflow: hidden;
+  z-index: 100;
+  text-align: center; }
+
+.modal-popup-dialog {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  text-align: left;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .modal-popup-dialog.full {
+    max-width: 100%;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    -webkit-box-align: initial;
+    -webkit-align-items: initial;
+        -ms-flex-align: initial;
+            align-items: initial; }
+  .modal-popup-dialog.large {
+    max-width: 1200px; }
+  .modal-popup-dialog.middle {
+    max-width: 800px; }
+  .modal-popup-dialog.small {
+    max-width: 400px; }
+  .modal-popup-dialog.top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .modal-popup-dialog.bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+
+.modal-popup-container {
+  width: 100%;
+  position: relative;
+  border: 1px solid gray;
+  background-color: #ffffff; }
+  .modal-popup-container .modal-popup-header {
+    padding: 30px 30px 30px 30px;
+    padding: 3rem 3rem 3rem 3rem;
+    border-bottom: 1px solid #dddddd; }
+  .modal-popup-container .modal-popup-content {
+    padding: 30px 30px 30px 30px;
+    padding: 3rem 3rem 3rem 3rem; }
+    .modal-popup-container .modal-popup-content img {
+      max-width: 100%; }
+  .modal-popup-container .modal-popup-tit {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: gray; }
+  .modal-popup-container .btn-close-popup {
+    position: absolute;
+    top: 17px;
+    top: 1.7rem;
+    right: 17px;
+    right: 1.7rem;
+    padding: 10px;
+    padding: 1rem;
+    background: red; }
+    .modal-popup-container .btn-close-popup .ico-close {
+      display: inline-block;
+      position: relative;
+      width: 20px;
+      width: 2rem;
+      height: 20px;
+      height: 2rem;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+      .modal-popup-container .btn-close-popup .ico-close:before {
+        content: '';
+        width: 20px;
+        width: 2rem;
+        height: 2px;
+        height: 0.2rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        background-color: #000000;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+      .modal-popup-container .btn-close-popup .ico-close:after {
+        content: '';
+        width: 2px;
+        width: 0.2rem;
+        height: 20px;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        background-color: #000000;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+
+/*# sourceMappingURL=../sass_maps/component_modal.css.map */

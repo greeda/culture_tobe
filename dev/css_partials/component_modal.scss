@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+/*! mobile 버전 - css */
+@media (max-width:1023px){}
+/*! pc & tablet 버전 - css */
+@media (min-width:1024px){}
+
+// ******************** code comments ********************
+// popup
+// ******************** code comments ********************
+/*! popup */
+.popup-wrap{
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    outline: 0;
+    overflow: hidden;
+    z-index:$popup-zindex;
+    text-align: center;
+}
+.popup-dialog{
+    position: relative;
+    display:flex;
+    width:auto;
+    text-align: left;
+    height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    flex-direction: row;
+    align-items: center; // 수직정렬
+    // justify-content: center; // 수평정렬
+
+    // full 사이즈
+    &.full{
+        max-width:100%;
+        flex-direction: initial;
+        align-items: initial;
+    }
+    // large 사이즈
+    &.large{
+        max-width:1200px;
+    }
+    // middle 사이즈
+    &.middle{
+        max-width:800px;
+    }
+    // small 사이즈
+    &.small{
+        max-width:400px;
+    }
+    // 방향 설정
+    &.top{align-items: flex-start;}
+    &.bottom{align-items: flex-end;}
+}
+.popup-container{
+    width:100%;
+    position: relative;
+    border:1px solid gray;
+    background-color:#ffffff;
+    .popup-header{
+        @include rem(padding, 30px 30px 30px 30px);
+        border-bottom: 1px solid #dddddd;
+    }
+    .popup-content{
+        @include rem(padding, 30px 30px 30px 30px);
+        img{
+            max-width: 100%;
+        }
+    }
+    .popup-tit{
+        @include rem(font-size, 24px);
+        font-weight: 500;
+        color: gray;
+    }
+    .btn-close-popup{
+        position: absolute;
+        @include rem(top, 17px);
+        @include rem(right, 17px);
+        @include rem(padding, 10px);
+        background:red;
+        .ico-close{
+            display:inline-block;
+            position: relative;
+            @include rem(width, 20px);
+            @include rem(height, 20px);
+
+            &:before{
+                content:'';
+                @include rem(width, 20px);
+                @include rem(height, 2px);
+                position: absolute;
+                top:50%;
+                left:0;
+                margin-top: -1px;
+                background-color:#000000;
+                transition: all .3s ease-out;
+            }
+            &:after{
+                content:'';
+                @include rem(width, 2px);
+                @include rem(height, 20px);
+                position: absolute;
+                top:0;
+                left:50%;
+                margin-left: -1px;
+                background-color:#000000;
+                transition: all .3s ease-out;
+            }
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+// ******************** code comments ********************
+// modal popup
+// ******************** code comments ********************
+/*! modal popup */
+.modal-popup-wrap{
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    outline: 0;
+    overflow: hidden;
+    z-index:$popup-zindex;
+    text-align: center;
+}
+.modal-popup-dialog{
+    position: relative;
+    display:flex;
+    width:auto;
+    text-align: left;
+    height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    flex-direction: row;
+    align-items: center; // 수직정렬
+    // justify-content: center; // 수평정렬
+
+    // full 사이즈
+    &.full{
+        max-width:100%;
+        flex-direction: initial;
+        align-items: initial;
+    }
+    // large 사이즈
+    &.large{
+        max-width:1200px;
+    }
+    // middle 사이즈
+    &.middle{
+        max-width:800px;
+    }
+    // small 사이즈
+    &.small{
+        max-width:400px;
+    }
+    // 방향 설정
+    &.top{align-items: flex-start;}
+    &.bottom{align-items: flex-end;}
+}
+.modal-popup-container{
+    width:100%;
+    position: relative;
+    border:1px solid gray;
+    background-color:#ffffff;
+    .modal-popup-header{
+        @include rem(padding, 30px 30px 30px 30px);
+        border-bottom: 1px solid #dddddd;
+    }
+    .modal-popup-content{
+        @include rem(padding, 30px 30px 30px 30px);
+        img{
+            max-width: 100%;
+        }
+    }
+    .modal-popup-tit{
+        @include rem(font-size, 24px);
+        font-weight: 500;
+        color: gray;
+    }
+    .btn-close-popup{
+        position: absolute;
+        @include rem(top, 17px);
+        @include rem(right, 17px);
+        @include rem(padding, 10px);
+        background:red;
+        .ico-close{
+            display:inline-block;
+            position: relative;
+            @include rem(width, 20px);
+            @include rem(height, 20px);
+
+            &:before{
+                content:'';
+                @include rem(width, 20px);
+                @include rem(height, 2px);
+                position: absolute;
+                top:50%;
+                left:0;
+                margin-top: -1px;
+                background-color:#000000;
+                transition: all .3s ease-out;
+            }
+            &:after{
+                content:'';
+                @include rem(width, 2px);
+                @include rem(height, 20px);
+                position: absolute;
+                top:0;
+                left:50%;
+                margin-left: -1px;
+                background-color:#000000;
+                transition: all .3s ease-out;
+            }
+            transform: rotate(-45deg);
+        }
+    }
+}

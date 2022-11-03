@@ -1,0 +1,60 @@
+{
+  "name": "ux_auto_gulp",
+  "config": {
+    "port": "8888"
+  },
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.etribe.co.kr:10022/ux/ux_auto_gulp.git"
+  },
+  "scripts": {
+    "gulp": "cross-env NODE_ENV=development gulp default --development",
+    "auto": "gulp default --development --reloadable",
+    "build": "cross-env NODE_ENV=production gulp build --build",
+    "build:git": "npm run build && cd build && git add . && git commit -m '퍼블업데이트' && git push origin",
+    "bak": "gulp bak",
+    "deploy": "npm run build && gulp deploy"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "browser-sync": "^2.26.13",
+    "browsersync-ssi": "^0.2.4",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "globby": "^11.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-ftp": "^1.1.0",
+    "gulp-header": "^2.0.9",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-mode": "^1.0.2",
+    "gulp-multi-process": "^1.4.0",
+    "gulp-noop": "^1.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ssi": "^0.1.5",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^5.0.2",
+    "gulp.spritesmith": "^6.11.0",
+    "merge-stream": "^2.0.0",
+    "pug": "^3.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "yargs": "^16.2.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "last 3 version",
+    "android >= 4.2",
+    "ios >= 6"
+  ]
+}
