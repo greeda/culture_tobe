@@ -1,9 +1,0 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap");
-.fonts-load {
-  visibility: hidden; }
-
-.fonts-loaded .fonts-load {
-  visibility: visible; }
-
-/*# sourceMappingURL=../sass_maps/font.css.map */
