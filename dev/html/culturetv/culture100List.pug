@@ -1,0 +1,56 @@
+extends /_src/_pug/_extend_html5
+
+block append css
+    //- link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+
+block contents
+    #container.pageClassSub
+        #content(role='main')
+            .content-inner
+                nav.breadcrumb
+                    .location-area
+                        ol.location-content
+                            li
+                                a(href="#") 홈
+                            li
+                                a(href="#") 문화공감
+                            li
+                                a.on(href="#") 공감리포트
+                    .share-area
+                        ul.share-content
+                            li
+                                a.link-share(href="#")
+                            li
+                                a.link-print(href="#")
+                section.visual-top
+                    .section-inner
+                        .title-area
+                            h1.title-h1 카드뉴스
+                                |
+                                span.txt 다양한 문화소식을 짧은 글과 이미지로 쉽고 간편하게 알려드립니다.
+
+                        .visual-area
+                            .visual-content-box
+                                .video 비디오 컨텐츠 영역
+                            .visual-text-box
+                                h3.title-h3 [한국문화100]농민들의 애환을 달래주다, 풍물 굿
+                                p.sub-txt 이때 농사꾼들의 능률을 올려주기 위해서 한데 모여 흥을 돋우는 의식을 벌였는데 이를 풍물 굿 이라고 한다. 주로 농사를 할 때 행해져 농악으로도 알려져 있는 풍물 굿은 농경사회를 이뤄온 우리 선조…
+                                ul.hashtag
+                                    li
+                                        span.txt #두레
+                                    li
+                                        span.txt #장구
+                                    li
+                                        span.txt #농악
+                                    li
+                                        span.txt #풍물굿
+                                    li
+                                        span.txt #풍물
+                                dl.info
+                                    dt 제작
+                                    dd 문화포털
+                                    dt 등록일
+                                    dd 2022-09-22
+
+                                
+
