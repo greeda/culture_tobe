@@ -6,9 +6,9 @@
 // _extend_html5.pug 파일의 block css 영역
 // if NODE_ENV === 'development' 영역의 css와 동일하게 세팅하기.
 // **********************************
-@import '../css_partials/font';
-@import '../css_partials/reset';
-@import '../css_partials/print';
+// @import '../css_partials/font';
+// @import '../css_partials/reset';
+// @import '../css_partials/print';
 @import '../css_partials/jquery.scrollbar';
 @import '../css_partials/swiper.5.4.5';
 
@@ -42,11 +42,8 @@
 // @import '../css_partials/component_test';
 // @import '../css_partials/componentlist';
 
-@import '../css_partials/header';
-@import '../css_partials/footer';
-
-@import '../css/culturetv';
-@import '../css/oneEye;
+// @import '../css_partials/header';
+// @import '../css_partials/footer';
 
 
 // **********************************
