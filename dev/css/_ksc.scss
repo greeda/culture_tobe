@@ -6,10 +6,11 @@
 }
 
 .visual-area {
-    border:1px solid #ddd;
+    display:flex;
 
     .visual-content-box {
         display:inline-flex;
+        flex-direction: column;
     }
     .video {
 
@@ -21,7 +22,77 @@
             background:lightsalmon;
         }
     }
+
+    .visual-text-box {
+        border:1px solid #ddd;
+        border-right:0;
+
+        @include rem(width, 838px);
+        @include rem(padding, 32px);
+
+        .category {
+            @include rem(padding, 3px 11px);
+            @include rem(font-size, 13px);
+            color:#222;
+            @include rem(border-radius, 13.5px);
+            border:1px solid #222;
+            background-color:#fff;
+            box-sizing: border-box;
+        }
+    }
 }
+
+.thumbnail-area {
+    display:inline-flex;
+    @include rem(padding, 32px 32px 69px 32px);
+    border:1px solid #ddd;
+
+    .thumbnail-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        display:flex;
+    }
+
+    .thumb-img {
+        display:inline-block;
+        @include rem(width, 180px);
+        @include rem(height, 101px);
+
+        img {
+            width:100%; height:100%;
+        }
+    }
+
+    .thumb-text {
+        text-align: left;
+        @include rem(padding-left, 16px);
+
+        .sub-category {
+            display:inline-block;
+            @include rem(padding, 3px 7px);
+            @include rem(font-size, 10px);
+            @include rem(border-radius, 11.5px);
+            line-height: 1.5;
+            letter-spacing: -0.25px;
+            border: 1px solid #222;
+            color:#222;
+        }
+
+        .txt {
+            @include rem(width, 180px);
+            @include rem(margin, 4px 0 2px 0);
+            @include rem(font-size, 16px);
+            line-height: 1.5;
+            color:#222;
+        }
+    }
+}
+
+
+//공통
 
 .ico-play {
     position:absolute;
@@ -29,8 +100,23 @@
     transform: translate(-50%, -50%);
     @include rem(width, 72px);
     @include rem(height, 72px);
-    // background:rgba(0, 0, 0, 0.5);
-    // border-radius: 50%;
     background: url('../images/icons/ico_play_btn.png') no-repeat 0 0;
     background-size: cover;
+}
+
+.title-h3 {
+    @include rem(margin, 8px 0 16px);
+    @include rem(font-size, 24px);
+    font-weight: bold;
+    color:#222;
+    line-height: 1.75;
+    letter-spacing: -0.6px;
+
+    & + .sub-txt {
+        @include rem(width, 774px);
+        @include rem(font-size, 16px);
+        color:#999;
+        line-height: 1.5;
+        letter-spacing: -0.4px;
+    }
 }
