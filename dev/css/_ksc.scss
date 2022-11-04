@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+//문화TV
+.visual-top {
+
+}
+
+.visual-area {
+    border:1px solid #ddd;
+
+    .visual-content-box {
+        display:inline-flex;
+    }
+    .video {
+
+        .link-content-list {
+            position:relative;
+            display:flex;
+            @include rem(width, 838px);
+            @include rem(height, 471px);
+            background:lightsalmon;
+        }
+    }
+}
+
+.ico-play {
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    @include rem(width, 72px);
+    @include rem(height, 72px);
+    // background:rgba(0, 0, 0, 0.5);
+    // border-radius: 50%;
+    background: url('../images/icons/ico_play_btn.png') no-repeat 0 0;
+    background-size: cover;
+}

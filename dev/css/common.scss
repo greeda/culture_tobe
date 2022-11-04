@@ -12,8 +12,8 @@
 @import '../css_partials/print';
 @import '../css_partials/jquery.scrollbar';
 @import '../css_partials/swiper.5.4.5';
-@import '../css_partials/tui-date-picker';
 
+// @import '../css_partials/tui-date-picker';
 // @import '../css_partials/component_common';
 // @import '../css_partials/component_scroll';
 // @import '../css_partials/component_map';
@@ -41,7 +41,7 @@
 // @import '../css_partials/component_spinners';
 // @import '../css_partials/component_editor';
 // @import '../css_partials/component_test';
-@import '../css_partials/componentlist';
+// @import '../css_partials/componentlist';
 
 @import '../css_partials/header';
 @import '../css_partials/footer';
@@ -52,3 +52,13 @@
 // common.css 에 다 넣어야 할때 아래에 @import 하면 됩니다.
 // **********************************
 // 예) @import '../css/서브카테고리';
+
+
+.content-inner {
+    @include rem(margin-top, 80px);
+}
+
+.section-inner {
+    @include rem(width, 1280px);
+    margin:0 auto;
+}
