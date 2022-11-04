@@ -1,54 +1,135 @@
 @charset "utf-8";
-
 @import 'dev/_src/_scss/_setting';
 
-// **********************************
-// 기본 영역
-// _extend_html5.pug 파일의 block css 영역
-// if NODE_ENV === 'development' 영역의 css와 동일하게 세팅하기.
-// **********************************
-@import '../css_partials/font';
-@import '../css_partials/reset';
-@import '../css_partials/print';
-@import '../css_partials/jquery.scrollbar';
-@import '../css_partials/swiper.5.4.5';
-@import '../css_partials/tui-date-picker';
+/*! common */
+//- 메뉴나 링크 부분이 아닌 순수한 이미지에 대한 대체 텍스트 영역에만 사용할 것.
+.hide-txt{
+    // display:inline-block;
+    overflow:hidden;
+    position:absolute;
+    width:1px;height:1px;
+    font-size:1px;line-height:0;
+    // clip:rect(1px 1px 1px 1px);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    margin: -1px;padding: 0;border: 0;
+}
 
-// @import '../css_partials/component_common';
-// @import '../css_partials/component_scroll';
-// @import '../css_partials/component_map';
-// @import '../css_partials/component_video';
-// @import '../css_partials/component_icon';
-// @import '../css_partials/component_button';
-// @import '../css_partials/component_input';
-// @import '../css_partials/component_select';
-// @import '../css_partials/component_checkbox';
-// @import '../css_partials/component_radio';
-// @import '../css_partials/component_formGroup';
-// @import '../css_partials/component_pagination';
-// @import '../css_partials/component_table';
-// @import '../css_partials/component_card';
-// @import '../css_partials/component_list';
-// @import '../css_partials/component_tab';
-// @import '../css_partials/component_dropdowns';
-// @import '../css_partials/component_breadcrumb';
-// @import '../css_partials/component_scrollspy';
-// @import '../css_partials/component_carousel';
-// @import '../css_partials/component_accordion';
-// @import '../css_partials/component_tooltip';
-// @import '../css_partials/component_modal';
-// @import '../css_partials/component_toasts';
-// @import '../css_partials/component_spinners';
-// @import '../css_partials/component_editor';
-// @import '../css_partials/component_test';
-@import '../css_partials/componentlist';
+// a태그 이하 hide-txt 클래스는 모바일 디바이스 사이즈에서는 font-size:1px 을 font-size:0 으로 변경해야 초점 오류를 방지할 수 있다.
+// 모바일 분기 사이즈에 따라 아래 max-width 값은 변경될 수 있음.
+@media (max-width: 1024px) {
+    a .hide-txt{
+        font-size:0;
+    }
+}
 
-@import '../css_partials/header';
-@import '../css_partials/footer';
+// 웹접근성용 추가 소스
+// a 태그의 before 가상클래스 쓰지 말 것
+a{
+    &:before{
+        content: '　';position:absolute;font-size:0;
+    }
+}
 
-// **********************************
-// 서브 컨텐츠 영역
-// 서브 카테고리 css는 각 페이지마다 불어오는 것을 권장 하지만
-// common.css 에 다 넣어야 할때 아래에 @import 하면 됩니다.
-// **********************************
-// 예) @import '../css/서브카테고리';
+// 강제 포커스 생성되는 곳의 아웃라인을 제거하는 소스
+[tabindex="-1"]{
+    &:focus{
+        outline:0;
+    }
+}
+
+/*! font */
+// 구글 API로 세팅 할때 아래 소스 사용
+// noto sans kr
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+
+/*! 퍼블 화면확인용 */
+#header {
+    width:100%;
+    height:224px;
+    background:#efefef;
+    font-size:24px;
+    text-align: center;
+    vertical-align: middle;
+
+    .header-content {
+        display: flex;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#footer {
+    width:100%;
+    height:286px;
+    background:#dfdfdf;
+    font-size:24px;
+    text-align: center;
+    vertical-align: middle;
+
+    .footer-content {
+        display: flex;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+// html 에 font-size, font-weight 등 설정 이유는
+// 1. rem 코딩을 활용하기 위해
+// 2. 다국어 활용을 위해 (lang 으로 분기 설정)
+html{
+    text-size-adjust: 100%;
+    font-size: $global-font-size;
+    font-weight: 400;
+    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // -webkit-tap-highlight-color: transparent;
+    @include languages();
+}
+// rem 코딩일때 화면 리사이즈에 rem 값이 자연스럽게 변하는 미디어 쿼리 분기값 (아래 사이트들 참고)
+// rem 단위를 쓰지 않으면 필요 없는 소스
+// https://css-tricks.com/using-a-mixin-to-take-the-math-out-of-responsive-font-sizes/
+// https://css-tricks.com/snippets/css/fluid-typography/
+
+// 모바일 기본 영역 보다 작은 사이즈 대응 영역
+@media (max-width: 374px) {
+    html {
+        font-size: calc(#{$global-font-size - 3} + 10 * ((100vw - 280px) / 374));
+    }
+}
+
+// 모바일 기본 사이즈 대응 영역 (PSD 750 사이즈 기준 세팅)
+// max-width 에는 PSD 가로 사이즈 적용하기. 그걸 반으로 나눈 것을 min-width 에 적용하기.
+@media (min-width: 375px) and (max-width: 750px) {
+    html {
+        font-size: calc(#{$global-font-size} + 20 * ((100vw - 375px) / 750));
+    }
+}
+
+// 기본 영역보다 큰 사이즈 대응 영역 (태블릿 전 단계)
+@media (min-width: 751px) and (max-width: 1023px) {
+    html {
+        font-size: calc(#{$global-font-size} + 13 * ((100vw - 751px) / 1023));
+    }
+}
+
+// 태블릿 영역 대응 (아이패드 기준 1024 부터 태블릿 영역으로 정의함)
+// pc 컨텐츠 영역 최소 사이즈에 맞춰서 조정이 필요함
+// 예) 컨텐츠 최소 넓이가 1100px 이라고 한다면 max-width를 1100px 로 변경 해야함
+@media (min-width: 1024px) and (max-width: 1279px) {
+    html {
+        font-size: calc(#{$global-font-size} + 12 * ((100vw - 1024px) / 1279));
+    }
+}
+
+// PC 영역
+@media (min-width: 1280px) {
+    html {
+        font-size: $global-font-size;
+    }
+}

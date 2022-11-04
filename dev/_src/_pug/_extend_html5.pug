@@ -42,30 +42,16 @@ html(class=`${htmlClass}`, lang=`${language}`)
         link(rel='shortcut icon', type='image/x-icon', href='/favicon.ico')
 
         block css
-            //- www
-            if NODE_ENV === 'development'
-                link(href=`${pathSettingHtml}css_partials/font.css`, type='text/css', rel='stylesheet')
-                link(href=`${pathSettingHtml}css_partials/reset.css`, type='text/css', rel='stylesheet')
-                //- link(href=`${pathSettingHtml}css_partials/print.css`, type='text/css', rel='stylesheet')
-                link(href=`${pathSettingHtml}css_partials/jquery.scrollbar.css`, type='text/css', rel='stylesheet')
-                link(href=`${pathSettingHtml}css_partials/swiper.5.4.5.css`, type='text/css', rel='stylesheet')
-                //- link(href=`${pathSettingHtml}css_partials/tui-date-picker.css`, type='text/css', rel='stylesheet')
-
-                link(href=`${pathSettingHtml}css_partials/component_common.css`, type='text/css', rel='stylesheet')
-                link(href=`${pathSettingHtml}css_partials/componentlist.css`, type='text/css', rel='stylesheet')
-
-                link(href=`${pathSettingHtml}css_partials/header.css`, type='text/css', rel='stylesheet')
-                link(href=`${pathSettingHtml}css_partials/footer.css`, type='text/css', rel='stylesheet')
-            //- build
-            else
-                link(href=`${pathSettingHtml}css/common.css`, type='text/css', rel='stylesheet')
+            //AS-IS
+            link(href=`${pathSettingHtml}css/global.css`, type='text/css', rel='stylesheet')
+            link(href=`${pathSettingHtml}css_partials/swiper.5.4.5.css`, type='text/css', rel='stylesheet')
+            //TO-BE
+            link(href=`${pathSettingHtml}css/common.css`, type='text/css', rel='stylesheet')
 
         block script_top
             script(src=`${pathSettingHtml}js/jquery.js`)
-            script(src=`${pathSettingHtml}js/gsap.min.js`)
             script(src=`${pathSettingHtml}js/swiper.min.5.4.5.js`)
-            script(src=`${pathSettingHtml}js/jquery.scrollbar.min.js` defer)
-            script(src=`${pathSettingHtml}js/common.js` defer)
+            //- script(src=`${pathSettingHtml}js/common.js` defer)
 
     body(class=`${bodyClass}`)
         //- ie8이하 브라우저 업그레이드 권장 안내 텍스트
@@ -84,8 +70,6 @@ html(class=`${htmlClass}`, lang=`${language}`)
 
                 block contents
 
-                block top_btn
-
                 block footer
                     // s: footer include
                     if NODE_ENV === 'development'
@@ -93,8 +77,5 @@ html(class=`${htmlClass}`, lang=`${language}`)
                     else
                         include /html/include/footer
                     // e: footer include
-
-            //- 딤드용 이미지
-            +dimm
 
         block script
