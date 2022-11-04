@@ -117,6 +117,8 @@ block contents
                                 span.page-count-category
                             //- 코딩리스트 갯수만큼 아래 목록 추가 하기
                             case item[1]
+                                when 'p1'
+                                    include _codinglist/_components_cl
                                 when 1
                                     include _codinglist/_cl01
                                 when 2
@@ -144,6 +146,7 @@ block contents
             [
                 ['1. 문화포털', 1],
                 ['2. 문화공감', 2],
+                ['components', 'p1'],
             ]
         )
 

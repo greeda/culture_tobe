@@ -42,11 +42,21 @@ html(class=`${htmlClass}`, lang=`${language}`)
         link(rel='shortcut icon', type='image/x-icon', href='/favicon.ico')
 
         block css
-            //AS-IS
-            link(href=`${pathSettingHtml}css/global.css`, type='text/css', rel='stylesheet')
-            link(href=`${pathSettingHtml}css_partials/swiper.5.4.5.css`, type='text/css', rel='stylesheet')
-            //TO-BE
-            link(href=`${pathSettingHtml}css/common.css`, type='text/css', rel='stylesheet')
+            //- www
+            if NODE_ENV === 'development'
+                link(href=`${pathSettingHtml}css_partials/font.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/reset.css`, type='text/css', rel='stylesheet')
+                //- link(href=`${pathSettingHtml}css_partials/jquery.scrollbar.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/swiper.5.4.5.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/component_common.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/componentlist.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/header.css`, type='text/css', rel='stylesheet')
+                link(href=`${pathSettingHtml}css_partials/footer.css`, type='text/css', rel='stylesheet')
+            //- build
+            else
+                link(href=`${pathSettingHtml}css/common.css`, type='text/css', rel='stylesheet')
+
+
 
         block script_top
             script(src=`${pathSettingHtml}js/jquery.js`)
