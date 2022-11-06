@@ -2,7 +2,14 @@
 
 //문화TV
 .visual-top {
-
+    &::after {
+        content:'';
+        display: block;
+        width:100%;
+        @include rem(height, 15px);
+        @include rem(margin-top, 80px);
+        background-color: #f5f5f5;
+    }
 }
 
 .visual-area {
@@ -44,12 +51,26 @@
 
 .thumbnail-area {
     display:inline-flex;
-    @include rem(padding, 32px 32px 69px 32px);
+    // @include rem(width, 441px);
+    // @include rem(padding, 32px 32px 69px 32px);
     border:1px solid #ddd;
 
     .thumbnail-list {
         display: flex;
+        // width:100%;
+        @include rem(width, 376px);
+        @include rem(height, 569px);
+        @include rem(margin-top, 32px);
         flex-direction: column;
+
+        .swiper-slide {
+            display: flex;
+            // width:100%;
+            // height:calc((100%) / 5) !important;
+            @include rem(height, 101px !important);
+            justify-content: center;
+
+        }
     }
 
     button {
@@ -91,9 +112,71 @@
     }
 }
 
+.slide-contents {
+    @include rem(margin-top, 80px);
+    
+    .thumb-img {
+        position: relative;
+        display: block;
+        @include rem(width, 290px);
+        @include rem(height, 163px);
+        
+        img {width:100%; height:100%;}
+
+        .ico-play{
+            @include rem(width, 40px);
+            @include rem(height, 40px);
+        }
+    }
+
+    .category {
+        display: flex;
+
+        li {
+            @include rem(margin-top, 16px);
+            @include rem(margin-right, 8px);
+
+            &:nth-of-type(even) .txt {
+                color:#fff;
+                background-color: #222;
+            }
+        }
+
+        .txt {
+            display: inline-flex;
+            @include rem(padding, 3px 12px);
+            @include rem(font-size, 13px);
+            @include rem(border-radius, 13.5);
+            line-height: 1.5;
+            letter-spacing: -.65px;
+            color:#222;
+            background-color:#fff;
+            border:1px solid #222;
+
+            
+        }
+    }
+
+    p.txt {
+        @include rem(width, 290px);
+        @include rem(margin-top, 8px);
+        @include rem(margin-bottom, 16px);
+        @include rem(font-size, 20px);
+        line-height: 1.5;
+        color:#222;
+    }
+
+    p.sub-txt {
+        @include rem(width, 290px);
+        @include rem(font-size, 14px);
+        line-height: 1.43;
+        letter-spacing: -.35px;
+        color:#999;
+    }
+}
+
 
 //공통
-
 .ico-play {
     position:absolute;
     top:50%; left:50%;
@@ -120,3 +203,81 @@
         letter-spacing: -0.4px;
     }
 }
+
+.title-h4 {
+    @include rem(font-size, 32px);
+    @include rem(margin-right, 8px);
+    font-weight: bold;
+    color:#222;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ico {
+        display:inline-flex;
+        @include rem(width, 40px);
+        @include rem(height, 40px);
+        background: url('../images/icons/ico_arrow.png') no-repeat 0 0;
+        background-size: cover;
+    }
+}
+
+.swiper-button-area {
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+
+    @include rem(bottom, 32px);
+    @include rem(width, 102px);
+    @include rem(height, 20px);
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+
+        @include rem(width, 20px);
+        @include rem(height, 20px);
+        background:url('../images/icons/ico_slide_arrow.png') no-repeat 0 0;
+        background-size: cover;
+        z-index: 999;
+
+        &::after {
+            content:none;
+        }
+    }
+
+    .swiper-button-prev {
+        @include rem(top, 20px);
+        left:0;
+        bottom:auto;
+    }
+    .swiper-button-next {
+        @include rem(top, 20px);
+        right:0;
+        bottom:auto;
+        transform: rotateY(180deg);
+    }
+
+    .swiper-pagination {
+        top:0;
+        bottom:auto;
+        @include rem(font-size, 16px);
+        font-family: Montserrat;
+        letter-spacing: -.4px;
+        font-weight: bold;
+        color:#999;
+
+        .swiper-pagination-current {
+            color:#000;
+        }
+    }
+}
+
+
+
