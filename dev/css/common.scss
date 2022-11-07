@@ -31,6 +31,7 @@
 .content-inner {
     @include rem(margin-top, 80px);
 }
+
 .section-inner {
     @include rem(width, 1280px);
     margin:0 auto;
@@ -49,5 +50,8 @@
     }
     &.type03 {
         -webkit-line-clamp: 3;
+    }
+    &.type04 {
+        -webkit-line-clamp: 4;
     }
   }
