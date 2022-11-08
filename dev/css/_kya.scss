@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-// 공통
-.title-h4 {
-    text-align: center;
-}
- 
-
 //집콕+집밖
 .ico-housein {
     @include rem(width, 60px);

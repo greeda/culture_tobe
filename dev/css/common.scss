@@ -40,19 +40,24 @@
 
 //텍스트 말줄임
 .ellipsis {
-    // width: 각 요소에 적용
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+// width: 각 요소에 적용
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
 
-    &.type02 {
-        -webkit-line-clamp: 2;
-    }
-    &.type03 {
-        -webkit-line-clamp: 3;
-    }
-    &.type04 {
-        -webkit-line-clamp: 4;
-    }
-  }
+&.type02 {
+    -webkit-line-clamp: 2;
+}
+&.type03 {
+    -webkit-line-clamp: 3;
+}
+&.type04 {
+    -webkit-line-clamp: 4;
+}
+}
+
+// 텍스트 공통
+.title-h4 {
+    text-align: center;
+}
