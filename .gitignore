@@ -121,3 +121,5 @@ package-lock.json
 *.cache
 documentation
 .strapi-updater.json
+sass_maps/css/common.css.map
+*.map
