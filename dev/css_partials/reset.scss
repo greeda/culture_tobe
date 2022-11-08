@@ -28,7 +28,7 @@ html{
 // 모바일 기본 영역 보다 작은 사이즈 대응 영역
 @media (max-width: 374px) {
     html {
-        font-size: calc(#{$global-font-size - 3} + 10 * ((100vw - 280px) / 374));
+        font-size: calc(#{$global-font-size - 3} + 3 * ((100vw - 280px) / 374));
     }
 }
 
@@ -36,7 +36,7 @@ html{
 // max-width 에는 PSD 가로 사이즈 적용하기. 그걸 반으로 나눈 것을 min-width 에 적용하기.
 @media (min-width: 375px) and (max-width: 750px) {
     html {
-        font-size: calc(#{$global-font-size} + 20 * ((100vw - 375px) / 750));
+        font-size: calc(#{$global-font-size} + 8 * ((100vw - 375px) / 750));
     }
 }
 

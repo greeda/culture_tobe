@@ -38,6 +38,10 @@
         @include rem(margin-top, 80px);
         background-color: #f5f5f5;
     }
+
+    [class^="ico-"] {
+        display: inline-block;
+    }
 }
 
 .main-home-swiper {
@@ -265,7 +269,7 @@
 
 @media (max-width:1024px){
     .title-area .title-h2 {
-        @include rem(font-size, 24);
+        // @include rem(font-size, 24);
     }
 
     .main-home-swiper {
@@ -288,19 +292,19 @@
         @include rem(padding, 8px);
         @include rem(margin-right, 4px);
     }
-    .main-home-swiper .tag .txt {
-        @include rem(font-size, 10px);
-    }
+    // .main-home-swiper .tag .txt {
+    //     @include rem(font-size, 10px);
+    // }
 
     .main-home-swiper .box-txt .txt-tit {
-        @include rem(font-size, 16px);
+        // @include rem(font-size, 16px);
         @include rem(height, 48px);
     }
     .main-home-swiper .box-txt .txt-desc {
-        @include rem(font-size, 12px);
+        // @include rem(font-size, 12px);
     }
     .main-home-swiper .box-txt .txt-data {
-        @include rem(font-size, 12px);
+        // @include rem(font-size, 12px);
     }
 
 
@@ -311,7 +315,7 @@
     
             &.on {
                 @include rem(height, 86);
-                box-shadow: 4px 0 4px -4px black;
+                // box-shadow: 4px 0 4px -4px black;
             }
     
             &:nth-child(1) {
