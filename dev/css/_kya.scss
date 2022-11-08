@@ -243,6 +243,121 @@
 }
 
 
+.section-search {
+
+    .area-option {
+        @include rem(border-radius, 12px);
+        border: solid 1px #ddd;
+        overflow: hidden;
+    }
+    
+    .search-category {
+        display: flex;
+        border-bottom: solid 1px #ddd;
+    }
+
+    .search-option {
+        .btn-reset {
+            @include rem(font-size, 14px);
+        }
+    }
+    
+    .search-head {
+        @include rem(width, 137px);
+        @include rem(min-height, 115px);
+        background: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input[type="checkbox"]{
+            display: none;
+    
+            & + label::before {
+                display: block;
+                content: '';
+                @include rem(width, 20px);
+                @include rem(height, 20px);
+                @include rem(margin-right, 8px);
+                border: 1px solid #ddd;
+                background: #fff;
+                border-radius: 50%;
+            }
+    
+            &:checked + label::before {
+                background: #ff6742;
+                border: none;
+            }
+        }
+
+        .filter-main {
+            display: flex;
+        }
+
+        .txt {
+            display: inline-block;
+            @include rem(font-size, 20px);
+            font-weight: bold;
+        }
+    }
+
+    .search-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include rem(padding, 0 24px);
+
+        .item {
+            
+
+            & + .item {
+                @include rem(margin-left, 43px);
+            }
+        }
+
+        input[type="checkbox"]{
+            display: none;
+
+            & + label .circle-item {
+                background: gray;
+            }
+            
+            &:checked + label .circle-item:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                content:'';
+                display: block;
+                background: #ff6742;
+                opacity: 0.5;
+            }
+        }
+
+        .filter-label {
+            display: block;
+            text-align: center;
+
+            .circle-item {
+                position: relative;
+                @include rem(width, 52px);
+                @include rem(height, 52px);
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            .txt {display: block;
+                @include rem(margin-top, 6px);
+                @include rem(font-size, 14px);
+                font-weight: bold;
+            }
+        }
+        
+    }
+    
+}
+
+
 // .type-home {
 //     &.slide-contents .thumb-img {
 //         @include rem(width, 180px);
