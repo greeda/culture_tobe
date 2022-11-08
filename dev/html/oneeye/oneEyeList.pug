@@ -7,7 +7,7 @@ block contents
     #container.pageClassSub
         #content(role='main')
             .content-inner
-                nav.breadcrumb
+                //nav.breadcrumb
                     .location-area
                         ol.location-content
                             li
@@ -31,4 +31,23 @@ block contents
                 
                 section.section-search
                     .section-inner
-                        p 검색영역
+                        .area-option
+                            fieldset
+                                legend 주제별 필터
+                                ul 
+                                    li 
+                                        input#filterItem01_01(type="checkbox")
+                                        label.filter_label(for='filterItem01_01')
+                                            .circle-item(area-hidden="true")
+                                            span.txt 문화예술
+
+                                .filter__mask.filter__mask--topic
+                                    .filter__set
+                                    input#filterItem01_01.filter__checkbox(type='checkbox' name='org_genre_chk' value='문화예술')
+                                    label.filter__label.filter__label--art(for='filterItem01_01')
+                                        i
+                                        span
+                                   
+
+
+                        .area-search
