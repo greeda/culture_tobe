@@ -122,4 +122,5 @@ package-lock.json
 documentation
 .strapi-updater.json
 sass_maps
+sass_map
 *.map

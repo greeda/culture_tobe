@@ -13,6 +13,7 @@ block contents
                                 .visual-content-box
                                     .video
                                         a.link-content-list(href="#" title="")
+                                            img.link-img(src="../../images/link_img_sample.jpg", alt="")
                                             i.ico-play(aria-hidden="true") 
                                     .visual-text-box
                                         strong.category 문화유산
@@ -948,11 +949,11 @@ block append script
         }
 
         let swiper =  new Swiper('.thumbnail-area', {
-            slidesPerView: 1,
-            slidesPerColumn: 5,
+            slidesPerView: 2,
+            slidesPerColumn: 1,
             slidesPerGroup :1,
-            loopFillGroupWithBlank : true,
             spaceBetween:16,
+            loopFillGroupWithBlank : true,
             watchOverflow:true,
             navigation: {
                 nextEl: '.swiper-button-area .swiper-button-next',
@@ -964,6 +965,14 @@ block append script
             },
             a11y : {
                 enabeld: true
+            },
+            breakpoints: {
+                1279: {
+                    slidesPerView: 1,
+                    slidesPerColumn: 5,
+                    slidesPerGroup :1,
+                    spaceBetween:16,
+                }
             }
         });
         
