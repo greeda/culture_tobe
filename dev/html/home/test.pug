@@ -1,0 +1,94 @@
+extends /_src/_pug/_extend_html5
+
+block append css
+    link(href=`${pathSettingHtml}css/oneEye.css`, type='text/css', rel='stylesheet')
+
+block contents
+    #container.pageClassSub
+        #content(role='main')
+            .content-inner
+                nav.breadcrumb
+                    .location-area
+                        ol.location-content
+                            li
+                                a(href="#") 홈
+                            li
+                                a(href="#") 문화체험
+                            li
+                                a.on(href="#") 집콕+집밖 문화생활
+                    .share-area
+                        ul.share-content
+                            li
+                                a.link-share(href="#")
+                            li
+                                a.link-print(href="#")
+
+                section
+                    .section-inner
+                        div(style="font-size: 30px;color: green") 목록 all case
+                        div(style="width:290px")
+
+                            // 목록 all case
+                            a(href="#none").box-thumb
+                                .thumb-img
+                                    img(src="../../images/thumb_img02.jpg", alt="")
+                                    i.ico-play(aria-hidden="true")
+                                    .thumb-category
+                                        i.ico-housein
+                                            span.hide-txt 집콕
+                                    .btn-link
+                                        span.txt 예매 바로가기
+                                ul.thumb-tag.size02
+                                    li.tag
+                                        span.txt 공연/전시
+                                    li.tag
+                                        span.txt 행사
+                                    li.tag.reverse
+                                        span.txt 유료
+                                ul.thumb-tag.size01
+                                    li.tag
+                                        span.txt 공연/전시
+                                    li.tag
+                                        span.txt 행사
+                                    li.tag.reverse
+                                        span.txt 유료
+
+                                .thumb-txt
+                                    p.tit.size01 16 지원의 음악과 미술이 함께하는 콘서트
+                                    p.tit.size02 20 지원의 음악과 미술이 함께하는 콘서트
+
+                                    p.txt.size01 13 무용의 기본인 신체적 움직임을 통해 자존감을 얻으며, 자연의
+                                    p.txt.size02 14 무용의 기본인 신체적 움직임을 통해 자존감을 얻으며, 자연의
+
+                                    dl.txt-list
+                                        dt.term 제공
+                                        dd.desc 오프라인
+                                    dl.txt-list
+                                        dt.term 기간
+                                        dd.desc 2022.09.21~ 2022.09.25
+
+                        div(style="font-size: 30px;margin-top:100px; color: green") 예시
+                        div(style="width:290px")
+
+                            a(href="#none").box-thumb
+                                .thumb-img
+                                    img(src="../../images/thumb_img.jpg", alt="")
+                                    i.ico-play(aria-hidden="true")
+                                ul.thumb-tag
+                                    li.tag
+                                        span.txt 생활
+                                    li.tag.reverse
+                                        span.txt 서울
+
+                                .thumb-txt
+                                    p.tit.size02 20 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
+                                    p.txt.size02 14px 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
+
+                                    p.txt.size02 14px 문화포털
+                                    p.txt.size01 13px 2022.10.06 ~ 2022.10.07
+                    
+
+
+            
+                                
+

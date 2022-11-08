@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 //집콕+집밖
+
+[class^="ico-"] {
+    display: inline-block;
+}
+
 .ico-housein {
     @include rem(width, 60px);
     @include rem(height, 60px);
@@ -39,9 +44,7 @@
         background-color: #f5f5f5;
     }
 
-    [class^="ico-"] {
-        display: inline-block;
-    }
+    
 }
 
 .main-home-swiper {
@@ -240,30 +243,30 @@
 }
 
 
-.type-home {
-    &.slide-contents .thumb-img {
-        @include rem(width, 180px);
-        @include rem(height, 254px);
-    }
+// .type-home {
+//     &.slide-contents .thumb-img {
+//         @include rem(width, 180px);
+//         @include rem(height, 254px);
+//     }
     
-    &.slide-contents p.txt {
-        width: auto;
-        @include rem(font-size, 16px);
-        @include rem(height, 48px);
-    }
+//     &.slide-contents p.txt {
+//         width: auto;
+//         @include rem(font-size, 16px);
+//         @include rem(height, 48px);
+//     }
     
-    &.slide-contents p.sub-txt {
-        width: auto;
-        @include rem(font-size, 13px);
-    }
+//     &.slide-contents p.sub-txt {
+//         width: auto;
+//         @include rem(font-size, 13px);
+//     }
 
-    &.slide-contents .category .txt {
-        @include rem(font-size, 10px);
-        @include rem(padding, 4px 8px);
-        line-height: 1;
-    }
+//     &.slide-contents .category .txt {
+//         @include rem(font-size, 10px);
+//         @include rem(padding, 4px 8px);
+//         line-height: 1;
+//     }
     
-}
+// }
 
 
 
@@ -347,5 +350,10 @@
 
     
 }
+
+
+
+
+
 
 
