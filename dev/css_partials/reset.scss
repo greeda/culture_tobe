@@ -30,6 +30,11 @@ html{
     html {
         font-size: calc(#{$global-font-size - 3} + 3 * ((100vw - 280px) / 374));
     }
+
+    .section-inner {
+        @include rem(max-width, 1280px);
+        width:100% !important;
+    }
 }
 
 // 모바일 기본 사이즈 대응 영역 (PSD 750 사이즈 기준 세팅)
@@ -38,12 +43,22 @@ html{
     html {
         font-size: calc(#{$global-font-size} + 8 * ((100vw - 375px) / 750));
     }
+
+    .section-inner {
+        @include rem(max-width, 1280px);
+        width:100% !important;
+    }
 }
 
 // 기본 영역보다 큰 사이즈 대응 영역 (태블릿 전 단계)
 @media (min-width: 751px) and (max-width: 1023px) {
     html {
         font-size: calc(#{$global-font-size} + 13 * ((100vw - 751px) / 1023));
+    }
+
+    .section-inner {
+        @include rem(max-width, 1280px);
+        width:100% !important;
     }
 }
 
@@ -54,6 +69,7 @@ html{
     html {
         font-size: calc(#{$global-font-size} + 12 * ((100vw - 1024px) / 1279));
     }
+
 }
 
 // PC 영역
