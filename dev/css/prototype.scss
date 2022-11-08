@@ -82,6 +82,10 @@ display: -webkit-box;
             li {
                 @include rem(width, 40px);
                 @include rem(height, 40px);
+
+                + li {
+                    @include rem(margin-left, 12px);
+                }
             }
             a {
                 display:inline-block;
@@ -93,7 +97,6 @@ display: -webkit-box;
                 }
 
                 &.link-print {
-                    @include rem(margin-left, 12px);
                     background: url('../images/icons/ico_print.png') no-repeat 0 0;
                     background-size: cover;
                 }
