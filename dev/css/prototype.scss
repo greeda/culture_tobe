@@ -7,8 +7,8 @@
 }
 
 .section-inner {
-    @include rem(width, 1280px);
-    // width: 100%;
+    @include rem(max-width, 1280px);
+    width: 100%;
     margin:0 auto;
 }
 
