@@ -6,15 +6,15 @@
         content:'';
         display: block;
         width:100%;
-        @include rem(height, 15px);
-        @include rem(margin-top, 80px);
+        height: 15px;
+        margin-top: 80px;
         background-color: #f5f5f5;
     }
 }
 
 .visual-area {
     display:flex;
-    @include rem(height, 670px);
+    height: 670px;
 
     .visual-content-box {
         display:inline-flex;
@@ -25,8 +25,8 @@
         .link-content-list {
             position:relative;
             display:flex;
-            @include rem(width, 838px);
-            // @include rem(height, 471px);
+            width: 838px;
+            // height: 471px;
             background:lightsalmon;
 
             img {width:100%;}
@@ -37,14 +37,14 @@
         border:1px solid #ddd;
         border-right:0;
 
-        @include rem(width, 838px);
-        @include rem(padding, 39px 32px);
+        width: 838px;
+        padding: 39px 32px;
 
         .category {
-            @include rem(padding, 3px 11px);
-            @include rem(font-size, 13px);
+            padding: 3px 11px;
+            font-size: 13px;
             color:#222;
-            @include rem(border-radius, 13.5px);
+            border-radius: 13.5px;
             border:1px solid #222;
             background-color:#fff;
             box-sizing: border-box;
@@ -54,7 +54,7 @@
     &.type-slider {
         
         .title-h3 {
-            @include rem(margin-top, 12px);
+            margin-top: 12px;
         }
 
         .item {
@@ -62,9 +62,9 @@
         }
 
         .visual-text-box {
-            @include rem(width, 440px);
+            width: 440px;
             padding:0;
-            @include rem(padding-left, 40px);
+            padding-left: 40px;
             border:none;
 
             .title-h3 + .sub-txt {
@@ -76,7 +76,7 @@
             display: flex;
         
             li {
-                @include rem(margin-right, 8px);
+                margin-right: 8px;
     
                 &:nth-of-type(even) .txt {
                     color:#fff;
@@ -86,9 +86,9 @@
     
             .txt {
                 display: inline-flex;
-                @include rem(padding, 3px 12px);
-                @include rem(font-size, 13px);
-                @include rem(border-radius, 13.5);
+                padding: 3px 12px;
+                font-size: 13px;
+                border-radius: 13.5;
                 line-height: 1.5;
                 letter-spacing: -.65px;
                 color:#222;
@@ -102,20 +102,20 @@
         .hashtag {
             display:flex;
             flex-wrap: wrap;
-            @include rem(margin-top, 8px);
-            @include rem(margin-bottom, 32px);
+            margin-top: 8px;
+            margin-bottom: 32px;
 
             li {
-                @include rem(padding, 4px 8px);
-                @include rem(margin-top, 8px);
-                @include rem(margin-right, 8px);
+                padding: 4px 8px;
+                margin-top: 8px;
+                margin-right: 8px;
                 background:#eee;
 
                 & + li {
                     
                 }
                 .txt {
-                    @include rem(font-size, 13px);
+                    font-size: 13px;
                     line-height: 1.38;
                     letter-spacing: -0.33px;
                     color:#222;
@@ -126,16 +126,16 @@
 
         .info {
             display:flex;
-            @include rem(width, 184px);
+            width: 184px;
             justify-content: space-between;
             
             & + .info {
-                @include rem(margin-top, 12px);
+                margin-top: 12px;
             }
 
             dt, dd {
                 width:50%;
-                @include rem(font-size, 14px);
+                font-size: 14px;
                 letter-spacing: -0.35px;
                 color:#222;
             }
@@ -150,25 +150,24 @@
 
 .thumbnail-area {
     display:inline-flex;
-    // @include rem(width, 441px);
-    // @include rem(padding, 32px 32px 69px 32px);
+    // width: 441px;
+    // padding: 32px 32px 69px 32px;
     border:1px solid #ddd;
 
     .thumbnail-list {
         display: flex;
         // width:100%;
-        @include rem(width, 376px);
-        // @include rem(height, 569px);
-        @include rem(margin-top, 32px);
+        width: 376px;
+        // height: 569px;
+        margin-top: 32px;
         flex-direction: column;
 
         .swiper-slide {
             display: flex;
             // width:100%;
             // height:calc((100%) / 5) !important;
-            @include rem(height, 101px !important);
+            height: 101px !important;
             justify-content: center;
-
         }
     }
 
@@ -178,8 +177,8 @@
 
     .thumb-img {
         display:inline-block;
-        @include rem(width, 180px);
-        @include rem(height, 101px);
+        width: 180px;
+        height: 101px;
 
         img {
             width:100%;
@@ -188,13 +187,13 @@
 
     .thumb-text {
         text-align: left;
-        @include rem(padding-left, 16px);
+        padding-left: 16px;
 
         .sub-category {
             display:inline-block;
-            @include rem(padding, 3px 7px);
-            @include rem(font-size, 10px);
-            @include rem(border-radius, 11.5px);
+            padding: 3px 7px;
+            font-size: 10px;
+            border-radius: 11.5px;
             line-height: 1.5;
             letter-spacing: -0.25px;
             border: 1px solid #222;
@@ -202,9 +201,9 @@
         }
 
         .txt {
-            @include rem(width, 180px);
-            @include rem(margin, 4px 0 2px 0);
-            @include rem(font-size, 16px);
+            width: 180px;
+            margin: 4px 0 2px 0;
+            font-size: 16px;
             line-height: 1.5;
             color:#222;
         }
@@ -212,28 +211,28 @@
 }
 
 .slide-contents {
-    @include rem(margin-top, 80px);
+    margin-top: 80px;
 
     &:last-child {
-        @include rem(margin-bottom, 120px);
+        margin-bottom: 120px;
     }
     
     .swiper-wrapper {
-        @include rem(padding-bottom, 103px);
+        padding-bottom: 103px;
     }
 
     //- 공통으로 따로 만듦 .box-thumb로 교체함 (prototype.scss)
     // .thumb-img {
     //     position: relative;
     //     display: block;
-    //     @include rem(width, 290px);
-    //     @include rem(height, 163px);
+    //     width: 290px;
+    //     height: 163px;
         
     //     img {width:100%; height:100%;}
 
     //     .ico-play{
-    //         @include rem(width, 40px);
-    //         @include rem(height, 40px);
+    //         width: 40px;
+    //         height: 40px;
     //     }
     // }
 
@@ -241,8 +240,8 @@
     //     display: flex;
 
     //     li {
-    //         @include rem(margin-top, 16px);
-    //         @include rem(margin-right, 8px);
+    //         margin-top: 16px;
+    //         margin-right: 8px;
 
     //         &:nth-of-type(even) .txt {
     //             color:#fff;
@@ -252,9 +251,9 @@
 
     //     .txt {
     //         display: inline-flex;
-    //         @include rem(padding, 3px 12px);
-    //         @include rem(font-size, 13px);
-    //         @include rem(border-radius, 13.5);
+    //         padding: 3px 12px;
+    //         font-size: 13px;
+    //         border-radius: 13.5);
     //         line-height: 1.5;
     //         letter-spacing: -.65px;
     //         color:#222;
@@ -266,17 +265,17 @@
     // }
 
     // p.txt {
-    //     @include rem(width, 290px);
-    //     @include rem(margin-top, 8px);
-    //     @include rem(margin-bottom, 16px);
-    //     @include rem(font-size, 20px);
+    //     width: 290px;
+    //     margin-top: 8px;
+    //     margin-bottom: 16px;
+    //     font-size: 20px;
     //     line-height: 1.5;
     //     color:#222;
     // }
 
     // p.sub-txt {
-    //     @include rem(width, 290px);
-    //     @include rem(font-size, 14px);
+    //     width: 290px;
+    //     font-size: 14px;
     //     line-height: 1.43;
     //     letter-spacing: -.35px;
     //     font-weight: 300;
@@ -286,21 +285,21 @@
     .swiper-button-area {
         left:auto;
         right:0;
-        @include rem(bottom, -2px);
-        @include rem(width, 146px);
-        @include rem(height, 54px);
+        bottom: -2px;
+        width: 146px;
+        height: 54px;
         transform: translateX(0);
 
         .swiper-pagination {
             top:auto;
-            @include rem(bottom, 21px);
+            bottom: 21px;
         }
 
         .swiper-button-prev,
         .swiper-button-next {
             bottom:auto;
-            @include rem(width, 54px);
-            @include rem(height, 54px);
+            width: 54px;
+            height: 54px;
             background: url('../images/icons/ico_slide_arrow_circle.png') no-repeat 0 0;
             background-size: cover;
         }
@@ -308,8 +307,8 @@
 
     .swiper-progress {
         top:auto;
-        @include rem(bottom, 27px);
-        @include rem(width, 1060px);
+        bottom: 27px;
+        width: 1060px;
         height:2px;
         background:#ddd;
 
@@ -323,12 +322,12 @@
 
 @media (max-width:1279px) {
     .visual-top::after {
-        @include rem(margin-top, 40px);
+        margin-top: 40px;
     }
 
     .content-inner,
     .slide-contents {
-        @include rem(margin-top, 40px);
+        margin-top: 40px;
     }
 
     .visual-area {
@@ -339,7 +338,7 @@
     .visual-area .visual-text-box {
         width:100%;
         border:0;
-        @include rem(padding, 20px);
+        padding: 20px;
     }
 
     .visual-area .video .link-content-list {
@@ -348,7 +347,7 @@
 
     .thumbnail-area {
         display: inherit;
-        @include rem(padding, 0 23px 40px 23px);
+        padding: 0 23px 40px 23px;
         border:0;
 
         .thumbnail-list {
@@ -361,6 +360,8 @@
                 height:100% !important;
                 margin-top:0 !important;
                 justify-content: unset;
+
+                a {width:100%;}
             }
 
         }
