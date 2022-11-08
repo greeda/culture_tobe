@@ -3,11 +3,12 @@
 @import 'dev/_src/_scss/_setting';
 
 .content-inner {
-    @include rem(margin-top, 80px);
+    margin-top: 80px;
+
 }
 
 .section-inner {
-    @include rem(max-width, 1280px);
+    max-width: 1280px;
     width: 100%;
     margin:0 auto;
 }
@@ -39,11 +40,11 @@ display: -webkit-box;
 //breadcrumb
 .breadcrumb {
     display:flex;
-    @include rem(max-width, 1280px);
+    max-width: 1280px;
     width: 100%;
-    @include rem(height, 84px);
+    height: 84px;
     margin:0 auto;
-    @include rem(margin-top, -80px);
+    margin-top: -80px;
     justify-content: space-between;
     align-items: center;
 
@@ -58,7 +59,7 @@ display: -webkit-box;
         }
 
         a {
-            @include rem(font-size, 14px);
+            font-size: 14px;
             line-height: 1.5;
             letter-spacing: -.7px;
             color:#666;
@@ -66,9 +67,9 @@ display: -webkit-box;
             &::after {
                 content:'';
                 display:inline-block;
-                @include rem(width, 12px);
-                @include rem(height, 12px);
-                @include rem(margin, 0 4px);
+                width: 12px;
+                height: 12px;
+                margin: 0 4px;
                 background: url('../images/icons/ico_breadcrumb_arrow.png') no-repeat 0 0;
                 background-size: cover;
             }
@@ -80,11 +81,11 @@ display: -webkit-box;
             display:flex;
 
             li {
-                @include rem(width, 40px);
-                @include rem(height, 40px);
+                width: 40px;
+                height: 40px;
 
                 + li {
-                    @include rem(margin-left, 12px);
+                    margin-left: 12px;
                 }
             }
             a {
@@ -110,21 +111,21 @@ display: -webkit-box;
 .ico-play {
     position:absolute;
     top:50%; left:50%;
-    transform: translate(-50%, -50%);
-    @include rem(width, 72px);
-    @include rem(height, 72px);
+    transform: translate(-50% -50%);
+    width: 72px;
+    height: 72px;
     background: url('../images/icons/ico_play_btn.png') no-repeat 0 0;
     background-size: cover;
 }
 
 .title-area {
-    @include rem(margin-top, 2px);
-    @include rem(margin-bottom, 80px);
+    margin-top: 2px;
+    margin-bottom: 80px;
     text-align: center;
 }
 
 .title-h1 {
-    @include rem(font-size, 48px);
+    font-size: 48px;
     font-weight: bold;
     line-height: 0.83;
     letter-spacing: -1.2px;
@@ -132,8 +133,8 @@ display: -webkit-box;
 
     .txt {
         display:flex;
-        @include rem(margin-top, 25px);
-        @include rem(font-size, 18px);
+        margin-top: 25px;
+        font-size: 18px;
         justify-content: center;
         line-height: 1.78;
         font-weight: 400;
@@ -143,16 +144,16 @@ display: -webkit-box;
 }
 
 .title-h3 {
-    @include rem(margin, 8px 0 16px);
-    @include rem(font-size, 24px);
+    margin: 8px 0 16px;
+    font-size: 24px;
     font-weight: bold;
     color:#222;
     line-height: 1.5;
     letter-spacing: -0.6px;
 
     & + .sub-txt {
-        @include rem(width, 774px);
-        @include rem(font-size, 16px);
+        width: 774px;
+        font-size: 16px;
         color:#999;
         line-height: 1.5;
         letter-spacing: -0.4px;
@@ -161,9 +162,9 @@ display: -webkit-box;
 
 
 .title-h4 {
-    @include rem(font-size, 32px);
-    @include rem(margin-right, 8px);
-    @include rem(margin-bottom, 32px);
+    font-size: 32px;
+    margin-right: 8px;
+    margin-bottom: 32px;
     font-weight: bold;
     color:#222;
     line-height: 1.25;
@@ -177,8 +178,8 @@ display: -webkit-box;
 
     .ico {
         display:inline-flex;
-        @include rem(width, 40px);
-        @include rem(height, 40px);
+        width: 40px;
+        height: 40px;
         background: url('../images/icons/ico_arrow.png') no-repeat 0 0;
         background-size: cover;
     }
@@ -190,17 +191,17 @@ display: -webkit-box;
     transform: translateX(-50%);
     z-index: 10;
 
-    @include rem(bottom, 32px);
-    @include rem(width, 102px);
-    @include rem(height, 20px);
+    bottom: 32px;
+    width: 102px;
+    height: 20px;
 
 
     .swiper-button-prev,
     .swiper-button-next {
         position: absolute;
 
-        @include rem(width, 20px);
-        @include rem(height, 20px);
+        width: 20px;
+        height: 20px;
         background:url('../images/icons/ico_slide_arrow.png') no-repeat 0 0;
         background-size: cover;
         z-index: 999;
@@ -211,12 +212,12 @@ display: -webkit-box;
     }
 
     .swiper-button-prev {
-        @include rem(top, 20px);
+        top: 20px;
         left:0;
         bottom:auto;
     }
     .swiper-button-next {
-        @include rem(top, 20px);
+        top: 20px;
         right:0;
         bottom:auto;
         transform: rotateY(180deg);
@@ -225,7 +226,7 @@ display: -webkit-box;
     .swiper-pagination {
         top:0;
         bottom:auto;
-        @include rem(font-size, 16px);
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: -.4px;
         font-weight: bold;
@@ -246,7 +247,7 @@ display: -webkit-box;
     // 썸네일 이미지
     .thumb-img {
         position: relative;
-        @include rem(margin-bottom, 16px);
+        margin-bottom: 16px;
 
         img {
             display: block;
@@ -258,8 +259,8 @@ display: -webkit-box;
     // 집콕+집밖 아이콘
     .thumb-category {
         position: absolute;
-        @include rem(top, 10px);
-        @include rem(right, 10px);
+        top: 10px;
+        right: 10px;
     }
 
     // 예매하기 버튼
@@ -271,13 +272,13 @@ display: -webkit-box;
         align-items: center;
         justify-content: center;
         width: 100%;
-        @include rem(height, 48px);
+        height: 48px;
         border: solid 1px #eee;
         background-color: #222;
         text-align: center;
 
         .txt {
-            @include rem(font-size, 14px);
+            font-size: 14px;
             font-weight: bold;
             color: #fff;
         }
@@ -288,10 +289,10 @@ display: -webkit-box;
         display:inline-flex;
         align-items: center;
         background-color:#f8f8f8;
-        @include rem(height, 23px);
-        @include rem(padding, 0 8px);
-        @include rem(border-radius, 11.5px);
-        @include rem(margin-right, 4px);
+        height: 23px;
+        padding: 0 8px;
+        border-radius: 11.5px;
+        margin-right: 4px;
 
         background-color:#fff;
         border: solid 1px #222;
@@ -302,7 +303,7 @@ display: -webkit-box;
         }
 
         .txt{
-            @include rem(font-size, 10px);
+            font-size: 10px;
 
         }
 
@@ -315,16 +316,16 @@ display: -webkit-box;
     }
     
     .thumb-tag {
-        @include rem(margin-bottom, 8px);
+        margin-bottom: 8px;
 
         &.size02 .tag {
-            @include rem(height, 27px);
-            @include rem(padding, 0 12px);
-            @include rem(border-radius, 13.5px);
-            @include rem(margin-right, 8px);
+            height: 27px;
+            padding: 0 12px;
+            border-radius: 13.5px;
+            margin-right: 8px;
 
             .txt{
-                @include rem(font-size, 13px);
+                font-size: 13px;
             }
         }
     }
@@ -333,21 +334,21 @@ display: -webkit-box;
     // 썸네일 텍스트
     .thumb-tag + .thumb-txt {
         margin-top: 8px;
-        @include rem(margin-top, 8px);
+        margin-top: 8px;
     }
 
     .tit {
         line-height: 1.5;
         color: #222;
-        @include rem(margin-bottom, 16px);
+        margin-bottom: 16px;
 
         &.size01 {
-            @include rem(font-size, 16px);
-            @include rem(min-height, 48px);
+            font-size: 16px;
+            min-height: 48px;
         }
         &.size02 {
-            @include rem(font-size, 20px);
-            @include rem(min-height, 59px);
+            font-size: 20px;
+            min-height: 59px;
         }
     }
 
@@ -356,22 +357,22 @@ display: -webkit-box;
         line-height: 1.42;
 
         &.size01 {
-            @include rem(font-size, 13px);
+            font-size: 13px;
         }
         &.size02 {
-            @include rem(font-size, 14px);
+            font-size: 14px;
         }
 
         & + .txt {
-            @include rem(margin-top, 16px);
+            margin-top: 16px;
         }
     }
 
     .txt-list {
         display: flex;
         color: #999;
-        @include rem(font-size, 13px);
-        @include rem(margin-top, 6px);
+        font-size: 13px;
+        margin-top: 6px;
 
         .term {
             width: 20%;

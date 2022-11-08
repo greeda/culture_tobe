@@ -7,40 +7,40 @@
 }
 
 .ico-housein {
-    @include rem(width, 60px);
-    @include rem(height, 60px);
+    width: 60px;
+    height: 60px;
     background:url('/images/home/ico_house_in.png') center/contain;
 }
 .ico-houseout {
-    @include rem(width, 60px);
-    @include rem(height, 60px);
+    width: 60px;
+    height: 60px;
     background:url('/images/home/ico_house_out.png') center/contain;
 }
 
 .intro-home {
-    @include rem(height, 254px);
+    height: 254px;
     background:url('/images/home/img_banner_home.jpg') center/cover;
 }
 
 .title-area {
     text-align: center;
-    @include rem(margin-bottom, 32px);
+    margin-bottom: 32px;
 
     .title-h2 {
-        @include rem(font-size, 32px);
+        font-size: 32px;
         font-weight: bold;
         color: #222;
     }
 }
 
 .main-home {
-    @include rem(padding, 52px 0 80px);
+    padding: 52px 0 80px;
     &::after {
         content:'';
         display: block;
         width:100%;
-        @include rem(height, 15px);
-        @include rem(margin-top, 80px);
+        height: 15px;
+        margin-top: 80px;
         background-color: #f5f5f5;
     }
 
@@ -66,8 +66,8 @@
 
     .thumb-category {
         position: absolute;
-        @include rem(top, 10px);
-        @include rem(right, 10px);
+        top: 10px;
+        right: 10px;
     }
 
     .thumb-btn {
@@ -78,13 +78,13 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        @include rem(height, 48px);
+        height: 48px;
         border: solid 1px #eee;
         background-color: #222;
         text-align: center;
 
         .txt {
-            @include rem(font-size, 16px);
+            font-size: 16px;
             font-weight: bold;
             color: #fff;
         }
@@ -93,24 +93,24 @@
     .box-tag {
         display: flex;
         flex-wrap: wrap;
-        @include rem(margin-top, 16px);
+        margin-top: 16px;
     }
 
     .tag{
         display:inline-flex;
         align-items: center;
         background-color:#f8f8f8;
-        @include rem(height, 27px);
-        @include rem(padding, 0 12px);
-        @include rem(border-radius, 13.5px);
-        @include rem(margin-right, 8px);
+        height: 27px;
+        padding: 0 12px;
+        border-radius: 13.5px;
+        margin-right: 8px;
 
         &:last-child {
             margin: 0;
         }
 
         .txt{
-            @include rem(font-size, 13px);
+            font-size: 13px;
         }
 
         &.type01{
@@ -121,15 +121,15 @@
     }
 
     .box-txt {
-        @include rem(margin-top, 8px);
+        margin-top: 8px;
 
         .txt-tit {
             display: block;
-            @include rem(font-size, 20px);
+            font-size: 20px;
             color: #222;
             line-height: 1.5;
-            @include rem(margin-bottom, 16px);
-            @include rem(height, 59px);
+            margin-bottom: 16px;
+            height: 59px;
 
             width: 100%;
             text-overflow: ellipsis;
@@ -141,7 +141,7 @@
         }
 
         .txt-desc {
-            @include rem(font-size, 14px);
+            font-size: 14px;
             color: #999;
             line-height: 1.42;
 
@@ -155,7 +155,7 @@
         }
 
         .txt-data {
-            @include rem(font-size, 14px);
+            font-size: 14px;
             color: #999;
             line-height: 1.42;
             
@@ -163,12 +163,12 @@
             flex-wrap: wrap;
 
             .data-term {
-                @include rem(width, 70px);
+                width: 70px;
             }
 
             .data-desc {
                 width: calc(100% - 7rem);
-                @include rem(margin-bottom, 4px);
+                margin-bottom: 4px;
 
                 &:last-child {
                     margin-bottom: 0;
@@ -187,8 +187,8 @@
     .tab-btn {
         display: block;
         flex: 1;
-        @include rem(height, 64px);
-        // background: #e8e7e8;
+        height: 64px;
+        background: #e8e7e8;
         border: 1px solid #ebebeb;
         border-bottom: 2px solid #444344;
         border-right: 0;
@@ -199,8 +199,8 @@
         
 
         &.on {
-            @include rem(height, 86);
-            // background: #fff;
+            height: 86;
+            background: #fff;
             border: 2px solid #444344;
             border-bottom: 0;
             box-shadow: 12px 0 12px -12px #9f9f9f;
@@ -209,26 +209,26 @@
 
         &:nth-child(1) {
             background:#f5f5f5 url('/images/home/img_title01_off.png') center no-repeat;
-            @include rem(background-size, 206px 36px);
+            background-size: 206px 36px;
             &.on {
                 background:#fff url('/images/home/img_title01_on.png') center no-repeat;
-                @include rem(background-size, 306px 59px);
+                background-size: 306px 59px;
             }
         }
         &:nth-child(2) {
             background:#f5f5f5 url('/images/home/img_title02_off.png') center no-repeat;
-            @include rem(background-size, 192px 39px);
+            background-size: 192px 39px;
             &.on {
                 background:#fff url('/images/home/img_title02_on.png') center no-repeat;
-                @include rem(background-size, 275px 56.5px);
+                background-size: 275px 56.5px;
             }
         }
         &:nth-child(3) {
             background:#f5f5f5 url('/images/home/img_title03_off.png') center no-repeat;
-            @include rem(background-size, 209px 37px);
+            background-size: 209px 37px;
             &.on {
                 background:#fff url('/images/home/img_title03_on.png') center no-repeat;
-                @include rem(background-size, 303px 57.5px);
+                background-size: 303px 57.5px;
             }
         }
     }
@@ -246,7 +246,7 @@
 .section-search {
 
     .area-option {
-        @include rem(border-radius, 12px);
+        border-radius: 12px;
         border: solid 1px #ddd;
         overflow: hidden;
     }
@@ -258,13 +258,13 @@
 
     .search-option {
         .btn-reset {
-            @include rem(font-size, 14px);
+            font-size: 14px;
         }
     }
     
     .search-head {
-        @include rem(width, 137px);
-        @include rem(min-height, 115px);
+        width: 137px;
+        min-height: 115px;
         background: whitesmoke;
         display: flex;
         align-items: center;
@@ -276,9 +276,9 @@
             & + label::before {
                 display: block;
                 content: '';
-                @include rem(width, 20px);
-                @include rem(height, 20px);
-                @include rem(margin-right, 8px);
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
                 border: 1px solid #ddd;
                 background: #fff;
                 border-radius: 50%;
@@ -296,7 +296,7 @@
 
         .txt {
             display: inline-block;
-            @include rem(font-size, 20px);
+            font-size: 20px;
             font-weight: bold;
         }
     }
@@ -305,13 +305,13 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        @include rem(padding, 0 24px);
+        padding: 0 24px;
 
         .item {
             
 
             & + .item {
-                @include rem(margin-left, 43px);
+                margin-left: 43px;
             }
         }
 
@@ -341,14 +341,14 @@
 
             .circle-item {
                 position: relative;
-                @include rem(width, 52px);
-                @include rem(height, 52px);
+                width: 52px;
+                height: 52px;
                 border-radius: 50%;
                 overflow: hidden;
             }
             .txt {display: block;
-                @include rem(margin-top, 6px);
-                @include rem(font-size, 14px);
+                margin-top: 6px;
+                font-size: 14px;
                 font-weight: bold;
             }
         }
@@ -360,24 +360,24 @@
 
 // .type-home {
 //     &.slide-contents .thumb-img {
-//         @include rem(width, 180px);
-//         @include rem(height, 254px);
+//         width: 180px;
+//         height: 254px;
 //     }
     
 //     &.slide-contents p.txt {
 //         width: auto;
-//         @include rem(font-size, 16px);
-//         @include rem(height, 48px);
+//         font-size: 16px;
+//         height: 48px;
 //     }
     
 //     &.slide-contents p.sub-txt {
 //         width: auto;
-//         @include rem(font-size, 13px);
+//         font-size: 13px;
 //     }
 
 //     &.slide-contents .category .txt {
-//         @include rem(font-size, 10px);
-//         @include rem(padding, 4px 8px);
+//         font-size: 10px;
+//         padding: 4px 8px;
 //         line-height: 1;
 //     }
     
@@ -387,77 +387,77 @@
 
 @media (max-width:1024px){
     .title-area .title-h2 {
-        // @include rem(font-size, 24);
+        // font-size: 24;
     }
 
     .main-home-swiper {
         [class^="ico-"] {
-            @include rem(width, 48px);
-            @include rem(height, 48px);
+            width: 48px;
+            height: 48px;
         }
 
         .swiper-container {
-            @include rem(padding, 0 23px);
+            padding: 0 23px;
         }
 
         .swiper-slide {
-            @include rem(width, 152px);
+            width: 152px;
         }
     }
 
     .main-home-swiper .tag {
-        @include rem(height, 23px);
-        @include rem(padding, 8px);
-        @include rem(margin-right, 4px);
+        height: 23px;
+        padding: 8px;
+        margin-right: 4px;
     }
     // .main-home-swiper .tag .txt {
-    //     @include rem(font-size, 10px);
+    //     font-size: 10px;
     // }
 
     .main-home-swiper .box-txt .txt-tit {
-        // @include rem(font-size, 16px);
-        @include rem(height, 48px);
+        // font-size: 16px;
+        height: 48px;
     }
     .main-home-swiper .box-txt .txt-desc {
-        // @include rem(font-size, 12px);
+        // font-size: 12px;
     }
     .main-home-swiper .box-txt .txt-data {
-        // @include rem(font-size, 12px);
+        // font-size: 12px;
     }
 
 
     .tab-buttons {
     
         .tab-btn {
-            @include rem(height, 60px);
+            height: 60px;
     
             &.on {
-                @include rem(height, 86);
+                height: 86;
                 // box-shadow: 4px 0 4px -4px black;
             }
     
             &:nth-child(1) {
                 background:#f5f5f5 url('/images/home/img_title01_mo_off.png') center no-repeat;
-                @include rem(background-size, 59px 30.2px);
+                background-size: 59px 30.2px;
                 &.on {
                     background:#fff url('/images/home/img_title01_mo_on.png') center no-repeat;
-                    @include rem(background-size, 70.5px 76.5px);
+                    background-size: 70.5px 76.5px;
                 }
             }
             &:nth-child(2) {
                 background:#f5f5f5 url('/images/home/img_title02_mo_off.png') center no-repeat;
-                @include rem(background-size, 47.5px 31px);
+                background-size: 47.5px 31px;
                 &.on {
                     background:#fff url('/images/home/img_title02_mo_on.png') center no-repeat;
-                    @include rem(background-size, 57px 76px);
+                    background-size: 57px 76px;
                 }
             }
             &:nth-child(3) {
                 background:#f5f5f5 url('/images/home/img_title03_mo_off.png') center no-repeat;
-                @include rem(background-size, 59px 31px);
+                background-size: 59px 31px;
                 &.on {
                     background:#fff url('/images/home/img_title03_mo_on.png') center no-repeat;
-                    @include rem(background-size, 70px 75.5px);
+                    background-size: 70px 75.5px;
                 }
             }
         }
