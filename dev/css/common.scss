@@ -20,44 +20,11 @@
 @import '../css_partials/header';
 @import '../css_partials/footer';
 
+@import '../css/prototype.scss';
+
 // **********************************
 // 서브 컨텐츠 영역
 // 서브 카테고리 css는 각 페이지마다 불어오는 것을 권장 하지만
 // common.css 에 다 넣어야 할때 아래에 @import 하면 됩니다.
 // **********************************
 // 예) @import '../css/서브카테고리';
-
-
-.content-inner {
-    @include rem(margin-top, 80px);
-}
-
-.section-inner {
-    @include rem(max-width, 1280px);
-    width: 100%;
-    margin:0 auto;
-}
-
-//텍스트 말줄임
-.ellipsis {
-// width: 각 요소에 적용
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-box-orient: vertical;
-
-&.type02 {
-    -webkit-line-clamp: 2;
-}
-&.type03 {
-    -webkit-line-clamp: 3;
-}
-&.type04 {
-    -webkit-line-clamp: 4;
-}
-}
-
-// 텍스트 공통
-.title-h4 {
-    text-align: center;
-}

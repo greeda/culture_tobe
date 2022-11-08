@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+@import 'dev/_src/_scss/_setting';
+
+.content-inner {
+    @include rem(margin-top, 80px);
+}
+
+.section-inner {
+    @include rem(max-width, 1280px);
+    width: 100%;
+    margin:0 auto;
+}
+
+//텍스트 말줄임
+.ellipsis {
+// width: 각 요소에 적용
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+
+&.type02 {
+    -webkit-line-clamp: 2;
+}
+&.type03 {
+    -webkit-line-clamp: 3;
+}
+&.type04 {
+    -webkit-line-clamp: 4;
+}
+}
+
+// 텍스트 공통
+.title-h4 {
+    text-align: center;
+}
+
+//breadcrumb
+.breadcrumb {
+    display:flex;
+    @include rem(max-width, 1280px);
+    width: 100%;
+    @include rem(height, 84px);
+    margin:0 auto;
+    @include rem(margin-top, -80px);
+    justify-content: space-between;
+    align-items: center;
+
+    .location-content {
+        display:flex;
+        
+        li:last-child {
+            a {
+                font-weight: bold;
+                color:#000;
+            }
+        }
+
+        a {
+            @include rem(font-size, 14px);
+            line-height: 1.5;
+            letter-spacing: -.7px;
+            color:#666;
+
+            &::after {
+                content:'';
+                display:inline-block;
+                @include rem(width, 12px);
+                @include rem(height, 12px);
+                @include rem(margin, 0 4px);
+                background: url('../images/icons/ico_breadcrumb_arrow.png') no-repeat 0 0;
+                background-size: cover;
+            }
+        }
+    }
+
+    .share-area {
+        .share-content {
+            display:flex;
+
+            li {
+                @include rem(width, 40px);
+                @include rem(height, 40px);
+            }
+            a {
+                display:inline-block;
+                width:100%; height:100%;
+
+                &.link-share {
+                    background: url('../images/icons/ico_share.png') no-repeat 0 0;
+                    background-size: cover;
+                }
+
+                &.link-print {
+                    @include rem(margin-left, 12px);
+                    background: url('../images/icons/ico_print.png') no-repeat 0 0;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+
+//공통
+.ico-play {
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    @include rem(width, 72px);
+    @include rem(height, 72px);
+    background: url('../images/icons/ico_play_btn.png') no-repeat 0 0;
+    background-size: cover;
+}
+
+.title-area {
+    @include rem(margin-top, 2px);
+    @include rem(margin-bottom, 80px);
+    text-align: center;
+}
+
+.title-h1 {
+    @include rem(font-size, 48px);
+    font-weight: bold;
+    line-height: 0.83;
+    letter-spacing: -1.2px;
+    color:#222;
+
+    .txt {
+        display:flex;
+        @include rem(margin-top, 25px);
+        @include rem(font-size, 18px);
+        justify-content: center;
+        line-height: 1.78;
+        font-weight: 400;
+        letter-spacing: -0.45px;
+        color:#999;
+    }
+}
+
+.title-h3 {
+    @include rem(margin, 8px 0 16px);
+    @include rem(font-size, 24px);
+    font-weight: bold;
+    color:#222;
+    line-height: 1.5;
+    letter-spacing: -0.6px;
+
+    & + .sub-txt {
+        @include rem(width, 774px);
+        @include rem(font-size, 16px);
+        color:#999;
+        line-height: 1.5;
+        letter-spacing: -0.4px;
+    }
+}
+
+
+.title-h4 {
+    @include rem(font-size, 32px);
+    @include rem(margin-right, 8px);
+    @include rem(margin-bottom, 32px);
+    font-weight: bold;
+    color:#222;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ico {
+        display:inline-flex;
+        @include rem(width, 40px);
+        @include rem(height, 40px);
+        background: url('../images/icons/ico_arrow.png') no-repeat 0 0;
+        background-size: cover;
+    }
+}
+
+.swiper-button-area {
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    @include rem(bottom, 32px);
+    @include rem(width, 102px);
+    @include rem(height, 20px);
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+
+        @include rem(width, 20px);
+        @include rem(height, 20px);
+        background:url('../images/icons/ico_slide_arrow.png') no-repeat 0 0;
+        background-size: cover;
+        z-index: 999;
+
+        &::after {
+            content:none;
+        }
+    }
+
+    .swiper-button-prev {
+        @include rem(top, 20px);
+        left:0;
+        bottom:auto;
+    }
+    .swiper-button-next {
+        @include rem(top, 20px);
+        right:0;
+        bottom:auto;
+        transform: rotateY(180deg);
+    }
+
+    .swiper-pagination {
+        top:0;
+        bottom:auto;
+        @include rem(font-size, 16px);
+        font-family: Montserrat;
+        letter-spacing: -.4px;
+        font-weight: bold;
+        color:#999;
+
+        .swiper-pagination-current {
+            color:#000;
+        }
+    }
+}

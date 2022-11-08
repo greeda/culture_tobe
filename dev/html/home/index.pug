@@ -7,7 +7,7 @@ block contents
     #container.pageClassSub
         #content(role='main')
             .content-inner
-                //nav.breadcrumb
+                nav.breadcrumb
                     .location-area
                         ol.location-content
                             li
@@ -209,11 +209,11 @@ block contents
                 section.tab-buttons
                     .section-inner
                         .tab-wrap(role="tabllist" aria-label="문화생활")
-                            button.tab-btn.on(type="button" role="button")
+                            button.tab-btn(type="button" role="tab")
                                 span.hide-txt 집콕 : 온라인에서 누려요
-                            button.tab-btn(type="button" role="button")
+                            button.tab-btn.on(type="button" role="tab")
                                 span.hide-txt 집밖 : 현장에서 즐겨요
-                            button.tab-btn(type="button" role="button")
+                            button.tab-btn(type="button" role="tab")
                                 span.hide-txt 채널 : 시간으로 만나요
 
                 section.tab-contents.on
@@ -686,7 +686,7 @@ block contents
                 section.tab-contents
                     p 탭 2
                 section.tab-contents
-                    p 탭 2
+                    p 탭 3
 
 
 block append script
