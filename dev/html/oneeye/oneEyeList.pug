@@ -34,20 +34,73 @@ block contents
                         .area-option
                             fieldset
                                 legend 주제별 필터
-                                ul 
-                                    li 
-                                        input#filterItem01_01(type="checkbox")
-                                        label.filter_label(for='filterItem01_01')
-                                            .circle-item(area-hidden="true")
-                                            span.txt 문화예술
+                                .search-category
+                                    .search-head
+                                        input#filterItem01(type="checkbox")
+                                        label.filter-main(for="filterItem01")
+                                            span.txt 주제별
+                                    ul.search-list
+                                        li.item
+                                            input#filterItem01-01(type="checkbox")
+                                            label.filter-label(for='filterItem01-01')
+                                                .circle-item(area-hidden="true")
+                                                span.txt 문화예술
+                                        li.item
+                                            input#filterItem01-02(type="checkbox")
+                                            label.filter-label(for='filterItem01-02')
+                                                .circle-item(area-hidden="true")
+                                                span.txt 문화유산
+                                .search-category
+                                    .search-head
+                                        input#filterItem02(type="checkbox" checked)
+                                        label.filter-main(for="filterItem02")
+                                            span.txt 분야별
+                                    ul.search-list
+                                        li.item
+                                            input#filterItem02-01(type="checkbox" checked)
+                                            label.filter-label(for='filterItem02-01')
+                                                .circle-item(area-hidden="true")
+                                                span.txt 도서
+                                        li.item
+                                            input#filterItem02-02(type="checkbox")
+                                            label.filter-label(for='filterItem02-02')
+                                                .circle-item(area-hidden="true")
+                                                span.txt 문화유산
+                                .search-category
+                                    .search-head
+                                        input#filterItem03(type="checkbox" checked)
+                                        label.filter-main(for="filterItem03")
+                                            span.txt 대상별
+                                    ul.search-list
+                                        li.item
+                                            input#filterItem02-01(type="checkbox")
+                                            label.filter-label(for='filterItem02-01')
+                                                .circle-item(area-hidden="true")
+                                                span.txt 도서
+                                            .sub-list
+                                                .sub-item 
+                                                    input#filterSub01(type="checkbox")
+                                                    label.filter-sub(for="filterSub01")
+                                                        span.txt 어린이
+                                                .sub-item 
+                                                    input#filterSub02(type="checkbox")
+                                                    label.filter-sub(for="filterSub02")
+                                                        span.txt 청소년
+                                                .sub-item 
+                                                    input#filterSub03(type="checkbox")
+                                                    label.filter-sub(for="filterSub03")
+                                                        span.txt 성인
+                                                .sub-item 
+                                                    input#filterSub04(type="checkbox")
+                                                    label.filter-sub(for="filterSub04")
+                                                        span.txt 어르신
 
-                                .filter__mask.filter__mask--topic
-                                    .filter__set
-                                    input#filterItem01_01.filter__checkbox(type='checkbox' name='org_genre_chk' value='문화예술')
-                                    label.filter__label.filter__label--art(for='filterItem01_01')
-                                        i
-                                        span
-                                   
-
-
+                                        li.item
+                                            input#filterItem02-02(type="checkbox")
+                                            label.filter-label(for='filterItem02-02')
+                                                .circle-item(area-hidden="true")
+                                                span.txt 문화유산
+                                .search-option
+                                    button.btn-reset(type="button")
+                                        span.txt 전체해제
                         .area-search

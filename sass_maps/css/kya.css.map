@@ -1,1 +1,0 @@
-{"version":3,"sources":["css/kya.scss"],"names":[],"mappings":"AAGA;EACI,eAAe,EAAA","file":"../../dev/css/kya.css","sourcesContent":["@charset \"utf-8\";\n@import 'dev/_src/_scss/_setting';\n\n.title-h1 {\n    font-size: 24px;\n}"]}
