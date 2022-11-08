@@ -233,3 +233,148 @@ display: -webkit-box;
         }
     }
 }
+
+
+// 썸네일
+.box-thumb {
+    width: 100%;
+    display: block;
+
+    // 썸네일 이미지
+    .thumb-img {
+        position: relative;
+        @include rem(margin-bottom, 16px);
+
+        img {
+            display: block;
+            width: 100%;
+            
+        }
+    }
+
+    // 집콕+집밖 아이콘
+    .thumb-category {
+        position: absolute;
+        @include rem(top, 10px);
+        @include rem(right, 10px);
+    }
+
+    // 예매하기 버튼
+    .btn-link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include rem(height, 48px);
+        border: solid 1px #eee;
+        background-color: #222;
+        text-align: center;
+
+        .txt {
+            @include rem(font-size, 14px);
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+
+    // 썸네일 카테고리 태그
+    .tag{
+        display:inline-flex;
+        align-items: center;
+        background-color:#f8f8f8;
+        @include rem(height, 23px);
+        @include rem(padding, 0 8px);
+        @include rem(border-radius, 11.5px);
+        @include rem(margin-right, 4px);
+
+        background-color:#fff;
+        border: solid 1px #222;
+        .txt{color:#222;}
+
+        &:last-child {
+            margin: 0;
+        }
+
+        .txt{
+            @include rem(font-size, 10px);
+
+        }
+
+        &.reverse {
+            background-color:#222;
+            .txt{color:#fff;}
+        }
+
+        
+    }
+    
+    .thumb-tag {
+        @include rem(margin-bottom, 8px);
+
+        &.size02 .tag {
+            @include rem(height, 27px);
+            @include rem(padding, 0 12px);
+            @include rem(border-radius, 13.5px);
+            @include rem(margin-right, 8px);
+
+            .txt{
+                @include rem(font-size, 13px);
+            }
+        }
+    }
+
+
+    // 썸네일 텍스트
+    .thumb-tag + .thumb-txt {
+        margin-top: 8px;
+        @include rem(margin-top, 8px);
+    }
+
+    .tit {
+        line-height: 1.5;
+        color: #222;
+        @include rem(margin-bottom, 16px);
+
+        &.size01 {
+            @include rem(font-size, 16px);
+            @include rem(min-height, 48px);
+        }
+        &.size02 {
+            @include rem(font-size, 20px);
+            @include rem(min-height, 59px);
+        }
+    }
+
+    .txt {
+        color: #999;
+        line-height: 1.42;
+
+        &.size01 {
+            @include rem(font-size, 13px);
+        }
+        &.size02 {
+            @include rem(font-size, 14px);
+        }
+
+        & + .txt {
+            @include rem(margin-top, 16px);
+        }
+    }
+
+    .txt-list {
+        display: flex;
+        color: #999;
+        @include rem(font-size, 13px);
+        @include rem(margin-top, 6px);
+
+        .term {
+            width: 20%;
+        }
+        .desc {
+            height: 80%;
+        }
+    }
+}

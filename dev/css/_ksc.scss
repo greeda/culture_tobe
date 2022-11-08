@@ -219,65 +219,67 @@
     .swiper-wrapper {
         @include rem(padding-bottom, 103px);
     }
-    .thumb-img {
-        position: relative;
-        display: block;
-        @include rem(width, 290px);
-        @include rem(height, 163px);
+
+    //- 공통으로 따로 만듦 .box-thumb로 교체함 (prototype.scss)
+    // .thumb-img {
+    //     position: relative;
+    //     display: block;
+    //     @include rem(width, 290px);
+    //     @include rem(height, 163px);
         
-        img {width:100%; height:100%;}
+    //     img {width:100%; height:100%;}
 
-        .ico-play{
-            @include rem(width, 40px);
-            @include rem(height, 40px);
-        }
-    }
+    //     .ico-play{
+    //         @include rem(width, 40px);
+    //         @include rem(height, 40px);
+    //     }
+    // }
 
-    .category {
-        display: flex;
+    // .category {
+    //     display: flex;
 
-        li {
-            @include rem(margin-top, 16px);
-            @include rem(margin-right, 8px);
+    //     li {
+    //         @include rem(margin-top, 16px);
+    //         @include rem(margin-right, 8px);
 
-            &:nth-of-type(even) .txt {
-                color:#fff;
-                background-color: #222;
-            }
-        }
+    //         &:nth-of-type(even) .txt {
+    //             color:#fff;
+    //             background-color: #222;
+    //         }
+    //     }
 
-        .txt {
-            display: inline-flex;
-            @include rem(padding, 3px 12px);
-            @include rem(font-size, 13px);
-            @include rem(border-radius, 13.5);
-            line-height: 1.5;
-            letter-spacing: -.65px;
-            color:#222;
-            background-color:#fff;
-            border:1px solid #222;
+    //     .txt {
+    //         display: inline-flex;
+    //         @include rem(padding, 3px 12px);
+    //         @include rem(font-size, 13px);
+    //         @include rem(border-radius, 13.5);
+    //         line-height: 1.5;
+    //         letter-spacing: -.65px;
+    //         color:#222;
+    //         background-color:#fff;
+    //         border:1px solid #222;
 
             
-        }
-    }
+    //     }
+    // }
 
-    p.txt {
-        @include rem(width, 290px);
-        @include rem(margin-top, 8px);
-        @include rem(margin-bottom, 16px);
-        @include rem(font-size, 20px);
-        line-height: 1.5;
-        color:#222;
-    }
+    // p.txt {
+    //     @include rem(width, 290px);
+    //     @include rem(margin-top, 8px);
+    //     @include rem(margin-bottom, 16px);
+    //     @include rem(font-size, 20px);
+    //     line-height: 1.5;
+    //     color:#222;
+    // }
 
-    p.sub-txt {
-        @include rem(width, 290px);
-        @include rem(font-size, 14px);
-        line-height: 1.43;
-        letter-spacing: -.35px;
-        font-weight: 300;
-        color:#999;
-    }
+    // p.sub-txt {
+    //     @include rem(width, 290px);
+    //     @include rem(font-size, 14px);
+    //     line-height: 1.43;
+    //     letter-spacing: -.35px;
+    //     font-weight: 300;
+    //     color:#999;
+    // }
 
     .swiper-button-area {
         left:auto;
