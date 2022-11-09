@@ -1,7 +1,7 @@
 extends /_src/_pug/_extend_html5
 
 block append css
-    //- link(href=`${pathSettingHtml}css/카테고리별.css`, type='text/css', rel='stylesheet')
+    link(href=`${pathSettingHtml}css/oneEye.css`, type='text/css', rel='stylesheet')
 
 block contents
     #container.pageClassSub
@@ -13,33 +13,324 @@ block contents
                             li
                                 a(href="#") 홈
                             li
-                                a(href="#") 문화공감
+                                a(href="#") 문화체험
                             li
-                                a(href="#") 문화TV
-                            li
-                                a.on(href="#") 공감리포트
+                                a.on(href="#") 문화릴레이티켓
                     .share-area
                         ul.share-content
                             li
                                 a.link-share(href="#")
                             li
                                 a.link-print(href="#")
-                section.visual-top
+                section.section-main
                     .section-inner
                         .title-area
-                            h1.title-h1 한눈에 보는 문화정보
+                            h1.title-h1 문화릴레이티켓
                                 |
-                                span.txt 일상문화의 시대, 공연/전시/축제 등 다채로운 문화정보를 찾아보세요.
+                                span.txt 공연애호가를 위한 특별한 할인을 만나보세요.
 
-                        .visual-area
-                            .visual-content-box
-                                .video 비디오 컨텐츠 영역
-                            .visual-text-box
-                                h3.title-h3 [정부위원회 246개 통폐합···40% 가까이 정비 [뉴스의 맥]
-                                p.sub-txt 김용민 앵커 > 앞서 국무회의 소식 전해드렸는데요. 국무회의 주요 안건을 취재기자와 자세히 알아보겠습니다. 임소형 기자 나와있습니다. 윤 대통령이 정부세종청사에서 국무회의를 주재한 건 이번이 두 번째였는데요. 어떤 안건들이 다뤄졌습니까. …
-                                dl.info
-                                    dt 출처
-                                    dd 한국정책방송원
+                section.section-ticket.line-gray
+                    .section-inner
+                        .wrap-ticket
+                            p.tit 국공립·공연단체가·공연애호가를 위한 특별 할인제도
+                            p.txt 참여공연장의 유료관람티켓이나 전자스탬프를 소지한 분들에게 새로운 공연 예매 시, 동반1인까지 최대 50% 할인혜택을 주는 티켓할인 협력서비스입니다.
+                            .btn-wrap
+                                a(href="#none").btn-download
+                                    span.txt-btn 리플렛 다운로드
+                                    i.ico(aria-hidden="true")
+                                a(href="#none").btn-more
+                                    span.txt-btn 스탬프 적립하기
+                                    i.ico(aria-hidden="true")
+                                a(href="#none").btn-more
+                                    span.txt-btn 리플렛 다운로드
+                                    i.ico(aria-hidden="true")
+                        .wrap-ticket-info
+                            .tab-button(role="tabllist" aria-label="문화릴레이티켓")
+                                button.tab-btn.on(type="button" role="tab")
+                                    span.txt 문화릴레이티켓 스탬프 이용방법
+                                button.tab-btn(type="button" role="tab")
+                                    span.txt 문화릴레이티켓 이용시 유의사항
+                            .tab-info.on
+                                ol.info-list
+                                    li.box-cont
+                                        img(src="../../images/home/img_phone01.png", alt="")
+                                        .txt-wrap
+                                            em.txt-num 01
+                                            p.tit 할인공연 선택하기
+                                            p.txt 원하시는 할인공연을 선택해 주세요.
+                                    li.box-cont
+                                        img(src="../../images/home/img_phone02.png", alt="")
+                                        .txt-wrap
+                                            em.txt-num 02
+                                            p.tit 전자스탬프 적립
+                                            p.txt 할인공연을 선택 후 스탬프를 적립 받으세요.
+                                    li.box-cont
+                                        img(src="../../images/home/img_phone03.png", alt="")
+                                        .txt-wrap
+                                            em.txt-num 03
+                                            p.tit 전자스탬프 적립 확인
+                                            p.txt 나의 문화릴레이 티켓에서 전자 스탬프를 확인하세요.
+                            .tab-info
+                                .info-table
+                                    p.txt-head 이용안내
+                                    .txt-body
+                                        p.txt-bold 문화릴레이티켓 할인공연 목록에서 관람하고 싶은 공연과 할인율 확인 후 예매해주세요.
+                                        ol.num-list
+                                            li ① 참여 공연장의 유료 관람 티켓(발권된 실물 종이 티켓) 제시
+                                            li ② 문화포털 로그인 후, 문화릴레이티켓 - 오늘의공연 페이지 제시
+                                            li ③ 본인 확인이 가능한 티켓 예매처의 모바일(온라인) 예매내역 제시
+                                        p.txt-point ※ 위의 3가지 방법 중 한가지만 해당해도 참여 가능
+                                .info-table
+                                    p.txt-head 참고사항
+                                    .txt-body.type-flex
+                                        ol.circle-list
+                                            li 전년도 1월 이후 티켓부터 할인 가능(초대권, 전시권 불가)
+                                            li 전자스탬프 적용 시, 문화포털 회원가입 및 로그인 필수
+                                            li 참여 공연장이라면, 타공연장 및 동일 공연장 티켓 모두 할인 적용
+                                        ol.circle-list
+                                            li 티켓 예매처 예매내역은 단순 캡처 이미지, 취소된 예매내역, 양도 티켓은 적용 불가
+                                            li 티켓 예매 및 할인은 동반 1인까지 가능하나, 전자스탬프 적립은 1인 1스탬프만 적용
+                                            li 참여 공연장이라면, 타공연장 및 동일 공연장 티켓 모두 할인 적용
 
-                                
+                section.search-result
+                    .section-inner
+                        .tab-util
+                            .txt-total 총 <strong>107</strong>건
+                            .list-search
+                                select(name="장르") 
+                                    option(value="") 장르 전체
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                select(name="") 
+                                    option(value="") 지역 전체
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                select(name="") 
+                                    option(value="") 공연/전시일
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                select(name="") 
+                                    option(value="") 제목
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                .search-input
+                                    input(type="text" placeholder="검색어를 입력하세요.")
+                                    button(type="button").btn-search
+                                        span.hide-txt 검색
+                        ul.tab-result-list
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                        .thumb-discount.color01
+                                            em.num 30
+                                            |%
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                        .thumb-discount.color02
+                                            em.num 40
+                                            |%
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                        .thumb-discount.color03
+                                            em.num 50
+                                            |%
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        p.txt.size01.mont 2022.10.06 ~ 2022.10.07
+                                        dl.txt-list
+                                            dt.term 경기
+                                            dd.desc 북현아트홀
+
+                        .area-pagenation
+                            button.btn-first(type="button")
+                                span.hide-txt 맨 앞으로
+                            button.btn-prev(type="button")
+                                span.hide-txt 앞으로
+                            .wrap-number
+                                button.btn-num.on(type="button")
+                                    span.txt 1
+                                button.btn-num(type="button")
+                                    span.txt 2
+                                button.btn-num(type="button")
+                                    span.txt 3
+                                button.btn-num(type="button")
+                                    span.txt 4
+                                button.btn-num(type="button")
+                                    span.txt 5
+                                button.btn-num(type="button")
+                                    span.txt 6
+                                button.btn-num(type="button")
+                                    span.txt 7
+                                button.btn-num(type="button")
+                                    span.txt 8
+                                button.btn-num(type="button")
+                                    span.txt 9
+                                button.btn-num(type="button")
+                                    span.txt 10
+                            button.btn-next(type="button")
+                                span.hide-txt 뒤로
+                            button.btn-last(type="button")
+                                span.hide-txt 맨뒤로
+                                    
+
+block append script
+    script.
+        //tab
+        $('.wrap-ticket-info .tab-btn').on('click', function(){
+            const _index = $(this).index();
+            $('.tab-btn').removeClass('on');
+            $(this).addClass('on');
+            
+            $('.tab-info').removeClass('on');
+            $('.tab-info').eq(_index).addClass('on');
+        });
+                        
 
