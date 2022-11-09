@@ -1,20 +1,94 @@
 @charset "utf-8";
 
+// 공통
+.area-util {
+
+    .align-box {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .txt-total {
+            margin-right: 30px;
+        }
+    }
+
+    .radio-box-wrap {
+        display: flex;
+    }
+
+    .radio-box {
+        margin-right: 12px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        input[type="radio"]{
+            display: none;
+            
+            & + label {
+                position: relative;
+            }
+            & + label::before {
+                display: block;
+                content: '';
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                margin-top: 2px;
+                border: 1px solid #ff6742;
+                background: #fff;
+                border-radius: 50%;
+            }
+
+            & + label::after {
+                display: none;
+                position: absolute;
+                left: 4px;
+                top: 6px;
+                // transform: translate(-50%, -50%);
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: #ff6742;
+                border-radius: 50%;
+            }
+
+            &:checked + label::after {
+                display: block;
+            }
+        }
+
+        .txt-radio {
+            display: flex;
+            align-items: center;
+            
+
+            .txt {
+                font-size: 14px;
+                color: #222;
+            }
+        }
+    }
+}
+
 //집콕+집밖
 .ico-housein {
     width: 60px;
     height: 60px;
-    background:url('/images/home/ico_house_in.png') center/contain;
+    background:url('/images/common/ico_house_in.png') center/contain;
 }
 .ico-houseout {
     width: 60px;
     height: 60px;
-    background:url('/images/home/ico_house_out.png') center/contain;
+    background:url('/images/common/ico_house_out.png') center/contain;
 }
 
 .intro-home {
     height: 254px;
-    background:url('/images/home/img_banner_home.jpg') center/cover;
+    background:url('/images/common/img_banner_home.jpg') center/cover;
 }
 
 .title-area {
@@ -203,26 +277,26 @@
         }
 
         &:nth-child(1) {
-            background:#f5f5f5 url('/images/home/img_title01_off.png') center no-repeat;
+            background:#f5f5f5 url('/images/common/img_title01_off.png') center no-repeat;
             background-size: 206px 36px;
             &.on {
-                background:#fff url('/images/home/img_title01_on.png') center no-repeat;
+                background:#fff url('/images/common/img_title01_on.png') center no-repeat;
                 background-size: 306px 59px;
             }
         }
         &:nth-child(2) {
-            background:#f5f5f5 url('/images/home/img_title02_off.png') center no-repeat;
+            background:#f5f5f5 url('/images/common/img_title02_off.png') center no-repeat;
             background-size: 192px 39px;
             &.on {
-                background:#fff url('/images/home/img_title02_on.png') center no-repeat;
+                background:#fff url('/images/common/img_title02_on.png') center no-repeat;
                 background-size: 275px 56.5px;
             }
         }
         &:nth-child(3) {
-            background:#f5f5f5 url('/images/home/img_title03_off.png') center no-repeat;
+            background:#f5f5f5 url('/images/common/img_title03_off.png') center no-repeat;
             background-size: 209px 37px;
             &.on {
-                background:#fff url('/images/home/img_title03_on.png') center no-repeat;
+                background:#fff url('/images/common/img_title03_on.png') center no-repeat;
                 background-size: 303px 57.5px;
             }
         }
@@ -455,7 +529,7 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background:url('/images/home/ico_reset.png') center no-repeat;
+            background:url('/images/icons/ico_reset.png') center no-repeat;
             background-size: 12px 12px; 
         }
         .txt {
@@ -466,7 +540,7 @@
     .btn-delete {
         width: 20px;
         height: 20px;
-        background:url('/images/home/ico_delete.png') center no-repeat;
+        background:url('/images/icons/ico_delete.png') center no-repeat;
         background-size: 10px 10px; 
     }
 
@@ -510,7 +584,7 @@
                 transform: translateY(-50%);
                 width: 36px;
                 height: 36px;
-                background:url('/images/home/ico_search.png') center no-repeat;
+                background:url('/images/icons/ico_search.png') center no-repeat;
                 background-size: 24px 24px; 
             }
         }
@@ -539,7 +613,7 @@
                     width: 8px;
                     height: 4.5px;
                     margin-left: 8px;
-                    background:url('/images/home/ico_arrow_open.png') center/contain no-repeat;
+                    background:url('/images/icons/ico_arrow_open.png') center/contain no-repeat;
                 }
             }
 
@@ -607,11 +681,10 @@
 
 // 문화릴레이 티켓
 .section-ticket {
-
     .wrap-ticket {
         height: 325px;
         padding: 100px 56px 45px 56px;
-        background: url('/images/home/img_bg_ticket.png') center/100% no-repeat;
+        background: url('/images/common/img_bg_ticket.png') center/100% no-repeat;
 
         .tit {
             font-size: 36px;
@@ -841,6 +914,14 @@
     }
 }
 
+.section-banner {
+    padding-bottom: 120px;
+
+    .title-h4 {
+        margin-bottom: 52px;
+    }
+}
+
 
 // .type-home {
 //     &.slide-contents .thumb-img {
@@ -895,6 +976,18 @@
 
 @media (max-width:1023px){
 
+    // 공통
+    .area-util .align-box .txt-total {
+        margin-bottom: 10px;
+    }
+    .area-util .radio-box-wrap {
+        margin-bottom: 10px;
+    }
+    .area-util .list-search {
+        margin-top: 0;
+    }
+
+
     .ico-housein {
         width: 48px;
         height: 48px;
@@ -947,6 +1040,14 @@
         // font-size: 12px;
     }
 
+    .search-result {
+        padding-bottom: 40px;
+    }
+
+    .section-banner {
+        padding-bottom: 40px;
+    }
+
 
     .tab-buttons {
     
@@ -959,26 +1060,26 @@
             }
     
             &:nth-child(1) {
-                background:#f5f5f5 url('/images/home/img_title01_mo_off.png') center no-repeat;
+                background:#f5f5f5 url('/images/common/img_title01_mo_off.png') center no-repeat;
                 background-size: 59px 30.2px;
                 &.on {
-                    background:#fff url('/images/home/img_title01_mo_on.png') center no-repeat;
+                    background:#fff url('/images/common/img_title01_mo_on.png') center no-repeat;
                     background-size: 70.5px 76.5px;
                 }
             }
             &:nth-child(2) {
-                background:#f5f5f5 url('/images/home/img_title02_mo_off.png') center no-repeat;
+                background:#f5f5f5 url('/images/common/img_title02_mo_off.png') center no-repeat;
                 background-size: 47.5px 31px;
                 &.on {
-                    background:#fff url('/images/home/img_title02_mo_on.png') center no-repeat;
+                    background:#fff url('/images/common/img_title02_mo_on.png') center no-repeat;
                     background-size: 57px 76px;
                 }
             }
             &:nth-child(3) {
-                background:#f5f5f5 url('/images/home/img_title03_mo_off.png') center no-repeat;
+                background:#f5f5f5 url('/images/common/img_title03_mo_off.png') center no-repeat;
                 background-size: 59px 31px;
                 &.on {
-                    background:#fff url('/images/home/img_title03_mo_on.png') center no-repeat;
+                    background:#fff url('/images/common/img_title03_mo_on.png') center no-repeat;
                     background-size: 70px 75.5px;
                 }
             }
@@ -1046,7 +1147,7 @@
     .section-ticket .wrap-ticket {
         padding: 24px 24px;
         border-radius: 20px;
-        background: #f2532a url(/images/home/img_bg_ticket.png) bottom/100% no-repeat;
+        background: #f2532a url(/images/common/img_bg_ticket.png) bottom/100% no-repeat;
 
         .tit {
             font-size: 24px;
