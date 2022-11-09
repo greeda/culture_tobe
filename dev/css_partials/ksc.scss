@@ -221,67 +221,6 @@
         padding-bottom: 103px;
     }
 
-    //- 공통으로 따로 만듦 .box-thumb로 교체함 (prototype.scss)
-    // .thumb-img {
-    //     position: relative;
-    //     display: block;
-    //     width: 290px;
-    //     height: 163px;
-        
-    //     img {width:100%; height:100%;}
-
-    //     .ico-play{
-    //         width: 40px;
-    //         height: 40px;
-    //     }
-    // }
-
-    // .category {
-    //     display: flex;
-
-    //     li {
-    //         margin-top: 16px;
-    //         margin-right: 8px;
-
-    //         &:nth-of-type(even) .txt {
-    //             color:#fff;
-    //             background-color: #222;
-    //         }
-    //     }
-
-    //     .txt {
-    //         display: inline-flex;
-    //         padding: 3px 12px;
-    //         font-size: 13px;
-    //         border-radius: 13.5);
-    //         line-height: 1.5;
-    //         letter-spacing: -.65px;
-    //         color:#222;
-    //         background-color:#fff;
-    //         border:1px solid #222;
-
-            
-    //     }
-    // }
-
-    // p.txt {
-    //     width: 290px;
-    //     margin-top: 8px;
-    //     margin-bottom: 16px;
-    //     font-size: 20px;
-    //     line-height: 1.5;
-    //     color:#222;
-    // }
-
-    // p.sub-txt {
-    //     width: 290px;
-    //     font-size: 14px;
-    //     line-height: 1.43;
-    //     letter-spacing: -.35px;
-    //     font-weight: 300;
-    //     color:#999;
-    // }
-
     .swiper-button-area {
         left:auto;
         right:0;
@@ -308,7 +247,7 @@
     .swiper-progress {
         top:auto;
         bottom: 27px;
-        width: 1060px;
+        width: 1030px;
         height:2px;
         background:#ddd;
 
@@ -330,6 +269,10 @@
         margin-top: 40px;
     }
 
+    .slide-contents .swiper-progress {
+        width:820px;
+    }
+
     .visual-area {
         display:block;
         height:auto;
@@ -347,7 +290,8 @@
 
     .thumbnail-area {
         display: inherit;
-        padding: 0 23px 40px 23px;
+        // padding: 0 23px 40px 23px;
+        padding:0 30px 40px 0;
         border:0;
 
         .thumbnail-list {
@@ -381,4 +325,106 @@
     .title-h3 + .sub-txt {
         width:auto;
     }
+}
+
+
+@media (max-width:1023px) {
+    .visual-area .visual-text-box {
+        padding:30px 0 20px;
+    }
+
+    .thumbnail-area .thumbnail-list {
+        margin-top:16px;
+    }
+}
+
+
+
+
+//prototype.css 에 공통 넣을 것들
+
+
+
+
+//tablet
+@media (max-width:1279px) {
+    .section-inner {
+        padding:0 20px;
+    }
+}
+
+//mobile
+@media (max-width:1023px) {
+    .line-gray::after {
+        height:10px;
+    }
+
+    .section-inner {
+        padding:0 20px;
+    }
+    .title-h3 {
+        margin:13px 0 16px;
+        font-size:18px;
+
+        + .sub-txt {
+            font-size:14px;
+        }
+    }
+
+    .title-h4 {
+        font-size:24px;
+        line-height: 1.25;
+        margin-bottom:24px;
+
+        .ico {
+            width:35px; height:35px;
+        }
+    }
+    .slide-area {
+        .box-thumb .thumb-tag + .thumb-txt {
+            margin-top:0;
+        }
+
+        .box-thumb .tit.size02 {
+            font-size:16px;
+            line-height: 1.5;
+            min-height: auto;
+        }
+        .box-thumb .thumb-tag.size02 .tag {
+            height:23px;
+            margin-right:4px;
+            padding:4px 8px;
+        }
+        
+        .box-thumb .thumb-tag.size02 .tag .txt {
+            font-size:10px;
+        }
+
+        .box-thumb .txt.size02 {
+            font-size:12px;
+            line-height: 1.67;
+        }
+        .box-thumb .txt + .txt {
+            margin-top:8px;
+        }
+    }
+
+    .slide-contents .swiper-wrapper {
+        // padding-bottom:80px;
+    }
+
+    .slide-contents .swiper-progress {
+        width:100%;
+        bottom:69px;
+    }
+    .slide-contents .swiper-button-area {
+        left:50%;
+        right:auto;
+        transform: translateX(-50%);
+    }
+
+    .slide-contents:last-child {
+        margin-bottom:80px;
+    }
+    
 }
