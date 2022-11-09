@@ -1,7 +1,7 @@
 extends /_src/_pug/_extend_html5
 
-block append css
-    //- link(href=`${pathSettingHtml}css/culturetv.css`, type='text/css', rel='stylesheet')
+//- block append css
+//-     link(href=`${pathSettingHtml}css/ksc.css`, type='text/css', rel='stylesheet')
 
 block contents
     #container.pageClassSub
@@ -941,11 +941,23 @@ block append script
         // UI 확인용 Swiper
 
         let defaults = {
-            slidesPerView:4,
-            slidesPerGroup :4,
-            spaceBetween:40,
+            slidesPerView:2,
+            slidesPerGroup :2,
+            spaceBetween:20,
             watchOverflow:true,
             loopFillGroupWithBlank : true,
+            breakpoints: {
+                1023: {
+                    slidesPerView:3,
+                    slidesPerGroup :3,
+                    spaceBetween:40,
+                },
+                1279: {
+                    slidesPerView:4,
+                    slidesPerGroup :4,
+                    spaceBetween:40,
+                }
+            }
         }
 
         let swiper =  new Swiper('.thumbnail-area', {
@@ -967,6 +979,12 @@ block append script
                 enabeld: true
             },
             breakpoints: {
+                1023: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 1,
+                    slidesPerGroup :1,
+                    spaceBetween:16,
+                },
                 1279: {
                     slidesPerView: 1,
                     slidesPerColumn: 5,
