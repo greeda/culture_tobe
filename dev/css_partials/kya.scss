@@ -1,5 +1,79 @@
 @charset "utf-8";
 
+// 공통
+.area-util {
+
+    .align-box {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .txt-total {
+            margin-right: 30px;
+        }
+    }
+
+    .radio-box-wrap {
+        display: flex;
+    }
+
+    .radio-box {
+        margin-right: 12px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        input[type="radio"]{
+            display: none;
+            
+            & + label {
+                position: relative;
+            }
+            & + label::before {
+                display: block;
+                content: '';
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                margin-top: 2px;
+                border: 1px solid #ff6742;
+                background: #fff;
+                border-radius: 50%;
+            }
+
+            & + label::after {
+                display: none;
+                position: absolute;
+                left: 4px;
+                top: 6px;
+                // transform: translate(-50%, -50%);
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: #ff6742;
+                border-radius: 50%;
+            }
+
+            &:checked + label::after {
+                display: block;
+            }
+        }
+
+        .txt-radio {
+            display: flex;
+            align-items: center;
+            
+
+            .txt {
+                font-size: 14px;
+                color: #222;
+            }
+        }
+    }
+}
+
 //집콕+집밖
 .ico-housein {
     width: 60px;
@@ -607,7 +681,6 @@
 
 // 문화릴레이 티켓
 .section-ticket {
-
     .wrap-ticket {
         height: 325px;
         padding: 100px 56px 45px 56px;
@@ -894,6 +967,18 @@
 
 
 @media (max-width:1023px){
+
+    // 공통
+    .area-util .align-box .txt-total {
+        margin-bottom: 10px;
+    }
+    .area-util .radio-box-wrap {
+        margin-bottom: 10px;
+    }
+    .area-util .list-search {
+        margin-top: 0;
+    }
+
 
     .ico-housein {
         width: 48px;

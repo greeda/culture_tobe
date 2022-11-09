@@ -95,7 +95,17 @@ block contents
                 section.search-result
                     .section-inner
                         .area-util
-                            .txt-total 총 <strong>107</strong>건
+                            .align-box
+                                .txt-total 총 <strong>107</strong>건
+                                .radio-box-wrap
+                                    .radio-box
+                                        input#radio01(type="radio" name="test")
+                                        label.txt-radio(for="radio01")
+                                            span.txt 할인순
+                                    .radio-box
+                                        input#radio02(type="radio" name="test")
+                                        label.txt-radio(for="radio02")
+                                            span.txt 참여공연장(단체)순
                             .list-search
                                 .form-box
                                     select(name="") 
