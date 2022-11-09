@@ -655,13 +655,14 @@ block append script
     script.
         // 검색 상세옵션 오픈
         let $wrapSearch = $('.wrap-search');
-        $('.wrap-search .btn-open').on('click', function(){
+
+        $wrapSearch.find('.btn-open').on('click', function(){
             if ($wrapSearch.hasClass('open')) {
                 $wrapSearch.removeClass('open');
-                $('.wrap-search .btn-open .txt').text('쉬운 검색 열기');
+                $wrapSearch.find('.btn-open .txt').text('쉬운 검색 열기');
 
             } else {
                 $wrapSearch.addClass('open');
-                $('.wrap-search .btn-open .txt').text('쉬운 검색 닫기');
+                $wrapSearch.find('.btn-open .txt').text('쉬운 검색 닫기');
             }
         });
