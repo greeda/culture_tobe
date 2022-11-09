@@ -8,9 +8,11 @@
 }
 
 .section-inner {
-    max-width: 1280px;
+    // max-width: 1280px;
+    max-width: 1320px;
     width: 100%;
     margin:0 auto;
+    padding: 0 20px;
 }
 
 //텍스트 말줄임
@@ -293,7 +295,7 @@ display: -webkit-box;
         padding: 0 8px;
         border-radius: 11.5px;
         margin-right: 4px;
-
+        margin-bottom: 4px;
         background-color:#fff;
         border: solid 1px #222;
         .txt{color:#222;}
@@ -316,7 +318,7 @@ display: -webkit-box;
     }
     
     .thumb-tag {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
 
         &.size02 .tag {
             height: 27px;
@@ -372,13 +374,92 @@ display: -webkit-box;
         display: flex;
         color: #999;
         font-size: 13px;
+        line-height: 1.5;
         margin-top: 6px;
+        letter-spacing: -0.3px;
 
         .term {
-            width: 20%;
+            width: 40px;
         }
         .desc {
-            height: 80%;
+            height: calc(100% - 40px);
         }
+    }
+}
+
+// 페이지네이션
+.area-pagenation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    & > button {
+        width: 20px;
+        height: 20px;
+        margin: 4px 0;
+    }
+
+    .btn-first {
+        background: url('../images/icons/ico_arrow_prev02.png') center no-repeat;
+    }
+    .btn-prev {
+        background: url('../images/icons/ico_arrow_prev.png') center no-repeat;
+    }
+    .btn-next {
+        background: url('../images/icons/ico_arrow_prev.png') center no-repeat;
+        transform:rotate(180deg);
+
+    }
+    .btn-last {
+        background: url('../images/icons/ico_arrow_prev02.png') center no-repeat;
+        transform:rotate(180deg);
+    }
+
+    .wrap-number {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 24px;
+    }
+
+    .btn-num {
+        width: 32px;
+        height: 32px;
+        margin-right: 2px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+
+        .txt {
+            font-size: 14px;
+            font-family: Montserrat;
+            color: #666;
+        }
+
+        &.on {
+            border: 2px solid #dddddd;
+
+            .txt {
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1024px){
+    .breadcrumb {
+        display: none;
+    }
+    .title-h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+    .title-h1 .txt {
+        font-size: 14px;
+        margin-top: 16px;
     }
 }

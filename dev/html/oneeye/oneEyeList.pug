@@ -7,7 +7,7 @@ block contents
     #container.pageClassSub
         #content(role='main')
             .content-inner
-                //nav.breadcrumb
+                nav.breadcrumb
                     .location-area
                         ol.location-content
                             li
@@ -31,76 +31,629 @@ block contents
                 
                 section.section-search
                     .section-inner
-                        .area-option
-                            fieldset
-                                legend 주제별 필터
-                                .search-category
-                                    .search-head
-                                        input#filterItem01(type="checkbox")
-                                        label.filter-main(for="filterItem01")
-                                            span.txt 주제별
-                                    ul.search-list
-                                        li.item
-                                            input#filterItem01-01(type="checkbox")
-                                            label.filter-label(for='filterItem01-01')
-                                                .circle-item(area-hidden="true")
-                                                span.txt 문화예술
-                                        li.item
-                                            input#filterItem01-02(type="checkbox")
-                                            label.filter-label(for='filterItem01-02')
-                                                .circle-item(area-hidden="true")
-                                                span.txt 문화유산
-                                .search-category
-                                    .search-head
-                                        input#filterItem02(type="checkbox" checked)
-                                        label.filter-main(for="filterItem02")
-                                            span.txt 분야별
-                                    ul.search-list
-                                        li.item
-                                            input#filterItem02-01(type="checkbox" checked)
-                                            label.filter-label(for='filterItem02-01')
-                                                .circle-item(area-hidden="true")
-                                                span.txt 도서
-                                        li.item
-                                            input#filterItem02-02(type="checkbox")
-                                            label.filter-label(for='filterItem02-02')
-                                                .circle-item(area-hidden="true")
-                                                span.txt 문화유산
-                                .search-category
-                                    .search-head
-                                        input#filterItem03(type="checkbox" checked)
-                                        label.filter-main(for="filterItem03")
-                                            span.txt 대상별
-                                    ul.search-list
-                                        li.item
-                                            input#filterItem02-01(type="checkbox")
-                                            label.filter-label(for='filterItem02-01')
-                                                .circle-item(area-hidden="true")
-                                                span.txt 도서
-                                            .sub-list
-                                                .sub-item 
-                                                    input#filterSub01(type="checkbox")
-                                                    label.filter-sub(for="filterSub01")
-                                                        span.txt 어린이
-                                                .sub-item 
-                                                    input#filterSub02(type="checkbox")
-                                                    label.filter-sub(for="filterSub02")
-                                                        span.txt 청소년
-                                                .sub-item 
-                                                    input#filterSub03(type="checkbox")
-                                                    label.filter-sub(for="filterSub03")
-                                                        span.txt 성인
-                                                .sub-item 
-                                                    input#filterSub04(type="checkbox")
-                                                    label.filter-sub(for="filterSub04")
-                                                        span.txt 어르신
+                        .wrap-search.open
+                            .area-option
+                                fieldset
+                                    legend 주제별 필터
+                                    .search-category
+                                        .search-head
+                                            input#filterItem01(type="checkbox" checked)
+                                            label.filter-main(for="filterItem01")
+                                                span.txt 주제별
+                                        ul.search-list
+                                            li.list
+                                                .item
+                                                    input#filterItem01-01(type="checkbox")
+                                                    label.filter-label(for='filterItem01-01')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화예술
+                                            li.list
+                                                .item
+                                                    input#filterItem01-02(type="checkbox")
+                                                    label.filter-label(for='filterItem01-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem01-02(type="checkbox")
+                                                    label.filter-label(for='filterItem01-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem01-02(type="checkbox")
+                                                    label.filter-label(for='filterItem01-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem01-02(type="checkbox")
+                                                    label.filter-label(for='filterItem01-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem01-02(type="checkbox")
+                                                    label.filter-label(for='filterItem01-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem01-02(type="checkbox")
+                                                    label.filter-label(for='filterItem01-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                    .search-category
+                                        .search-head
+                                            input#filterItem02(type="checkbox" checked)
+                                            label.filter-main(for="filterItem02")
+                                                span.txt 분야별
+                                        ul.search-list
+                                            li.list
+                                                .item
+                                                    input#filterItem02-01(type="checkbox" checked)
+                                                    label.filter-label(for='filterItem02-01')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 도서
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                            li.list
+                                                .item
+                                                    input#filterItem02-02(type="checkbox")
+                                                    label.filter-label(for='filterItem02-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 문화유산
+                                    .search-category
+                                        .search-head
+                                            input#filterItem03(type="checkbox")
+                                            label.filter-main(for="filterItem03")
+                                                span.txt 대상별
+                                        ul.search-list
+                                            li.list
+                                                .item
+                                                    input#filterItem03-01(type="checkbox")
+                                                    label.filter-label(for='filterItem03-01')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 연령별
+                                                .sub-list
+                                                    .sub-item 
+                                                        input#filterSub01(type="checkbox" checked)
+                                                        label.filter-sub(for="filterSub01")
+                                                            span.txt 어린이
+                                                    .sub-item 
+                                                        input#filterSub02(type="checkbox")
+                                                        label.filter-sub(for="filterSub02")
+                                                            span.txt 청소년
+                                                    .sub-item 
+                                                        input#filterSub03(type="checkbox")
+                                                        label.filter-sub(for="filterSub03")
+                                                            span.txt 성인
+                                                    .sub-item 
+                                                        input#filterSub04(type="checkbox")
+                                                        label.filter-sub(for="filterSub04")
+                                                            span.txt 어르신
+                                            li.list
+                                                .item
+                                                    input#filterItem03-02(type="checkbox")
+                                                    label.filter-label(for='filterItem03-02')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 다양성
+                                                .sub-list
+                                                    .sub-item 
+                                                        input#filterSub05(type="checkbox")
+                                                        label.filter-sub(for="filterSub05")
+                                                            span.txt 다문화
+                                                    .sub-item 
+                                                        input#filterSub06(type="checkbox")
+                                                        label.filter-sub(for="filterSub06")
+                                                            span.txt 장애인
+                                                    .sub-item 
+                                                        input#filterSub07(type="checkbox")
+                                                        label.filter-sub(for="filterSub07")
+                                                            span.txt 외국인
+                                            li.list
+                                                .item
+                                                    input#filterItem03-03(type="checkbox")
+                                                    label.filter-label(for='filterItem03-03')
+                                                        .circle-item(area-hidden="true")
+                                                        span.txt 직업
+                                                .sub-list
+                                                    .sub-item 
+                                                        input#filterSub08(type="checkbox")
+                                                        label.filter-sub(for="filterSub08")
+                                                            span.txt 예술인
+                                                    .sub-item 
+                                                        input#filterSub09(type="checkbox")
+                                                        label.filter-sub(for="filterSub09")
+                                                            span.txt 교사
+                                                    .sub-item 
+                                                        input#filterSub10(type="checkbox")
+                                                        label.filter-sub(for="filterSub10")
+                                                            span.txt 운동선수
+                                    .search-option
+                                        button.btn-reset(type="button")
+                                            i.ico(aria-hidden="true")
+                                            span.txt 전체해제
+                                        .wrap-item
+                                            .item-option
+                                                span.txt 문화생활
+                                                button.btn-delete(type="button")
+                                                    span.hide-txt 삭제
+                                            .item-option
+                                                span.txt 공연/전시
+                                                button.btn-delete(type="button")
+                                                    span.hide-txt 삭제
+                                            .item-option
+                                                span.txt 대상전체
+                                                button.btn-delete(type="button")
+                                                    span.hide-txt 삭제
+                                            .item-option
+                                                span.txt 할인
+                                                button.btn-delete(type="button")
+                                                    span.hide-txt 삭제
+                            .area-search
+                                .area-input
+                                    input(type="text" placeholder="검색어를 입력해 주세요.")
+                                    button(type="button").btn-search
+                                        span.hide-txt 검색
+                                .area-button
+                                    button(type="button").btn-open
+                                        span.txt 쉬운 검색 닫기
+                                        i.ico-arrow(aria-hidden="true")
+                                    a(href="#none").btn-confirm
+                                        span.txt 예약확인 
+                
+                section.search-result
+                    .section-inner
+                        .tab-result(role="tabllist" aria-label="검색결과")
+                            button.tab-btn.on(type="button" role="tab")
+                                span.txt 전체 
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 공연/전시
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 행사/축제
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 교육/체험
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 관광
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 체육
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 도서
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 봉사/교류
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 뉴스/지식
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 대관/대여
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 증명/저작권
+                                em.num 1791건
+                            button.tab-btn(type="button" role="tab")
+                                span.txt 연구/자료
+                                em.num 1791건
+                        .tab-util
+                            .txt-total 총 <strong>107</strong>건
+                            .list-search
+                                select(name="장르") 
+                                    option(value="") 장르 전체
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                select(name="") 
+                                    option(value="") 지역 전체
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                select(name="") 
+                                    option(value="") 공연/전시일
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                select(name="") 
+                                    option(value="") 제목
+                                    option(value="") 옵션1
+                                    option(value="") 옵션2
+                                .search-input
+                                    input(type="text" placeholder="검색어를 입력하세요.")
+                                    button(type="button").btn-search
+                                        span.hide-txt 검색
+                        ul.tab-result-list
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 연극
+                                        li.tag.reverse
+                                            span.txt 유료
 
-                                        li.item
-                                            input#filterItem02-02(type="checkbox")
-                                            label.filter-label(for='filterItem02-02')
-                                                .circle-item(area-hidden="true")
-                                                span.txt 문화유산
-                                .search-option
-                                    button.btn-reset(type="button")
-                                        span.txt 전체해제
-                        .area-search
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 음악/콘서트
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+                            li.list
+                                a(href="#none").box-thumb
+                                    .thumb-img
+                                        img(src="../../images/thumb_img02.jpg", alt="")
+                                    ul.thumb-tag.size01
+                                        li.tag
+                                            span.txt 공연/전시
+                                        li.tag
+                                            span.txt 행사
+                                        li.tag.reverse
+                                            span.txt 유료
+
+                                    .thumb-txt
+                                        p.tit.size01.ellipsis.type02 16 지원의 음악과 미술이 함께하는 콘서트
+                                        dl.txt-list
+                                            dt.term 제공
+                                            dd.desc 오프라인
+                                        dl.txt-list
+                                            dt.term 기간
+                                            dd.desc 2022.09.21~ 2022.09.25
+
+                        .area-pagenation
+                            button.btn-first(type="button")
+                                span.hide-txt 맨 앞으로
+                            button.btn-prev(type="button")
+                                span.hide-txt 앞으로
+                            .wrap-number
+                                button.btn-num.on(type="button")
+                                    span.txt 1
+                                button.btn-num(type="button")
+                                    span.txt 2
+                                button.btn-num(type="button")
+                                    span.txt 3
+                                button.btn-num(type="button")
+                                    span.txt 4
+                                button.btn-num(type="button")
+                                    span.txt 5
+                                button.btn-num(type="button")
+                                    span.txt 6
+                                button.btn-num(type="button")
+                                    span.txt 7
+                                button.btn-num(type="button")
+                                    span.txt 8
+                                button.btn-num(type="button")
+                                    span.txt 9
+                                button.btn-num(type="button")
+                                    span.txt 10
+                            button.btn-next(type="button")
+                                span.hide-txt 뒤로
+                            button.btn-last(type="button")
+                                span.hide-txt 맨뒤로
+
+
+block append script
+    script.
+        // 검색 상세옵션 오픈
+        $('.wrap-search .btn-open').on('click', function(){
+            if ($('.wrap-search').hasClass('open')) {
+                $('.wrap-search').removeClass('open');
+            } else {
+                $('.wrap-search').addClass('open');
+            }
+        });
