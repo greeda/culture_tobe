@@ -250,7 +250,7 @@ block contents
                                         span.hide-txt 검색
                                 .area-button
                                     button(type="button").btn-open
-                                        span.txt 쉬운 검색 닫기
+                                        span.txt 쉬운 검색 열기
                                         i.ico-arrow(aria-hidden="true")
                                     a(href="#none").btn-confirm
                                         span.txt 예약확인 
@@ -294,30 +294,34 @@ block contents
                             button.tab-btn(type="button" role="tab")
                                 span.txt 연구/자료
                                 em.num 1791건
-                        .tab-util
+                        .area-util
                             .txt-total 총 <strong>107</strong>건
                             .list-search
-                                select(name="장르") 
-                                    option(value="") 장르 전체
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
-                                select(name="") 
-                                    option(value="") 지역 전체
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
-                                select(name="") 
-                                    option(value="") 공연/전시일
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
-                                select(name="") 
-                                    option(value="") 제목
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
+                                .form-box
+                                    select(name="장르") 
+                                        option(value="") 장르 전체
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 지역 전체
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 공연/전시일
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 제목
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
                                 .search-input
                                     input(type="text" placeholder="검색어를 입력하세요.")
                                     button(type="button").btn-search
                                         span.hide-txt 검색
-                        ul.tab-result-list
+                        ul.area-thumb-list
                             li.list
                                 a(href="#none").box-thumb
                                     .thumb-img
@@ -650,10 +654,15 @@ block contents
 block append script
     script.
         // 검색 상세옵션 오픈
-        $('.wrap-search .btn-open').on('click', function(){
-            if ($('.wrap-search').hasClass('open')) {
-                $('.wrap-search').removeClass('open');
+        let $wrapSearch = $('.wrap-search');
+
+        $wrapSearch.find('.btn-open').on('click', function(){
+            if ($wrapSearch.hasClass('open')) {
+                $wrapSearch.removeClass('open');
+                $wrapSearch.find('.btn-open .txt').text('쉬운 검색 열기');
+
             } else {
-                $('.wrap-search').addClass('open');
+                $wrapSearch.addClass('open');
+                $wrapSearch.find('.btn-open .txt').text('쉬운 검색 닫기');
             }
         });
