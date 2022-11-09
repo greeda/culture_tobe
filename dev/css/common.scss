@@ -13,14 +13,16 @@
 // @import '../css_partials/jquery.scrollbar';
 @import '../css_partials/swiper.5.4.5';
 
-
 @import '../css_partials/component_common';
 @import '../css_partials/componentlist';
 
+// 작업완료 후 삭제
 @import '../css_partials/header';
 @import '../css_partials/footer';
 
-@import '../css/prototype.scss';
+@import '../css_partials/prototype.scss';
+@import '../css_partials/ksc.scss';
+@import '../css_partials/kya.scss';
 
 // **********************************
 // 서브 컨텐츠 영역
@@ -28,3 +30,4 @@
 // common.css 에 다 넣어야 할때 아래에 @import 하면 됩니다.
 // **********************************
 // 예) @import '../css/서브카테고리';
+
