@@ -97,22 +97,23 @@ block contents
                         .area-util
                             .txt-total 총 <strong>107</strong>건
                             .list-search
-                                select(name="장르") 
-                                    option(value="") 장르 전체
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
-                                select(name="") 
-                                    option(value="") 지역 전체
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
-                                select(name="") 
-                                    option(value="") 공연/전시일
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
-                                select(name="") 
-                                    option(value="") 제목
-                                    option(value="") 옵션1
-                                    option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 2022년 09월
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                    button.btn-view(type="button")
+                                        span.txt 보기
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 공연장
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 제목
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
                                 .search-input
                                     input(type="text" placeholder="검색어를 입력하세요.")
                                     button(type="button").btn-search
