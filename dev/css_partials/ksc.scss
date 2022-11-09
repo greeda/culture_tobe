@@ -12,6 +12,12 @@
 //     }
 // }
 
+.videoList {
+    .visual-area {
+        height: auto;
+    }
+}
+
 .visual-area {
     display:flex;
     height: 670px;
@@ -358,7 +364,7 @@
     .content-list {
         margin-left:-20px;
     }
-    
+
     .content-list .list {
         width:calc(100% / 4 - 20px);
         margin-left:20px;
