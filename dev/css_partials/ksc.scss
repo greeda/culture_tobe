@@ -257,6 +257,19 @@
     }
 }
 
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:32px;
+    margin-left:-40px;
+
+    .list {
+        width:calc(100% / 4 - 40px);
+        margin-left:40px;
+        margin-bottom:52px;
+    }
+}
+
 
 
 @media (max-width:1279px) {
@@ -325,6 +338,11 @@
     .title-h3 + .sub-txt {
         width:auto;
     }
+
+    .content-list .list {
+        width:calc(100% / 3 - 40px);
+        margin-bottom:52px;
+    }
 }
 
 
@@ -335,6 +353,16 @@
 
     .thumbnail-area .thumbnail-list {
         margin-top:16px;
+    }
+
+    .content-list {
+        margin-left:-20px;
+    }
+    
+    .content-list .list {
+        width:calc(100% / 4 - 20px);
+        margin-left:20px;
+        margin-bottom:52px;
     }
 }
 
