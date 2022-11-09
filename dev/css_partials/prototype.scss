@@ -509,7 +509,107 @@ display: -webkit-box;
 }
 
 
-@media (max-width:1024px){
+// 썸네일 리스트 유틸
+.area-util {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-top: 17px;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+
+    .txt-total {
+        font-size: 16px;
+        margin-right: 10px;
+        strong {
+            font-weight: bold;
+        }
+    }
+
+    .list-search {
+        display: flex;
+        margin-top: 15px;
+        flex-wrap: wrap;
+
+        select {
+            font-size: 13px;
+            color: #222;
+            width: 130px;
+            padding: 8px 10px 9px;
+            font-family: inherit;
+            background:url('/images/home/ico_arrow_select.png') center right 13px no-repeat; 
+            background-size: 9px 5px;
+            border: 1px solid #ddd; 
+            border-radius: 0px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin-right: 12px;
+            margin-bottom: 6px;
+        }
+    }
+
+    .search-input {
+        position: relative;
+        width: 220px;
+        margin-bottom: 6px;
+
+        input {
+            width: 100%;
+            font-size: 13px;
+            color: #999;
+            border: 1px solid #ddd; 
+            padding: 8px 38px 9px 10px;
+
+            &::placeholder {
+                color: #222;
+                opacity: 0.3;
+            }
+        }
+
+        .btn-search {
+            position: absolute;
+            width: 38px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background:url('/images/home/ico_search.png') center no-repeat;
+            background-size: 20px 20px; 
+        }
+    }
+}
+
+// 썸네일 리스트
+.area-thumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    margin-left: -40px;
+
+    .list {
+        width: calc(100% / 6 - 40px);
+        margin-left: 40px;
+        margin-bottom: 52px;
+        
+    }
+}
+
+
+@media (max-width:1279px){
+    .area-thumb-list {
+        margin-left: -20px;
+    }
+    .area-thumb-list .list {
+        width: calc(100% / 3 - 20px);
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+    
+}
+
+
+@media (max-width:1023px){
     .breadcrumb {
         display: none;
     }
@@ -546,6 +646,12 @@ display: -webkit-box;
                 font-size: 18px;
             }
         }
+    }
+
+
+    // 썸네일 리스트
+    .area-thumb-list .list {
+        width: calc(100% / 2 - 20px);
     }
     
 }
