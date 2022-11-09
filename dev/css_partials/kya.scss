@@ -78,17 +78,17 @@
 .ico-housein {
     width: 60px;
     height: 60px;
-    background:url('/images/common/ico_house_in.png') center/contain;
+    background:url('../images/common/ico_house_in.png') center/contain;
 }
 .ico-houseout {
     width: 60px;
     height: 60px;
-    background:url('/images/common/ico_house_out.png') center/contain;
+    background:url('../images/common/ico_house_out.png') center/contain;
 }
 
 .intro-home {
     height: 254px;
-    background:url('/images/common/img_banner_home.jpg') center/cover;
+    background:url('../images/common/img_banner_home.jpg') center/cover;
 }
 
 .title-area {
@@ -281,26 +281,26 @@
         }
 
         &:nth-child(1) {
-            background:#f5f5f5 url('/images/common/img_title01_off.png') center no-repeat;
+            background:#f5f5f5 url('../images/common/img_title01_off.png') center no-repeat;
             background-size: 206px 36px;
             &.on {
-                background:#fff url('/images/common/img_title01_on.png') center no-repeat;
+                background:#fff url('../images/common/img_title01_on.png') center no-repeat;
                 background-size: 306px 59px;
             }
         }
         &:nth-child(2) {
-            background:#f5f5f5 url('/images/common/img_title02_off.png') center no-repeat;
+            background:#f5f5f5 url('../images/common/img_title02_off.png') center no-repeat;
             background-size: 192px 39px;
             &.on {
-                background:#fff url('/images/common/img_title02_on.png') center no-repeat;
+                background:#fff url('../images/common/img_title02_on.png') center no-repeat;
                 background-size: 275px 56.5px;
             }
         }
         &:nth-child(3) {
-            background:#f5f5f5 url('/images/common/img_title03_off.png') center no-repeat;
+            background:#f5f5f5 url('../images/common/img_title03_off.png') center no-repeat;
             background-size: 209px 37px;
             &.on {
-                background:#fff url('/images/common/img_title03_on.png') center no-repeat;
+                background:#fff url('../images/common/img_title03_on.png') center no-repeat;
                 background-size: 303px 57.5px;
             }
         }
@@ -533,7 +533,7 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background:url('/images/icons/ico_reset.png') center no-repeat;
+            background:url('../images/icons/ico_reset.png') center no-repeat;
             background-size: 12px 12px; 
         }
         .txt {
@@ -544,7 +544,7 @@
     .btn-delete {
         width: 20px;
         height: 20px;
-        background:url('/images/icons/ico_delete.png') center no-repeat;
+        background:url('../images/icons/ico_delete.png') center no-repeat;
         background-size: 10px 10px; 
     }
 
@@ -588,7 +588,7 @@
                 transform: translateY(-50%);
                 width: 36px;
                 height: 36px;
-                background:url('/images/icons/ico_search.png') center no-repeat;
+                background:url('../images/icons/ico_search.png') center no-repeat;
                 background-size: 24px 24px; 
             }
         }
@@ -617,7 +617,7 @@
                     width: 8px;
                     height: 4.5px;
                     margin-left: 8px;
-                    background:url('/images/icons/ico_arrow_open.png') center/contain no-repeat;
+                    background:url('../images/icons/ico_arrow_open.png') center/contain no-repeat;
                 }
             }
 
@@ -688,7 +688,7 @@
     .wrap-ticket {
         height: 325px;
         padding: 100px 56px 45px 56px;
-        background: url('/images/common/img_bg_ticket.png') center/100% no-repeat;
+        background: url('../images/common/img_bg_ticket.png') center/100% no-repeat;
 
         .tit {
             font-size: 36px;
@@ -739,7 +739,7 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background: url('/images/icons/icon_download.png') center/100% no-repeat;
+            background: url('../images/icons/icon_download.png') center/100% no-repeat;
         }
     }
     .btn-more {
@@ -755,7 +755,7 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background: url('/images/icons/icon_chevron_right.png') center/100% no-repeat;
+            background: url('../images/icons/icon_chevron_right.png') center/100% no-repeat;
         }
     }
     
@@ -1064,26 +1064,26 @@
             }
     
             &:nth-child(1) {
-                background:#f5f5f5 url('/images/common/img_title01_mo_off.png') center no-repeat;
+                background:#f5f5f5 url('../images/common/img_title01_mo_off.png') center no-repeat;
                 background-size: 59px 30.2px;
                 &.on {
-                    background:#fff url('/images/common/img_title01_mo_on.png') center no-repeat;
+                    background:#fff url('../images/common/img_title01_mo_on.png') center no-repeat;
                     background-size: 70.5px 76.5px;
                 }
             }
             &:nth-child(2) {
-                background:#f5f5f5 url('/images/common/img_title02_mo_off.png') center no-repeat;
+                background:#f5f5f5 url('../images/common/img_title02_mo_off.png') center no-repeat;
                 background-size: 47.5px 31px;
                 &.on {
-                    background:#fff url('/images/common/img_title02_mo_on.png') center no-repeat;
+                    background:#fff url('../images/common/img_title02_mo_on.png') center no-repeat;
                     background-size: 57px 76px;
                 }
             }
             &:nth-child(3) {
-                background:#f5f5f5 url('/images/common/img_title03_mo_off.png') center no-repeat;
+                background:#f5f5f5 url('../images/common/img_title03_mo_off.png') center no-repeat;
                 background-size: 59px 31px;
                 &.on {
-                    background:#fff url('/images/common/img_title03_mo_on.png') center no-repeat;
+                    background:#fff url('../images/common/img_title03_mo_on.png') center no-repeat;
                     background-size: 70px 75.5px;
                 }
             }
