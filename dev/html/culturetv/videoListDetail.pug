@@ -65,38 +65,22 @@ block contents
                                 dl.info
                                     dt 등록일
                                     dd 2022-09-22
+                
                             .visual-text-info
-                                p.txt 국립국악원 국악아카이브는 국악 자원을 조사·수집·관리·보존하며 약 45만 여 점의 기록물을 보유하고 있습니다. 온라인으로도 이러한 기록물들을 즐길 수 있는데요, 온오프라인으로 국악아카이브를 재미있게 즐길 수 있는 3가지 방법을 소개해드리겠습니다!  서울 서초구에 위치한 국악박물관 국내 유일의 국악 전문 박물관인 이곳에서는 다양한 국악 유물 및 악기와 더불어 국악아카이브도 감상할 수 있습니다. 여기서 잠깐! 아카이브(archive)란, ‘특정 장르에 속하는 정보를 모아둔 정보 창고‘라는 뜻을 가지고 있는데요. 국악아카이브의 자료는 동영상, 음향, 이미지, 텍스트 등으로 무려 45만 여 점에 달한다고 합니다. 문화정보화 시대에 발맞춰 온라인에서도 국악아카이브를 생생하게 감상할 수 있도록 다양한 서비스가 제공됩니다. 국악박물관 홈페이지에선 VR로 국악박물관을 감상할 수 있습니다.
+                                // 내용 더보기 클릭 시 .text-overflow 클래스 제거
+                                p.txt.text-overflow  국립국악원 국악아카이브는 국악 자원을 조사·수집·관리·보존하며 약 45만 여 점의 기록물을 보유하고 있습니다. 온라인으로도 이러한 기록물들을 즐길 수 있는데요, 온오프라인으로 국악아카이브를 재미있게 즐길 수 있는 3가지 방법을 소개해드리겠습니다!  서울 서초구에 위치한 국악박물관 국내 유일의 국악 전문 박물관인 이곳에서는 다양한 국악 유물 및 악기와 더불어 국악아카이브도 감상할 수 있습니다. 여기서 잠깐! 아카이브(archive)란, ‘특정 장르에 속하는 정보를 모아둔 정보 창고‘라는 뜻을 가지고 있는데요. 국악아카이브의 자료는 동영상, 음향, 이미지, 텍스트 등으로 무려 45만 여 점에 달한다고 합니다. 문화정보화 시대에 발맞춰 온라인에서도 국악아카이브를 생생하게 감상할 수 있도록 다양한 서비스가 제공됩니다. 국악박물관 홈페이지에선 VR로 국악박물관을 감상할 수 있습니다.
                                 button.btn-txt-more(type="button")
                                     span.txt 내용 더보기 +
 
-                section.section-list
+                section.slide-contents.line-gray
                     .section-inner
-                        .area-util
-                            .txt-total 총 <strong>3131</strong>건
-                            .list-search
-                                .form-box
-                                    select(name="장르") 
-                                        option(value="") 전체
-                                        option(value="") 옵션1
-                                        option(value="") 옵션2
-                                .form-box
-                                    select(name="") 
-                                        option(value="") 지역
-                                        option(value="") 옵션1
-                                        option(value="") 옵션2
-                                .form-box
-                                    select(name="") 
-                                        option(value="") 7거리
-                                        option(value="") 옵션1
-                                        option(value="") 옵션2
-                                .search-input
-                                    input(type="text" placeholder="검색어를 입력하세요.")
-                                    button(type="button").btn-search
-                                        span.hide-txt 검색
-                        ul.content-list
-                            li.list
-                                a(href="#none").box-thumb
+                        h4.title-h4
+                            a(href="#") 함께 볼만한 영상
+                                //- i.ico(aria-hidden="true")
+                        .slide-area.swiper-container.slide-together(data-slide-type="together")
+                            .swiper-wrapper
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -109,8 +93,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -123,8 +107,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -137,8 +121,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -151,8 +135,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -165,8 +149,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -179,8 +163,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -193,8 +177,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -207,8 +191,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -221,8 +205,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -235,8 +219,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -249,8 +233,8 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            li.list
-                                a(href="#none").box-thumb
+                                .swiper-slide
+                                    a(href="#none").box-thumb
                                         .thumb-img
                                             img(src="../../images/thumb_img.png", alt="")
                                             i.ico-play(aria-hidden="true")
@@ -263,63 +247,104 @@ block contents
                                             p.tit.size02.ellipsis.type02 ‘랑종’을 능가하는 공포 특집, 더운 날에는 무서운 게 ...
                                             p.txt.size02.ellipsis.type02 얼마 전 개봉한 영화 ‘랑종’ 보셨나요? 여름만 되면 등골이 서늘한 공포물이 당겨!
                                             p.txt.size02 문화포털
-                            
-                        .area-pagenation
-                            button.btn-first(type="button")
-                                span.hide-txt 맨 앞으로
-                            button.btn-prev(type="button")
-                                span.hide-txt 앞으로
-                            .wrap-number
-                                button.btn-num.on(type="button")
-                                    span.txt 1
-                                button.btn-num(type="button")
-                                    span.txt 2
-                                button.btn-num(type="button")
-                                    span.txt 3
-                                button.btn-num(type="button")
-                                    span.txt 4
-                                button.btn-num(type="button")
-                                    span.txt 5
-                                button.btn-num(type="button")
-                                    span.txt 6
-                                button.btn-num(type="button")
-                                    span.txt 7
-                                button.btn-num(type="button")
-                                    span.txt 8
-                                button.btn-num(type="button")
-                                    span.txt 9
-                                button.btn-num(type="button")
-                                    span.txt 10
-                            button.btn-next(type="button")
-                                span.hide-txt 뒤로
-                            button.btn-last(type="button")
-                                span.hide-txt 맨뒤로
+                            .swiper-button-area
+                                .swiper-button-prev
+                                .swiper-button-next 
+                                .swiper-pagination
+                            .swiper-progress
+                        
+                        .caption
+                            img(src="../../images/common/nuri_sample.png", alt="공공누리")
+                            p.txt 한국문화정보원이 창작한 
+                                span.point [문화PD] 국악아카이브 재미있게 즐기는 3가지 방법 
+                                | 본 저작물은 "공공누리" 제4유형:출처표시+상업적 이용금지 + 변경금지조건에 따라 이용 할 수 있습니다.
 
+                section.section-contents.mb120
+                    .section-inner
+                        h4.title-h4
+                            a(href="#") 공감댓글
+                        .area-util
+                            .txt-total 총 <strong>2</strong>건
+                        .notice-area
+                            .write-field
+                                label.hide-txt(for="test-textarea") 
+                                textarea#test-textarea(name="", cols="30", rows="10" placeholder="본 게시물과 관련이 없거나 불건전한 댓글은 임의로 삭제될 수 있습니다.")
+                                .text-count 0/
+                                    span.point 140
+                                button.btn-submit(type="button")
+                                    span.txt 댓글쓰기
+                            ul.notice-list
+                                li
+                                    .user-info 
+                                        .user-photo
+                                            img(src="../../images/common/user_thumbnail.png", alt="유저 프로필 이미지")
+                                        .user-id PD_*******
+                                    .list-setup
+                                        .date 2022.09.17
+                                        button.btn-del(type="button") 삭제
+                                    p.txt 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다.
+                                li
+                                    .user-info 
+                                        .user-photo
+                                            img(src="../../images/common/user_thumbnail.png", alt="유저 프로필 이미지")
+                                        .user-id PD_*******
+                                    .list-setup
+                                        .date 2022.09.17
+                                        button.btn-del(type="button") 삭제
+                                    p.txt 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다. 댓글 내용이 표시됩니다.
+                            a.link-listview(href="#") 
+                                span.txt 목록으로
+                                    
+                                        
+                                            
+                                        
+                            
 block append script
     script.
         // UI 확인용 Swiper
 
-        //문화영상
-        let swiper =  new Swiper('.type-slider .swiper-container', {
-            slidesPerView: 1,
-            spaceBetween:16,
-            spaceBetween:16,
-            loopFillGroupWithBlank : true,
+        let defaults = {
+            slidesPerView:2,
+            slidesPerGroup :2,
+            spaceBetween:20,
             watchOverflow:true,
-            effect: "fade",
-            fadeEffect: {
-                crossFade: true
-            },
-            speed:600,
+            loopFillGroupWithBlank : true,
+            breakpoints: {
+                1023: {
+                    slidesPerView:3,
+                    slidesPerGroup :3,
+                    spaceBetween:40,
+                },
+                1279: {
+                    slidesPerView:4,
+                    slidesPerGroup :4,
+                    spaceBetween:40,
+                }
+            }
+        }
+
+        //문화영상
+        let swiperTogether = new Swiper('.slide-together', {
+            ...defaults,
             navigation: {
-                nextEl: '.type-slider .swiper-button-area .swiper-button-next',
-                prevEl: '.type-slider .swiper-button-area .swiper-button-prev',
+                nextEl: '.slide-together .swiper-button-area .swiper-button-next',
+                prevEl: '.slide-together .swiper-button-area .swiper-button-prev',
             },
             pagination: {
-                el: '.type-slider .swiper-button-area .swiper-pagination',
+                el: '.slide-together .swiper-button-area .swiper-pagination',
                 type: 'fraction',
             },
             a11y : {
                 enabeld: true
             }
         });
+
+        let swiperTogetherPagi = new Swiper('.slide-together', {
+            ...defaults,
+            pagination: {
+                el: '.slide-together .swiper-progress',
+                type: 'progressbar'
+            }
+            
+        });
+        swiperTogether.controller.control = swiperTogetherPagi;

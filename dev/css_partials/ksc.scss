@@ -12,6 +12,16 @@
 //     }
 // }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.visual-top {
+    .title-area {
+        margin-bottom:80px;
+    }
+}
+
 .videoList {
     .visual-area {
         height: auto;
@@ -63,14 +73,14 @@
             background-color:#fff;
             box-sizing: border-box;
         }
+
+        .title-h3 {
+            margin-top:0;
+        }
     }
 
     &.type-slider {
         flex-wrap: wrap;
-
-        .title-h3 {
-            margin-top: 12px;
-        }
 
         .item {
             display:flex;
@@ -89,6 +99,7 @@
 
         .visual-category {
             display: flex;
+            margin-bottom:12px;
         
             li {
                 margin-right: 8px;
@@ -118,7 +129,7 @@
             display:flex;
             flex-wrap: wrap;
             margin-top: 8px;
-            margin-bottom: 32px;
+            // margin-bottom: 32px;
 
             li {
                 padding: 4px 8px;
@@ -143,6 +154,10 @@
             display:flex;
             width: 184px;
             justify-content: space-between;
+
+            &:nth-of-type(1) {
+                margin-top:32px;
+            }
             
             & + .info {
                 margin-top: 12px;
@@ -163,6 +178,7 @@
 
             .txt {
                 height:auto;
+                margin:32px 0;
                 font-size:16px;
                 line-height: 1.5;
                 letter-spacing: -0.4px;
@@ -170,12 +186,13 @@
 
                 &.text-overflow {
                     overflow-y: hidden;
-                    height:320px;
+                    height:96px;
                 }
             }
 
             .btn-txt-more {
                 width:100%;
+                padding:16px 0;
                 border:1px solid #ddd;
                 text-align: center;
 
@@ -317,6 +334,271 @@
     }
 }
 
+.caption {
+    display: flex;
+    margin-top:16px;
+    background:#f5f5f5;
+    padding:24px 37px 24px 36px;
+
+    .txt {
+        margin-left:36px;
+        font-size:16px;
+        letter-spacing: -0.4px;
+        color:#666;
+
+        .point {
+            color:#ff6742;
+        }
+    }
+}
+
+.section-contents {
+    margin-top:80px;
+}
+
+.notice-area {
+    margin-top:32px;
+
+    .write-field {
+        position:relative;
+
+        textarea {
+            width:91%;
+            height:82px;
+            padding:12px 50px 32px 12px;
+            font-size:14px;
+            color:#666;
+            resize: none;
+            border:1px solid #ccc;
+            border-radius: 0;
+            border-right: none;
+
+            &::placeholder {
+                font-size:14px;
+                color:#ccc;
+            }
+        }
+        .text-count {
+            position:absolute;
+            bottom:12px; right:10%;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            color:#666;
+
+            .point {
+                font-weight: bold;
+            }
+        }
+        .btn-submit {
+            position: absolute;
+            top:0; right:0;
+            width:9%;
+            height:82px;
+            background:#666;
+            
+            .txt {
+                font-size:16px;
+                color:#fff;
+            }
+
+        }
+    }
+
+    .notice-list {
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding:24px 0 0 24px;
+            border-bottom:1px solid #ddd;
+
+            .user-info,
+            .list-setup {
+                display: flex;
+                align-items: center;
+                
+            }
+
+            .user-info {
+                .user-photo {
+                    width:40px; height:40px;
+
+                    img {
+                        width:100%;
+                    }
+                }
+                .user-id {
+                    margin-left:14px;
+                    font-size:14px;
+                    font-weight: bold;
+                    color:#222;
+                }
+            }
+
+            .list-setup {
+                
+                .date {
+                    font-size:14px;
+                    font-family: 'Montserrat';
+                    color:#999;
+                    line-height: 2.29;
+
+                    &::after {
+                        content:'';
+                        display:inline-block;
+                        width:1px;
+                        height:12px;
+                        margin:0 16px;
+                        vertical-align: -1px;
+                        background:#ddd;
+                    }
+                }
+                .btn-del {
+                    font-size: 14px;
+                    color:#999;
+                    line-height: 2.29;
+
+                    &::after {
+                        content:'';
+                        display:inline-block;
+                        width:20px;
+                        height:20px;
+                        vertical-align: -6px;
+                        background: url('../images/icons/ico_del.png') no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+            .txt {
+                margin:24px 0 24px 5px;
+                font-size:14px;
+                color:#1b1b1b;
+                line-height: 1.43;
+                letter-spacing: -0.28px;
+            }
+        }
+    }
+
+    .link-listview {
+        display: flex;
+        width:314px; height:56px;
+        margin:52px auto 0;
+        padding:16px 128px;
+        align-items: center;
+        justify-content: center;
+        border:1px solid #ddd;
+
+        .txt {
+            font-size:16px;
+            color:#222;
+        }
+    }
+
+}
+
+.mb120 {
+    margin-bottom:120px;
+}
+
+
+.layerPopup-container {
+
+
+    .dimm {
+        display: none;
+        position:fixed;
+        top:0; left:0; right:0; bottom:0;
+        z-index: 100;
+        background:#000;
+        opacity: .5;
+    }
+
+    .layerPopup-wrap {
+        position:fixed;
+        top:50%; left:50%;
+        width:100%;
+        height:100%;
+        max-width:720px;
+        max-height: 1052px;
+        padding:37px 0;
+        transform: translate(-50%, -50%);
+        z-index: 101;
+        background:#fff;
+        
+
+        .layerPopup-inner {
+            position: relative;
+            height:100%;
+            overflow: hidden;
+
+            .btn-close {
+                position: absolute;
+                top:0;
+                right:24px;
+                width:24px; height:24px;
+                background: url('../images/icons/ico_delete.png') no-repeat 0 0;
+                background-size: cover;
+            }
+        }
+
+        .title-h5 {
+            padding:0 24px 24px 24px;
+            font-size:24px;
+            font-weight: bold;
+            color:#222;
+            border-bottom:1px solid #000;
+        }
+    }
+
+    .popup-contents {
+        height:100%;
+        padding:0 36px 80px 36px;
+        overflow-y: scroll;
+
+        strong {
+            display: block;
+            margin-top:24px;
+            font-size:16px;
+            font-weight: bold;
+            color:#222;
+
+            &.point {
+                font-size:14px;
+                font-weight: 400;
+                color:#ff6742;
+
+                + .txt {
+                    font-weight: 300;
+                }
+            }
+        }
+        .txt {
+            margin-top:8px;
+            font-size:14px;
+            line-height: 1.43;
+            color:#999;
+        }
+
+        .border-area {
+            margin-top:20px;
+            padding:0 24px 24px;
+            border:1px solid #ddd;
+        }
+    }
+}
+
+.btn-popup {
+    margin-top:12px;
+    padding:6px 12px;
+    border:1px solid #ddd;
+    border-radius: 15px;
+
+    .txt {
+        font-size:12px;
+        color:#222;
+    }
+}
+
 
 
 @media (max-width:1279px) {
@@ -336,6 +618,10 @@
     .visual-area {
         display:block;
         height:auto;
+    }
+
+    .visual-area .visual-content-box {
+        display: flex;
     }
 
     .visual-area .visual-text-box {
@@ -425,6 +711,103 @@
         margin-left:20px;
         margin-bottom:52px;
     }
+
+    .visual-area.type-slider .visual-text-info .txt {
+        margin:0 0 16px 0;
+        font-size:14px;
+
+        &.text-overflow {
+            height:85px;
+        }
+    }
+
+    .visual-area.type-slider .visual-text-info .btn-txt-more {
+        padding:8px;
+    }
+    
+    .visual-area.type-slider .visual-text-info .btn-txt-more .txt {
+        font-size: 14px;
+    }
+
+    .caption {
+        flex-direction: column;
+        padding:20px;
+
+        img {
+            width:150px;
+            height:100%;
+        }
+    }
+
+    .caption .txt {
+        margin-left:0;
+        margin-top:10px;
+        font-size:12px;
+        line-height: 1.4;
+    }
+    .notice-area {
+        margin-top:18px;
+    }
+
+    .notice-area .write-field textarea {
+        width:81%;
+        padding:12px 38px 20px 12px;
+    }
+
+    .notice-area .write-field .btn-submit {
+        width:19%;
+
+        .txt {
+            font-size:14px;
+        }
+    }
+
+    .notice-area .notice-list li {
+        padding:20px 0 0 0;
+    }
+
+    .notice-area .write-field .text-count {
+        right:20%;
+        font-size:12px;
+    }
+    .notice-area .notice-list li .list-setup .date,
+    .notice-area .notice-list li .list-setup .btn-del {
+        font-size:12px;
+    }
+
+    .notice-area .notice-list li .list-setup .date::after {
+        margin:0 8px;
+    }
+
+    .notice-area .notice-list li .txt {
+        margin:16px 0 16px 5px;
+        font-size:12px;
+    }
+
+    .notice-area .link-listview {
+        width:100%;
+        height:46px;
+        margin-top:40px;
+
+        .txt {
+            font-size:14px;
+        }
+    }
+
+    .mb120 {
+        margin-bottom:80px;
+    }
+
+    .layerPopup-container .layerPopup-wrap {
+        width:calc(100% - 40px);
+        padding:28px 0;
+    }
+    .layerPopup-container .layerPopup-wrap .title-h5 {
+        font-size: 18px;;
+    }
+    .layerPopup-container .popup-contents {
+        padding:0 28px 40px 28px;
+    }
 }
 
 
@@ -481,7 +864,7 @@
 
     .section-inner {
         padding:0 20px;
-    }
+    }    
 
     .visual-top .title-area {
         margin-bottom:20px;
@@ -567,5 +950,9 @@
     .section-list {
         margin-top:40px;
         padding-bottom:80px;
+    }
+
+    .section-contents {
+        margin-top:40px;
     }
 }
