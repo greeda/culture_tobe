@@ -1,0 +1,127 @@
+extends /_src/_pug/_extend_html5
+
+block append css
+    //- link(href=`${pathSettingHtml}css/oneEye.css`, type='text/css', rel='stylesheet')
+
+block contents
+    #container.pageClassSub
+        #content(role='main')
+            .content-inner
+                nav.breadcrumb
+                    .location-area
+                        ol.location-content
+                            li
+                                a(href="#") 홈
+                            li
+                                a(href="#") 문화공감
+                            li
+                                a(href="#") 공감마당
+                            li
+                                a.on(href="#") 문화마루
+                    .share-area
+                        ul.share-content
+                            li
+                                a.link-share(href="#")
+                            li
+                                a.link-print(href="#")
+                section.section-main
+                    .section-inner
+                        .title-area
+                            h1.title-h1 문화마루
+                                |
+                                span.txt 문화정보를 자유롭게 공유해 보세요
+
+
+                section.section-board
+                    .section-inner
+                        .area-util
+                            .align-box
+                                .txt-total 총 <strong>107</strong>건
+                            .list-search
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 분류 전체
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 공연/전시일
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .form-box
+                                    select(name="") 
+                                        option(value="") 제목
+                                        option(value="") 옵션1
+                                        option(value="") 옵션2
+                                .search-input
+                                    input(type="text" placeholder="검색어를 입력하세요.")
+                                    button(type="button").btn-search
+                                        span.hide-txt 검색
+                        .area-table.type01
+                            table
+                                caption 문화마루
+                                colgroup 
+                                    col.col01
+                                    col.col02
+                                    col.col03
+                                    col.col04
+                                    col.col05
+                                thead 
+                                    tr
+                                        th 번호
+                                        th 분류
+                                        th 제목
+                                        th 작성자
+                                        th 등록일
+                                tbody
+                                    tr
+                                        td
+                                            strong.cap-notice 공지
+                                        td.point 문화마루
+                                        td.point.align-left 
+                                            a(href="#") ※ 게시판 운영정책 안내
+                                        td 관리자
+                                        td.mont 2019-09-30
+                                    tr 
+                                        td 7119
+                                        td 문화마루
+                                        td.align-left 
+                                            a(href="#") [공연·전시] 문화초대이벤트 당첨으로 옥탑방 고양이를 보고 왔습니다.
+                                        td 밀꼬마
+                                        td.mont 2019-09-30
+                                    
+                        .area-pagenation
+                            button.btn-first(type="button")
+                                span.hide-txt 맨 앞으로
+                            button.btn-prev(type="button")
+                                span.hide-txt 앞으로
+                            .wrap-number
+                                button.btn-num.on(type="button")
+                                    span.txt 1
+                                button.btn-num(type="button")
+                                    span.txt 2
+                                button.btn-num(type="button")
+                                    span.txt 3
+                                button.btn-num(type="button")
+                                    span.txt 4
+                                button.btn-num(type="button")
+                                    span.txt 5
+                                button.btn-num(type="button")
+                                    span.txt 6
+                                button.btn-num(type="button")
+                                    span.txt 7
+                                button.btn-num(type="button")
+                                    span.txt 8
+                                button.btn-num(type="button")
+                                    span.txt 9
+                                button.btn-num(type="button")
+                                    span.txt 10
+                            button.btn-next(type="button")
+                                span.hide-txt 뒤로
+                            button.btn-last(type="button")
+                                span.hide-txt 맨뒤로        
+                        
+
+block append script
+    script.
+

@@ -1464,6 +1464,35 @@
     }
 }
 
+// 문화마루
+.section-board {
+    margin-top: 80px;
+    padding-bottom: 120px;
+
+    .area-util + .area-table {
+        margin-top: 52px;
+    }
+
+    .area-pagenation {
+        margin-top: 52px;
+    }
+
+    .cap-notice {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 30px;
+        background: #ff6742;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .point {
+        color: #FF6742;
+        font-weight: bold;
+    }
+}
 
 // .type-home {
 //     &.slide-contents .thumb-img {
