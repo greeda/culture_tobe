@@ -1798,8 +1798,27 @@
             width: 100px;
         }
     }
-    
 
+    .section-map {
+        margin-top: 40px;
+    }
+    
+    .section-facility-result {
+        padding-top: 40px;
+        padding-bottom: 92px;
+    }
+
+    .section-map .area-facility {
+        flex-wrap: wrap;
+    }
+
+    .section-map .wrap-facility-map {
+        width: 100%;
+    }
+
+    .section-map .box-search {
+        position: static;
+    }
     
 }
 
