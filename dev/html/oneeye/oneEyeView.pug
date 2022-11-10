@@ -136,7 +136,8 @@ block contents
                                     span.hide-txt 맨뒤로
 
                         .area-tab-info
-                            .area-table
+                            // 모바일 디자인에 따라 type01,02 로 분류
+                            .area-table.type02
                                 table
                                     caption 위치
                                     thead 
@@ -146,29 +147,39 @@ block contents
                                             th 상세정보
                                     tbody
                                         tr 
+                                            // 왼쪽정렬 : .align-left
+                                            // 볼드 : .bold
+                                            // 영문폰트 : .mont
                                             td.align-left 엄마와 딸의 3번째 발자국
                                             td.mont 2022-11-16 ~ 2022-11-24	
                                             td
-                                                a(href="#").link-more
+                                                a(href="#none").link-more
                                                     span.txt 자세히 보기
                                         tr 
                                             td.align-left 엄마와 딸의 3번째 발자국
                                             td.mont 2022-11-16 ~ 2022-11-24	
                                             td
-                                                a(href="#").link-more
+                                                a(href="#none").link-more
                                                     span.txt 자세히 보기 
                                         tr 
                                             td.align-left 엄마와 딸의 3번째 발자국
                                             td.mont 2022-11-16 ~ 2022-11-24	
                                             td
-                                                a(href="#").link-more
+                                                a(href="#none").link-more
                                                     span.txt 자세히 보기 
                                         tr 
                                             td.align-left 엄마와 딸의 3번째 발자국
                                             td.mont 2022-11-16 ~ 2022-11-24	
                                             td
-                                                a(href="#").link-more
-                                                    span.txt 자세히 보기 
+                                                a(href="#none").link-more
+                                                    span.txt 자세히 보기
+                                        tr 
+                                            td.align-left 
+                                                a(herf="#") 엄마와 딸의 3번째 발자국
+                                            td.mont 2022-11-16 ~ 2022-11-24	
+                                            td
+                                                a(href="#none").link-more
+                                                    span.txt 자세히 보기
                             .area-pagenation
                                 button.btn-first(type="button")
                                     span.hide-txt 맨 앞으로
@@ -201,7 +212,8 @@ block contents
                                     span.hide-txt 맨뒤로
 
                         .area-tab-info
-                            .area-table
+                            // 모바일 디자인에 따라 type01,02 로 분류
+                            .area-table.type01
                                 table
                                     caption 주변관광지
                                     thead 
@@ -211,19 +223,22 @@ block contents
                                             th 연락처
                                     tbody
                                         tr 
-                                            td.align-left 능허대지
+                                            // 왼쪽정렬 : .align-left
+                                            // 볼드 : .bold
+                                            // 영문폰트 : .mont
+                                            td 능허대지
                                             td 인천광역시 연수구 옥련동 194-54
                                             td.mont 032-810-7298
                                         tr 
-                                            td.align-left 능허대지
+                                            td 능허대지
                                             td 인천광역시 연수구 옥련동 194-54
                                             td.mont 032-810-7298 
                                         tr 
-                                            td.align-left 능허대지
+                                            td 능허대지
                                             td 인천광역시 연수구 옥련동 194-54
                                             td.mont 032-810-7298 
                                         tr 
-                                            td.align-left 능허대지
+                                            td 능허대지
                                             td 인천광역시 연수구 옥련동 194-54
                                             td.mont 032-810-7298 
                             .area-pagenation
