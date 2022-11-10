@@ -54,7 +54,9 @@ block contents
                                         button.btn-menu(type="button")
                                             .ico-money(aria-hidden="true")
                                             span.txt 문회비<br>소득공제
-                                .box-search.open
+                                
+                                //s: 통합검색
+                                .box-search(style="display:none")
                                     button(type="button").btn-open
                                         i.ico(aria-hidden="true")
                                         span.hide-txt 열기
@@ -98,6 +100,53 @@ block contents
                                             input(type="text" placeholder="검색어를 입력하세요.")
                                             button(type="button").btn-search
                                                 span.hide-txt 검색
+                                //e: 통합검색
+
+                                //s: 문화시설
+                                .box-search
+                                    button(type="button").btn-open
+                                        i.ico(aria-hidden="true")
+                                        span.hide-txt 열기
+                                    .cont-txt
+                                        p.tit 문화시설
+                                        p.txt 다양한 지역별 문화공간과 단체들을 검색을 통해 찾아볼 수 있습니다.
+                                    .cont-check
+                                        .form-check
+                                            input#facilityCheck05(type="checkbox" checked)
+                                            label(for="facilityCheck05")
+                                                span.txt 문화시설
+                                        .form-check
+                                            input#facilityCheck06(type="checkbox")
+                                            label(for="facilityCheck06")
+                                                span.txt 체육시설
+                                        .form-check
+                                            input#facilityCheck07(type="checkbox")
+                                            label(for="facilityCheck07")
+                                                span.txt 문화예술단체
+                                        .form-check
+                                            input#facilityCheck08(type="checkbox")
+                                            label(for="facilityCheck08")
+                                                span.txt 문화소비소득공제
+                                    .cont-select
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 서울시
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 종로구
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 문화시설
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .search-input
+                                            input(type="text" placeholder="검색어를 입력하세요.")
+                                            button(type="button").btn-search
+                                                span.hide-txt 검색
                                     
                                     ul.cont-picker
                                         li
@@ -105,8 +154,9 @@ block contents
                                                 i.ico-picker01(aria-hidden="true")
                                                 span.txt 공연장
                                         li
-                                            button.btn-picker.on(type="button")
-                                                i.ico-picker02(aria-hidden="true")
+                                            // .btn-picker 클릭 시 .ico-picker에 .type-on 클래스 추가
+                                            button.btn-picker(type="button")
+                                                i.ico-picker02.type-on(aria-hidden="true")
                                                 span.txt 미술관
                                         li
                                             button.btn-picker(type="button")
@@ -136,9 +186,131 @@ block contents
                                             button.btn-picker(type="button")
                                                 i.ico-picker09(aria-hidden="true")
                                                 span.txt 기타
+                                //e: 문화시설
+                                
+                                //s: 체육시설
+                                .box-search(style="display:none")
+                                    button(type="button").btn-open
+                                        i.ico(aria-hidden="true")
+                                        span.hide-txt 열기
+                                    .cont-txt
+                                        p.tit 체육시설
+                                        p.txt 다양한 지역별 문화공간(체육시설)을 공유합니다.
+                                    .cont-select
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 서울시
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 종로구
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 문화시설
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .search-input
+                                            input(type="text" placeholder="검색어를 입력하세요.")
+                                            button(type="button").btn-search
+                                                span.hide-txt 검색
+                                    
+                                    ul.cont-picker
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker10(aria-hidden="true")
+                                                span.txt 간이<br>체육시설
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker11(aria-hidden="true")
+                                                span.txt 공공<br>체육시설
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker12(aria-hidden="true")
+                                                span.txt 기금<br>체육시설
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker13(aria-hidden="true")
+                                                span.txt 기타<br>체육시설
+                                //e: 체육시설
+                                
+                                //s: 문화예술단체
+                                .box-search(style="display:none")
+                                    button(type="button").btn-open
+                                        i.ico(aria-hidden="true")
+                                        span.hide-txt 열기
+                                    .cont-txt
+                                        p.tit 문화예술단체
+                                        p.txt 다양한 문화예술단체를 공유합니다
+                                    .cont-select
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 서울시
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 종로구
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 문화시설
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .search-input
+                                            input(type="text" placeholder="검색어를 입력하세요.")
+                                            button(type="button").btn-search
+                                                span.hide-txt 검색
+                                    
+                                    ul.cont-picker
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker14(aria-hidden="true")
+                                                span.txt 문화예술<br>단체
+                                //e: 문화예술단체
+
+                                //s: 문화비 소득공제
+                                .box-search(style="display:none")
+                                    button(type="button").btn-open
+                                        i.ico(aria-hidden="true")
+                                        span.hide-txt 열기
+                                    .cont-txt
+                                        p.tit 문화비 소득공제
+                                        p.txt 문화비 소득공제가 가능한 시설을 공유합니다.
+                                    .cont-select
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 서울시
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 종로구
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 문화시설
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .search-input
+                                            input(type="text" placeholder="검색어를 입력하세요.")
+                                            button(type="button").btn-search
+                                                span.hide-txt 검색
+                                    
+                                    ul.cont-picker
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker15(aria-hidden="true")
+                                                span.txt 문화비 소득공제
+                                //e: 문화비 소득공제
+
 
                             .wrap-facility-map
-                                //-  지도영역
+                                // 지도영역
                                 div(style="width:100%;height:100%;background:pink")
 
                 section.section-facility-result
@@ -159,7 +331,7 @@ block contents
                                     tr 
                                         td.align-left
                                             .txt-icon
-                                                i.ico-picker02.on(aria-hidden="true")
+                                                i.ico-picker02.type-on(aria-hidden="true")
                                                 span 서울메트로미술관
                                         td 서울특별시 종로구 사직로 지하 130
                                         td.mont 2022-11-16 ~ 2022-11-24	
@@ -169,7 +341,7 @@ block contents
                                     tr 
                                         td.align-left
                                             .txt-icon
-                                                i.ico-picker02.on(aria-hidden="true")
+                                                i.ico-picker02.type-on(aria-hidden="true")
                                                 span 서울메트로미술관
                                         td 서울특별시 종로구 사직로 지하 130
                                         td.mont 2022-11-16 ~ 2022-11-24	
@@ -179,7 +351,7 @@ block contents
                                     tr 
                                         td.align-left
                                             .txt-icon
-                                                i.ico-picker02.on(aria-hidden="true")
+                                                i.ico-picker02.type-on(aria-hidden="true")
                                                 span 서울메트로미술관
                                         td 서울특별시 종로구 사직로 지하 130
                                         td.mont 2022-11-16 ~ 2022-11-24	
@@ -189,7 +361,7 @@ block contents
                                     tr 
                                         td.align-left
                                             .txt-icon
-                                                i.ico-picker02.on(aria-hidden="true")
+                                                i.ico-picker02.type-on(aria-hidden="true")
                                                 span 서울메트로미술관
                                         td 서울특별시 종로구 사직로 지하 130
                                         td.mont 2022-11-16 ~ 2022-11-24	
@@ -241,4 +413,5 @@ block append script
                 $boxSearch.addClass('open');
             }
         });
+
 
