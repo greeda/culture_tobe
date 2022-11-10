@@ -27,12 +27,12 @@ block contents
                     h1.hide-txt 집콕+집밖 문화생활
 
 
-                section.main-home
+                section.main-home.line-gray
                     .section-inner
                         .title-area
                             h2.title-h2 오늘의 집콕+집밖
                         .slide-area
-                            .main-home-swiper
+                            .auto-play-swiper
                                 .swiper-container
                                     ul.swiper-wrapper
                                         li.swiper-slide
@@ -728,7 +728,7 @@ block append script
             loopFillGroupWithBlank : true,
         }
 
-        var swiper = new Swiper('.main-home-swiper .swiper-container', {
+        var swiper = new Swiper('.auto-play-swiper .swiper-container', {
             slidesPerView: 2,
             spaceBetween: 10,
             watchOverflow: true,

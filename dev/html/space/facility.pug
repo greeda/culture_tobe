@@ -31,8 +31,187 @@ block contents
 
                 section.section-map
                     .section-inner
+                        .area-facility
+                            .wrap-facility-menu
+                                ul.box-menu
+                                    li
+                                        button.btn-menu.on(type="button")
+                                            .ico-search(aria-hidden="true")
+                                            span.txt 시설검색
+                                    li
+                                        button.btn-menu(type="button")
+                                            .ico-building(aria-hidden="true")
+                                            span.txt 문화시설
+                                    li
+                                        button.btn-menu(type="button")
+                                            .ico-health(aria-hidden="true")
+                                            span.txt 체육시설
+                                    li
+                                        button.btn-menu(type="button")
+                                            .ico-people(aria-hidden="true")
+                                            span.txt 문화예술<br>단체
+                                    li
+                                        button.btn-menu(type="button")
+                                            .ico-money(aria-hidden="true")
+                                            span.txt 문회비<br>소득공제
+                                .box-search.open
+                                    button(type="button").btn-open
+                                        i.ico(aria-hidden="true")
+                                        span.hide-txt 열기
+                                    .cont-txt
+                                        p.tit 통합검색
+                                        p.txt 다양한 지역별 문화공간과 단체들을 검색을 통해 찾아볼 수 있습니다.
+                                    .cont-check
+                                        .form-check
+                                            input#facilityCheck01(type="checkbox" checked)
+                                            label(for="facilityCheck01")
+                                                span.txt 문화시설
+                                        .form-check
+                                            input#facilityCheck02(type="checkbox")
+                                            label(for="facilityCheck02")
+                                                span.txt 체육시설
+                                        .form-check
+                                            input#facilityCheck03(type="checkbox")
+                                            label(for="facilityCheck03")
+                                                span.txt 문화예술단체
+                                        .form-check
+                                            input#facilityCheck04(type="checkbox")
+                                            label(for="facilityCheck04")
+                                                span.txt 문화소비소득공제
+                                    .cont-select
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 서울시
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 종로구
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .form-box
+                                            select(name="") 
+                                                option(value="") 문화시설
+                                                option(value="") 옵션1
+                                                option(value="") 옵션2
+                                        .search-input
+                                            input(type="text" placeholder="검색어를 입력하세요.")
+                                            button(type="button").btn-search
+                                                span.hide-txt 검색
+                                    
+                                    ul.cont-picker
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker01(aria-hidden="true")
+                                                span.txt 공연장
+                                        li
+                                            button.btn-picker.on(type="button")
+                                                i.ico-picker02(aria-hidden="true")
+                                                span.txt 미술관
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker03(aria-hidden="true")
+                                                span.txt 박물관
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker04(aria-hidden="true")
+                                                span.txt 도서관
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker05(aria-hidden="true")
+                                                span.txt 영화관
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker06(aria-hidden="true")
+                                                span.txt 서점
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker07(aria-hidden="true")
+                                                span.txt 문화재
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker08(aria-hidden="true")
+                                                span.txt 복지회관
+                                        li
+                                            button.btn-picker(type="button")
+                                                i.ico-picker09(aria-hidden="true")
+                                                span.txt 기타
+
+                            .wrap-facility-map
+                                //-  지도영역
+                                div(style="width:100%;height:100%;background:pink")
+
+                section.section-facility-result
+                    .section-inner
+                        .area-util
+                            .align-box
+                                .txt-total 총 <strong>107</strong>건
+                        .area-table.type02
+                            table
+                                caption 문화시설
+                                thead 
+                                    tr
+                                        th 시설명
+                                        th 위치
+                                        th 문의전화
+                                        th 상세정보
+                                tbody
+                                    tr 
+                                        // 왼쪽정렬 : .align-left
+                                        // 볼드 : .bold
+                                        // 영문폰트 : .mont
+                                        td.align-left
+                                            .txt-icon
+                                                i.ico-picker02.on(aria-hidden="true")
+                                                span 서울메트로미술관
+                                        td 서울특별시 종로구 사직로 지하 130
+                                        td.mont 2022-11-16 ~ 2022-11-24	
+                                        td
+                                            a(href="#none").link-more
+                                                span.txt 자세히 보기
+                                    
+                        .area-pagenation
+                            button.btn-first(type="button")
+                                span.hide-txt 맨 앞으로
+                            button.btn-prev(type="button")
+                                span.hide-txt 앞으로
+                            .wrap-number
+                                button.btn-num.on(type="button")
+                                    span.txt 1
+                                button.btn-num(type="button")
+                                    span.txt 2
+                                button.btn-num(type="button")
+                                    span.txt 3
+                                button.btn-num(type="button")
+                                    span.txt 4
+                                button.btn-num(type="button")
+                                    span.txt 5
+                                button.btn-num(type="button")
+                                    span.txt 6
+                                button.btn-num(type="button")
+                                    span.txt 7
+                                button.btn-num(type="button")
+                                    span.txt 8
+                                button.btn-num(type="button")
+                                    span.txt 9
+                                button.btn-num(type="button")
+                                    span.txt 10
+                            button.btn-next(type="button")
+                                span.hide-txt 뒤로
+                            button.btn-last(type="button")
+                                span.hide-txt 맨뒤로        
                         
 
 block append script
-    script.    
+    script.
+        let $boxSearch = $('.box-search');
+
+        $boxSearch.find('.btn-open').on('click', function(){
+            if ($boxSearch.hasClass('open')) {
+                $boxSearch.removeClass('open');
+            }
+            else {
+                $boxSearch.addClass('open');
+            }
+        });
 
