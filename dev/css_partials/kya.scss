@@ -5,7 +5,31 @@
     font-family: Montserrat;
 }
 
+.area-util {
+    .btn-write {
+        // margin-left: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 17px;
+        height: 38px;
+        background: #222;
+
+        .txt {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+
+    .search-input {
+        display: flex;
+    }
+}
+
 .area-table {
+    table{
+        min-width: 600px;
+    }
     .txt-icon {
         display: flex;
         align-items: center;
@@ -1336,6 +1360,31 @@
     margin-top: 80px;
     padding-bottom: 120px;
 
+    .search-input {
+        margin-right: 12px;
+    }
+
+    .col01 {
+        width: 110px;
+    }
+    .col02 {
+        width: 110px;
+    }
+
+    .col04 {
+        width: 260px;
+    }
+    .col05 {
+        width: 180px;
+    }
+
+    .area-table td {
+        padding: 13px 20px;
+    }
+
+
+
+
     .area-util + .area-table {
         margin-top: 52px;
     }
@@ -1715,7 +1764,69 @@
         padding-top: 40px;
     }
 
+    .section-board {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+    .section-board .area-util + .area-table {
+        margin-top: 32px;
+    }
+    .section-board .cap-notice {
+        font-size: 12px;
+        width: 50px;
+        height: 24px;
+    }
+
+    .section-board {
+
+        .area-table {
+            overflow: scroll;
+        }
+
+        .area-table td {
+            padding: 10px;
+        }
+
+        .col01,
+        .col02,
+        .col03,
+        .col04 {
+            width: auto;
+        }
+
+        .col05 {
+            width: 100px;
+        }
+    }
     
+
+    
+}
+
+@media (max-width:500px){
+    .section-board  {
+    
+        .search-input {
+            width: 100%;
+            margin-right: 0;
+        }
+        .form-btn{
+            width: 100%;
+
+            .btn-write {
+                width: 100%;
+            }
+        }
+    }
+
+    .area-util .list-search .form-box {
+        width: 100%;
+        margin-right: 0;
+
+        select {
+            width: 100%;
+        }
+    }
 }
 
 
@@ -1732,6 +1843,10 @@
     .section-ticket .btn-wrap a {
         margin-right: 0;
     }
+
+    
+
+    
 }
 
 
