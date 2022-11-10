@@ -326,52 +326,6 @@ display: -webkit-box;
         }
     }
 
-    // 썸네일 카테고리 태그
-    .tag{
-        display:inline-flex;
-        align-items: center;
-        background-color:#f8f8f8;
-        height: 23px;
-        padding: 0 8px;
-        border-radius: 11.5px;
-        margin-right: 4px;
-        margin-bottom: 4px;
-        background-color:#fff;
-        border: solid 1px #222;
-        .txt{color:#222;}
-
-        &:last-child {
-            margin: 0;
-        }
-
-        .txt{
-            font-size: 10px;
-
-        }
-
-        &.reverse {
-            background-color:#222;
-            .txt{color:#fff;}
-        }
-
-        
-    }
-    
-    .thumb-tag {
-        margin-bottom: 4px;
-
-        &.size02 .tag {
-            height: 27px;
-            padding: 0 12px;
-            border-radius: 13.5px;
-            margin-right: 8px;
-
-            .txt{
-                font-size: 13px;
-            }
-        }
-    }
-
 
     // 썸네일 텍스트
     .thumb-tag + .thumb-txt {
@@ -494,6 +448,52 @@ display: -webkit-box;
                 color: #000;
                 font-weight: bold;
             }
+        }
+    }
+}
+
+// 썸네일 카테고리 태그
+.thumb-tag {
+    margin-bottom: 4px;
+
+    .tag{
+        display:inline-flex;
+        align-items: center;
+        background-color:#f8f8f8;
+        height: 23px;
+        padding: 0 8px;
+        border-radius: 11.5px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        background-color:#fff;
+        border: solid 1px #222;
+        .txt{color:#222;}
+    
+        &:last-child {
+            margin: 0;
+        }
+    
+        .txt{
+            font-size: 10px;
+    
+        }
+    
+        &.reverse {
+            background-color:#222;
+            .txt{color:#fff;}
+        }
+    
+        
+    }
+
+    &.size02 .tag {
+        height: 27px;
+        padding: 0 12px;
+        border-radius: 13.5px;
+        margin-right: 8px;
+
+        .txt{
+            font-size: 13px;
         }
     }
 }

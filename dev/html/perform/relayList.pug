@@ -45,12 +45,12 @@ block contents
                                     span.txt-btn 리플렛 다운로드
                                     i.ico(aria-hidden="true")
                         .wrap-ticket-info
-                            .tab-button(role="tabllist" aria-label="문화릴레이티켓")
+                            .area-tab-button(role="tabllist" aria-label="문화릴레이티켓")
                                 button.tab-btn.on(type="button" role="tab")
                                     span.txt 문화릴레이티켓 스탬프 이용방법
                                 button.tab-btn(type="button" role="tab")
                                     span.txt 문화릴레이티켓 이용시 유의사항
-                            .tab-info.on
+                            .area-tab-info.on
                                 ol.info-list
                                     li.box-cont
                                         img(src="../../images/common/img_phone01.png", alt="")
@@ -447,13 +447,13 @@ block contents
 block append script
     script.
         //tab
-        $('.wrap-ticket-info .tab-btn').on('click', function(){
+        $('.area-tab-button .tab-btn').on('click', function(){
             const _index = $(this).index();
-            $('.tab-btn').removeClass('on');
+            $('.area-tab-button .tab-btn').removeClass('on');
             $(this).addClass('on');
             
-            $('.tab-info').removeClass('on');
-            $('.tab-info').eq(_index).addClass('on');
+            $('.area-tab-info').removeClass('on');
+            $('.area-tab-info').eq(_index).addClass('on');
         });
                         
 
