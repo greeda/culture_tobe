@@ -66,7 +66,8 @@
     }
 
     &.type-slider {
-        
+        flex-wrap: wrap;
+
         .title-h3 {
             margin-top: 12px;
         }
@@ -158,7 +159,34 @@
                 font-weight: bold;
             }
         }
+        .visual-text-info {
 
+            .txt {
+                height:auto;
+                font-size:16px;
+                line-height: 1.5;
+                letter-spacing: -0.4px;
+                color:#999;
+
+                &.text-overflow {
+                    overflow-y: hidden;
+                    height:320px;
+                }
+            }
+
+            .btn-txt-more {
+                width:100%;
+                border:1px solid #ddd;
+                text-align: center;
+
+                .txt {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color:#222;
+                }
+            }
+            
+        }
     }
 }
 
