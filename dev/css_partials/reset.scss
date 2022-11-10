@@ -12,56 +12,56 @@
 // html 에 font-size, font-weight 등 설정 이유는
 // 1. rem 코딩을 활용하기 위해
 // 2. 다국어 활용을 위해 (lang 으로 분기 설정)
-html{
-    text-size-adjust: 100%;
-    font-size: $global-font-size;
-    font-weight: 400;
-    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    // -webkit-tap-highlight-color: transparent;
-    @include languages();
-}
+// html{
+//     text-size-adjust: 100%;
+//     font-size: $global-font-size;
+//     font-weight: 400;
+//     // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//     // -webkit-tap-highlight-color: transparent;
+//     @include languages();
+// }
 // rem 코딩일때 화면 리사이즈에 rem 값이 자연스럽게 변하는 미디어 쿼리 분기값 (아래 사이트들 참고)
 // rem 단위를 쓰지 않으면 필요 없는 소스
 // https://css-tricks.com/using-a-mixin-to-take-the-math-out-of-responsive-font-sizes/
 // https://css-tricks.com/snippets/css/fluid-typography/
 
 // 모바일 기본 영역 보다 작은 사이즈 대응 영역
-@media (max-width: 374px) {
-    html {
-        font-size: calc(#{$global-font-size - 3} + 3 * ((100vw - 280px) / 374));
-    }
-}
+// @media (max-width: 374px) {
+//     html {
+//         font-size: calc(#{$global-font-size - 3} + 3 * ((100vw - 280px) / 374));
+//     }
+// }
 
-// 모바일 기본 사이즈 대응 영역 (PSD 750 사이즈 기준 세팅)
-// max-width 에는 PSD 가로 사이즈 적용하기. 그걸 반으로 나눈 것을 min-width 에 적용하기.
-@media (min-width: 375px) and (max-width: 750px) {
-    html {
-        font-size: calc(#{$global-font-size - 2.5} + 10 * ((100vw - 375px) / 750));
-    }
-}
+// // 모바일 기본 사이즈 대응 영역 (PSD 750 사이즈 기준 세팅)
+// // max-width 에는 PSD 가로 사이즈 적용하기. 그걸 반으로 나눈 것을 min-width 에 적용하기.
+// @media (min-width: 375px) and (max-width: 750px) {
+//     html {
+//         font-size: calc(#{$global-font-size - 2.5} + 10 * ((100vw - 375px) / 750));
+//     }
+// }
 
-// 기본 영역보다 큰 사이즈 대응 영역 (태블릿 전 단계)
-@media (min-width: 751px) and (max-width: 1023px) {
-    html {
-        font-size: calc(#{$global-font-size} + 13 * ((100vw - 751px) / 1023));
-    }
-}
+// // 기본 영역보다 큰 사이즈 대응 영역 (태블릿 전 단계)
+// @media (min-width: 751px) and (max-width: 1023px) {
+//     html {
+//         font-size: calc(#{$global-font-size} + 13 * ((100vw - 751px) / 1023));
+//     }
+// }
 
-// 태블릿 영역 대응 (아이패드 기준 1024 부터 태블릿 영역으로 정의함)
-// pc 컨텐츠 영역 최소 사이즈에 맞춰서 조정이 필요함
-// 예) 컨텐츠 최소 넓이가 1100px 이라고 한다면 max-width를 1100px 로 변경 해야함
-@media (min-width: 1024px) and (max-width: 1279px) {
-    html {
-        font-size: calc(#{$global-font-size} + 12 * ((100vw - 1024px) / 1279));
-    }
-}
+// // 태블릿 영역 대응 (아이패드 기준 1024 부터 태블릿 영역으로 정의함)
+// // pc 컨텐츠 영역 최소 사이즈에 맞춰서 조정이 필요함
+// // 예) 컨텐츠 최소 넓이가 1100px 이라고 한다면 max-width를 1100px 로 변경 해야함
+// @media (min-width: 1024px) and (max-width: 1279px) {
+//     html {
+//         font-size: calc(#{$global-font-size} + 12 * ((100vw - 1024px) / 1279));
+//     }
+// }
 
-// PC 영역
-@media (min-width: 1280px) {
-    html {
-        font-size: $global-font-size;
-    }
-}
+// // PC 영역
+// @media (min-width: 1280px) {
+//     html {
+//         font-size: $global-font-size;
+//     }
+// }
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 code,form,fieldset,legend,input,textarea,p,blockquote,th,td,
