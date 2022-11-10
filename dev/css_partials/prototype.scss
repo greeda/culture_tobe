@@ -62,6 +62,10 @@ display: -webkit-box;
             a {
                 font-weight: bold;
                 color:#000;
+
+                &::after {
+                    display: none;
+                }
             }
         }
 
@@ -616,6 +620,7 @@ display: -webkit-box;
 @media (max-width:1279px){
     .breadcrumb {
         margin-top: -40px;
+        padding:0 20px;
     }
 
     // 썸네일 리스트
