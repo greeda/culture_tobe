@@ -846,7 +846,58 @@
 
 //prototype.css 에 공통 넣을 것들
 
+.auto-play-swiper {
 
+    .swiper-container {
+        padding-bottom:60px;
+    }
+
+    .swiper-pagination-bullet {
+        width:16px;
+        height:16px;
+        background:#d9d9d9;
+        transition: all .3s ease-in-out;
+        opacity: 1;
+
+        + .swiper-pagination-bullet {
+            margin-left:12px;
+        }
+    }
+    
+    .swiper-pagination-bullet-active {
+        width:32px;
+        border-radius: 8px;
+        background-color:#222;
+    }
+    
+    .swiper-play-btn {
+        width:10px;
+        height:15px;
+        margin:0 auto;
+        background: url('../images/icons/ico_play.png') no-repeat 0 0;
+        background-size: cover;
+
+        &.pause {
+            background-image: url('../images//icons/ico_pause.png');
+        }
+    }
+
+    .swiper-button-area {
+        width:auto;
+        bottom:0;
+
+        .swiper-contr-area {
+            position: absolute;
+            width:78px;
+        }
+
+        .swiper-pagination {
+            position: relative;
+            left:89px;
+            width:100%;
+        }
+    }
+}
 
 
 //tablet
